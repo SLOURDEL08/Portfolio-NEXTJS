@@ -1,53 +1,54 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Slider = () => {
   return (
     <div className="custom-slider">
       <div className="custom-slide-track grayz">
         <div className="custom-slide">
-          <img src="/slider/html.png" alt="" />
+          <Image src="/slider/html.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/css.png" alt="" />
+          <Image src="/slider/css.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/sass.png" alt="" />
+          <Image src="/slider/sass.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/tailwind.png" alt="" />
+          <Image src="/slider/tailwind.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/bootstrap.png" alt="" />
+          <Image src="/slider/bootstrap.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/js.png" alt="" />
+          <Image src="/slider/js.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/php.png" alt="" />
+          <Image src="/slider/php.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/react.webp" alt="" />
+          <Image src="/slider/react.webp" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/nodejs.png" alt="" />
+          <Image src="/slider/nodejs.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/ts.png" alt="" />
+          <Image src="/slider/ts.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/mongo.png" alt="" />
+          <Image src="/slider/mongo.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/sql.png" alt="" />
+          <Image src="/slider/sql.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/firebase.png" alt="" />
+          <Image src="/slider/firebase.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/fig.png" alt="" />
+          <Image src="/slider/fig.png" alt="" />
         </div>
         <div className="custom-slide">
-          <img src="/slider/photoshop.png" alt="" />
+          <Image src="/slider/photoshop.png" alt="" />
         </div>
         
         

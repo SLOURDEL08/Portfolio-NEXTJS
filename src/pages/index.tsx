@@ -205,14 +205,14 @@ const HomePage: React.FC = () => {
    
   </div>
   </div>
-<a href="/" className='h-[20%]'>
+<Link href="/" className='h-[20%]'>
   <div className='flex justify-between items-center h-[100%] gradiended p-10 rounded-3xl parentproject'>
   <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='ClashDisplay' className=''>
       Télécharger mon CV !
     </Typography>
     <Image src='/download.png' width="30" height="30" alt='de'/>
   </div>
-  </a>
+  </Link>
 </div>
 
 <div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject'>

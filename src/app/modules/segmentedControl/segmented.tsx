@@ -24,15 +24,10 @@ const Segmented: React.FC<SegmentedProps> = ({
   className = '', // Valeur par défaut pour className
   onProjectChange, // Ajouter onProjectChange comme une prop
 }) => {
-  const responsiveNumProjects = useResponsiveProjects(numProjects === 'all' ? Infinity : numProjects, responsiveBreakpoints);
-  
-  if (typeof numCols === 'string' && (numCols !== "grid-cols-2" && numCols !== "grid-cols-4" && numCols !== "grid-cols-3" && numCols !== "grid-col" )) {
-    console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
-    return null;
-  }
-
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedFilter, setSelectedFilter] = useState('Tous');
+
+  const responsiveNumProjects = useResponsiveProjects(numProjects === 'all' ? Infinity : numProjects, responsiveBreakpoints);
 
   useEffect(() => {
     import('@/app/data/project.json')
@@ -45,6 +40,11 @@ const Segmented: React.FC<SegmentedProps> = ({
       })
       .catch(error => console.error('Erreur lors du chargement des données:', error));
   }, [responsiveNumProjects, onProjectChange]);
+
+  if (typeof numCols === 'string' && (numCols !== "grid-cols-2" && numCols !== "grid-cols-4" && numCols !== "grid-cols-3" && numCols !== "grid-col" )) {
+    console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
+    return null;
+  }
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
@@ -88,14 +88,14 @@ const Segmented: React.FC<SegmentedProps> = ({
                 <div className='flex flex-col gap-2 w-[100%]'>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
-                    <Image src={project.symbol} width="25" height="25" alt='de' className='rounded shadowingsymbol' />
-                    <Typography theme='white' weight='bold' variant='body-base' component='p' fontFamily='ClashDisplay' className='text-left hover:text-[white] linked-color'>
-                      {project.title}
-                    </Typography>
+                      <Image src={project.symbol} width="25" height="25" alt='de' className='rounded shadowingsymbol' />
+                      <Typography theme='white' weight='bold' variant='body-base' component='p' fontFamily='ClashDisplay' className='text-left hover:text-[white] linked-color'>
+                        {project.title}
+                      </Typography>
                     </div>
                     <Link className='p-3 rounded-full linaked min-w-[32px] w-[35px]' href={`/project/${project.id}`} >
-                    <Image src="/top-right-arrow.png" width="15" height="15" alt='' className='grayscale-2' />
-                </Link>
+                      <Image src="/top-right-arrow.png" width="15" height="15" alt='' className='grayscale-2' />
+                    </Link>
                   </div>
                   <div className='tagoverlay flex justify-start gap-4'>
                     {project.tags.slice(0, 2).map(tag => (
