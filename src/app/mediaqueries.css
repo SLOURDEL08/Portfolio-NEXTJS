@@ -1,0 +1,35 @@
+@media screen and (max-width: 900px) {
+    .segmented-controls{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gapnav{
+        padding-top:12em
+    }
+
+    .mtneg{
+        margin-top:-2em
+    }
+
+    .parented:hover .parentprojected {
+        background-color: #ffffff00;
+                    }
+        
+                    .parented:hover .parentprojecting {
+                      background-color: #ffffff00;
+                                  }
+
+                                  .parented{
+transition:0.2s ease-in-out                                }
+        .parented:hover{
+            background: #ffffff30;
+        }
+                                 
+}
+
+@media screen and (max-width: 1280px) {
+.indexproppage .project-item{
+    height:250px
+}}
