@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Slider = () => {
   return (
     <div className="custom-slider">
-      <div className="custom-slide-track grayz">
+      <div className="custom-slide-track grayz ">
         <div className="custom-slide">
           <Image src="/slider/html.png" width="100" height="100" alt="" />
         </div>

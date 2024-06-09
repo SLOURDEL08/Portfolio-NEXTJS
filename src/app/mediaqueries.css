@@ -39,4 +39,8 @@ transition:0.2s ease-in-out                                }
     .mediagride {
         display: grid;
         grid-template-columns: 1fr!important;
-      }}
+      }
+    
+
+      
+    }

@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
     <Layout>
       <TransitionPage>
 
-      <Main className='overflow-hidden    p-24 max-[900px]:p-14'>
+      <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
       <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-10'>
   <div className='flex flex-col items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px] max-[680px]:w-full max-[680px]:mb-10 rounded-WL max-[900px]:w-[40%]' >
     
@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight'>
+    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
       Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
     </Typography>
     </div>
@@ -77,18 +77,18 @@ const HomePage: React.FC = () => {
 {/* Blocs de gauche */}
 <div className='flex flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
   {/* Premier bloc */}
-  <div className='w-full flex flex-col justify-between h-[80% gap-10 max-[1280px]:flex-row'>
-  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 rounded-3xl parentproject max-[1280px]:w-[50%]'>
+  <div className='w-full flex flex-col justify-between h-[100%] gap-10 max-[900px]:flex-col  max-[1280px]:flex-row'>
+  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full '>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
   <Image src="/workin.png" width="40" height="20" alt='de' className='filesimg'/>
 
-<Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib '>
+<Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
       Dernières expériences
     </Typography>
     </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4 p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -99,12 +99,12 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           Depuis 2020
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4  p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -115,12 +115,12 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           2022/2023
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4  p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
           <div className='grid grid-col '>
             <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -131,7 +131,7 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           2021/2022
         </Typography> 
       </div>
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
   </div>
   </div>
   {/* Deuxième bloc */}
-  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 rounded-3xl parentproject max-[1280px]:w-[50%]'>
+  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full'>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
   <Image src="/studen.png" width="40" height="20" alt='de' className='filesimg'/>
@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
     
     </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
         <div className='flex justify-between items-center flex-wrap gap-x-8'>
         <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -164,12 +164,12 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           Depuis 2020
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -180,12 +180,12 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           2022/2023
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -196,7 +196,7 @@ const HomePage: React.FC = () => {
         </Typography>
         </div>
         </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className=''>
+        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
           2021/2022
         </Typography> 
       </div>
@@ -209,7 +209,7 @@ const HomePage: React.FC = () => {
 
   </div>
 <Link href="/" className='h-[20%] w-full'>
-  <div className='flex justify-between items-center h-[100%] gradiended p-10 rounded-3xl parentproject'>
+  <div className='flex justify-between items-center h-[100%] gradiended p-10 max-[900px]:p-8 rounded-3xl parentproject '>
   <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='ClashDisplay' className=''>
       Télécharger mon CV !
     </Typography>
@@ -218,7 +218,7 @@ const HomePage: React.FC = () => {
   </Link>
 </div>
 
-<div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
+<div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 max-[900px]:p-8 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
   <div className='flex gap-5 items-center'>
   <Image src="/files.png" width="40" height="20" alt='de' className='filesimg'/>
 
@@ -239,7 +239,7 @@ const HomePage: React.FC = () => {
   
 
 </div>
-<div className='mt-10 bg-[#ffffff20] p-10 rounded-3xl parentproject'>
+<div className='mt-10 bg-[#ffffff20] p-10  max-[900px]:p-8 rounded-3xl parentproject'>
 <Slider/>
 
 </div>
