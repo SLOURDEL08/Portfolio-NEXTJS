@@ -22,14 +22,14 @@ const HomePage: React.FC = () => {
       <TransitionPage>
 
       <Main className='overflow-hidden    p-24 max-[900px]:p-14'>
-      <div className='image-container pt-2 w-[100%] flex gap-10 max-[900px]:pt-10'>
-  <div className='flex flex-col items-start gap-2 profilpiced w-[30%] h-[auto] rounded-WL max-[900px]:w-[40%]' >
+      <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-10'>
+  <div className='flex flex-col items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px] max-[680px]:w-full max-[680px]:mb-10 rounded-WL max-[900px]:w-[40%]' >
     
   </div>
-  <div className='flex flex-col items-start gap-4 w-[70%] h-[auto] max-[900px]:w-[60%]'>
+  <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl'>
+    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight'>
       Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
     </Typography>
     </div>
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
     <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] leading-loose">
       {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
     </Typography>
-    <div className='flex flex-wrap gap-6 items-center'>
+    <div className='flex gap-6 items-center'>
     <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
   <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full">
     Mon CV
@@ -75,9 +75,10 @@ const HomePage: React.FC = () => {
 <div className='flex flex-col gap-10 mt-10 xl:flex-row flex-col-reverse'>
 
 {/* Blocs de gauche */}
-<div className='flex flex-col justify-between gap-10 w-[40%] sm:w-[100%]'>
+<div className='flex flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
   {/* Premier bloc */}
-  <div className='flex justify-start h-[40%] bg-[#ffffff20] p-10 rounded-3xl parentproject'>
+  <div className='w-full flex flex-col justify-between h-[80% gap-10 max-[1280px]:flex-row'>
+  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 rounded-3xl parentproject max-[1280px]:w-[50%]'>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
   <Image src="/workin.png" width="40" height="20" alt='de' className='filesimg'/>
@@ -89,7 +90,7 @@ const HomePage: React.FC = () => {
     <div className='exp-sec grid'>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col lg:flex lg:gap-10'>
+      <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           Freelance
         </Typography>
@@ -105,7 +106,7 @@ const HomePage: React.FC = () => {
       <hr className='border-[#ffffff20]'/>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col lg:flex lg:gap-10'>
+      <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           ToastAgency
         </Typography>
@@ -121,7 +122,7 @@ const HomePage: React.FC = () => {
       <hr className='border-[#ffffff20]'/>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
-          <div className='grid grid-col lg:flex lg:gap-10'>
+          <div className='grid grid-col '>
             <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           FL Express
         </Typography>
@@ -141,7 +142,7 @@ const HomePage: React.FC = () => {
   </div>
   </div>
   {/* Deuxième bloc */}
-  <div className='flex justify-start h-[40%] bg-[#ffffff20] p-10 rounded-3xl parentproject'>
+  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 rounded-3xl parentproject max-[1280px]:w-[50%]'>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
   <Image src="/studen.png" width="40" height="20" alt='de' className='filesimg'/>
@@ -154,7 +155,7 @@ const HomePage: React.FC = () => {
     <div className='exp-sec grid'>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
         <div className='flex justify-between items-center flex-wrap gap-x-8'>
-        <div className='grid grid-col lg:flex lg:gap-10'>
+        <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           Freelance
         </Typography>
@@ -170,7 +171,7 @@ const HomePage: React.FC = () => {
       <hr className='border-[#ffffff20]'/>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col lg:flex lg:gap-10'>
+      <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           ToastAgency
         </Typography>
@@ -186,7 +187,7 @@ const HomePage: React.FC = () => {
       <hr className='border-[#ffffff20]'/>
       <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col lg:flex lg:gap-10'>
+      <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
           FL Express
         </Typography>
@@ -205,7 +206,9 @@ const HomePage: React.FC = () => {
    
   </div>
   </div>
-<Link href="/" className='h-[20%]'>
+
+  </div>
+<Link href="/" className='h-[20%] w-full'>
   <div className='flex justify-between items-center h-[100%] gradiended p-10 rounded-3xl parentproject'>
   <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='ClashDisplay' className=''>
       Télécharger mon CV !
@@ -215,7 +218,7 @@ const HomePage: React.FC = () => {
   </Link>
 </div>
 
-<div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject'>
+<div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
   <div className='flex gap-5 items-center'>
   <Image src="/files.png" width="40" height="20" alt='de' className='filesimg'/>
 
@@ -224,7 +227,7 @@ const HomePage: React.FC = () => {
     </Typography>
     </div>
     <Segmented
-  numProjects={4}
+  numProjects={6}
   className='indexproppage'
   useFilters={false}
   numCols="grid-cols-2"

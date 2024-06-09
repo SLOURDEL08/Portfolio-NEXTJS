@@ -6,49 +6,49 @@ const Slider = () => {
     <div className="custom-slider">
       <div className="custom-slide-track grayz">
         <div className="custom-slide">
-          <Image src="/slider/html.png" alt="" />
+          <Image src="/slider/html.png" width="100" height="100" alt="" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/css.png" alt="" />
+          <Image src="/slider/css.png" width="100" height="100" alt="" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/sass.png" alt="" />
+          <Image src="/slider/sass.png" width="100" height="100" alt="" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/tailwind.png" alt="" />
+          <Image src="/slider/tailwind.png" width="100" height="100" alt="" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/bootstrap.png" alt="" />
+          <Image src="/slider/bootstrap.png" width="100" height="100" alt="" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/js.png" alt="" />
+          <Image src="/slider/js.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/php.png" alt="" />
+          <Image src="/slider/php.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/react.webp" alt="" />
+          <Image src="/slider/react.webp" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/nodejs.png" alt="" />
+          <Image src="/slider/nodejs.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/ts.png" alt="" />
+          <Image src="/slider/ts.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/mongo.png" alt="" />
+          <Image src="/slider/mongo.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/sql.png" alt="" />
+          <Image src="/slider/sql.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/firebase.png" alt="" />
+          <Image src="/slider/firebase.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/fig.png" alt="" />
+          <Image src="/slider/fig.png" alt="" width="100" height="100" />
         </div>
         <div className="custom-slide">
-          <Image src="/slider/photoshop.png" alt="" />
+          <Image src="/slider/photoshop.png" alt="" width="100" height="100" />
         </div>
         
         

@@ -1,7 +1,6 @@
 // components/Layout.tsx
 import React from 'react';
 
-import '@/app/globals.css'
 
 const PreviewProjectSlider = () => {
   return (

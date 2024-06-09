@@ -33,3 +33,10 @@ transition:0.2s ease-in-out                                }
 .indexproppage .project-item{
     height:250px
 }}
+
+@media screen and (max-width: 620px) {
+
+    .mediagride {
+        display: grid;
+        grid-template-columns: 1fr!important;
+      }}

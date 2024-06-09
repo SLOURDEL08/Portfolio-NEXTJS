@@ -1,6 +1,5 @@
 import Image from "../../../../node_modules/next/image"
 import { Typography } from "../typography/typography"
-import '@/app/globals.css'
 
 export const Footer:React.FC = () => {
     return <footer className="navbar bg-[linear-gradient(#ffffff10,#ffffff05)] border-t border-stone-800  w-full p-24 max-[900px]:p-14 ">
@@ -8,7 +7,7 @@ export const Footer:React.FC = () => {
         <div className="w-full flex max-[900px]:flex-wrap  justify-between items-start max-[900px]:gap-10 gap-20 ">
             <div className="w-3/6 flex max-[900px]:w-full justify-start gap-14">
             
-            <div className="flex justify-between w-full max-[900px]:justify-start max-[900px]:gap-14  gap-8 order-2">
+            <div className="flex flex-wrap justify-between w-full max-[900px]:justify-start max-[900px]:gap-14  gap-8 order-2">
             <div className="p-6 w-1/3 h-min max-w-36	min-w-[100px] min-h-[100px]  tr rounded-3xl order-first">
                <Image width="500" height="500" alt="logo web app" src="/sl.png" className="w-[100%] h-[100%]"/>
 

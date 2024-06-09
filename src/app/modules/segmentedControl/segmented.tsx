@@ -75,7 +75,7 @@ const Segmented: React.FC<SegmentedProps> = ({
         </section>
       )}
 
-      <div className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3  max-[900px]:grid-cols-2 gap-8 ${useFilters ? 'mt-8' : ''}`}>
+      <div className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3 mediagride  max-[900px]:grid-cols-2 gap-8 ${useFilters ? 'mt-8' : ''}`}>
         {projects.map(project => (
           <div
             key={project.id}
