@@ -397,6 +397,7 @@ table {
 }
 
 
+
 .strocked {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Nombre de lignes maximum */

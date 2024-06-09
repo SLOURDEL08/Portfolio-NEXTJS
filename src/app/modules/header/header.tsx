@@ -83,17 +83,17 @@ export const Header: React.FC = () => {
         (isScrolled && searchResults.length === 0) ? "bgscrolled" : "bgtransparent"
       }`}
     >
-      <div className="flex justify-between">
-        <div className="w-4/12 flex items-center gap-4">
+      <div className="flex justify-between max-md:justify-start">
+        <div className="w-4/12 flex items-center gap-4 max-md:w-[auto]">
           <div className="p-3 tr rounded-xl">
             <Image width="30" height="30" alt="logo web app" src="/sl.png" className="]" />
           </div>
-          <div className="flex flex-col gap-3 items-center">
+          <div className="flex flex-col gap-3 items-center max-md:hidden">
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">LOURDEL</Typography>
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">Sébastien</Typography>
           </div>
         </div>
-        <div className="w-8/12 flex justify-end gap-8 items-center">
+        <div className="w-8/12 flex justify-end gap-8 items-center max-md:w-[100%]">
           <div className="navbar-end flex gap-8 items-center">
             <div className="justify-between gap-8 hidden max-[900px]:flex">
               <div onClick={handleMenuToggle} className="cursor-pointer">
@@ -111,7 +111,7 @@ export const Header: React.FC = () => {
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Contact</Typography>
               </Link>
             </div>
-            <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-60`}>
+            <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] focus-within:bg-[#7A24E8] max-md:hidden transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-60`}>
               <label className="searchbar">
                 <input
                   type="text"
@@ -126,40 +126,58 @@ export const Header: React.FC = () => {
             </div>
           </div>
           <div className="navbar-end flex gap-5">
-            <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] " >
+            <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[10px] max-[450px]:w-[10px]" >
               <Image src="/github-icon.png" alt="logo github" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
-            <Link href="https://gitlab.com/slourdel08" className="w-[25px] h-[25px] ">
+            <Link href="https://gitlab.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[10px] max-[450px]:w-[10px]">
               <Image src="/gitlab.png" alt="logo gitlab" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
-            <Link href="https://linkedin.com/in/slourdel08" className="w-[25px] h-[25px]">
+            <Link href="https://linkedin.com/in/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[10px] max-[450px]:w-[10px]">
               <Image src="/linkedin.png" alt="logo linkedin" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
           </div>
         </div>
       </div>
       <div className="menu-section">
-        <div className={`menu-toggle ${menuOpen ? "on" : ""}`} onClick={handleMenuToggle}>
-          <div className={`line one ${menuOpen ? "on" : ""}`}></div>
-          <div className={`line two ${menuOpen ? "on" : ""}`}></div>
-          <div className={`line three ${menuOpen ? "on" : ""}`}></div>
-        </div>
-        <nav>
-          <ul className={menuOpen ? "" : "hidden"}>
-          <div className="flex flex-col items-center gap-20 justify-center min-[900px]:hidden h-[100vh] mtneg">
-              <Link href="/" className="opacity-90 hover:opacity-100 text-center "> 
-                <Typography theme="white" component="p" variant="h1" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi">Resume</Typography>
-              </Link>
-              <Link href="/projects" className="opacity-90 hover:opacity-100 text-center"> 
-                <Typography theme="white" component="p" variant="h1" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi">Projects</Typography>
-              </Link>
-              <Link href="/projects" className="opacity-90 hover:opacity-100 text-center"> 
-                <Typography theme="white" component="p" variant="h1" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100  transi">Contact</Typography>
-              </Link>
-            </div>
-          </ul>
-        </nav>
+  <div className={`menu-toggle ${menuOpen ? "on" : ""}`} onClick={handleMenuToggle}>
+    <div className={`line one ${menuOpen ? "on" : ""}`}></div>
+    <div className={`line two ${menuOpen ? "on" : ""}`}></div>
+    <div className={`line three ${menuOpen ? "on" : ""}`}></div>
+  </div>
+  <nav>
+    <ul className={menuOpen ? "" : "hidden"}>
+    <Typography theme="graylight" component="p" variant="body-base" fontFamily="SanFrancisco" weight="light" className="mt-10">Vous chercher quelque chose <b className="text-white">?</b></Typography>
+
+    <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] m-auto mt-4 focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-full z-full ${menuOpen ? "" : "hidden"}`}>
+  <label className="searchbar">
+    <input
+      type="text"
+      value={searchText}
+      onChange={handleSearchChange}
+      placeholder="Search documentation..."
+      className="focus:outline-none border-none text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent"
+      onClick={handleSearchClick}
+    />
+    <kbd className="pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-neutral-800 border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded">⌘ K</kbd>
+  </label>
+</div>
+
+      <div className="flex flex-col items-start gap-10 justify-start min-[900px]:hidden h-[100vh] mtneg mt-20">
+        <Link href="/" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi">Resume</Typography>
+        </Link>
+        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi">Projects</Typography>
+        </Link>
+        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi">Contact</Typography>
+        </Link>
+        
       </div>
+    </ul>
+  </nav>
+</div>
+
       <div className="flex fd flex-cols justify-center">
         <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hidden">
           Quel projet vous souhaitez ?
