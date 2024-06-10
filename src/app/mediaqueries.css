@@ -8,9 +8,13 @@
         background-color: #ffffff00!important;
     }
 
+    .rounded-WL{
+        border-radius: 1.7rem!important;
+    }
+
     .segmented-controls label{
         font-size:14px!important;
-        padding:10px 14px!important;
+        padding:10px 16px!important;
 
     }
 
@@ -27,7 +31,7 @@
     }
 
     .mtneg{
-        margin-top:-2em
+        margin-top:3em
     }
 
     .parented:hover .parentprojected {

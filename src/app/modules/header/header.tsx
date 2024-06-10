@@ -162,15 +162,15 @@ export const Header: React.FC = () => {
   </label>
 </div>
 
-      <div className="flex flex-col items-start gap-10 justify-start min-[900px]:hidden h-[100vh] mtneg mt-20">
+      <div className="flex flex-col items-start gap-10 justify-start min-[900px]:hidden h-[100vh] mtneg">
         <Link href="/" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi">Resume</Typography>
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Resume</Typography>
         </Link>
         <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi">Projects</Typography>
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Projects</Typography>
         </Link>
         <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi">Contact</Typography>
+          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Contact</Typography>
         </Link>
         
       </div>
