@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
             <TransitionPage>
 
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8 '>
-        <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16'>
+        <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-6'>
           <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
             <Image src="/files.png" width="50" height="40" alt='de' className='filesimg max-[900px]:w-[45px] max-[900px]:h-[45px]'/>
             <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-3xl semib'>
@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=' bg-[#ffffff20] parentproject p-10 rounded-3xl w-[100%]'>
+        <div className=' bg-[#ffffff20] parentproject p-10 max-[900px]:p-8 rounded-3xl w-[100%]'>
           <Segmented
             numProjects={8}
             className='proppage'
