@@ -5,6 +5,14 @@
         justify-content: center;
     }
 
+    .parented:hover .parentprojected {
+        background-color: #ffffff00!important;
+                    }
+        
+                    .parented:hover .parentprojecting {
+                      background-color: #ffffff00!important;
+                                  }
+
     .gapnav{
         padding-top:12em
     }

@@ -73,7 +73,7 @@ const ProjectDetailsPage = () => {
     <Layout>
             <TransitionPage>
 
-      <Main className='overflow-hidden p-24 max-[900px]:p-14'>
+      <Main className='overflow-hidden p-24 max-[900px]:p-8'>
       <div className='grid pt-2 grid-cols-1 gap-10 py-4 max-[900px]:pt-14 max-[900px]:pb-0'>
         <div className='flex gap-8 items-center justify-center max-[900px]:justify-start '>
           <Image src={project.symbol} width="60" height="50" alt='de' className='filesimg rounded-xl shadowingsymbol'/>
@@ -83,7 +83,7 @@ const ProjectDetailsPage = () => {
           </Typography>
         </div>
       </div>
-      <div className='mt-10 py-0 rounded-3xl max-h-20 w-[100%] max-[900px]:w-[100%] grid grid-cols-3 max-[900px]:flex-row justify-start gap-10 max-[900px]:gap-8 max-[900px]:mt-8'>
+      <div className='mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] grid grid-cols-3 justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex max-[900px]:flex-wrap max-[900px]:h-[1 max-[900px]:mt-8'>
             {/* Barre de navigation */}
             <div className={`flex items-center justify-between cursor-pointer max-[900px]:w-[100%] handled p-4 px-6 transit rounded-2xl ${selectedSection === 'presentation' ? 'activesection' : ''}`} onClick={() => handleSectionClick('presentation')}>
   <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
@@ -112,7 +112,7 @@ const ProjectDetailsPage = () => {
           </div>
         <div className='flex pt-10 gap-10 max-[900px]:block max-[900px]:pt-0'>
          
-          <div className=' bg-[#ffffff20] p-10 rounded-3xl w-[100%] max-[900px]:w-[100%] max-[900px]:mt-8 parentproject '>
+          <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[100%] max-[900px]:w-[100%] max-[900px]:mt-8 parentproject '>
             {/* Affichage conditionnel des sections */}
             {selectedSection === 'presentation' && (
               <div className='presentation-block flex flex-col gap-8 '>

@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`navbar max-w-[100%] z-ndex sticky top-0 w-full p-8 pl-24 pr-24 z-50 backdroped max-[900px]:p-8 max-[900px]:py-8 ${
+      className={`navbar max-w-[100%] z-ndex sticky top-0 w-full p-8 pl-24 pr-24 z-50 backdroped max-[900px]:p-8 max-[900px]:px-8 max-[900px]:py-6 ${
         (isScrolled && searchResults.length > 0) ? "bgscrolled bgscrolled-result" : 
         (isScrolled && searchResults.length === 0) ? "bgscrolled" : "bgtransparent"
       }`}

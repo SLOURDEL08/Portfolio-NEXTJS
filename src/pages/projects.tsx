@@ -38,23 +38,23 @@ const Projects: React.FC = () => {
             <TransitionPage>
 
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-10'>
-        <div className='grid grid-cols-1 pt-2 gap-10 py-10  max-[900px]:pt-14'>
-          <div className='flex gap-8 items-center justify-center'>
-            <Image src="/files.png" width="50" height="40" alt='de' className='filesimg'/>
-            <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp semib'>
+        <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-14'>
+          <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
+            <Image src="/files.png" width="50" height="40" alt='de' className='filesimg max-[900px]:w-[40px]'/>
+            <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-3xl semib'>
               Mes projets
             </Typography>
             <div>
          <Slider/>
          </div>
           </div>
-          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-center strocked leading-loose w-[70%] m-auto mb-2 ">
+          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-center strocked leading-loose w-[70%] max-[900px]:w-full max-[900px]:text-left m-auto mb-2 ">
             {"Bienvenue sur ma page de portfolio ! Découvrez mes derniers projets professionnels, mes réalisations de formation et mes créations personnelles."}
           </Typography>
         
         </div>
         <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
-          <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
+          <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8  parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
             <div
               key={project.id}
               className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className={`w-3/5 bg-[#ffffff20] max-[900px]:bg-[#ffffff00] max-[900px]:pt-5 parentprojected p-10 carouzel relative rounded-3xl max-[900px]:w-[100%]`}>
+          <div className={`w-3/5 bg-[#ffffff20] max-[900px]:bg-[#ffffff00] max-[900px]:pt-5 parentprojected p-10 max-[900px]:p-8 carouzel relative rounded-3xl max-[900px]:w-[100%]`}>
             <div className={`flex flex-col gap-8 project-details ${!isTransitioning ? 'active' : ''}`}>
               <div className='flex items-center gap-4'>
               <Image src={project.symbol} width="500" height="500" alt={project.title} className='h-[40px] w-[40px] rounded-xl' />
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
               </Typography>
               </div>
               
-              <div className='flex justify-start items-center flex-wrap gap-x-6 capitalize gap-y-5 tranlating'>
+              <div className='flex justify-start items-center flex-wrap gap-x-6  capitalize gap-y-5 tranlating'>
                 {project.tags.slice(0, 4).map((tag, index) => (
                   <Typography
                     key={index}
@@ -96,12 +96,12 @@ const Projects: React.FC = () => {
               </Typography>
               <div className='flex gap-4 absolute top-10 right-10'>
                 <button className='custom-buttonx flex gap-1 justify-center items-center p-3 px-4 border rounded-full' onClick={prevProject}>
-                  <Image src="/larrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px]' />
+                  <Image src="/larrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]' />
                  
                 </button>
                 <button className='custom-buttonx flex gap-1 justify-center items-center p-3 px-4 border rounded-full' onClick={nextProject}>
                
-                <Image src="/rarrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px]' />
+                <Image src="/rarrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]' />
                   
                 </button>
                 
