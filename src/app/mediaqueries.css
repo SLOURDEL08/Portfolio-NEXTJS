@@ -71,8 +71,16 @@ transition:0.2s ease-in-out                                }
     }
 
     @media screen and (max-width: 1040px) {
+        .modal-result{
+            margin-top: 0px!important;
+            justify-content: start!important;
+            padding:2rem 2rem!important;
+            width: 100%!important;
 
-
+        }
+        .hiddenqaau{
+            display: none!important;
+        }
     .mtneg{
         margin-top:3em
     }}

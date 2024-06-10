@@ -93,21 +93,26 @@ export const Header: React.FC = () => {
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">Sébastien</Typography>
           </div>
         </div>
-        <div className="w-8/12 flex justify-end gap-8 items-center max-md:w-[100%]">
-          <div className="navbar-end flex gap-8 items-center">
-            <div className="justify-between gap-8 hidden max-[1040px]:flex">
+        <div className="w-8/12 flex justify-end gap-12 items-center max-md:w-[100%]">
+          <div className="navbar-end flex gap-12 items-center">
+            <div className="justify-between gap-12 hidden max-[1040px]:flex">
               <div onClick={handleMenuToggle} className="cursor-pointer">
                 <Image width="30" height="30" alt="menu icon" src="/menuwhite.png" />
               </div>
             </div>
-            <div className="flex justify-between gap-8 max-[1040px]:hidden">
-              <Link href="/" className="opacity-60 hover:opacity-100" > 
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">Resume</Typography>
+            <div className="flex justify-between gap-12 max-[1040px]:hidden">
+              <Link href="/" className="opacity-60 hover:opacity-100 flex gap-3 items-center" > 
+              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">Home</Typography>
               </Link>
-              <Link href="/projects" className="opacity-60 hover:opacity-100" > 
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Projects</Typography>
+              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center" > 
+              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Projets</Typography>
               </Link>
-              <Link href="/projects" className="opacity-60 hover:opacity-100"> 
+              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center"> 
+              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Contact</Typography>
               </Link>
             </div>
@@ -125,7 +130,7 @@ export const Header: React.FC = () => {
               </label>
             </div>
           </div>
-          <div className="navbar-end flex gap-5">
+          <div className="navbar-end flex gap-6">
             <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]" >
               <Image src="/github-icon.png" alt="logo github" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
@@ -147,20 +152,24 @@ export const Header: React.FC = () => {
    
   <nav className="">
     <ul className={menuOpen ? "" : "hidden "}>
-    <div className="flex items-start gap-10 justify-start flex-wrap min-[1040px]:hidden mtneg">
-        <Link href="/" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="extralight" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi "><b>#</b>Resume</Typography>
-        </Link>
-        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi "><b>#</b>Projects</Typography>
-        </Link>
-        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi"><b>#</b>Contact</Typography>
-        </Link>
-        
-      </div>
+    <div className="flex justify-between gap-12 mt-10 max-[1040px]:opacity-100">
+              <Link href="/" className=" flex gap-3 max-[1040px]:gap-5 items-center" > 
+              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande max-[1040px]:text-2xl ease-in-out">Home</Typography>
+              </Link>
+              <Link href="/projects" className=" flex border-r border-l px-20 border-[#ffffff20] gap-3 max-[1040px]:gap-5 items-center" > 
+              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
+
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[1040px]:text-2xl hover:opacity-100">Projets</Typography>
+              </Link>
+              <Link href="/projects" className=" flex gap-3 max-[1040px]:gap-5 items-center"> 
+              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
+
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[1040px]:text-2xl hover:opacity-100">Contact</Typography>
+              </Link>
+            </div>
       <div className="min-[1040px]:hidden">
-    <Typography theme="graylight" component="p" variant="body-base" fontFamily="SanFrancisco" weight="light" className="mt-10">Vous chercher quelque chose <b className="text-white">?</b></Typography>
+    <Typography theme="graylight" component="p" variant="lead" fontFamily="SanFrancisco" weight="light" className="mt-10">Vous chercher quelque chose <b className="text-white">?</b></Typography>
 
     <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] m-auto mt-4 focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-full z-full ${menuOpen ? "" : "hidden"}`}>
   <label className="searchbar">
@@ -182,8 +191,8 @@ export const Header: React.FC = () => {
   </nav>
 </div>
 
-      <div className="flex fd flex-cols justify-center">
-        <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hidden">
+      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0">
+        <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
           Quel projet vous souhaitez ?
         </Typography>
         {searchResults.length > 0 && (

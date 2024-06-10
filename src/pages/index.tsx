@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
 
       <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
       <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-16'>
-  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px]  max-[680px]:mb-10 rounded-WL max-[900px]:w-[40%]' >
+  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
     
   </div>
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
