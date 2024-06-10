@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
       if (scrollTop > 0) {
         setIsScrolled(true);
       } else {
-        setIsScrolled(screenWidth < 900);
+        setIsScrolled(screenWidth < 1040);
       }
 
       const modal = modalRef.current;
@@ -95,12 +95,12 @@ export const Header: React.FC = () => {
         </div>
         <div className="w-8/12 flex justify-end gap-8 items-center max-md:w-[100%]">
           <div className="navbar-end flex gap-8 items-center">
-            <div className="justify-between gap-8 hidden max-[900px]:flex">
+            <div className="justify-between gap-8 hidden max-[1040px]:flex">
               <div onClick={handleMenuToggle} className="cursor-pointer">
                 <Image width="30" height="30" alt="menu icon" src="/menuwhite.png" />
               </div>
             </div>
-            <div className="flex justify-between gap-8 max-[900px]:hidden">
+            <div className="flex justify-between gap-8 max-[1040px]:hidden">
               <Link href="/" className="opacity-60 hover:opacity-100" > 
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">Resume</Typography>
               </Link>
@@ -144,8 +144,22 @@ export const Header: React.FC = () => {
     <div className={`line two ${menuOpen ? "on" : ""}`}></div>
     <div className={`line three ${menuOpen ? "on" : ""}`}></div>
   </div>
-  <nav>
-    <ul className={menuOpen ? "" : "hidden"}>
+   
+  <nav className="">
+    <ul className={menuOpen ? "" : "hidden "}>
+    <div className="flex items-start gap-10 justify-start flex-wrap min-[1040px]:hidden mtneg">
+        <Link href="/" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="extralight" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi "><b>#</b>Resume</Typography>
+        </Link>
+        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi "><b>#</b>Projects</Typography>
+        </Link>
+        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
+          <Typography theme="white" component="p" variant="h5" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi"><b>#</b>Contact</Typography>
+        </Link>
+        
+      </div>
+      <div className="min-[1040px]:hidden">
     <Typography theme="graylight" component="p" variant="body-base" fontFamily="SanFrancisco" weight="light" className="mt-10">Vous chercher quelque chose <b className="text-white">?</b></Typography>
 
     <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] m-auto mt-4 focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-full z-full ${menuOpen ? "" : "hidden"}`}>
@@ -161,19 +175,9 @@ export const Header: React.FC = () => {
     <kbd className="pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-neutral-800 border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded">⌘ K</kbd>
   </label>
 </div>
+</div>
 
-      <div className="flex flex-col items-start gap-10 justify-start min-[900px]:hidden h-[100vh] mtneg">
-        <Link href="/" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Resume</Typography>
-        </Link>
-        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Projects</Typography>
-        </Link>
-        <Link href="/projects" className="opacity-90 hover:opacity-100 text-center">
-          <Typography theme="white" component="p" variant="h2" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100 transi max-[700px]:text-4xl">Contact</Typography>
-        </Link>
-        
-      </div>
+   
     </ul>
   </nav>
 </div>

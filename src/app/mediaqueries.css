@@ -34,6 +34,8 @@
         margin-top:3em
     }
 
+   
+
     .parented:hover .parentprojected {
         background-color: #ffffff00;
                     }
@@ -65,3 +67,10 @@ transition:0.2s ease-in-out                                }
 
       
     }
+
+    @media screen and (max-width: 1040px) {
+
+
+    .mtneg{
+        margin-top:3em
+    }}

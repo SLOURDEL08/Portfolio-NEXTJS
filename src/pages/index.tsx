@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-4 max-[450px]:text-4xl'>
+    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
       Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
     </Typography>
     </div>
