@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
     <Layout>
             <TransitionPage>
 
-      <Main className='overflow-hidden py-24 p-24 max-[900px]:p-10'>
+      <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8'>
         <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-14'>
           <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
             <Image src="/files.png" width="50" height="40" alt='de' className='filesimg max-[900px]:w-[40px]'/>
