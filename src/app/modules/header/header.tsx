@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
       <div className="flex justify-between max-md:justify-start">
         <div className="w-4/12 flex items-center gap-4 max-md:w-[auto]">
           <div className="p-3 tr rounded-xl">
-            <Image width="30" height="30" alt="logo web app" src="/sl.png" className="min-w-[30px] min-h-[30px]" />
+            <Image width="30" height="30" alt="logo web app" src="/sl.png" className="min-w-[26px] min-h-[26px]" />
           </div>
           <div className="flex flex-col gap-3 items-center max-[400px]:hidden">
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">LOURDEL</Typography>
@@ -126,13 +126,13 @@ export const Header: React.FC = () => {
             </div>
           </div>
           <div className="navbar-end flex gap-5">
-            <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[20px]" >
+            <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]" >
               <Image src="/github-icon.png" alt="logo github" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
-            <Link href="https://gitlab.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[20px]">
+            <Link href="https://gitlab.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]">
               <Image src="/gitlab.png" alt="logo gitlab" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
-            <Link href="https://linkedin.com/in/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[20px]">
+            <Link href="https://linkedin.com/in/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]">
               <Image src="/linkedin.png" alt="logo linkedin" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
           </div>
