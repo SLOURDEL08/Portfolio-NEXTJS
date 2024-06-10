@@ -74,11 +74,11 @@ const ProjectDetailsPage = () => {
             <TransitionPage>
 
       <Main className='overflow-hidden p-24 max-[900px]:p-8'>
-      <div className='grid pt-2 grid-cols-1 gap-10 py-4 max-[900px]:pt-14 max-[900px]:pb-0'>
+      <div className='grid pt-2 grid-cols-1 gap-10 py-4 max-[900px]:pt-16 max-[900px]:pb-0'>
         <div className='flex gap-8 items-center justify-center max-[900px]:justify-start '>
-          <Image src={project.symbol} width="60" height="50" alt='de' className='filesimg rounded-xl shadowingsymbol'/>
+          <Image src={project.symbol} width="60" height="50" alt='de' className='filesimg rounded-xl max-[900px]:w-[45px] max-[900px]:h-[45px] shadowingsymbol'/>
 
-          <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left  projectpp semib'>
+          <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-[900px]:text-3xl projectpp semib'>
             {project.title}
           </Typography>
         </div>
