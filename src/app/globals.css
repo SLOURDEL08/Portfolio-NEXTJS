@@ -607,6 +607,10 @@ text-decoration-thickness: 2px;
 
 }
 
+.stod{
+  height:100vh!important
+}
+
 .transi:hover{
   transition:0.2s ease-in-out;
   text-decoration: underline;
@@ -1035,9 +1039,13 @@ filter:grayscale(0)
   transition:  0.3s ease; /* Ajouter une transition pour une animation fluide */
 }
 
-.trande:hover {
-  font-weight: 800;
-  transform: scale(1.05); /* Utiliser une échelle pour compenser le changement de poids */
+.bgfg{
+  width: max-content;display: flex; justify-content: center;
+  transition:0.2s ease-in-out;
+  background:#ffffff15 }
+
+.bgfg:hover{
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 20%, rgba(255, 255, 255, 0.15) 80%, rgba(255, 255, 255, 0.00) 100%);
 }
 
 

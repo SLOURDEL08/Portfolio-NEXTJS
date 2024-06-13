@@ -30,7 +30,7 @@ const TransitionWord = () => {
         variant='h1'
         component='h1'
         fontFamily='ClashDisplay'
-        className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] max-[450px]:text-4xl text-left z-10 text-slide max-[900px]:text-5xl max-[700px]:mb-1 mb-2'
+        className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] max-[450px]:text-3xl text-left z-10 text-slide max-[900px]:text-5xl max-[450px]:mb-1 mb-2'
       >
         {words[currentWordIndex]} 👋 ,
       </Typography>

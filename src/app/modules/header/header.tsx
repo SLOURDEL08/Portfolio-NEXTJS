@@ -151,47 +151,58 @@ export const Header: React.FC = () => {
   </div>
    
   <nav className="">
-    <ul className={menuOpen ? "" : "hidden "}>
-    <div className="flex justify-between gap-12 mt-10 max-[1040px]:opacity-100">
-              <Link href="/" className=" flex gap-3 max-[1040px]:gap-5 items-center" > 
-              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande max-[1040px]:text-2xl ease-in-out">Home</Typography>
+    <ul className={menuOpen ? "" : "hidden"}>
+      <div className="h-[87vh] flex justify-center p-14">
+      <div className=" flex flex-col items-center justify-center gap-14 mt-10">
+              <Link href="/" className=" flex border border-stone-800 gap-8 max-[900px]:gap-6 items-center opacity-80 max-w-full hover:opacity-100 bgfg rounded-2xl p-8 max-[900px]:p-7" > 
+              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
+                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande max-[900px]:text-3xl  ease-in-out">Accueil</Typography>
               </Link>
-              <Link href="/projects" className=" flex border-r border-l px-20 border-[#ffffff20] gap-3 max-[1040px]:gap-5 items-center" > 
-              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
+              <Link href="/projects" className=" flex border border-stone-800  max-[900px]:gap-6 opacity-80 hover:opacity-100 bgfg bg-[#ffffff10] p-8 max-[900px]:p-7  border-[#ffffff20] rounded-2xl gap-8 items-center " > 
+              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
 
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[1040px]:text-2xl hover:opacity-100">Projets</Typography>
+                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[900px]:text-3xl hover:opacity-100">Projets</Typography>
               </Link>
-              <Link href="/projects" className=" flex gap-3 max-[1040px]:gap-5 items-center"> 
-              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[25px] min-w-[25px] w-[25px] h-[25px]" />
+              <Link href="/projects" className=" flex border border-stone-800  gap-8 max-[900px]:gap-6 items-center opacity-80 bgfg hover:opacity-100  rounded-2xl p-8 max-[900px]:p-7"> 
+              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
 
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[1040px]:text-2xl hover:opacity-100">Contact</Typography>
+                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[900px]:text-3xl hover:opacity-100">Contact</Typography>
               </Link>
             </div>
-      <div className="min-[1040px]:hidden">
-    <Typography theme="graylight" component="p" variant="lead" fontFamily="SanFrancisco" weight="light" className="mt-10">Vous chercher quelque chose <b className="text-white">?</b></Typography>
 
-    <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] m-auto mt-4 focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-full z-full ${menuOpen ? "" : "hidden"}`}>
-  <label className="searchbar">
-    <input
-      type="text"
-      value={searchText}
-      onChange={handleSearchChange}
-      placeholder="Search documentation..."
-      className="focus:outline-none border-none text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent"
-      onClick={handleSearchClick}
-    />
-    <kbd className="pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-neutral-800 border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded">⌘ K</kbd>
-  </label>
-</div>
-</div>
+      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50">
+        <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
+          Quel projet vous souhaitez ?
+        </Typography>
+        {searchResults.length > 0 && (
+          <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
+            {searchResults.slice(0, 3).map((result) => (
+              <div className="" key={result.id}>
+                <Link href={result.link} passHref>
+                  <div className="">
+                    <div className="result-item">
+                      <Image src={result.symbol} alt={result.title} width={300} height={300} />
+                      <Typography theme="white" component="p" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="transition ease-in-out opacity-80">
+                        {result.title}
+                      </Typography>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      </div>
+   
+   
 
    
     </ul>
   </nav>
 </div>
 
-      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0">
+      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 hidden">
         <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
           Quel projet vous souhaitez ?
         </Typography>

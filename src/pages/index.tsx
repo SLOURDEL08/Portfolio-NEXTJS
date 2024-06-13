@@ -29,18 +29,19 @@ const HomePage: React.FC = () => {
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
+    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-3xl'>
       Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
     </Typography>
     </div>
    
     
-    <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg leading-loose">
+    <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-sm max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
       {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
     </Typography>
-    <div className='flex gap-6 items-center'>
+    <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
+    <div className='flex gap-6 items-center max-[900px]:py-2'>
     <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full">
+  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-xs">
     Mon CV
     <Image src='/download.png' width="14" height="14" alt='de' />
     </Typography>
@@ -49,7 +50,7 @@ const HomePage: React.FC = () => {
       
  
   <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full">
+  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-xs">
     Mes projets
     <Image src='/top-right-arrow.png' width="14" height="14" alt='de' />
     </Typography>
@@ -65,6 +66,7 @@ const HomePage: React.FC = () => {
     <Image src="/slider/tailwindlong.png" width="200" height="200" alt='de' className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'/>
     <Image src="/slider/tipes.png" width="200" height="200" alt='de' className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'/>
 
+    </div>
     </div>
   </div>
 </div>
@@ -220,7 +222,7 @@ const HomePage: React.FC = () => {
 
 <div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 max-[900px]:p-8 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
   <div className='flex gap-5 items-center'>
-  <Image src="/files.png" width="40" height="20" alt='de' className='filesimg'/>
+  <Image src="/applelay.png" width="35" height="35" alt='de' className='filesimg'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
       Mes projets
