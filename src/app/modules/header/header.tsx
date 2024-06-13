@@ -88,13 +88,13 @@ export const Header: React.FC = () => {
           <div className="p-3 tr rounded-xl">
             <Image width="30" height="30" alt="logo web app" src="/sl.png" className="min-w-[26px] min-h-[26px]" />
           </div>
-          <div className="flex flex-col gap-3 items-center max-[400px]:hidden">
+          <div className="flex flex-col gap-3 items-center max-[600px]:hidden">
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">LOURDEL</Typography>
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">Sébastien</Typography>
           </div>
         </div>
         <div className="w-8/12 flex justify-end gap-12 items-center max-md:w-[100%]">
-          <div className="navbar-end flex gap-12 items-center">
+          <div className="navbar-end flex gap-12 items-center ">
             <div className="justify-between gap-12 hidden max-[1040px]:flex">
               <div onClick={handleMenuToggle} className="cursor-pointer">
                 <Image width="30" height="30" alt="menu icon" src="/menuwhite.png" />
@@ -116,7 +116,7 @@ export const Header: React.FC = () => {
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Contact</Typography>
               </Link>
             </div>
-            <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] focus-within:bg-[#7A24E8] max-md:hidden transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-60`}>
+            <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] focus-within:bg-[#7A24E8]  transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-60 max-[600px]:w-40`}>
               <label className="searchbar">
                 <input
                   type="text"
@@ -130,7 +130,7 @@ export const Header: React.FC = () => {
               </label>
             </div>
           </div>
-          <div className="navbar-end flex gap-6">
+          <div className="navbar-end flex gap-6 max-md:hidden">
             <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]" >
               <Image src="/github-icon.png" alt="logo github" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
             </Link>
@@ -202,7 +202,7 @@ export const Header: React.FC = () => {
   </nav>
 </div>
 
-      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 hidden">
+      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 ">
         <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
           Quel projet vous souhaitez ?
         </Typography>

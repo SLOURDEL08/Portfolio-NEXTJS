@@ -38,19 +38,19 @@ const Projects: React.FC = () => {
             <TransitionPage>
 
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8 '>
-        <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-6'>
+        <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
           <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
-            <Image src="/applelay.png" width="45" height="45" alt='de' className='filesimg max-[900px]:w-[45px] max-[900px]:h-[45px]'/>
-            <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-3xl semib'>
+            <Image src="/applelay.png" width="45" height="45" alt='de' className='filesimg max-[900px]:w-[35px] max-[900px]:h-[35px]'/>
+            <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
               Mes projets
             </Typography>
             <div>
          <Slider/>
          </div>
           </div>
-          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-center strocked leading-loose w-[70%] max-[900px]:w-full max-[900px]:text-left m-auto mb-2 ">
-            {"Bienvenue sur ma page de portfolio ! Découvrez mes derniers projets professionnels, mes réalisations de formation et mes créations personnelles."}
-          </Typography>
+          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
+      {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
+    </Typography>
         
         </div>
         <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
