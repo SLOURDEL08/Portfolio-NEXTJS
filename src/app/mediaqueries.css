@@ -97,3 +97,12 @@ transition:0.2s ease-in-out                                }
         background-color: red!important;
         padding: 20px;
     }
+
+    @media screen and (max-width: 680px) {
+
+
+    .borbot b{
+        text-decoration: underline;
+        text-decoration-thickness:3px !important;
+        text-underline-offset: 8px!important;
+      } }
