@@ -10,6 +10,11 @@ import Slider from '@/app/modules/slider/slider';
 import '@/app/globals.scss';
 import Segmented from '@/app/modules/segmentedControl/segmented';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
+import '@/app/globals.scss';
+import '@/app/globals.css';
+
+import '@/app/mediaqueries.css'
+
 
 
 
@@ -23,19 +28,19 @@ const HomePage: React.FC = () => {
 
       <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
       <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-16'>
-  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
+  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px] max-[680px]:w-[150px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
     
   </div>
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-3xl'>
+    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
       Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
     </Typography>
     </div>
    
     
-    <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-sm max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
+    <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
       {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
     </Typography>
     <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>

@@ -65,6 +65,13 @@ transition:0.2s ease-in-out                                }
         display: grid;
         grid-template-columns: 1fr!important;
       }
+
+      .background-topgradient{
+        background-image: url('/bgr.png');
+        background-position: top left!important;
+        opacity: 0.95!important;
+    
+      }
     
 
       
@@ -84,3 +91,9 @@ transition:0.2s ease-in-out                                }
     .mtneg{
         margin-top:3em
     }}
+
+
+    .hpd{
+        background-color: red!important;
+        padding: 20px;
+    }
