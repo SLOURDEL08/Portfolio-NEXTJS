@@ -8,7 +8,7 @@ import Segmented from '@/app/modules/segmentedControl/segmented';
 import '@/app/globals.scss';
 import '@/app/modules/types/types';
 import Link from 'next/link';
-import { Slider } from '@nextui-org/react';
+import Slider from '@/app/modules/slider/slider';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 
 const Projects: React.FC = () => {
@@ -40,18 +40,19 @@ const Projects: React.FC = () => {
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8 '>
         <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
           <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
-            <Image src="/applelay.png" width="45" height="45" alt='de' className='filesimg max-[900px]:w-[35px] max-[900px]:h-[35px]'/>
+          <Image src="/applelay.png" width="50" height="50" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
             <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
               Mes projets
             </Typography>
-            <div>
-         <Slider/>
-         </div>
+           
           </div>
-          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
-      {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
+          <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-center strocked  max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose w-[80%] m-auto">
+      {"Retrouvrez tous mes projets de développement web, de graphisme, back-end/front-end et plus...."}
     </Typography>
         
+        </div>
+        <div className=' rounded-3xl mb-10'>
+          <Slider className='projage'/>
         </div>
         <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
           <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8  parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>

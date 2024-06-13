@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import clsx from 'clsx';
 
-const Slider = () => {
+const Slider = ({ className = '' }) => {
   return (
-    <div className="custom-slider">
+    <div className={clsx("custom-slider", className)}>
       <div className="custom-slide-track grayz ">
         <div className="custom-slide">
           <Image src="/slider/html.png" width="100" height="100" alt="" />

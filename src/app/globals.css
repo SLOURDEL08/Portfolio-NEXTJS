@@ -569,12 +569,39 @@ position: fixed;
   background-color: rgba(0, 0, 0, 0); /* Fond transparent initial */
 }
 
+.parentproject:hover .filesimg{
+  background:#fff;
+}
+
+.custom-slider.projage{
+filter: grayscale(0.7);
+opacity: 0.8;
+}
+
+.custom-slider.projage .custom-slide-track{
+  gap:60px
+  }
 
 .profilpiced {
   flex-grow: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
-  background-image: url('/cesde.png');
+  background-image: url('/cesded.png');
   background-position: 100%;
   background-size: cover;
+  background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+    transition:  background 0.2s ease-in-out
+}
+
+.profilpiced:hover {
+  flex-grow: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
+  background-image: url('/cesded.png');
+  background-position: 100%;
+  background-size: cover;
+  background: linear-gradient(45deg, #7A24E8, #7924e864, #7A24E8, #7924e864, #7A24E8, #7924e864);
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+    transition:  background 0.2s ease-in-out
 }
 
 

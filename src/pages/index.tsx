@@ -28,8 +28,9 @@ const HomePage: React.FC = () => {
 
       <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
       <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-16'>
-  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[160px] max-[680px]:w-[160px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
-    
+  <div className='flex flex-col overflow-hidden items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[160px] max-[680px]:w-[160px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
+  <Image src='/cesded.png' width="599" height="599" alt='de' className='h-full w-full object-cover'/>
+
   </div>
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
@@ -87,14 +88,14 @@ const HomePage: React.FC = () => {
   <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full '>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
-  <Image src="/workin.png" width="40" height="20" alt='de' className='filesimg'/>
+  <Image src="/expwork.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
       Dernières expériences
     </Typography>
     </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4 p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:py-4 p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -110,7 +111,7 @@ const HomePage: React.FC = () => {
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4  p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10]  max-[900px]:py-4  p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -122,11 +123,11 @@ const HomePage: React.FC = () => {
         </div>
         </div>
         <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2022/2023
+          2022/23
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:p-0 max-[900px]:py-4  p-2 px-4'>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:py-4  p-2 px-4'>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
           <div className='grid grid-col '>
             <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -138,7 +139,7 @@ const HomePage: React.FC = () => {
         </div>
         </div>
         <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2021/2022
+          2021/22
         </Typography> 
       </div>
 
@@ -151,7 +152,7 @@ const HomePage: React.FC = () => {
   <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full'>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
   <div className='flex items-center gap-5'>
-  <Image src="/studen.png" width="40" height="20" alt='de' className='filesimg'/>
+  <Image src="/formexp.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
       Formation
@@ -159,7 +160,7 @@ const HomePage: React.FC = () => {
     
     </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4   max-[900px]:py-4  '>
         <div className='flex justify-between items-center flex-wrap gap-x-8'>
         <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -175,7 +176,7 @@ const HomePage: React.FC = () => {
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:py-4  '>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -187,11 +188,11 @@ const HomePage: React.FC = () => {
         </div>
         </div>
         <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2022/2023
+          2022/23
         </Typography> 
       </div>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:p-0 max-[900px]:py-4  '>
+      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4 max-[900px]:py-4  '>
       <div className='flex justify-between items-center flex-wrap gap-x-8'>
       <div className='grid grid-col '>
           <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
@@ -203,7 +204,7 @@ const HomePage: React.FC = () => {
         </div>
         </div>
         <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2021/2022
+          2021/22
         </Typography> 
       </div>
 
@@ -226,7 +227,7 @@ const HomePage: React.FC = () => {
 
 <div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 max-[900px]:p-8 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
   <div className='flex gap-5 items-center'>
-  <Image src="/applelay.png" width="35" height="35" alt='de' className='filesimg'/>
+  <Image src="/applelay.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
       Mes projets
