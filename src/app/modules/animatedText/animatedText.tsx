@@ -2,8 +2,14 @@ import { Typography } from '@/app/modules/typography/typography';
 import { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const words = ['Bonjour', 'Hello', 'Hola', '你好', 'مرحبا', 'Привет'];
-
+const words = [
+  'Bienvenue', 
+  'Welcome', 
+  'Bienvenidos', 
+  '欢迎', 
+  'أهلاً وسهلاً', 
+  'Добро пожаловать'
+];
 const TransitionWord = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -30,9 +36,9 @@ const TransitionWord = () => {
         variant='h1'
         component='h1'
         fontFamily='ClashDisplay'
-        className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] max-[450px]:text-4xl text-left z-10 text-slide max-[900px]:text-5xl max-[450px]:mb-1 mb-2'
+        className='bg-clip-text text-transparent  bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight tracking-lighter  borbot max-[450px]:text-4xl mb-2'
       >
-        {words[currentWordIndex]} 👋 ,
+        <b>{words[currentWordIndex]}</b>  👋
       </Typography>
     </CSSTransition>
   );

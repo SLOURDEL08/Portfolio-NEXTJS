@@ -28,15 +28,14 @@ const HomePage: React.FC = () => {
 
       <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
       <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-16'>
-  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[150px] max-[680px]:w-[150px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
+  <div className='flex flex-col  items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[180px] max-[680px]:w-[180px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]' >
     
   </div>
   <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
     <div>
     <AnimatedText />
-    <Typography theme='white' weight='bold' variant='h1' component='h2' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-tight max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
-      Bienvenue sur mon Portfolio <b className='italic font-inter font-thin tracking-tighter	'>v2</b> &nbsp;2024
-    </Typography>
+    <Typography theme='white'  variant='h1' component='h2' fontFamily='ClashDisplay' className=' semib bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
+   Découvrez mon Portfolio 2024 Front-end    </Typography>
     </div>
    
     

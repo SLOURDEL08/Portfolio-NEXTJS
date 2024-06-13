@@ -301,6 +301,12 @@ table {
   backdrop-filter: blur(2px);
 }
 
+.borbot b{
+  text-decoration: underline;
+  text-decoration-thickness:4px ;
+  text-underline-offset: 10px;
+}
+
 .background-topgradient{
   background-image: url('/bgr.png');
   background-position: top center;
