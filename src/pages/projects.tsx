@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
 
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8 '>
         <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
-          <div className='flex gap-8 items-center justify-center max-[900px]:justify-start'>
+          <div className='flex gap-8 items-center justify-center '>
           <Image src="/applelay.png" width="50" height="50" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
             <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
               Mes projets
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
               key={project.id}
               className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
             >
-              <Image src={project.image} width="500" height="500" alt={project.title} className='h-[100%] w-[100%] rounded-3xl object-cover object-left grayzc' />
+              <Image src={project.image} width="500" height="500" alt={project.title} className='h-[100%] w-[100%] rounded-2xl object-cover object-left grayzc' />
               <div className={`overlay-projectitem`}>
                 <div className='overlay-projectitem-content'>
                  
@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
           <div className={`w-3/5 bg-[#ffffff20] max-[900px]:bg-[#ffffff00] max-[900px]:pt-5 parentprojected p-10 max-[900px]:p-8 carouzel relative rounded-3xl max-[900px]:w-[100%]`}>
             <div className={`flex flex-col gap-8 project-details ${!isTransitioning ? 'active' : ''}`}>
               <div className='flex items-center gap-4'>
-              <Image src={project.symbol} width="500" height="500" alt={project.title} className='h-[40px] w-[40px] rounded-xl' />
+              <Image src={project.symbol} width="50" height="50" alt={project.title} className='h-[40px] w-[40px] rounded-lg' />
               <Typography theme='white' weight='medium' variant='h5' component='span' fontFamily='ClashDisplay' className=''>
                 {project.title}
               </Typography>

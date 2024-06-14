@@ -606,6 +606,8 @@ opacity: 0.8;
 
 
 
+
+
 .parentproject{
   transition: 0.3s ease-in-out;    
   
@@ -1323,7 +1325,7 @@ display: block;                          margin-top: 100px;
 
 
             .project-itemm .overlay-projectitem{
-height:100%;border-radius: 1.5rem;
+height:100%;border-radius: 1rem;
 backdrop-filter: blur(0px);
 background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
 background-size: 400% 400%;
@@ -1338,12 +1340,12 @@ transition: background 0.3s ease-in-out!important
             }
 
             .project-itemm .overlay-projectitem img{
-              height:100%;border-radius: 1.4rem;
+              height:100%;border-radius: 1rem;
               
                           }
 
             .project-itemm .overlay-projectitem-content{
-              border-radius: 1.4rem;
+              border-radius: 1rem;
 
             }
 
