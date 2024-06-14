@@ -66,12 +66,7 @@ transition:0.2s ease-in-out                                }
         grid-template-columns: 1fr!important;
       }
 
-      .background-topgradient{
-        background-image: url('/bgr.png');
-        background-position: top left!important;
-        opacity: 0.95!important;
-    
-      }
+      
     
 
       
@@ -105,4 +100,18 @@ transition:0.2s ease-in-out                                }
         text-decoration: underline;
         text-decoration-thickness:3px !important;
         text-underline-offset: 8px!important;
-      } }
+      }
+
+      .custom-slide img{
+        width: 30px!important;
+      }
+
+      .custom-slide-track{
+gap:30px!important
+      }
+
+      .background-topgradient{
+        background-image: url('/bgrd.png')!important;
+      }
+    
+    }
