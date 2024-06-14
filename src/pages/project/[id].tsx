@@ -77,39 +77,39 @@ const ProjectDetailsPage = () => {
             </div>
           </div>
 
-          <div className='mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex max-[900px]:flex-wrap max-[900px]:h-[1 max-[900px]:mt-8'>
+          <div className='mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex  max-[900px]:h-[1 max-[900px]:mt-8'>
             {/* Barre de navigation */}
-            <div className={`flex items-center justify-between gap-8 cursor-pointer handled p-4 px-6 transit rounded-2xl ${selectedSection === 'presentation' ? 'activesection' : ''}`} onClick={() => handleSectionClick('presentation')}>
+            <div className={`flex items-center justify-between gap-8 cursor-pointer handled max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 p-4 px-6 transit rounded-2xl ${selectedSection === 'presentation' ? 'activesection' : ''}`} onClick={() => handleSectionClick('presentation')}>
               {selectedSection === 'presentation' && (
-                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
+                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-base'>
                   Présentation
                 </Typography>
               )}
-              <Image src="/dashboard.png" width="23" height="23" alt='de' className='' />
+              <Image src="/dashboard.png" width="23" height="23" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
             </div>
 
-            <div className={`flex items-center justify-between gap-8 cursor-pointer  handled p-4 px-6 transit rounded-2xl ${selectedSection === 'ressources' ? 'activesection' : ''}`} onClick={() => handleSectionClick('ressources')}>
+            <div className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${selectedSection === 'ressources' ? 'activesection' : ''}`} onClick={() => handleSectionClick('ressources')}>
               {selectedSection === 'ressources' && (
                 <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
                   Ressources
                 </Typography>
               )}
-              <Image src="/open-file.png" width="25" height="25" alt='de' className='' />
+              <Image src="/open-file.png" width="25" height="25" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
             </div>
 
-            <div className={`flex items-center justify-between gap-8 cursor-pointer  handled p-4 px-6 transit rounded-2xl ${selectedSection === 'gallery' ? 'activesection' : ''}`} onClick={() => handleSectionClick('gallery')}>
+            <div className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${selectedSection === 'gallery' ? 'activesection' : ''}`} onClick={() => handleSectionClick('gallery')}>
               {selectedSection === 'gallery' && (
                 <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
                   Gallery
                 </Typography>
               )}
-              <Image src="/gallery.png" width="25" height="25" alt='de' className='' />
+              <Image src="/gallery.png" width="25" height="25" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
             </div>
 
             {/* Ajoutez des boutons similaires pour d'autres sections avec des fonctions onClick correspondantes */}
           </div>
           <div className='flex pt-10 gap-10 max-[900px]:block max-[900px]:pt-0'>
-            <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[100%] max-[900px]:w-[100%] max-[900px]:mt-8 parentproject '>
+            <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[100%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject '>
               {/* Affichage conditionnel des sections */}
               {selectedSection === 'presentation' && (
                 <div className='presentation-block flex flex-col gap-8 '>
