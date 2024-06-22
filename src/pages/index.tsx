@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
     <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
     <div className='flex gap-6 items-center max-[900px]:py-2'>
     <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-xs">
+  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-lead">
     Mon CV
     <Image src='/download.png' width="14" height="14" alt='de' />
     </Typography>
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
       
  
   <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-xs">
+  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-lead">
     Mes projets
     <Image src='/top-right-arrow.png' width="14" height="14" alt='de' />
     </Typography>

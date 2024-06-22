@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -63,6 +64,8 @@ const ProjectDetailsPage = () => {
   const handleSectionClick = (section: string) => {
     setSelectedSection(section);
   };
+
+  
   
   return (
     <Layout>
@@ -138,51 +141,59 @@ const ProjectDetailsPage = () => {
               {/* Affichage conditionnel des sections */}
               {selectedSection === 'presentation' && (
                 <div className='presentation-block flex flex-col gap-8 '>
-                  <div className='liens-block flex gap-10 max-[1100px]:flex-col'>
+                  <div className='liens-block  gap-10 max-[1100px]:flex-col'>
                     <Image src={project.image} width="800" height="500" alt='de' className='w-[100%] h-[200px] object-cover object-top rounded-3xl'/>
-                    <div className='flex flex-col gap-6'>
-                      <div className='flex justify-start gap-10 '>
-                        <div className='flex flex-wrap items-center justify-center gap-3 w-[auto]'>
-                          <Typography theme="graylight" weight="medium" variant="body-sm" component="p" fontFamily="ClashDisplay" className="p-2 bg-[#00000040]  transz  rounded-lg px-3">
-                            FEVRIER 2024
-                          </Typography>
-                        </div>
-                        <div className='flex flex-wrap items-center justify-center gap-3 w-[auto]'>
-                          <Typography theme="graylight" weight="medium" variant="body-sm" component="p" fontFamily="ClashDisplay" className="p-2 bg-[#00000040] transz rounded-lg px-3">
-                            1 JOUR
-                          </Typography>
-                        </div>
-                        <div className='flex flex-wrap items-center justify-center gap-3 w-[auto]'>
-                          <Typography theme="graylight" weight="medium" variant="body-sm" component="p" fontFamily="ClashDisplay" className="p-2 bg-[#00000040]  transz  rounded-lg px-3">
-                            PERSONNEL
-                          </Typography>
-                        </div>
-                      </div>
-                      <Typography theme="graylight" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
-                        {project.description}
-                      </Typography>
-                    </div>
+                   
+                    
                   </div>
+                  <div className='flex justify-evenly gap-10 bg-lin p-3 rounded-xl flex-wrap gap-y-4'>
+                     
+                     <Link href="https://github.com" className='flex gap-4 items-center' >
+                     <Image src="/github.png" width="800" height="500" alt='de' className='w-[23px] h-[23px]'/>
+
+                       <Typography theme="white" weight="medium" variant="body-lg" component="p" fontFamily="ClashDisplay" className="">
+                         REPOSITORY 
+                       </Typography>
+                       <Image src="/top-right-arrow.png" width="800" height="500" alt='de' className='w-[15px] h-[15px]'/>
+                     </Link>
+                     <div className='flex gap-4 items-center'>
+                       <Typography theme="white" weight="medium" variant="body-lg" component="p" fontFamily="ClashDisplay" className="">
+                         DATE &nbsp;:
+                       </Typography>
+                       <Typography theme="white" weight="light" variant="body-lg" component="p" fontFamily="ClashDisplay" className="">
+                         10/02/2024
+                       </Typography>
+                     </div>
+                     <div className='flex gap-4 items-center'>
+                       <Typography theme="white" weight="medium" variant="body-lg" component="p" fontFamily="ClashDisplay" className="">
+                         #FORMATION 
+                       </Typography>
+                     
+                     </div>
+                  
+                  
+                 </div>
+                  
+                  <div className='flex flex-col gap-6'>
+               
+               <Typography theme="graylight" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left  w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
+                 {project.description}
+               </Typography>
+             </div>
+           
                 </div>
               )}
               {selectedSection === 'ressources' && project.gallery && (
                 <div className='documentation-block flex flex-col gap-8'>
                   <div className=''>
                     <div className='flex gap-8'>
-                      <div className='flex flex-col gap-8 w-[30%]'>
-                        <div className='relative wek'>
-                          <Image src={project.gallery.mkt} width="500" height="300" alt='de' className='h-full w-[200px] object-cover object-left  rounded-3xl' />
-                          <div className='overmaket rounded-3xl flex justify-start items-center'>
-                            <Image src="/linked.png" width="60" height="60" alt='de' className='' />
-                          </div>
-                        </div>
-                      </div>
-                      <div className='flex flex-col gap-8 w-[70%]'>
-                        <div className='exp-sec grid'>
-                          <Typography theme='white' weight='medium' variant='body-lg' component='span' fontFamily='ClashDisplay' className='mb-6'>
+                     
+                      <div className='flex flex-col gap-8 w-[100%]'>
+                        <div className='exp-sec'>
+                          <Typography theme='white' weight='medium' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
                             Quelques mots clés &nbsp;&nbsp;⬇️
                           </Typography>
-                          <div className='flex justify-start items-center flex-wrap gap-x-8 capitalize gap-y-6 italic'>
+                          <div className='flex justify-start items-center flex-wrap gap-x-8 capitalize gap-y-6 italic mt-6'>
                             {project.tags.map((tag, index) => (
                               <Typography 
                                 key={index} 
@@ -214,8 +225,8 @@ const ProjectDetailsPage = () => {
                                 <Image src={project.gallery.topright} width="500" height="300" alt='de' className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl' />
                                 </div>
                                 </div>
-                                <div className='flex gap-8'>
-                                <div className='flex gap-8 flex-wrap w-[70%]'>
+                                <div className='flex max-[550px]:flex-col gap-8'>
+                                <div className='flex gap-8 flex-wrap  max-[550px]:w-full w-[70%]'>
                                 <div className='w-[100%]'>
                                 <Image src={project.gallery.big} width="500" height="300" alt='de' className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl' />
                                 </div>
@@ -228,9 +239,9 @@ const ProjectDetailsPage = () => {
                                 </div>
                                 </div>
                                 </div>
-                                <div className='flex gap-8 flex-wrap w-[30%]'>
+                                <div className='flex gap-8 flex-wrap  max-[550px]:w-full w-[30%]'>
                                 <div className='w-[100%]'>
-                                <Image src={project.gallery.vertical} width="500" height="300" alt='de' className=' w-[100%] imglong  transitioned hover:brightness-150 object-cover object-left  rounded-3xl' />
+                                <Image src={project.gallery.vertical} width="500" height="300" alt='de' className=' w-[100%]  max-[550px]:max-h-[250px] h-full imglong  transitioned hover:brightness-150 object-cover object-left  rounded-3xl' />
                                 </div>
                                 </div>
                                 </div>

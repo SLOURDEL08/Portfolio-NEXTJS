@@ -494,7 +494,10 @@ opacity: 1;  background-color: #7A24E8;border-color:#7A24E8
 
 }
 
+.bg-lin{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
 
+}
 
 
 .bordered{

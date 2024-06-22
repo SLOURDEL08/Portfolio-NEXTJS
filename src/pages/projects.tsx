@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
     </Typography>
         
         </div>
-        <div className=' rounded-3xl mb-14'>
+        <div className=' rounded-3xl mb-14 max-[900px]:mb-10'>
           <Slider className='projage '/>
         </div>
         <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
