@@ -88,7 +88,7 @@ const Segmented: React.FC<SegmentedProps> = ({
                 <div className='flex flex-col gap-2 w-[100%]'>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
-                      <Image src={project.symbol} width="25" height="25" alt='de' className='rounded shadowingsymbol' />
+                      <Image src={project.symbol} width="25" height="25" alt='de' className='min-h-[25px] min-w-[25px] object-cover rounded shadowingsymbol' />
                       <Typography theme='white' weight='bold' variant='body-base' component='p' fontFamily='ClashDisplay' className='text-left hover:text-[white] linked-color'>
                         {project.title}
                       </Typography>

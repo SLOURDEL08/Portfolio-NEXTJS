@@ -124,7 +124,7 @@ const Projects: React.FC = () => {
         </div>
         <div className=' bg-[#ffffff20] parentproject p-10 max-[900px]:p-8 rounded-3xl w-[100%]'>
           <Segmented
-            numProjects={8}
+           
             className='proppage'
             useFilters={true}
             numCols="grid-cols-4"

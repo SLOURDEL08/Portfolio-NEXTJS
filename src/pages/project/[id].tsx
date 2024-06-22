@@ -26,7 +26,6 @@ interface Project {
     botleft: string;
     botright: string;
     vertical: string;
-    mkt:string;
   };
 }
 

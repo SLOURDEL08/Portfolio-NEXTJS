@@ -6,7 +6,7 @@
       "image": "/projects/netflix/homepage.png",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
       "symbol": "/projects/netflix/symbol.png",
-      "categories": ["Full-stack"],
+      "categories": ["Front-end"],
       "tags": ["Front-end", "Integration", "JSON", "Carousel"],
       "link": "/netflix-project-page",
       "hoverBackgroundColor": "#370000d0",
@@ -30,86 +30,350 @@
       "image": "/ubereats.png",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
       "symbol": "/ubersymbol.png",
-      "categories": ["Wordpress"],
+      "categories": ["Front-end"],
       "tags": ["VueJs", "Javascript", "Homepage", "JSON","Filter", "Front-end", "Component", "Dynamique", "Router", "Responsive", "SearchBar", "VueRouter", "Integration"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/netflix/top-right.png",
-        "topleft": "/projects/netflix/top-left.png",
-      "botright": "/projects/netflix/bot-right.png",
-      "botleft": "/projects/netflix/bot-left.png",
-      "big": "/projects/netflix/big.png",
-      "vertical": "/projects/netflix/vertical.png",
-      "mkt": "/projects/netflix/mkt.png"
+        "topright": "/projects/uber/top-right.png",
+        "topleft": "/projects/uber/top-left.png",
+      "botright": "/projects/uber/bot-right.png",
+      "botleft": "/projects/uber/bot-left.png",
+      "big": "/projects/uber/big.png",
+      "vertical": "/projects/uber/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
     
     }
     },
     {
       "id": 3,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "Alliance Batiment ",
+      "slug": "abc-renov",
+      "image": "/projects/abc/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/abc/symbol.png",
+      "categories": ["Wordpress"],
+      "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/abc/top-right.png",
+        "topleft": "/projects/abc/top-left.png",
+      "botright": "/projects/abc/bot-right.png",
+      "botleft": "/projects/abc/bot-left.png",
+      "big": "/projects/abc/big.png",
+      "vertical": "/projects/abc/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     },
     {
       "id": 4,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "Booki ",
+      "slug": "booki",
+      "image": "/projects/booki/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/booki/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/booki/top-right.png",
+        "topleft": "/projects/booki/top-left.png",
+      "botright": "/projects/booki/bot-right.png",
+      "botleft": "/projects/booki/bot-left.png",
+      "big": "/projects/booki/big.png",
+      "vertical": "/projects/booki/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     },
     {
       "id": 5,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "Couvretanche ",
+      "slug": "couvretanche",
+      "image": "/projects/couvretanche/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/couvretanche/symbol.png",
+      "categories": ["Wordpress"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/couvretanche/top-right.png",
+        "topleft": "/projects/couvretanche/top-left.png",
+      "botright": "/projects/couvretanche/bot-right.png",
+      "botleft": "/projects/couvretanche/bot-left.png",
+      "big": "/projects/couvretanche/big.png",
+      "vertical": "/projects/couvretanche/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     },
     {
       "id": 6,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "Couvrassistance ",
+      "slug": "couvrassistance",
+      "image": "/projects/couvrassistance/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/couvrassistance/symbol.png",
+      "categories": ["Wordpress"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/couvrassistance/top-right.png",
+        "topleft": "/projects/couvrassistance/top-left.png",
+      "botright": "/projects/couvrassistance/bot-right.png",
+      "botleft": "/projects/couvrassistance/bot-left.png",
+      "big": "/projects/couvrassistance/big.png",
+      "vertical": "/projects/couvrassistance/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     },
     {
       "id": 7,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "FerrariBeverly ",
+      "slug": "ferrari",
+      "image": "/projects/ferrari/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/ferrari/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/ferrari/top-right.png",
+        "topleft": "/projects/ferrari/top-left.png",
+      "botright": "/projects/ferrari/bot-right.png",
+      "botleft": "/projects/ferrari/bot-left.png",
+      "big": "/projects/ferrari/big.png",
+      "vertical": "/projects/ferrari/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     },
     {
       "id": 8,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
-      "image": "/ubereats.png",
-      "symbol": "/ubersymbol.png",
-      "categories": ["Full-stack", "React js", "JSON"],
-      "tags": ["Front-end", "Integration", "JSON", "Carousel"],
+      "title": "KASA ",
+      "slug": "kasa",
+      "image": "/projects/kasa/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/kasa/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700e4"
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/kasa/top-right.png",
+        "topleft": "/projects/kasa/top-left.png",
+      "botright": "/projects/kasa/bot-right.png",
+      "botleft": "/projects/kasa/bot-left.png",
+      "big": "/projects/kasa/big.png",
+      "vertical": "/projects/kasa/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 9,
+      "title": "LaDigitoile ",
+      "slug": "ladigitoile",
+      "image": "/projects/ladigitoile/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/ladigitoile/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/ladigitoile/top-right.png",
+        "topleft": "/projects/ladigitoile/top-left.png",
+      "botright": "/projects/ladigitoile/bot-right.png",
+      "botleft": "/projects/ladigitoile/bot-left.png",
+      "big": "/projects/ladigitoile/big.png",
+      "vertical": "/projects/ladigitoile/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 10,
+      "title": "LesVanniers ",
+      "slug": "kasa",
+      "image": "/projects/lesvanniers/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/lesvanniers/symbol.png",
+      "categories": ["Wordpress"],
+      "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/lesvanniers/top-right.png",
+        "topleft": "/projects/lesvanniers/top-left.png",
+      "botright": "/projects/lesvanniers/bot-right.png",
+      "botleft": "/projects/lesvanniers/bot-left.png",
+      "big": "/projects/lesvanniers/big.png",
+      "vertical": "/projects/lesvanniers/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 11,
+      "title": "MonVieuxGrimoire",
+      "slug": "monvieuxgrimoire",
+      "image": "/projects/MVG/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/MVG/symbol.png",
+      "categories": ["Back-end"],
+      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/MVG/top-right.png",
+        "topleft": "/projects/MVG/top-left.png",
+      "botright": "/projects/MVG/bot-right.png",
+      "botleft": "/projects/MVG/bot-left.png",
+      "big": "/projects/MVG/big.png",
+      "vertical": "/projects/MVG/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 12,
+      "title": "PaulSavine",
+      "slug": "paulsavine",
+      "image": "/projects/paulsavine/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/paulsavine/symbol.png",
+      "categories": ["Wordpress"],
+      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/paulsavine/top-right.png",
+        "topleft": "/projects/paulsavine/top-left.png",
+      "botright": "/projects/paulsavine/bot-right.png",
+      "botleft": "/projects/paulsavine/bot-left.png",
+      "big": "/projects/paulsavine/big.png",
+      "vertical": "/projects/paulsavine/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 13,
+      "title": "RocketSchool",
+      "slug": "rocketschool",
+      "image": "/projects/rocketschool/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/rocketschool/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/rocketschool/top-right.png",
+        "topleft": "/projects/rocketschool/top-left.png",
+      "botright": "/projects/rocketschool/bot-right.png",
+      "botleft": "/projects/rocketschool/bot-left.png",
+      "big": "/projects/rocketschool/big.png",
+      "vertical": "/projects/rocketschool/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 14,
+      "title": "Sirius",
+      "slug": "sirius",
+      "image": "/projects/sirius/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/sirius/top-left.png",
+      "categories": ["Wordpress"],
+      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/sirius/top-right.png",
+        "topleft": "/projects/sirius/top-left.png",
+      "botright": "/projects/sirius/bot-right.png",
+      "botleft": "/projects/sirius/bot-left.png",
+      "big": "/projects/sirius/big.png",
+      "vertical": "/projects/sirius/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 15,
+      "title": "SophieBluel",
+      "slug": "sophiebluel",
+      "image": "/projects/sophiebluel/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/sophiebluel/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/sophiebluel/top-right.png",
+        "topleft": "/projects/sophiebluel/top-left.png",
+      "botright": "/projects/sophiebluel/bot-right.png",
+      "botleft": "/projects/sophiebluel/bot-left.png",
+      "big": "/projects/sophiebluel/big.png",
+      "vertical": "/projects/sophiebluel/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 16,
+      "title": "Tesla",
+      "slug": "sophiebluel",
+      "image": "/projects/tesla/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/tesla/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["ReactJs", "Y-Scroll", "MegaMenu", "Homepage", "Integration", "SectionScroll", "useState", ""],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/tesla/top-right.png",
+        "topleft": "/projects/tesla/top-left.png",
+      "botright": "/projects/tesla/bot-right.png",
+      "botleft": "/projects/tesla/bot-left.png",
+      "big": "/projects/tesla/big.png",
+      "vertical": "/projects/tesla/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
+    },
+    {
+      "id": 17,
+      "title": "Toast Collectif",
+      "slug": "sophiebluel",
+      "image": "/projects/toast/homepage.png",
+      "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
+      "symbol": "/projects/toast/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["Wordpress", "JS", "CSS", "Responsive", "Tracking", "Maquette"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/toast/top-right.png",
+        "topleft": "/projects/toast/top-left.png",
+      "botright": "/projects/toast/bot-right.png",
+      "botleft": "/projects/toast/bot-left.png",
+      "big": "/projects/toast/big.png",
+      "vertical": "/projects/toast/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
+    
+    }
     }
   ]
   
