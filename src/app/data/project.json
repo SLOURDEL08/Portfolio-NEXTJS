@@ -47,29 +47,29 @@
     },
     {
       "id": 3,
-      "title": "Alliance Batiment ",
+      "title": "Alliance Batiment",
       "slug": "abc-renov",
-      "image": "/projects/abc/homepage.png",
+      "image": "/public/projects/abc/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/abc/symbol.png",
+      "symbol": "/public/projects/abc/symbol.png",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/abc/top-right.png",
-        "topleft": "/projects/abc/top-left.png",
-      "botright": "/projects/abc/bot-right.png",
-      "botleft": "/projects/abc/bot-left.png",
-      "big": "/projects/abc/big.png",
-      "vertical": "/projects/abc/vertical.png",
-      "mkt": "/projects/abc/mkt.png"
+        "topright": "/public/projects/abc/top-right.png",
+        "topleft": "/public/projects/abc/top-left.png",
+      "botright": "/public/projects/abc/bot-right.png",
+      "botleft": "/public/projects/abc/bot-left.png",
+      "big": "/public/projects/abc/big.png",
+      "vertical": "/public/projects/abc/vertical.png",
+      "mkt": "/public/projects/abc/mkt.png"
     
     }
     },
     {
       "id": 4,
-      "title": "Booki ",
+      "title": "Booki",
       "slug": "booki",
       "image": "/projects/booki/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
@@ -91,7 +91,7 @@
     },
     {
       "id": 5,
-      "title": "Couvretanche ",
+      "title": "Couvretanche",
       "slug": "couvretanche",
       "image": "/projects/couvretanche/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
@@ -113,7 +113,7 @@
     },
     {
       "id": 6,
-      "title": "Couvrassistance ",
+      "title": "Couvrassistance",
       "slug": "couvrassistance",
       "image": "/projects/couvrassistance/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
@@ -135,7 +135,7 @@
     },
     {
       "id": 7,
-      "title": "FerrariBeverly ",
+      "title": "FerrariBeverly",
       "slug": "ferrari",
       "image": "/projects/ferrari/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
@@ -179,7 +179,7 @@
     },
     {
       "id": 9,
-      "title": "LaDigitoile ",
+      "title": "LaDigitoile",
       "slug": "ladigitoile",
       "image": "/projects/ladigitoile/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
