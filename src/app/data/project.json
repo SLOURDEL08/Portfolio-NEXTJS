@@ -27,7 +27,7 @@
       "id": 2,
       "title": "Uber Eats",
       "slug": "uber-eats",
-      "image": "/ubereats.png",
+      "image": "/projects/uber/homepage.png",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
       "symbol": "/ubersymbol.png",
       "categories": ["Front-end"],
