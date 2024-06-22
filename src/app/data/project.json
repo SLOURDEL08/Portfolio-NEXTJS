@@ -49,20 +49,20 @@
       "id": 3,
       "title": "Alliance Batiment ",
       "slug": "abc-renov",
-      "image": "/projects/abc/homepage.png",
+      "image": "/projects/ABC/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/abc/symbol.png",
+      "symbol": "/projects/ABC/symbol.png",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/abc/top-right.png",
-        "topleft": "/projects/abc/top-left.png",
-      "botright": "/projects/abc/bot-right.png",
-      "botleft": "/projects/abc/bot-left.png",
-      "big": "/projects/abc/big.png",
-      "vertical": "/projects/abc/vertical.png",
+        "topright": "/projects/ABC/top-right.png",
+        "topleft": "/projects/ABC/top-left.png",
+      "botright": "/projects/ABC/bot-right.png",
+      "botleft": "/projects/ABC/bot-left.png",
+      "big": "/projects/ABC/big.png",
+      "vertical": "/projects/ABC/vertical.png",
       "mkt": "/projects/uber/mkt.png"
     
     }
