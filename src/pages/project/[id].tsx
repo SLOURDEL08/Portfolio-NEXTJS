@@ -71,17 +71,17 @@ const ProjectDetailsPage = () => {
           <div className='grid pt-2 grid-cols-1 gap-10 py-4 max-[900px]:pt-16 max-[900px]:pb-0'>
             <div className='flex gap-8 items-center justify-center max-[900px]:justify-start '>
               <Image src={project.symbol} width="60" height="50" alt='de' className='filesimg rounded-xl max-[900px]:w-[45px] max-[900px]:h-[45px] shadowingsymbol'/>
-              <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-[900px]:text-3xl projectpp semib'>
+              <Typography theme='graylight' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-[900px]:text-3xl projectpp semib'>
                 {project.title}
               </Typography>
             </div>
           </div>
 
-          <div className='mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex  max-[900px]:h-[1 max-[900px]:mt-8'>
+          <div className='mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex  min-[900px]:hidden max-[900px]:mt-8 '>
             {/* Barre de navigation */}
             <div className={`flex items-center justify-between gap-8 cursor-pointer handled max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 p-4 px-6 transit rounded-2xl ${selectedSection === 'presentation' ? 'activesection' : ''}`} onClick={() => handleSectionClick('presentation')}>
               {selectedSection === 'presentation' && (
-                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-base'>
+                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
                   Présentation
                 </Typography>
               )}
@@ -90,7 +90,7 @@ const ProjectDetailsPage = () => {
 
             <div className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${selectedSection === 'ressources' ? 'activesection' : ''}`} onClick={() => handleSectionClick('ressources')}>
               {selectedSection === 'ressources' && (
-                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
+                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
                   Ressources
                 </Typography>
               )}
@@ -99,7 +99,7 @@ const ProjectDetailsPage = () => {
 
             <div className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${selectedSection === 'gallery' ? 'activesection' : ''}`} onClick={() => handleSectionClick('gallery')}>
               {selectedSection === 'gallery' && (
-                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco'>
+                <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
                   Gallery
                 </Typography>
               )}
@@ -108,8 +108,33 @@ const ProjectDetailsPage = () => {
 
             {/* Ajoutez des boutons similaires pour d'autres sections avec des fonctions onClick correspondantes */}
           </div>
-          <div className='flex pt-10 gap-10 max-[900px]:block max-[900px]:pt-0'>
-            <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[100%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject '>
+       
+          <div className='flex pt-10 gap-10 min-[900px]:w-[100%] max-[900px]:block max-[900px]:pt-0'>
+       
+<div className='flex flex-col gap-8 w-[30%] max-[900px]:hidden'>
+  <div className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${selectedSection === 'presentation' ? 'activesection' : ''}`} onClick={() => handleSectionClick('presentation')}>
+    <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
+      Présentation
+    </Typography>
+    <Image src="/dashboard.png" width="23" height="23" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
+  </div>
+  <div className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${selectedSection === 'ressources' ? 'activesection' : ''}`} onClick={() => handleSectionClick('ressources')}>
+    <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
+      Ressources
+    </Typography>
+    <Image src="/open-file.png" width="25" height="25" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
+  </div>
+  <div className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${selectedSection === 'gallery' ? 'activesection' : ''}`} onClick={() => handleSectionClick('gallery')}>
+    <Typography theme='white' weight='medium' variant='lead' component='span' fontFamily='SanFrancisco' className='max-[500px]:text-lg'>
+      Gallery
+    </Typography>
+    <Image src="/gallery.png" width="25" height="25" alt='de' className='max-[500px]:w-[20px] max-[500px]:h-[20px]' />
+  </div>
+</div>
+
+
+        
+            <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[70%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject '>
               {/* Affichage conditionnel des sections */}
               {selectedSection === 'presentation' && (
                 <div className='presentation-block flex flex-col gap-8 '>
@@ -215,6 +240,7 @@ const ProjectDetailsPage = () => {
                                 {/* Ajoutez des conditions similaires pour d'autres sections */}
                                 </div>
                                 </div>
+                             
                                 </Main>
                                 </TransitionPage>
                                 </Layout>

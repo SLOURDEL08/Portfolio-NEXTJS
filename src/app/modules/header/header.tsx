@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import projects from "@/app/data/project.json";
 import { Typography } from "../typography/typography";
+import { useRouter } from "next/router"; // Import useRouter hook
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,6 +12,7 @@ export const Header: React.FC = () => {
   const [hasText, setHasText] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+  const router = useRouter(); // Initialize useRouter hook
 
   useEffect(() => {
     const handleScroll = () => {
@@ -151,53 +153,59 @@ export const Header: React.FC = () => {
   </div>
    
   <nav className="">
-    <ul className={menuOpen ? "" : "hidden"}>
-      <div className="h-[87vh] flex justify-center p-14">
-      <div className=" flex flex-col items-center justify-center gap-14 mt-10">
-              <Link href="/" className=" flex border border-stone-800 gap-8 max-[900px]:gap-6 items-center opacity-80 max-w-full hover:opacity-100 bgfg rounded-2xl p-8 max-[900px]:p-7" > 
-              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
-                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande max-[900px]:text-3xl  ease-in-out">Accueil</Typography>
-              </Link>
-              <Link href="/projects" className=" flex border border-stone-800  max-[900px]:gap-6 opacity-80 hover:opacity-100 bgfg bg-[#ffffff10] p-8 max-[900px]:p-7  border-[#ffffff20] rounded-2xl gap-8 items-center " > 
-              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
+  <ul className={menuOpen ? "" : "hidden"}>
+      <div className=" flex justify-start ">
+      <div className="flex items-center gap-4 mt-10 flex-wrap">
+  <Link href="/" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/" ? "activesection" : ""}`}>
+    <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+    {router.pathname === "/" ? (
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+        Accueil
+      </Typography>
+    ) : null}
+  </Link>
+  <Link href="/projects" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
+    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+    {router.pathname === "/projects" ? (
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+        Projets
+      </Typography>
+    ) : null}
+  </Link>
+  <Link href="/contact" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
+    <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+    {router.pathname === "/contact" ? (
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+        Contact
+      </Typography>
+    ) : null}
+  </Link>
+</div>
 
-                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[900px]:text-3xl hover:opacity-100">Projets</Typography>
-              </Link>
-              <Link href="/projects" className=" flex border border-stone-800  gap-8 max-[900px]:gap-6 items-center opacity-80 bgfg hover:opacity-100  rounded-2xl p-8 max-[900px]:p-7"> 
-              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[35px] max-[900px]:w-[35px]" />
-
-                <Typography theme="white" variant="h3" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out max-[900px]:text-3xl hover:opacity-100">Contact</Typography>
-              </Link>
-            </div>
-
-      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50">
-        <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
-          Quel projet vous souhaitez ?
-        </Typography>
-        {searchResults.length > 0 && (
-          <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
-            {searchResults.slice(0, 3).map((result) => (
-              <div className="" key={result.id}>
-                <Link href={result.link} passHref>
-                  <div className="">
-                    <div className="result-item">
-                      <Image src={result.symbol} alt={result.title} width={300} height={300} />
-                      <Typography theme="white" component="p" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="transition ease-in-out opacity-80">
-                        {result.title}
-                      </Typography>
+        <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50 max-[900px]:hidden">
+          <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
+            Quel projet vous souhaitez ?
+          </Typography>
+          {searchResults.length > 0 && (
+            <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
+              {searchResults.slice(0, 3).map((result) => (
+                <div className="" key={result.id}>
+                  <Link href={result.link} passHref>
+                    <div className="">
+                      <div className="result-item">
+                        <Image src={result.symbol} alt={result.title} width={300} height={300} />
+                        <Typography theme="white" component="p" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="transition ease-in-out opacity-80">
+                          {result.title}
+                        </Typography>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        )}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-      </div>
-   
-   
-
-   
     </ul>
   </nav>
 </div>

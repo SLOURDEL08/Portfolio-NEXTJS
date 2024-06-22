@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
         <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
           <div className='flex gap-8 max-[500px]:gap-6 items-center justify-center '>
           <Image src="/applelay.png" width="50" height="50" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl max-[500px]:w-[40px] max-[500px]:h-[40px]'/>
-            <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
+            <Typography theme='graylight' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
               Mes projets
             </Typography>
            
@@ -51,8 +51,8 @@ const Projects: React.FC = () => {
     </Typography>
         
         </div>
-        <div className=' rounded-3xl mb-10'>
-          <Slider className='projage'/>
+        <div className=' rounded-3xl mb-14'>
+          <Slider className='projage '/>
         </div>
         <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
           <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8  parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
