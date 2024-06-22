@@ -3,9 +3,9 @@
       "id": 1,
       "title": "Netflix",
       "slug": "netflix",
-      "image": "/projects/NETFLIX/homepage.png",
+      "image": "/projects/netflix/homepage.png",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
-      "symbol": "/projects/NETFLIX/symbol.png",
+      "symbol": "/projects/netflix/symbol.png",
       "categories": ["Front-end"],
       "tags": ["Front-end", "Integration", "JSON", "Carousel"],
       "link": "/netflix-project-page",
@@ -13,12 +13,12 @@
       "repoUrl": "https://uber.com",
       "pageUrl":"https://youtube.com",
       "gallery": { 
-        "topright": "/projects/NETFLIX/top-right.png",
-        "topleft": "/projects/NETFLIX/top-left.png",
-      "botright": "/projects/NETFLIX/bot-right.png",
-      "botleft": "/projects/NETFLIX/bot-left.png",
-      "big": "/projects/NETFLIX/big.png",
-      "vertical": "/projects/NETFLIX/vertical.png",
+        "topright": "/projects/netflix/top-right.png",
+        "topleft": "/projects/netflix/top-left.png",
+      "botright": "/projects/netflix/bot-right.png",
+      "botleft": "/projects/netflix/bot-left.png",
+      "big": "/projects/netflix/big.png",
+      "vertical": "/projects/netflix/vertical.png",
       "mkt": "/projects/netflix/mkt.png"
     
     }
