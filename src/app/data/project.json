@@ -35,13 +35,13 @@
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/public/projects/uber/top-right.png",
-        "topleft": "/public/projects/uber/top-left.png",
-      "botright": "/public/projects/uber/bot-right.png",
-      "botleft": "/public/projects/uber/bot-left.png",
-      "big": "/public/projects/uber/big.png",
-      "vertical": "/public/projects/uber/vertical.png",
-      "mkt": "/public/projects/uber/mkt.png"
+        "topright": "/projects/uber/top-right.png",
+        "topleft": "/projects/uber/top-left.png",
+      "botright": "/projects/uber/bot-right.png",
+      "botleft": "/projects/uber/bot-left.png",
+      "big": "/projects/uber/big.png",
+      "vertical": "/projects/uber/vertical.png",
+      "mkt": "/projects/uber/mkt.png"
     
     }
     },
@@ -49,21 +49,21 @@
       "id": 3,
       "title": "Alliance Batiment",
       "slug": "abc-renov",
-      "image": "/public/projects/abc/homepage.png",
+      "image": "/projects/abc/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/public/projects/abc/symbol.png",
+      "symbol": "/projects/abc/symbol.png",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/public/projects/abc/top-right.png",
-        "topleft": "/public/projects/abc/top-left.png",
-      "botright": "/public/projects/abc/bot-right.png",
-      "botleft": "/public/projects/abc/bot-left.png",
-      "big": "/public/projects/abc/big.png",
-      "vertical": "/public/projects/abc/vertical.png",
-      "mkt": "/public/projects/abc/mkt.png"
+        "topright": "/projects/abc/top-right.png",
+        "topleft": "/projects/abc/top-left.png",
+      "botright": "/projects/abc/bot-right.png",
+      "botleft": "/projects/abc/bot-left.png",
+      "big": "/projects/abc/big.png",
+      "vertical": "/projects/abc/vertical.png",
+      "mkt": "/projects/abc/mkt.png"
     
     }
     },
