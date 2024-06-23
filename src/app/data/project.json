@@ -335,7 +335,7 @@
       "id": 16,
       "title": "Tesla",
       "slug": "tesla",
-      "image": "/projects/tesla/homepage.png",
+      "image": "/projects/teslahome/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
       "symbol": "/projects/tesla/symbol.png",
       "categories": ["Front-end"],
@@ -343,13 +343,13 @@
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/tesla/top-right.png",
-        "topleft": "/projects/tesla/top-left.png",
-      "botright": "/projects/tesla/bot-right.png",
-      "botleft": "/projects/tesla/bot-left.png",
-      "big": "/projects/tesla/big.png",
-      "vertical": "/projects/tesla/vertical.png",
-      "mkt": "/projects/tesla/mkt.png"
+        "topright": "/projects/teslahome/top-right.png",
+        "topleft": "/projects/teslahome/top-left.png",
+      "botright": "/projects/teslahome/bot-right.png",
+      "botleft": "/projects/teslahome/bot-left.png",
+      "big": "/projects/teslahome/big.png",
+      "vertical": "/projects/teslahome/vertical.png",
+      "mkt": "/projects/teslahome/mkt.png"
     
     }
     },
