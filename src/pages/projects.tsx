@@ -128,7 +128,7 @@ const Projects: React.FC = () => {
             className='proppage'
             useFilters={true}
             numCols="grid-cols-4"
-            responsiveBreakpoints={{ '1279': 6, '900': 4 }}
+         
           />
         </div>
       </Main>
