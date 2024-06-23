@@ -57,13 +57,13 @@
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/abc/top-right.png",
-        "topleft": "/projects/abc/top-left.png",
-      "botright": "/projects/abc/bot-right.png",
-      "botleft": "/projects/abc/bot-left.png",
-      "big": "/projects/abc/big.png",
-      "vertical": "/projects/abc/vertical.png",
-      "mkt": "/projects/abc/mkt.png"
+        "topright": "/projects/alliance/top-right.png",
+        "topleft": "/projects/alliance/top-left.png",
+      "botright": "/projects/alliance/bot-right.png",
+      "botleft": "/projects/alliance/bot-left.png",
+      "big": "/projects/alliance/big.png",
+      "vertical": "/projects/alliance/vertical.png",
+      "mkt": "/projects/alliance/mkt.png"
     
     }
     },
