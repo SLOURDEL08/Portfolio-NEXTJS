@@ -269,21 +269,21 @@
       "id": 13,
       "title": "RocketSchool",
       "slug": "rocketschool",
-      "image": "/projects/rocketschool/homepage.png",
+      "image": "/projects/rocketlanding/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/rocketschool/symbol.png",
+      "symbol": "/projects/rocketlanding/symbol.png",
       "categories": ["Front-end"],
       "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/rocketschool/top-right.png",
-        "topleft": "/projects/rocketschool/top-left.png",
-      "botright": "/projects/rocketschool/bot-right.png",
-      "botleft": "/projects/rocketschool/bot-left.png",
-      "big": "/projects/rocketschool/big.png",
-      "vertical": "/projects/rocketschool/vertical.png",
-      "mkt": "/projects/rocketschool/mkt.png"
+        "topright": "/projects/rocketlanding/top-right.png",
+        "topleft": "/projects/rocketlanding/top-left.png",
+      "botright": "/projects/rocketlanding/bot-right.png",
+      "botleft": "/projects/rocketlanding/bot-left.png",
+      "big": "/projects/rocketlanding/big.png",
+      "vertical": "/projects/rocketlanding/vertical.png",
+      "mkt": "/projects/rocketlanding/mkt.png"
     
     }
     },
