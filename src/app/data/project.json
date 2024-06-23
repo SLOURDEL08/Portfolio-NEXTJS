@@ -313,21 +313,21 @@
       "id": 15,
       "title": "SophieBluel",
       "slug": "sophiebluel",
-      "image": "/projects/sophiebluel/homepage.png",
+      "image": "/projects/sophiedesign/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/sophiebluel/symbol.png",
+      "symbol": "/projects/sophiedesign/symbol.png",
       "categories": ["Front-end"],
       "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/sophiebluel/top-right.png",
-        "topleft": "/projects/sophiebluel/top-left.png",
-      "botright": "/projects/sophiebluel/bot-right.png",
-      "botleft": "/projects/sophiebluel/bot-left.png",
-      "big": "/projects/sophiebluel/big.png",
-      "vertical": "/projects/sophiebluel/vertical.png",
-      "mkt": "/projects/sophiebluel/mkt.png"
+        "topright": "/projects/sophiedesign/top-right.png",
+        "topleft": "/projects/sophiedesign/top-left.png",
+      "botright": "/projects/sophiedesign/bot-right.png",
+      "botleft": "/projects/sophiedesign/bot-left.png",
+      "big": "/projects/sophiedesign/big.png",
+      "vertical": "/projects/sophiedesign/vertical.png",
+      "mkt": "/projects/sophiedesign/mkt.png"
     
     }
     },
