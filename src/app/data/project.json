@@ -295,7 +295,7 @@
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
       "symbol": "/projects/sirius/top-left.png",
       "categories": ["Wordpress"],
-      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "tags": ["WORDPRESS", "ELEMENTOR", "ANIMATION", "SLIDER", "CSS", "RESPONSIVE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
@@ -317,7 +317,7 @@
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
       "symbol": "/projects/sophiedesign/symbol.png",
       "categories": ["Front-end"],
-      "tags": ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH"],
+      "tags": ["OPENCLASSROOM", "INREGRATION", "JAVASCRIPT", "JSON", "RESPONSIVE", "FORM", "CRUD"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
