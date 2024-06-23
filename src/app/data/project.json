@@ -49,7 +49,7 @@
       "id": 3,
       "title": "Alliance Batiment",
       "slug": "abc-renov",
-      "image": "/projects/abc/homepage.png",
+      "image": "/projects/alliance/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
       "symbol": "/projects/abc/symbol.png",
       "categories": ["Wordpress"],
