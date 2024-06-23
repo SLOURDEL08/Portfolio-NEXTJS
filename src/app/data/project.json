@@ -137,21 +137,21 @@
       "id": 7,
       "title": "FerrariBeverly",
       "slug": "ferrari",
-      "image": "/projects/ferrari/homepage.png",
+      "image": "/projects/ferraribeverlyhills/homepage.png",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/ferrari/symbol.png",
+      "symbol": "/projects/ferraribeverlyhills/symbol.png",
       "categories": ["Front-end"],
       "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
       "gallery": { 
-        "topright": "/projects/ferrari/top-right.png",
-        "topleft": "/projects/ferrari/top-left.png",
-      "botright": "/projects/ferrari/bot-right.png",
-      "botleft": "/projects/ferrari/bot-left.png",
-      "big": "/projects/ferrari/big.png",
-      "vertical": "/projects/ferrari/vertical.png",
-      "mkt": "/projects/ferrari/mkt.png"
+        "topright": "/projects/ferraribeverlyhills/top-right.png",
+        "topleft": "/projects/ferraribeverlyhills/top-left.png",
+      "botright": "/projects/ferraribeverlyhills/bot-right.png",
+      "botleft": "/projects/ferraribeverlyhills/bot-left.png",
+      "big": "/projects/ferraribeverlyhills/big.png",
+      "vertical": "/projects/ferraribeverlyhills/vertical.png",
+      "mkt": "/projects/ferraribeverlyhills/mkt.png"
     
     }
     },
