@@ -1,5 +1,5 @@
 import Layout from '@/app/modules/layout/layout';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '@/app/globals.scss';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import '@/app/globals.scss';
@@ -15,8 +15,15 @@ import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 
 const AboutPage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { locale, handleLanguageChange } = useLocale();
+
+  useEffect(() => {
+    // Exemple de logique avec i18n dans useEffect
+    console.log('Current language:', i18n.language);
+  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+
+
   const [showMore, setShowMore] = useState(false);
 
   const [isFirstDropdownOpen, setIsFirstDropdownOpen] = useState(false);

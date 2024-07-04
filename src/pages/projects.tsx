@@ -9,6 +9,7 @@ import '@/app/globals.scss';
 import '@/app/modules/types/types';
 import Link from 'next/link';
 import Slider from '@/app/modules/slider/slider';
+import { useLocale } from '@/app/modules/useLocale';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import { useTranslation } from 'react-i18next';
 
@@ -35,17 +36,12 @@ const Projects: React.FC = () => {
   const project = projectsData[currentProjectIndex];
 
   const { t, i18n } = useTranslation();
-  const [locale, setLocale] = useState('en');
-
-  const handleLanguageChange = (newLocale: string) => {
-    setLocale(newLocale);
-    i18n.changeLanguage(newLocale); // Ensure language change triggers re-render
-  };
+  const { locale, handleLanguageChange } = useLocale();
 
   useEffect(() => {
-    // Optional: Load translations based on initial locale or user preference
-    i18n.loadLanguages(locale); // Load translations for the current locale
-  }, [locale]); // Run effect when locale changes
+    // Exemple de logique avec i18n dans useEffect
+    console.log('Current language:', i18n.language);
+  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
 
 
   return (
