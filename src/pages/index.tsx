@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
 
 
         
-<div className='flex flex-col gap-10 mt-10 xl:flex-row flex-col-reverse'>
+<div className='flex flex-col gap-10 mt-10 min-[1281px]:flex-row flex-col-reverse'>
 
 {/* Blocs de gauche */}
 <div className='flex flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>

@@ -1565,3 +1565,17 @@ padding: 20px;
                             white-space: normal;
                             overflow-wrap: break-word;
                           }
+
+
+                .optdd{
+                  background: rgb(255, 255, 255, 0.15);
+                  border-radius: 0.76rem;
+                  padding: 0.625rem;
+                  font-size: 1.2rem;
+                  transition:0.3s ease-in-out
+                }
+
+                .optdd:hover{
+                  background: rgb(255, 255, 255, 0.20);
+
+                }

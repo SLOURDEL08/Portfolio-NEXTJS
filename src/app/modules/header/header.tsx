@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import '@/app/i18n';
 import projects from "@/app/data/project.json";
 import { Typography } from "../typography/typography";
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
-import { useLocale } from '@/app/modules/useLocale';
+import i18n from 'i18next';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,15 +67,13 @@ export const Header: React.FC = () => {
     setSearchResults(filteredProjects);
   };
 
-
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
 
-
   const { t, i18n } = useTranslation();
-  const { locale, handleLanguageChange } = useLocale();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language);
 
   useEffect(() => {
     // Exemple de logique avec i18n dans useEffect
@@ -84,6 +81,10 @@ export const Header: React.FC = () => {
   }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
 
 
+  const handleLanguageChange = (language: string) => {
+    setSelectedLanguage(language);
+    i18n.changeLanguage(language); // Changer la langue avec i18n
+  };
 
   return (
     <header
@@ -150,87 +151,94 @@ export const Header: React.FC = () => {
             </div>
           </div>
           <div className="navbar-end flex gap-6 max-md:hidden">
- 
-  <button onClick={() => handleLanguageChange('fr')}><Image width="25" height="25" alt="france flag" src="/france.png" className="min-w-[22px] min-h-[22px]  grayscaled" /></button>
-      <button onClick={() => handleLanguageChange('en')}> <Image width="25" height="25" alt="english flag" src="/english.png" className="min-w-[22px] min-h-[22px] grayscaled" /></button>
-      <button onClick={() => handleLanguageChange('es')}><Image width="25" height="25" alt="spain flag" src="/espagne.png" className="min-w-[22px] min-h-[22px] grayscaled" /></button>
-</div>
-
+        <select
+          value={selectedLanguage}
+          onChange={(e) => handleLanguageChange(e.target.value)}
+          className="appearance-none bg-transparent optdd border-none"
+        >
+          <option value="fr">🇫🇷</option>
+          <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+          <option value="es">🇪🇸</option>
+        </select>
+      </div>
         </div>
       </div>
+
+      {/* Menu Toggle Section */}
       <div className="menu-section ">
-  <div className={`menu-toggle ${menuOpen ? "on" : ""}`} onClick={handleMenuToggle}>
-    <div className={`line one ${menuOpen ? "on" : ""}`}></div>
-    <div className={`line two ${menuOpen ? "on" : ""}`}></div>
-    <div className={`line three ${menuOpen ? "on" : ""}`}></div>
-  </div>
-   
-  <nav className="min-[1040px]:hidden">
-  <ul className={menuOpen ? "" : "hidden"}>
-      <div className=" flex justify-start ">
-      <div className="flex items-center gap-4 mt-10 flex-wrap">
-  <Link href="/" className={`handled p-3 px-4 flex items-center  max-[900px]:gap-3 justify-center gap-4 rounded-lg ${router.pathname === "/" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
-    {router.pathname === "/" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-        Accueil
-      </Typography>
-    ) : null}
-  </Link>
-  <Link href="/projects" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
-    {router.pathname === "/projects" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-        Projets
-      </Typography>
-    ) : null}
-  </Link>
-  <Link href="/aboutpage" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/aboutpage" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
-    {router.pathname === "/aboutpage" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-        CV
-      </Typography>
-    ) : null}
-  </Link>
-  <Link href="/contact" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
-    {router.pathname === "/contact" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-        Contact
-      </Typography>
-    ) : null}
-  </Link>
-</div>
-
-        <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50 max-[1040px]:hidden">
-          <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
-            Quel projet vous souhaitez ?
-          </Typography>
-          {searchResults.length > 0 && (
-            <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
-              {searchResults.slice(0, 3).map((result) => (
-                <div className="" key={result.id}>
-                  <Link href={result.link} passHref>
-                    <div className="">
-                      <div className="result-item">
-                        <Image src={result.symbol} alt={result.title} width={300} height={300} />
-                        <Typography theme="white" component="p" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="transition ease-in-out opacity-80">
-                          {result.title}
-                        </Typography>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          )}
+        <div className={`menu-toggle ${menuOpen ? "on" : ""}`} onClick={handleMenuToggle}>
+          <div className={`line one ${menuOpen ? "on" : ""}`}></div>
+          <div className={`line two ${menuOpen ? "on" : ""}`}></div>
+          <div className={`line three ${menuOpen ? "on" : ""}`}></div>
         </div>
+        
+        <nav className="min-[1040px]:hidden">
+          <ul className={menuOpen ? "" : "hidden"}>
+            <div className=" flex justify-start ">
+              <div className="flex items-center gap-4 mt-10 flex-wrap">
+                <Link href="/" className={`handled p-3 px-4 flex items-center  max-[900px]:gap-3 justify-center gap-4 rounded-lg ${router.pathname === "/" ? "activesection" : ""}`}>
+                  <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+                  {router.pathname === "/" ? (
+                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+                      Accueil
+                    </Typography>
+                  ) : null}
+                </Link>
+                <Link href="/projects" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
+                  <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+                  {router.pathname === "/projects" ? (
+                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+                      Projets
+                    </Typography>
+                  ) : null}
+                </Link>
+                <Link href="/aboutpage" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/aboutpage" ? "activesection" : ""}`}>
+                  <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+                  {router.pathname === "/aboutpage" ? (
+                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+                      CV
+                    </Typography>
+                  ) : null}
+                </Link>
+                <Link href="/contact" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
+                  <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+                  {router.pathname === "/contact" ? (
+                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+                      Contact
+                    </Typography>
+                  ) : null}
+                </Link>
+              </div>
+              
+              <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50 max-[1040px]:hidden">
+                <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
+                  Quel projet vous souhaitez ?
+                </Typography>
+                {searchResults.length > 0 && (
+                  <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
+                    {searchResults.slice(0, 3).map((result) => (
+                      <div className="" key={result.id}>
+                        <Link href={result.link} passHref>
+                          <div className="">
+                            <div className="result-item">
+                              <Image src={result.symbol} alt={result.title} width={300} height={300} />
+                              <Typography theme="white" component="p" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="transition ease-in-out opacity-80">
+                                {result.title}
+                              </Typography>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </ul>
+        </nav>
       </div>
-    </ul>
-  </nav>
-</div>
 
+      {/* Search Results Section */}
       <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 ">
         <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
           Quel projet vous souhaitez ?
@@ -257,3 +265,5 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+
+export default Header;
