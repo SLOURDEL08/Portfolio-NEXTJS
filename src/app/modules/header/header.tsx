@@ -191,7 +191,7 @@ export const Header: React.FC = () => {
     <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
     {router.pathname === "/aboutpage" ? (
       <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-        Cv
+        CV
       </Typography>
     ) : null}
   </Link>
