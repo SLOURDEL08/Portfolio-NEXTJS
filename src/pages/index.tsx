@@ -21,8 +21,14 @@ import LayerCV from '@/app/modules/layerCV/layerCV';
 
 
 const HomePage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { locale, handleLanguageChange } = useLocale();
+
+  useEffect(() => {
+    // Exemple de logique avec i18n dans useEffect
+    console.log('Current language:', i18n.language);
+  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+
 
 
   return (
