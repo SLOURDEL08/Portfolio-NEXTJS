@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Typography } from '@/app/modules/typography/typography';
 import Image from 'next/image';
 import Link from 'next/link';
+import '@/app/i18n';
 import { useLocale } from '@/app/modules/useLocale';
 import useResponsiveProjects from '@/app/modules/segmentedControl/useResponsiveProjects'; // Importer le hook personnalisé
 import { Project } from '@/app/modules/types/types'; // Importer le type partagé
@@ -20,16 +21,22 @@ interface SegmentedProps {
 
 const Segmented: React.FC<SegmentedProps> = ({
   useFilters = true,
-  numCols = "grid-cols-2",
+  numCols = 'grid-cols-2',
   numProjects = 'all',
   responsiveBreakpoints = {},
-  className = '', // Valeur par défaut pour className
-  onProjectChange, // Ajouter onProjectChange comme une prop
+  className = '',
+  onProjectChange,
 }) => {
+  const { t, i18n } = useTranslation(); // Appel de useTranslation en haut du composant
+  const { locale, handleLanguageChange } = useLocale(); // Appel de useLocale en haut du composant
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedFilter, setSelectedFilter] = useState('Tous');
-
   const responsiveNumProjects = useResponsiveProjects(numProjects === 'all' ? Infinity : numProjects, responsiveBreakpoints);
+
+  useEffect(() => {
+    // Dépendance ajoutée : i18n
+    console.log('Current language:', i18n.language);
+  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
 
   useEffect(() => {
     import('@/app/data/project.json')
@@ -43,11 +50,6 @@ const Segmented: React.FC<SegmentedProps> = ({
       .catch(error => console.error('Erreur lors du chargement des données:', error));
   }, [responsiveNumProjects, onProjectChange]);
 
-  if (typeof numCols === 'string' && (numCols !== "grid-cols-2" && numCols !== "grid-cols-4" && numCols !== "grid-cols-3" && numCols !== "grid-col" )) {
-    console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
-    return null;
-  }
-
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
   };
@@ -60,14 +62,10 @@ const Segmented: React.FC<SegmentedProps> = ({
 
   const gridColsClass = `${numCols}`;
 
-
-  const { t, i18n } = useTranslation();
-  const { locale, handleLanguageChange } = useLocale();
-
-  useEffect(() => {
-    // Exemple de logique avec i18n dans useEffect
-    console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+  if (typeof numCols === 'string' && !['grid-cols-2', 'grid-cols-4', 'grid-cols-3', 'grid-col'].includes(numCols)) {
+    console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
+    return null;
+  }
 
 
   return (

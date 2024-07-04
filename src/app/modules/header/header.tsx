@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import '@/app/i18n';
 import projects from "@/app/data/project.json";
 import { Typography } from "../typography/typography";
 import { useRouter } from 'next/router';

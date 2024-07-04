@@ -4,7 +4,7 @@ import '@/app/globals.scss';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import '@/app/globals.scss';
 import '@/app/globals.css';
-import './i18n';
+import '@/app/i18n';
 import '@/app/mediaqueries.css';
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/app/modules/useLocale';

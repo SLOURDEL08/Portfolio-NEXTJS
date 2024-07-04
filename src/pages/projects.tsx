@@ -6,6 +6,7 @@ import projectsData from '@/app/data/project.json';
 import Main from '@/app/modules/main/main';
 import Segmented from '@/app/modules/segmentedControl/segmented';
 import '@/app/globals.scss';
+import '@/app/i18n';
 import '@/app/modules/types/types';
 import Link from 'next/link';
 import Slider from '@/app/modules/slider/slider';
