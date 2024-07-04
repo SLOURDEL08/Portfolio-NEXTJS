@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@/app/modules/layout/layout';
 import Image from "next/image";
 import { Typography } from '@/app/modules/typography/typography';
@@ -10,6 +10,7 @@ import '@/app/modules/types/types';
 import Link from 'next/link';
 import Slider from '@/app/modules/slider/slider';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
+import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -33,6 +34,20 @@ const Projects: React.FC = () => {
 
   const project = projectsData[currentProjectIndex];
 
+  const { t, i18n } = useTranslation();
+  const [locale, setLocale] = useState('en');
+
+  const handleLanguageChange = (newLocale: string) => {
+    setLocale(newLocale);
+    i18n.changeLanguage(newLocale); // Ensure language change triggers re-render
+  };
+
+  useEffect(() => {
+    // Optional: Load translations based on initial locale or user preference
+    i18n.loadLanguages(locale); // Load translations for the current locale
+  }, [locale]); // Run effect when locale changes
+
+
   return (
     <Layout>
             <TransitionPage>
@@ -42,12 +57,12 @@ const Projects: React.FC = () => {
           <div className='flex gap-8 max-[500px]:gap-6 items-center justify-center '>
           <Image src="/applelay.png" width="50" height="50" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl max-[500px]:w-[40px] max-[500px]:h-[40px]'/>
             <Typography theme='graylight' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
-              Mes projets
+              {t('projetpage.title')}
             </Typography>
            
           </div>
           <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-center strocked  max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose  max-[450px]:leading-loose leading-loose w-[80%] m-auto">
-      {"Retrouvrez tous mes projets de développement web, de graphisme, back/front-end et bien plus.."}
+      {t('projectpage.description')}
     </Typography>
         
         </div>
@@ -95,12 +110,12 @@ const Projects: React.FC = () => {
               <Typography theme="white" weight="light" variant="body-base" component="p" fontFamily="Inter" className="leading-8 strocked">
                 {project.description}
               </Typography>
-              <div className='flex gap-4 absolute top-6 right-8'>
-                <button className='custom-buttonx flex gap-1 justify-center items-center p-3 px-4 border rounded-full' onClick={prevProject}>
+              <div className='flex gap-4 absolute top-10 right-10'>
+                <button className='ovhea flex gap-1 justify-center items-center p-3 px-4 rounded-full' onClick={prevProject}>
                   <Image src="/larrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]' />
                  
                 </button>
-                <button className='custom-buttonx flex gap-1 justify-center items-center p-3 px-4 border rounded-full' onClick={nextProject}>
+                <button className='ovhea flex gap-1 justify-center items-center p-3 px-4  rounded-full' onClick={nextProject}>
                
                 <Image src="/rarrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]' />
                   

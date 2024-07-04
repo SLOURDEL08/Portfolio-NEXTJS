@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import projects from "@/app/data/project.json";
 import { Typography } from "../typography/typography";
-import { useRouter } from "next/router"; // Import useRouter hook
+import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,25 +13,17 @@ export const Header: React.FC = () => {
   const [hasText, setHasText] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
-  const router = useRouter(); // Initialize useRouter hook
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const screenWidth = window.innerWidth;
-      if (scrollTop > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(screenWidth < 1040);
-      }
+      setIsScrolled(scrollTop > 0 || screenWidth < 1040);
 
       const modal = modalRef.current;
       if (modal) {
-        if (scrollTop > 0) {
-          modal.classList.add("bgscrolled");
-        } else {
-          modal.classList.remove("bgscrolled");
-        }
+        modal.classList.toggle("bgscrolled", scrollTop > 0);
       }
     };
 
@@ -45,8 +38,7 @@ export const Header: React.FC = () => {
   }, []);
 
   const handleSearchClick = () => {
-    const scrollTop = window.scrollY;
-    if (scrollTop === 0) {
+    if (window.scrollY === 0) {
       window.scrollBy({
         top: 100,
         behavior: 'smooth',
@@ -74,9 +66,26 @@ export const Header: React.FC = () => {
     setSearchResults(filteredProjects);
   };
 
+
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+
+
+
+  const { t, i18n } = useTranslation();
+  const [locale, setLocale] = useState('en');
+
+  const handleLanguageChange = (newLocale: string) => {
+    setLocale(newLocale);
+    i18n.changeLanguage(newLocale); // Ensure language change triggers re-render
+  };
+
+  useEffect(() => {
+    // Optional: Load translations based on initial locale or user preference
+    i18n.loadLanguages(locale); // Load translations for the current locale
+  }, [locale]); // Run effect when locale changes
+
 
   return (
     <header
@@ -103,19 +112,29 @@ export const Header: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-between gap-12 max-[1040px]:hidden">
-              <Link href="/" className="opacity-60 hover:opacity-100 flex gap-3 items-center" > 
-              <Image width="100" height="100" alt="menu icon" src="/homet.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">Home</Typography>
+              <Link href="/" className="opacity-60 hover:opacity-100 flex gap-3 items-center" >
+                <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">
+                  {t('header.home')}
+                </Typography>
               </Link>
-              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center" > 
-              <Image width="100" height="100" alt="menu icon" src="/layers.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
-
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Projets</Typography>
+              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center">
+                <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">
+                {t('header.cv')}
+                </Typography>
               </Link>
-              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center"> 
-              <Image width="100" height="100" alt="menu icon" src="/chat.png"className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
-
-                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">Contact</Typography>
+              <Link href="/projects" className="opacity-60 hover:opacity-100 flex gap-3 items-center">
+                <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">
+                {t('header.project')}
+                </Typography>
+              </Link>
+              <Link href="/contact" className="opacity-60 hover:opacity-100 flex gap-3 items-center">
+                <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">
+                {t('header.contact')}
+                </Typography>
               </Link>
             </div>
             <div className={`bg-[#ffffff20] ${hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'} active:bg-[#7A24E8] focus-within:bg-[#7A24E8]  transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative w-60 max-[600px]:w-40`}>
@@ -133,56 +152,60 @@ export const Header: React.FC = () => {
             </div>
           </div>
           <div className="navbar-end flex gap-6 max-md:hidden">
-            <Link href="https://github.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]" >
-              <Image src="/github-icon.png" alt="logo github" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
-            </Link>
-            <Link href="https://gitlab.com/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]">
-              <Image src="/gitlab.png" alt="logo gitlab" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
-            </Link>
-            <Link href="https://linkedin.com/in/slourdel08" className="w-[25px] h-[25px] max-[450px]:h-[20px] max-[450px]:w-[22px] max-[450px]:h-[22px]">
-              <Image src="/linkedin.png" alt="logo linkedin" width="25" height="25" className="grayscale-[0.8] transition hover:grayscale-[0] w-[100%] h-[100%] brightness-full opacity-60 hover:opacity-100 hover:brightness-1 transz" />
-            </Link>
-          </div>
+ 
+  <button onClick={() => handleLanguageChange('fr')}><Image width="25" height="25" alt="france flag" src="/france.png" className="min-w-[22px] min-h-[22px]  grayscaled" /></button>
+      <button onClick={() => handleLanguageChange('en')}> <Image width="25" height="25" alt="english flag" src="/english.png" className="min-w-[22px] min-h-[22px] grayscaled" /></button>
+      <button onClick={() => handleLanguageChange('es')}><Image width="25" height="25" alt="spain flag" src="/espagne.png" className="min-w-[22px] min-h-[22px] grayscaled" /></button>
+</div>
+
         </div>
       </div>
-      <div className="menu-section">
+      <div className="menu-section ">
   <div className={`menu-toggle ${menuOpen ? "on" : ""}`} onClick={handleMenuToggle}>
     <div className={`line one ${menuOpen ? "on" : ""}`}></div>
     <div className={`line two ${menuOpen ? "on" : ""}`}></div>
     <div className={`line three ${menuOpen ? "on" : ""}`}></div>
   </div>
    
-  <nav className="">
+  <nav className="min-[1040px]:hidden">
   <ul className={menuOpen ? "" : "hidden"}>
       <div className=" flex justify-start ">
       <div className="flex items-center gap-4 mt-10 flex-wrap">
-  <Link href="/" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+  <Link href="/" className={`handled p-3 px-4 flex items-center  max-[900px]:gap-3 justify-center gap-4 rounded-lg ${router.pathname === "/" ? "activesection" : ""}`}>
+    <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
     {router.pathname === "/" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
         Accueil
       </Typography>
     ) : null}
   </Link>
   <Link href="/projects" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
     {router.pathname === "/projects" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
         Projets
       </Typography>
     ) : null}
   </Link>
+  <Link href="/aboutpage" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/aboutpage" ? "activesection" : ""}`}>
+    <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+    {router.pathname === "/aboutpage" ? (
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+        CV
+      </Typography>
+    ) : null}
+  </Link>
   <Link href="/contact" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
-    <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[25px] min-w-[25px] w-[45px] h-[45px] max-[900px]:h-[20px] max-[900px]:w-[20px]" />
+    <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
     {router.pathname === "/contact" ? (
-      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium">
+      <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
         Contact
       </Typography>
     ) : null}
   </Link>
 </div>
 
-        <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50 max-[900px]:hidden">
+        <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 max-[900px]:absolute h-[85vh] left-50 top-50 max-[1040px]:hidden">
           <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
             Quel projet vous souhaitez ?
           </Typography>

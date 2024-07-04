@@ -38,7 +38,7 @@ const TransitionPage = ({ children }: TransitionPageProps) => {
   }, [router, currentPath]);
 
   return (
-    <AnimatePresence mode='popLayout'>
+    <AnimatePresence mode='wait'>
       {loading && (
         <motion.div
           key="transition"
@@ -46,7 +46,7 @@ const TransitionPage = ({ children }: TransitionPageProps) => {
           animate="animate"
           exit="exit"
           variants={variants}
-          transition={{ duration: 1.4 }}
+          transition={{ duration: 0.4 }}
           style={{
             position: 'fixed',
             top: 0,
@@ -65,7 +65,7 @@ const TransitionPage = ({ children }: TransitionPageProps) => {
         animate="animate"
         exit="exit"
         variants={variants}
-        transition={{ duration: 1.4 }}
+        transition={{ duration: 0.4 }}
       >
         {children}
       </motion.div>

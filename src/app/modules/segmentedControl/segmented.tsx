@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '@/app/globals.scss';
+import { useTranslation } from 'react-i18next';
 import { Typography } from '@/app/modules/typography/typography';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -58,13 +59,28 @@ const Segmented: React.FC<SegmentedProps> = ({
 
   const gridColsClass = `${numCols}`;
 
+
+  const { t, i18n } = useTranslation();
+  const [locale, setLocale] = useState('en');
+
+  const handleLanguageChange = (newLocale: string) => {
+    setLocale(newLocale);
+    i18n.changeLanguage(newLocale); // Ensure language change triggers re-render
+  };
+
+  useEffect(() => {
+    // Optional: Load translations based on initial locale or user preference
+    i18n.loadLanguages(locale); // Load translations for the current locale
+  }, [locale]); // Run effect when locale changes
+
+
   return (
     <div className={`w-full h-full ${className}`}>
       {useFilters && (
         <section className='fivefilter'>
           <div className="segmented-controls square">
             <input id="five-1" name="five" type="radio" checked={selectedFilter === 'Tous'} onChange={() => handleFilterChange('Tous')} />
-            <label htmlFor="five-1" className='tdf'>Tous</label>
+            <label htmlFor="five-1" className='tdf'>{t('label.segmented')}</label>
             {['Wordpress', 'Front-end', 'Back-end', 'Full-stack', 'Design'].map(category => (
               <React.Fragment key={category}>
                 <input id={`five-${category.toLowerCase()}`} name="five" type="radio" checked={selectedFilter === category} onChange={() => handleFilterChange(category)} />

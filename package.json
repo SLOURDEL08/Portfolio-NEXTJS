@@ -14,7 +14,12 @@
     "@nextui-org/react": "^2.2.9",
     "clsx": "^2.1.0",
     "framer-motion": "^11.2.10",
+    "i18next": "^23.11.5",
     "next": "14.0.4",
+    "next-i18n-router": "^5.5.0",
+    "next-i18next": "^14.0.0",
+    "next-translate": "^2.6.2",
+    "next-translate-plugin": "^2.6.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
@@ -24,6 +29,8 @@
     "yet-another-react-lightbox": "^3.20.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@next/bundle-analyzer": "^14.2.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -33,6 +40,7 @@
     "eslint-config-next": "14.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

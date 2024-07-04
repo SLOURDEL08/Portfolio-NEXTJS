@@ -12,14 +12,17 @@ import Segmented from '@/app/modules/segmentedControl/segmented';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import '@/app/globals.scss';
 import '@/app/globals.css';
-
+import './i18n';
 import '@/app/mediaqueries.css'
-
-
-
+import { useTranslation } from 'react-i18next';
+import { useLocale } from '@/app/modules/useLocale';
+import Parented from '@/app/modules/parented/parented';
+import LayerCV from '@/app/modules/layerCV/layerCV';
 
 
 const HomePage: React.FC = () => {
+  const { t } = useTranslation();
+  const { locale, handleLanguageChange } = useLocale();
 
 
   return (
@@ -36,36 +39,47 @@ const HomePage: React.FC = () => {
     <div>
     <AnimatedText />
     <Typography theme='white'  variant='h1' component='h2' fontFamily='ClashDisplay' className=' semib bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'>
-   Découvrez mon Portfolio 2024 Front-end    </Typography>
+    {t('Welcome')}    </Typography>
     </div>
-   
+  
     
     <Typography theme="gray" weight="light" variant="lead" component="p" fontFamily="SanFrancisco" className="text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose">
-      {"Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI."}
+      {t('index.description')}
     </Typography>
     <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
-    <div className='flex gap-6 items-center max-[900px]:py-2'>
-    <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-lead">
-    Mon CV
-    <Image src='/download.png' width="14" height="14" alt='de' />
-    </Typography>
-  </Link>
+    <div className='flex flex-wrap gap-6 items-center max-[900px]:py-2'>
+
 
       
  
-  <Link href='/projects' className="ctn-cstbtn flex justify-center items-center p-2 bg-[#ffffff10] hover:bg-[#ffffff00] rounded-full" >
-  <Typography className="custom-button flex justify-center items-center p-3 px-4 border rounded-full max-[450px]:text-lead">
-    Mes projets
-    <Image src='/top-right-arrow.png' width="14" height="14" alt='de' />
+ 
+
+  <Link href='/projects' className='' >
+    <div className='flex items-center gap-3 p-3 px-4 ovhea rounded-2xl  roundedlb'>
+    <Typography component='span' variant='lead' theme='white' weight='medium' fontFamily='ClashDisplay' className="max-[900px]:text-lg">
+  {t('index.button.first')}
     </Typography>
+    <Image src='/top-right-arrow.png' width="14" height="14" alt='de' />
+    </div>
+  
   </Link>
+
+  <Link href='/projects' className='' >
+    <div className='flex items-center gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
+    <Typography component='span' variant='lead' theme='white' weight='medium' fontFamily='ClashDisplay' className="max-[900px]:text-lg">
+  {t('index.button.second')}
+    </Typography>
+    <Image src='/top-right-arrow.png' width="14" height="14" alt='de' />
+    </div>
+  
+  </Link>
+
 
    
     </div>
     <div className='flex mt-2  gap-6 justify-start items-center'>
-    <Typography theme="gray" weight="light" variant="body-xs" component="p" fontFamily="SanFrancisco" className="">
-      {"MADE WITH"}
+    <Typography theme="gray" weight="light" variant="body-xs" component="p" fontFamily="SanFrancisco" className=" uppercase">
+    {t('madewith')}
     </Typography>
     <Image src="/slider/nextjslong.png" width="200" height="200" alt='de' className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'/>
     <Image src="/slider/tailwindlong.png" width="200" height="200" alt='de' className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'/>
@@ -85,153 +99,89 @@ const HomePage: React.FC = () => {
 <div className='flex flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
   {/* Premier bloc */}
   <div className='w-full flex flex-col justify-between h-[100%] gap-10 max-[900px]:flex-col  max-[1280px]:flex-row'>
-  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full '>
+  <Parented className='flex justify-start  max-[1280px]:w-[50%] max-[900px]:w-full '>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
-  <div className='flex items-center gap-5'>
-  <Image src="/expwork.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
+  <div className='flex items-center justify-between'>
+    <div className='flex items-center gap-5'>
+  <Image src="/work.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
-      Dernières expériences
+{t('index.titleexp')}
     </Typography>
     </div>
+    <Link href='/aboutpage' className="click-parented  rounded-full" >
+
+    <Image src='/top-right-arrow.png' width="22" height="22" alt='de' className='opacity-70 hover:opacity-100 ' />
+  </Link>
+    </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:py-4 p-2 px-4'>
-      <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col '>
-          <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          Freelance
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Développement / Marketing
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          Depuis 2020
-        </Typography> 
-      </div>
+      <LayerCV  title='Freelance' description='Développement / Marketing' date='Depuis 2020'/>
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10]  max-[900px]:py-4  p-2 px-4'>
-      <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col '>
-          <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          ToastAgency
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Alternance Développeur web
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2022/23
-        </Typography> 
-      </div>
+      <LayerCV  title='ToastAgency' description='Développement / Marketing' date='Nov 2022/2023'/>
+
       <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] max-[900px]:py-4  p-2 px-4'>
-      <div className='flex justify-between items-center flex-wrap gap-x-8'>
-          <div className='grid grid-col '>
-            <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          FL Express
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Livreur messagerie
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2021/22
-        </Typography> 
-      </div>
+      <LayerCV  title='FL Express' description='Livreur Fedex en messagerie' date='Depuis 2020'/>
+
 
       
     </div>
    
   </div>
-  </div>
+  </Parented>
   {/* Deuxième bloc */}
-  <div className='flex justify-start h-[100%] bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl parentproject max-[1280px]:w-[50%] max-[900px]:w-full'>
+  <Parented className='flex justify-start max-[1280px]:w-[50%] max-[900px]:w-full'>
   <div className='  w-[100%] flex flex-col justify-between gap-8'>
-  <div className='flex items-center gap-5'>
+  <div className='flex items-center justify-between'>
+    <div className='flex items-center gap-5'>
   <Image src="/formexp.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
-      Formation
+{t('index.titleform')}
     </Typography>
-    
+    </div>
+    <Link href='/aboutpage' className="click-parented  rounded-full" >
+
+    <Image src='/top-right-arrow.png' width="22" height="22" alt='de' className='opacity-70 hover:opacity-100 ' />
+  </Link>
     </div>
     <div className='exp-sec grid'>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4   max-[900px]:py-4  '>
-        <div className='flex justify-between items-center flex-wrap gap-x-8'>
-        <div className='grid grid-col '>
-          <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          Freelance
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Développement / Marketing
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          Depuis 2020
-        </Typography> 
-      </div>
-      <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4  max-[900px]:py-4  '>
-      <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col '>
-          <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          ToastAgency
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Alternance Développeur web
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2022/23
-        </Typography> 
-      </div>
-      <hr className='border-[#ffffff20]'/>
-      <div className='flex flex-nowrap justify-between items-center expLine hover:bg-[#ffffff10] p-2 px-4 max-[900px]:py-4  '>
-      <div className='flex justify-between items-center flex-wrap gap-x-8'>
-      <div className='grid grid-col '>
-          <Typography theme='gray' weight='bold' variant='body-lg' component='span' fontFamily='ClashDisplay' className=''>
-          FL Express
-        </Typography>
-        <Typography theme='gray' weight='extralight' variant='body-base' component='span' fontFamily='SanFrancisco' className='italic'>
-          Livreur messagerie
-        </Typography>
-        </div>
-        </div>
-        <Typography theme='gray' weight='light' variant='body-base' component='span' fontFamily='ClashDisplay' className='text-right'>
-          2021/22
-        </Typography> 
-      </div>
+    <LayerCV  title='Freelance' description='Développement / Marketing' date='Depuis 2020'/>
 
-      
+      <hr className='border-[#ffffff20]'/>
+      <LayerCV  title='ToastAgency' description='Développement / Marketing' date='Nov 2022/2023'/>
+
+      <hr className='border-[#ffffff20]'/>
+      <LayerCV  title='FL Express' description='Livreur Fedex en messagerie' date='Depuis 2020'/> 
     </div>
    
   </div>
-  </div>
+  </Parented>
 
   </div>
 <Link href="/" className='h-[20%] w-full'>
   <div className='flex justify-between items-center h-[100%] gradiended p-10 max-[900px]:p-8 rounded-3xl parentproject '>
   <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='ClashDisplay' className=''>
-      Télécharger mon CV !
+  {t('index.download.cv')}
+
     </Typography>
     <Image src='/download.png' width="30" height="30" alt='de'/>
   </div>
   </Link>
 </div>
 
-<div className=' bg-[#ffffff20] flex flex-col gap-8  p-10 max-[900px]:p-8 rounded-3xl max-[900px]: w-[60%] sm:w-[100%] parentproject max-[1280px]:w-[100%]'>
-  <div className='flex gap-5 items-center'>
+<Parented className='  flex flex-col gap-8   max-[900px]: w-[60%] sm:w-[100%]  max-[1280px]:w-[100%]'>
+<div className='flex justify-between'>
+    <div className='flex items-center gap-5'>
   <Image src="/applelay.png" width="45" height="45" alt='de' className='filesimg bg-[#ffffffcc] p-2 rounded-xl'/>
 
 <Typography theme='white' weight='bold' variant='h5' component='span' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'>
-      Mes projets
+{t('index.titleproject')}
     </Typography>
+    </div>
+    <Link href='/projects' className="click-parented flex justify-center px-4 gap-3 items-center p-3 rounded-full" >
+  
+    <Image src='/top-right-arrow.png' width="20" height="20" alt='de' />
+  </Link>
     </div>
     <Segmented
   numProjects={6}
@@ -242,14 +192,14 @@ const HomePage: React.FC = () => {
 />
   
 
-  </div>
+  </Parented>
   
 
 </div>
-<div className='mt-10 bg-[#ffffff20] p-10  max-[900px]:p-8 rounded-3xl parentproject'>
+<Parented className='mt-10'>
 <Slider/>
 
-</div>
+</Parented>
       </Main>
 
      
