@@ -80,6 +80,13 @@ transition:0.2s ease-in-out                                }
             width: 100%!important;
 
         }
+
+        .bgscrolled .tr{
+            background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
+                            background-size: 400% 400%;
+                            animation: Gradient 10s ease infinite;
+        }
+
         .hiddenqaau{
             display: none!important;
         }
@@ -137,3 +144,18 @@ width: 130px;
           ::placeholder{
             font-size:1rem
           }
+
+
+          @media screen and (max-width: 400px) {
+
+
+            ::placeholder{
+                font-size:0.8rem;
+              }
+
+             .oft{
+padding: 0.22rem 0.4rem;
+
+              }
+          }
+

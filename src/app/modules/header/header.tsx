@@ -98,19 +98,19 @@ export const Header: React.FC = () => {
           <div className="p-3 tr rounded-xl">
             <Image width="30" height="30" alt="logo web app" src="/sl.png" className="min-w-[26px] min-h-[26px]" />
           </div>
-          <div className="flex flex-col gap-3 items-center max-xml:hidden">
+          <div className="flex flex-col gap-3 items-center max-smd:hidden">
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">LOURDEL</Typography>
             <Typography theme="white" component="p" variant="lead" fontFamily="ClashDisplay" weight="bolder" className="hover:text-white transition  ease-in-out p-0 leading-3 tracking-wide">Sébastien</Typography>
           </div>
         </div>
         <div className="w-8/12 flex justify-end gap-12 max-[900px]:gap-6 items-center max-md:w-[100%]">
           <div className="navbar-end flex gap-12 max-[900px]:gap-6 items-center ">
-            <div className="justify-between gap-12 hidden max-[1040px]:flex">
+            <div className="justify-between gap-12 hidden max-hxl:flex">
               <div onClick={handleMenuToggle} className="cursor-pointer">
                 <Image width="30" height="30" alt="menu icon" src="/menuwhite.png" className=""/>
               </div>
             </div>
-            <div className="flex justify-between gap-12 max-[1040px]:hidden">
+            <div className="flex justify-between gap-12 max-hxl:hidden">
               <Link href="/" className="opacity-60 hover:opacity-100 flex gap-3 items-center" >
                 <Image width="100" height="100" alt="menu icon" src="/homet.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white transition trande ease-in-out">
@@ -118,7 +118,7 @@ export const Header: React.FC = () => {
                 </Typography>
               </Link>
               <Link href="/aboutpage" className="opacity-60 hover:opacity-100 flex gap-3 items-center">
-                <Image width="100" height="100" alt="menu icon" src="/file.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
+                <Image width="100" height="100" alt="menu icon" src="/docufile.png" className="min-h-[18px] min-w-[18px] w-[18px] h-[18px]" />
                 <Typography theme="white" variant="body-base" fontFamily="SanFrancisco" weight="medium" className="hover:text-white trande transition ease-in-out hover:opacity-100">
                 {t('header.cv')}
                 </Typography>
@@ -146,7 +146,7 @@ export const Header: React.FC = () => {
                   className="focus:outline-none border-none text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent"
                   onClick={handleSearchClick}
                 />
-                <kbd className=" max-[900px]:hidden pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-neutral-800 border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded">⌘ K</kbd>
+                <kbd className=" max-[900px:hidden pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded">⌘ K</kbd>
               </label>
             </div>
           </div>
@@ -184,7 +184,15 @@ export const Header: React.FC = () => {
                     </Typography>
                   ) : null}
                 </Link>
-                <Link href="/projects" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
+                <Link href="/aboutpage" className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/aboutpage" ? "activesection" : ""}`}>
+                  <Image width="100" height="100" alt="menu icon" src="/docufile.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
+                  {router.pathname === "/aboutpage" ? (
+                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
+                      CV
+                    </Typography>
+                  ) : null}
+                </Link>
+                <Link href="/projects" className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/projects" ? "activesection" : ""}`}>
                   <Image width="100" height="100" alt="menu icon" src="/layers.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
                   {router.pathname === "/projects" ? (
                     <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
@@ -192,15 +200,8 @@ export const Header: React.FC = () => {
                     </Typography>
                   ) : null}
                 </Link>
-                <Link href="/aboutpage" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/aboutpage" ? "activesection" : ""}`}>
-                  <Image width="100" height="100" alt="menu icon" src="/file.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
-                  {router.pathname === "/aboutpage" ? (
-                    <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
-                      CV
-                    </Typography>
-                  ) : null}
-                </Link>
-                <Link href="/contact" className={`handled p-3 px-4 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
+               
+                <Link href="/contact" className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${router.pathname === "/contact" ? "activesection" : ""}`}>
                   <Image width="100" height="100" alt="menu icon" src="/chat.png" className="min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-[1040px]:h-[20px] max-[1040px]:w-[20px]" />
                   {router.pathname === "/contact" ? (
                     <Typography theme="white" variant="lead" fontFamily="SanFrancisco" weight="medium" className=" max-[900px]:text-lg">
