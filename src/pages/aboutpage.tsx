@@ -41,9 +41,9 @@ const AboutPage: React.FC = () => {
     <Layout>
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
-          <div className='flex gap-10 h-full w-full'>
-            <div className='flex flex-col overflow-hidden items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[160px] max-[680px]:w-[160px] max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]'>
-              <Image src='/cesded.png' width="599" height="599" alt='de' className='h-full w-full object-cover' />
+          <div className='flex gap-10 max-[1000px]:flex-wrap h-full w-full '>
+            <div className='flex flex-col overflow-hidden items-start gap-2 profilpiced  w-[30%] h-[auto]  max-[680px]:h-[160px] max-[1000px]:!flex-grow-0  max-[680px]:w-[160px] max-[680px]:mb-0 max-[680px]:mt-10 rounded-WL max-[900px]:w-[40%]'>
+              <Image src='/cesded.png' width="599" height="599" alt='de' className='h-full w-full object-cover ' />
             </div>
             <Parented className='w-[70%] flex flex-col gap-8 flex-grow'>
               <Typography theme='white' weight='bold' variant='h3' component='h1' fontFamily='ClashDisplay' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
@@ -51,44 +51,44 @@ const AboutPage: React.FC = () => {
               </Typography>
               <div className='flex gap-6 flex-wrap'>
                 <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-lg'>
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl '>
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg '>
                     LOURDEL Sébastien
                   </Typography>
                 </div>
                 <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-xl'>
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'>
                     25 ans
                   </Typography>
                 </div>
                 <div className='flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl'>
                   <Image src='/localpos.png' width="20" height="21" alt='de' className='opacity-80' />
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'>
                     Arras, France
                   </Typography>
                 </div>
                 <div className='flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
                   <Image src='/imail.png' width="25" height="24" alt='de' className='opacity-80' />
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
-                    Seb.lourdel8@gmail.com
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'>
+                    contact@slourdel.fr
                   </Typography>
                 </div>
                 <div className='overhed flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
                   <Image src='/linkedicon.png' width="23" height="23" alt='de' className='opacity-80' />
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'>
                     /Linkedin
                   </Typography>
                 </div>
                 <div className='overhed flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
                   <Image src='/github.png' width="22" height="22" alt='de' className='opacity-80' />
-                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'>
+                  <Typography theme='graylight' weight='bold' variant='lead' component='h1' fontFamily='SanFrancisco' className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'>
                     /Github
                   </Typography>
                 </div>
               </div>
-              <div className='h-full text-left gap-6 flex items-start'>
+              <div className='h-full text-left gap-6 flex items-start wrapf'>
                 <div className='flex gap-4 items-center p-3 px-4 rounded-xl w-max avail'>
                   <div className='bg-green-500 rounded-3xl h-2 w-2'></div>
-                  <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='SanFrancisco' className=''>
+                  <Typography theme='white' weight='bold' variant='h4' component='span' fontFamily='SanFrancisco' className='max-md:text-2xl'>
                     AvailableForWork
                   </Typography>
                 </div>
@@ -116,21 +116,21 @@ const AboutPage: React.FC = () => {
           </div>
         
       
-         <div className='flex gap-10 justify-between'>
+         <div className='flex gap-10 justify-between max-[1000px]:flex-wrap'>
                 
-                <Parented className='flex items-start gap-14  laylay !p-0'>
-          <LayerCV className='flex-col !items-end gap-4  !p-10 rounded-3xl' title='Titre professionnel bac +2 RNCP 5 - Développeur web et application' description='OpenClassRoom' date='Nov 2023'/>
+                <Parented className='flex items-start gap-14 max-[1000px]:w-full laylay !p-0'>
+          <LayerCV className='flex-col !items-end gap-4 !bg-[#00000000] !p-10 rounded-3xl' title='Titre professionnel bac +2 RNCP 5 - Développeur web et application' description='OpenClassRoom' date='Nov 2023'/>
           </Parented>
 
-          <Parented className='flex items-start gap-14  laylay !p-0'>
-          <LayerCV className=' flex-col !items-end gap-4 !p-10  rounded-3xl' title='Titre professionnel bac +2 RNCP 5 - Développeur web et application mobile' description='PopSchool - Valenciennes' date='2020'/>
+          <Parented className='flex items-start gap-14  laylay max-[1000px]:w-full !p-0'>
+          <LayerCV className=' flex-col !items-end gap-4 !bg-[#00000000] !p-10  rounded-3xl' title='Titre professionnel bac +2 RNCP 5 - Développeur web et application mobile' description='PopSchool - Valenciennes' date='2020'/>
           </Parented>
   
           
 
-          <Parented className='flex items-start gap-14  laylay !p-0'>
+          <Parented className='flex items-start gap-14 max-[1000px]:w-full laylay !p-0'>
         
-        <LayerCV className=' !items-end flex-col gap-4 !p-10  rounded-3xl !text-white' title='Baccalauréat Science et Technologie du Management de la Gestion' description='Lycée Arthur Rimabud - Sin le Noble' date='Juin 2016'/>
+        <LayerCV className=' !items-end flex-col gap-4 !p-10 !bg-[#00000000] rounded-3xl !text-white' title='Baccalauréat Science et Technologie du Management de la Gestion' description='Lycée Arthur Rimabud - Sin le Noble' date='Juin 2016'/>
         </Parented>
 
         
@@ -138,7 +138,7 @@ const AboutPage: React.FC = () => {
         
      
           </div>
-          <div className='flex items-start gap-10'>
+          <div className='flex items-start gap-10 wrapf'>
           
             <Parented className=' w-full flex justify-start max-[1280px]:w-[50%] max-[900px]:w-full'>
               <div className='w-[100%] flex flex-col justify-between gap-8'>

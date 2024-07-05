@@ -113,5 +113,27 @@ gap:30px!important
       .background-topgradient{
         background-image: url('/bgrd.png')!important;
       }
-    
+      .formtypesearch{
+min-width: 130px!important;
+width: 130px;
+      }
+
+      ::placeholder{
+        font-size:1rem
+      }
     }
+    @media screen and (max-width: 780px) {
+
+
+        .wrapf{
+            flex-wrap: wrap;
+        }
+}
+
+.formtypesearch{
+    min-width: 180px;
+          }
+
+          ::placeholder{
+            font-size:1rem
+          }
