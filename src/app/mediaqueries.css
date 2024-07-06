@@ -87,9 +87,7 @@ transition:0.2s ease-in-out                                }
                             animation: Gradient 10s ease infinite;
         }
 
-        .hiddenqaau{
-            display: none!important;
-        }
+       
     .mtneg{
         margin-top:3em
     }}
@@ -158,4 +156,26 @@ padding: 0.22rem 0.4rem;
 
               }
           }
+          @media screen and (max-width: 1150px) {
 
+            .headmax {
+         
+                display: block;
+              
+              }
+
+          }
+
+          @media screen and (min-width: 1150px) {
+           
+          .hidened{
+            display: none;
+          }}
+
+
+          @media screen and (max-width: 1280px) {
+
+          .revezed{
+flex-direction: column!important
+          }}
+       

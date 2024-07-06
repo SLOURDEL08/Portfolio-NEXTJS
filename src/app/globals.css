@@ -1115,7 +1115,6 @@ transition: opacity 0.2s ease-in-out;
       }
 
       .bgscrolled-result .fd{
-        height:100vh
       }
 
     
@@ -1589,3 +1588,16 @@ padding: 20px;
                 }
 
                
+
+
+               main {
+                margin: 0px auto;
+                  max-width: 2000px;
+                }
+
+                .headmax {
+                  margin: 0px auto;
+                    max-width: 2000px!important;
+                    display: flex;
+                    justify-content: space-between;
+                  }

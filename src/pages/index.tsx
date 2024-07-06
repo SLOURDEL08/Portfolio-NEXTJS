@@ -99,10 +99,10 @@ const HomePage: React.FC = () => {
 
 
         
-<div className='flex flex-col gap-10 mt-10 min-[1281px]:flex-row flex-col-reverse'>
+<div className='flex flex-row gap-10 mt-10 max-[1280px]:flex-wrap revezed'>
 
 {/* Blocs de gauche */}
-<div className='flex flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
+<div className='flex flex-nowrap flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
   {/* Premier bloc */}
   <div className='w-full flex flex-col justify-between h-[100%] gap-10 max-[900px]:flex-col  max-[1280px]:flex-row'>
   <Parented className='flex justify-start  max-[1280px]:w-[50%] max-[900px]:w-full '>
