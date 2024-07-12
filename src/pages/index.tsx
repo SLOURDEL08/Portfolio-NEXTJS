@@ -206,6 +206,7 @@ const HomePage: React.FC = () => {
 <Slider/>
 
 </Parented>
+
       </Main>
 
      

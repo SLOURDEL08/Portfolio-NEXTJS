@@ -12,14 +12,16 @@ export const Footer:React.FC = () => {
                <Image width="500" height="500" alt="logo web app" src="/sl.png" className="w-[100%] h-[100%]"/>
 
                </div>
-                <div className="flex flex-col gap-2">
-                <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="white" variant="body-lg" weight="bold" fontFamily="SanFrancisco">
-                    Resume     </Typography>
+                <div className="flex flex-col">
+               
                     <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
-                    Resume
+                    Accueil
                     </Typography>
                     <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
-                    Projects
+                    CV
+                    </Typography>
+                    <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
+                    Projets
                     </Typography>
                     <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
                     Contact
@@ -27,8 +29,7 @@ export const Footer:React.FC = () => {
                   
                 </div>
                 <div className="flex flex-col gap-2">
-                <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="white" variant="body-lg" weight="bold" fontFamily="SanFrancisco">
-                Repository     </Typography>
+               
            <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
            Github
            </Typography>
@@ -39,8 +40,7 @@ export const Footer:React.FC = () => {
          
        </div>
        <div className="flex flex-col gap-2">
-       <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="white" variant="body-lg" weight="bold" fontFamily="SanFrancisco">
-                    Contact     </Typography>
+     
            <Typography className="mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg"  theme="gray" variant="body-lg" weight="extralight" fontFamily="SanFrancisco">
            Linkedin
            </Typography>

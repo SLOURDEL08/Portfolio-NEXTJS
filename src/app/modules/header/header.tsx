@@ -5,16 +5,19 @@ import projects from "@/app/data/project.json";
 import { Typography } from "../typography/typography";
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
+import { ModalResult } from "../modal-result/ModalResult";
+import { useModal } from "../modal-result/ModalContext";
+
 import i18n from 'i18next';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchText, setSearchText] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
   const [hasText, setHasText] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const { openModal, closeModal, isModalOpen, searchResults } = useModal(); // Use the modal context
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +55,7 @@ export const Header: React.FC = () => {
     setSearchText(searchText);
     setHasText(searchText.trim() !== '');
     if (searchText.trim() === '') {
-      setSearchResults([]);
+      closeModal(); // Clear modal results if search text is cleared
     } else {
       filterProjects(searchText);
     }
@@ -64,26 +67,23 @@ export const Header: React.FC = () => {
       const tagMatches = project.tags.some((tag: string) => tag.toLowerCase().includes(searchText.toLowerCase()));
       return titleMatches || tagMatches;
     });
-    setSearchResults(filteredProjects);
+    openModal(filteredProjects); // Open modal with search results
   };
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
-
   const { t, i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language);
+  const [selectedLanguage,  setSelectedLanguage] = useState<string>(i18n.language);
 
   useEffect(() => {
-    // Exemple de logique avec i18n dans useEffect
     console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
-
+  }, [i18n]);
 
   const handleLanguageChange = (language: string) => {
     setSelectedLanguage(language);
-    i18n.changeLanguage(language); // Changer la langue avec i18n
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -210,20 +210,15 @@ export const Header: React.FC = () => {
                   ) : null}
                 </Link>
               </div>
-              
              
-            </div>
-          </ul>
-        </nav>
       </div>
-
-      {/* Search Results Section */}
-      <div className="flex fd flex-cols justify-center max-[1040px]:mt-0 ">
-        <Typography theme="white" component="p" variant="h3" fontFamily="SanFrancisco" weight="medium" className="mfdt hiddenqaau hidden">
-          Quel projet vous souhaitez ?
-        </Typography>
+    </ul>
+  </nav>
+</div>
+<div className="flex fd flex-cols justify-center max-[1040px]:mt-0 ">
+     
         {searchResults.length > 0 && (
-          <div className={`modal-result flex pt-10 flex-wrap justify-center items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
+          <div className={`modal-result flex pflex max-[900px]:p-8 max-[900px]:px-8 max-[900px]:py-6  flex-wrap justify-start items-center ${isScrolled ? 'bgscrolled bgscrolled-result' : 'bgtransparent'}`}>
             {searchResults.slice(0, 3).map((result) => (
               <div className="" key={result.id}>
                 <Link href={result.link} passHref>
@@ -241,8 +236,8 @@ export const Header: React.FC = () => {
           </div>
         )}
       </div>
+
     </header>
+    
   );
 };
-
-export default Header;

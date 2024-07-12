@@ -7,9 +7,9 @@
         padding:0px!important;
         background-color: #ffffff00!important;
     }
-
+  
  
-
+ 
     .rounded-WL{
         border-radius: 1.7rem!important;
     }
@@ -51,6 +51,13 @@ transition:0.2s ease-in-out                                }
         .parented:hover{
             background: #ffffff30;
         }
+
+        .modal-result{
+          margin-top: 0px!important;
+          justify-content: start!important;
+         
+    
+      }
                                  
 }
 
@@ -76,7 +83,8 @@ transition:0.2s ease-in-out                                }
         .modal-result{
             margin-top: 0px!important;
             justify-content: start!important;
-            padding:2rem 2rem!important;
+            padding:4rem 4rem;
+            padding-top: 2rem;
             width: 100%!important;
 
         }
@@ -179,3 +187,14 @@ padding: 0.22rem 0.4rem;
 flex-direction: column!important
           }}
        
+
+          @media screen and (max-width: 900px) {
+
+          .modal-result{
+            margin-top: 0px!important;
+            justify-content: start!important;
+            padding:4rem 2rem;
+            padding-top: 2rem;
+            width: 100%!important;
+      
+        }}
