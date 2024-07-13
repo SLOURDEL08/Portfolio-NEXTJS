@@ -197,4 +197,33 @@ flex-direction: column!important
             padding-top: 2rem;
             width: 100%!important;
       
-        }}
+        }
+     .btnresponsivee{
+      top:20px
+     }
+      
+      }
+
+
+          @media screen and (min-width: 901px) {
+
+
+       .mobileidmenu{
+        display: none;
+      }}
+          @media screen and (max-width: 551px) {
+
+
+       .btnresponsivee{
+      top:-100px;
+      right: 50%;
+    transform: translateX(50%);
+    margin:0px;
+     }
+    
+      .btnresponsivee img{
+      width:20px;
+      height: auto;
+     }
+    
+    }

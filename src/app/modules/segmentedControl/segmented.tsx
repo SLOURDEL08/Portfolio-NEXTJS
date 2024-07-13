@@ -38,17 +38,27 @@ const Segmented: React.FC<SegmentedProps> = ({
     console.log('Current language:', i18n.language);
   }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
 
-  useEffect(() => {
-    import('@/app/data/project.json')
-      .then(json => {
-        const limitedProjects = responsiveNumProjects === Infinity ? json.default : json.default.slice(0, responsiveNumProjects);
-        setProjects(limitedProjects);
-        if (onProjectChange) {
-          onProjectChange(limitedProjects[0]); // Définir le premier projet comme projet sélectionné initial
-        }
-      })
-      .catch(error => console.error('Erreur lors du chargement des données:', error));
-  }, [responsiveNumProjects, onProjectChange]);
+useEffect(() => {
+  import('@/app/data/project.json')
+    .then((json) => {
+      const data = json.default as Project[]; // Type assertion here
+      const shuffledData = shuffleArray(data); // Mélange les projets
+      const limitedProjects = responsiveNumProjects === Infinity ? shuffledData : shuffledData.slice(0, responsiveNumProjects);
+      setProjects(limitedProjects);
+      if (onProjectChange && limitedProjects.length > 0) {
+        onProjectChange(limitedProjects[0]); // Assuming onProjectChange expects a Project
+      }
+    })
+    .catch((error) => console.error('Erreur lors du chargement des données:', error));
+}, [responsiveNumProjects, onProjectChange]);
+  
+  function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);

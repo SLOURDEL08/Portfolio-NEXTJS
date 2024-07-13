@@ -73,11 +73,7 @@ const Projects: React.FC = () => {
               className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
             >
               <Image src={project.image} width="500" height="500" alt={project.title} className='h-[100%] w-[100%] rounded-2xl object-cover object-left grayzc' />
-              <div className={`overlay-projectitem`}>
-                <div className='overlay-projectitem-content'>
-                 
-                </div>
-              </div>
+           
             </div>
           </div>
           <div className={`w-3/5 bg-[#ffffff20] max-[900px]:bg-[#ffffff00] max-[900px]:pt-5 parentprojected p-10 max-[900px]:p-8 carouzel relative rounded-3xl max-[900px]:w-[100%]`}>
@@ -105,11 +101,11 @@ const Projects: React.FC = () => {
                 ))}
               </div>
               <Typography theme="white" weight="light" variant="body-base" component="p" fontFamily="Inter" className="leading-8 strocked">
-                {project.description}
+  {t(`project.${project.slug}.description.${i18n.language}`)}
               </Typography>
-              <div className='flex gap-4 absolute top-10 right-10'>
+              <div className='flex gap-4 absolute top-10 right-10 btnresponsivee'>
                 <button className='ovhea flex gap-1 justify-center items-center p-3 px-4 rounded-full' onClick={prevProject}>
-                  <Image src="/larrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]' />
+                  <Image src="/larrow.png" width="200" height="200" alt='' className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px] ' />
                  
                 </button>
                 <button className='ovhea flex gap-1 justify-center items-center p-3 px-4  rounded-full' onClick={nextProject}>

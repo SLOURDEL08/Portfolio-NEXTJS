@@ -482,6 +482,10 @@ border-radius: 1000px;
 transition:0.2s ease-in-out;
 }
 
+.shadowed{
+  box-shadow: 0px 0px 40px 0px #ffffff2a;
+}
+
 .custom-button.cardz{
  font-size:1rem;opacity: 0.3;transition:0.3s ease-in-out;font-weight:600;background-color: #ffffff00;border:1px solid white;padding:10px 14px
 }
@@ -495,7 +499,6 @@ opacity: 1;  background-color: #7A24E8;border-color:#7A24E8
 }
 
 .bg-lin{
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
 
 }
 
@@ -1355,6 +1358,7 @@ display: block;                          margin-top: 100px;
               opacity: 0;
               width: 100%;
               height: 100%;
+              background-color: #00000000;
             }
             
             .project-itemm.active {
@@ -1375,16 +1379,14 @@ display: block;                          margin-top: 100px;
             .project-itemm .overlay-projectitem{
 height:100%;border-radius: 1rem;
 backdrop-filter: blur(0px);
-background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
-background-size: 400% 400%;
-    animation: Gradient 10s ease infinite;
-transition: background 0.3s ease-in-out!important
+background-color: #00000000!important;
+
 
             }
 
             .project-itemm:hover .overlay-projectitem{
-              background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
-              background-size: 400% 400%;
+          background-color: #00000000!important;
+
             }
 
             .project-itemm .overlay-projectitem img{
@@ -1482,12 +1484,12 @@ padding: 20px;
 }
 
 .ovhea{
-  background: linear-gradient(45deg, #7A24E840, #e0c9ff4d, #7A24E840, #e0c9ff4d, #7A24E840, #e0c9ff4d);
+  background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
   background-size: 400% 400%;
   animation: Gradient 10s ease infinite;z-index: 200;
 }
 .ovhea:hover{
-  background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
+  background:  #7A24E8;
   background-size: 400% 400%;
   animation: Gradient 10s ease infinite;z-index: 200;
 }
