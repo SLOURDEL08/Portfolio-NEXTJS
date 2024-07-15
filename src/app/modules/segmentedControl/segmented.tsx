@@ -17,6 +17,7 @@ interface SegmentedProps {
   className?: string;
   onProjectChange?: (project: Project) => void;
   selectedProjectIndex?: number; // Ajoutez cette ligne pour déclarer la prop selectedProjectIndex
+  frontEndProject?: boolean; // Ajoutez cette ligne pour déclarer la prop frontEndProject
 }
 
 const Segmented: React.FC<SegmentedProps> = ({
@@ -26,39 +27,52 @@ const Segmented: React.FC<SegmentedProps> = ({
   responsiveBreakpoints = {},
   className = '',
   onProjectChange,
+  frontEndProject = false, // Ajoutez cette ligne pour initialiser la prop frontEndProject
 }) => {
   const { t, i18n } = useTranslation(); // Appel de useTranslation en haut du composant
   const { locale, handleLanguageChange } = useLocale(); // Appel de useLocale en haut du composant
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedFilter, setSelectedFilter] = useState('Tous');
-  const responsiveNumProjects = useResponsiveProjects(numProjects === 'all' ? Infinity : numProjects, responsiveBreakpoints);
+  const responsiveNumProjects = useResponsiveProjects(
+    numProjects === 'all' ? Infinity : numProjects,
+    responsiveBreakpoints
+  );
 
   useEffect(() => {
     // Dépendance ajoutée : i18n
     console.log('Current language:', i18n.language);
   }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
 
-useEffect(() => {
-  import('@/app/data/project.json')
-    .then((json) => {
-      const data = json.default as Project[]; // Type assertion here
-      const shuffledData = shuffleArray(data); // Mélange les projets
-      const limitedProjects = responsiveNumProjects === Infinity ? shuffledData : shuffledData.slice(0, responsiveNumProjects);
-      setProjects(limitedProjects);
-      if (onProjectChange && limitedProjects.length > 0) {
-        onProjectChange(limitedProjects[0]); // Assuming onProjectChange expects a Project
-      }
-    })
-    .catch((error) => console.error('Erreur lors du chargement des données:', error));
-}, [responsiveNumProjects, onProjectChange]);
-  
+  useEffect(() => {
+    import('@/app/data/project.json')
+      .then((json) => {
+        const data = json.default as Project[]; // Type assertion here
+        let filteredData = data;
+
+        if (frontEndProject) {
+          filteredData = data.filter((project) => project.categories.includes('Front-end'));
+        }
+
+        const shuffledData = shuffleArray(filteredData); // Mélange les projets
+        const limitedProjects =
+          responsiveNumProjects === Infinity
+            ? shuffledData
+            : shuffledData.slice(0, responsiveNumProjects);
+        setProjects(limitedProjects);
+        if (onProjectChange && limitedProjects.length > 0) {
+          onProjectChange(limitedProjects[0]); // Assuming onProjectChange expects a Project
+        }
+      })
+      .catch((error) => console.error('Erreur lors du chargement des données:', error));
+  }, [responsiveNumProjects, onProjectChange, frontEndProject]);
+
   function shuffleArray(array: any[]) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
-  return array;
-}
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
@@ -72,22 +86,38 @@ useEffect(() => {
 
   const gridColsClass = `${numCols}`;
 
-  if (typeof numCols === 'string' && !['grid-cols-2', 'grid-cols-4', 'grid-cols-3', 'grid-col'].includes(numCols)) {
+  if (
+    typeof numCols === 'string' &&
+    !['grid-cols-2', 'grid-cols-4', 'grid-cols-3', 'grid-col'].includes(numCols)
+  ) {
     console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
     return null;
   }
 
-
   return (
     <div className={`w-full h-full ${className}`}>
-      {useFilters && (
+      {useFilters && !frontEndProject && (
         <section className='fivefilter'>
-          <div className="segmented-controls square">
-            <input id="five-1" name="five" type="radio" checked={selectedFilter === 'Tous'} onChange={() => handleFilterChange('Tous')} />
-            <label htmlFor="five-1" className='tdf'>{t('label.segmented')}</label>
-            {['Wordpress', 'Front-end', 'Back-end', 'Full-stack', 'Design'].map(category => (
+          <div className='segmented-controls square'>
+            <input
+              id='five-1'
+              name='five'
+              type='radio'
+              checked={selectedFilter === 'Tous'}
+              onChange={() => handleFilterChange('Tous')}
+            />
+            <label htmlFor='five-1' className='tdf'>
+              {t('label.segmented')}
+            </label>
+            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', 'Design'].map((category) => (
               <React.Fragment key={category}>
-                <input id={`five-${category.toLowerCase()}`} name="five" type="radio" checked={selectedFilter === category} onChange={() => handleFilterChange(category)} />
+                <input
+                  id={`five-${category.toLowerCase()}`}
+                  name='five'
+                  type='radio'
+                  checked={selectedFilter === category}
+                  onChange={() => handleFilterChange(category)}
+                />
                 <label htmlFor={`five-${category.toLowerCase()}`}>{category}</label>
               </React.Fragment>
             ))}
@@ -95,31 +125,70 @@ useEffect(() => {
         </section>
       )}
 
-      <div className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3 mediagride  max-[900px]:grid-cols-2 gap-8 ${useFilters ? 'mt-8' : ''}`}>
-        {projects.map(project => (
+      <div
+        className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3 mediagride  max-[900px]:grid-cols-2 gap-8 ${
+          useFilters ? 'mt-8' : ''
+        }`}
+      >
+        {projects.map((project) => (
           <div
             key={project.id}
-            className={`project-item projectadow w-[100%] flex items-end h-[100%] rounded-3xl relative ${useFilters && selectedFilter !== 'Tous' && !project.categories.includes(selectedFilter) && 'hidden'}`}
+            className={`project-item projectadow w-[100%] flex items-end h-[100%] rounded-3xl relative ${
+              useFilters &&
+              selectedFilter !== 'Tous' &&
+              !project.categories.includes(selectedFilter) &&
+              'hidden'
+            }`}
             onClick={() => handleProjectSelect(project)} // Appeler handleProjectSelect lors de la sélection d'un projet
           >
-            <Image src={project.image} width="500" height="500" alt={project.title} className='h-[100%] w-[100%] rounded-3xl object-cover object-left grayzc' />
+            <Image
+              src={project.image}
+              width='500'
+              height='500'
+              alt={project.title}
+              className='h-[100%] w-[100%] rounded-3xl object-cover object-left grayzc'
+            />
             <div className={`overlay-projectitem`}>
               <div className='overlay-projectitem-content'>
                 <div className='flex flex-col gap-2 w-[100%]'>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
-                      <Image src={project.symbol} width="25" height="25" alt='de' className='min-h-[25px] min-w-[25px] object-cover rounded shadowingsymbol' />
-                      <Typography theme='white' weight='bold' variant='body-base' component='p' fontFamily='ClashDisplay' className='text-left hover:text-[white] linked-color'>
+                      <Image
+                        src={project.symbol}
+                        width='25'
+                        height='25'
+                        alt='de'
+                        className='min-h-[25px] min-w-[25px] object-cover rounded shadowingsymbol'
+                      />
+                      <Typography
+                        theme='white'
+                        weight='bold'
+                        variant='body-base'
+                        component='p'
+                        fontFamily='ClashDisplay'
+                        className='text-left hover:text-[white] linked-color'
+                      >
                         {project.title}
                       </Typography>
                     </div>
-                    <Link className='p-3 rounded-full linaked min-w-[32px] w-[35px]' href={`/project/${project.id}`} >
-                      <Image src="/top-right-arrow.png" width="15" height="15" alt='' className='grayscale-2' />
+                    <Link
+                      className='p-3 rounded-full linaked min-w-[32px] w-[35px]'
+                      href={`/project/${project.id}`}
+                    >
+                      <Image
+                        src='/top-right-arrow.png'
+                        width='15'
+                        height='15'
+                        alt=''
+                        className='grayscale-2'
+                      />
                     </Link>
                   </div>
                   <div className='tagoverlay flex justify-start gap-4'>
-                    {project.tags.slice(0, 2).map(tag => (
-                      <button className='' key={tag}>{tag}</button>
+                    {project.tags.slice(0, 2).map((tag) => (
+                      <button className='' key={tag}>
+                        {tag}
+                      </button>
                     ))}
                   </div>
                 </div>
