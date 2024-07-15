@@ -347,8 +347,8 @@ export const Header: React.FC = () => {
                   ) : null}
                 </Link>
 
-                <Link
-                  href='/contact'
+                <button
+                  onClick={openContactModal}
                   className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/contact' ? 'activesection' : ''
                   }`}
@@ -371,7 +371,7 @@ export const Header: React.FC = () => {
                       Contact
                     </Typography>
                   ) : null}
-                </Link>
+                </button>
               </div>
             </div>
           </ul>
