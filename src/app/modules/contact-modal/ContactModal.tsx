@@ -14,8 +14,8 @@ interface FormValues {
   email: string;
   message: string;
   country: { label: string; value: string };
-  city: { label: string; value: string };
-  postalCode: string;
+  city: string;
+  enterprise: string;
 }
 
 const customStyles = {
@@ -25,16 +25,48 @@ const customStyles = {
     border: 'none',
     outline: 'none',
     width: '100%',
-    padding: '20px',
+    height: '60px', // Hauteur fixe
+    paddingLeft: '20px', // Assurez-vous que le padding est 0
     borderRadius: '0.5em',
     fontSize: '18px',
     fontFamily: 'SanFrancisco',
-    fontWeight: '600',
-    color: '#676767',
+    fontWeight: '300',
+    color: '#aaa',
+    overflow: 'hidden', // Empêcher l'agrandissement
   }),
   singleValue: (provided: any) => ({
     ...provided,
-    color: '#676767',
+    color: '#aaa',
+  }),
+  valueContainer: (provided: any) => ({
+    ...provided,
+    height: '60px', // Hauteur fixe
+    display: 'flex',
+    alignItems: 'center', // Centrer verticalement le contenu
+    padding: '0px', // Assurez-vous que le padding est 0
+  }),
+  indicatorsContainer: (provided: any) => ({
+    ...provided,
+    height: '60px', // Hauteur fixe
+  }),
+
+  menu: (provided: any) => ({
+    ...provided,
+    backgroundColor: 'rgba(255, 255, 255, 1)', // Fond du menu
+    color: '#676767', // Couleur de la police
+    fontFamily: 'SanFrancisco', // Police
+  }),
+  option: (provided: any, state: any) => ({
+    ...provided,
+    'backgroundColor': state.isSelected ? '#ddd' : 'rgba(255, 255, 255, 1)', // Fond de l'option
+    'color': '#676767', // Couleur de la police
+    'fontFamily': 'SanFrancisco', // Police
+    'padding': '10px', // Rembourrage de l'option
+    'cursor': 'pointer',
+    '&:hover': {
+      backgroundColor: 'rgba(121, 36, 232, 1)',
+      color: 'white',
+    },
   }),
 };
 
@@ -48,18 +80,19 @@ const ContactModal: React.FC = () => {
     formState: { errors },
   } = useForm<FormValues>();
 
-  const [countries, setCountries] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [postalCode, setPostalCode] = useState('');
+  const [countries, setCountries] = useState<{ label: string; value: string }[]>([]);
 
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all').then((response) => {
-      const countryOptions = response.data.map((country: any) => ({
-        label: country.name.common,
-        value: country.cca2,
-      }));
-      setCountries(countryOptions);
-    });
+    axios
+      .get('https://restcountries.com/v3.1/all')
+      .then((response) => {
+        const countryOptions = response.data.map((country: any) => ({
+          label: country.name.common,
+          value: country.cca2,
+        }));
+        setCountries(countryOptions);
+      })
+      .catch((error) => console.error('Error fetching countries:', error));
 
     const handleRouteChange = (url: string) => {
       if (url !== '/contact') {
@@ -79,38 +112,19 @@ const ContactModal: React.FC = () => {
   };
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-    // Vous pouvez envoyer les données à votre backend ici
-    closeModal();
+    axios
+      .post('http://localhost:3001/send-mail', data) // Utilisez l'URL relative sans le domaine complet
+      .then((response) => {
+        console.log('Email sent successfully:', response.data);
+        closeModal();
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
   const handleCountryChange = (selectedOption: any) => {
     setValue('country', selectedOption);
-    axios
-      .get(
-        `http://api.geonames.org/searchJSON?country=${selectedOption.value}&featureClass=P&maxRows=1000&username=demo`
-      )
-      .then((response) => {
-        if (response.data && response.data.geonames) {
-          const cityOptions = response.data.geonames.map((city: any) => ({
-            label: city.name,
-            value: city.name,
-          }));
-          setCities(cityOptions);
-        } else {
-          setCities([]);
-        }
-      })
-      .catch((error) => {
-        console.error('Error fetching cities:', error);
-        setCities([]);
-      });
-  };
-
-  const handleCityChange = (selectedOption: any) => {
-    setValue('city', selectedOption);
-    // Optionally set postal code if available in the selectedOption
-    setPostalCode(selectedOption.postalCode || '');
   };
 
   return (
@@ -134,47 +148,83 @@ const ContactModal: React.FC = () => {
         >
           Discutons ensemble !
         </Typography>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form action='/send-mail' onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.formGroupRow}>
             <div className={styles.formGroup}>
-              <input
-                id='firstName'
-                placeholder='Nom'
-                {...register('firstName', { required: 'First name is required' })}
-              />
-              {errors.firstName && <p>{errors.firstName.message}</p>}
+              <div className={styles.inputWithIcon}>
+                <input
+                  id='firstName'
+                  placeholder='Nom'
+                  {...register('firstName', { required: 'Le nom est requis' })}
+                />
+                <Image
+                  src='/person.png'
+                  width='30'
+                  height='30'
+                  className={styles.icon}
+                  alt='Icône formulaire nom'
+                />
+                {errors.firstName && <p>{errors.firstName.message}</p>}
+              </div>
             </div>
             <div className={styles.formGroup}>
-              <input
-                id='lastName'
-                placeholder='Prénom'
-                {...register('lastName', { required: 'Last name is required' })}
-              />
-              {errors.lastName && <p>{errors.lastName.message}</p>}
+              <div className={styles.inputWithIcon}>
+                <input
+                  id='lastName'
+                  placeholder='Prénom'
+                  {...register('lastName', { required: 'Le prénom est requis' })}
+                />
+                <Image
+                  src='/person.png'
+                  width='30'
+                  height='30'
+                  className={styles.icon}
+                  alt='Icône formulaire prénom'
+                />
+                {errors.lastName && <p>{errors.lastName.message}</p>}
+              </div>
+            </div>
+            <div className={styles.formGroup}>
+              <div className={styles.inputWithIcon}>
+                <Image
+                  src='/suit.png'
+                  width='30'
+                  height='30'
+                  className={styles.icon}
+                  alt='Icône formulaire entreprise'
+                />
+                <input
+                  id='enterprise'
+                  placeholder='Société'
+                  {...register('enterprise', { required: "Le nom de l'entreprise est requis" })}
+                />
+                {errors.enterprise && <p>{errors.enterprise.message}</p>}
+              </div>
             </div>
           </div>
           <div className={styles.formGroup}>
-            <input
-              id='email'
-              type='email'
-              placeholder='Adresse-email'
-              {...register('email', {
-                required: 'Email is required',
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: 'Invalid email address',
-                },
-              })}
-            />
+            <div className={styles.inputWithIcon}>
+              <input
+                id='email'
+                type='email'
+                placeholder='Adresse email'
+                {...register('email', {
+                  required: "L'adresse email est requise",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: 'Adresse email invalide',
+                  },
+                })}
+              />
+              <Image
+                src='/mailrounded.png'
+                width='30'
+                height='30'
+                className={styles.icon}
+                alt='Icône formulaire email'
+              />
+            </div>
             {errors.email && <p>{errors.email.message}</p>}
-          </div>
-          <div className={styles.formGroup}>
-            <textarea
-              id='message'
-              placeholder='Description'
-              {...register('message', { required: 'Message is required' })}
-            />
-            {errors.message && <p>{errors.message.message}</p>}
           </div>
           <div className={styles.formGroupRow}>
             <div className={styles.formGroup}>
@@ -183,26 +233,25 @@ const ContactModal: React.FC = () => {
                 options={countries}
                 onChange={handleCountryChange}
                 styles={customStyles}
-              />
-            </div>
-            <div className={styles.formGroup}>
-              <Select
-                placeholder='Ville'
-                options={cities}
-                onChange={handleCityChange}
-                styles={customStyles}
+                className='custom-select-container'
               />
             </div>
             <div className={styles.formGroup}>
               <input
-                id='postalCode'
-                placeholder='Code Postal'
-                value={postalCode}
-                {...register('postalCode', { required: 'Postal code is required' })}
-                className={styles.slec}
+                id='city'
+                placeholder='Ville'
+                {...register('city', { required: 'La ville est requise' })}
               />
-              {errors.postalCode && <p>{errors.postalCode.message}</p>}
+              {errors.city && <p>{errors.city.message}</p>}
             </div>
+          </div>
+          <div className={styles.formGroup}>
+            <textarea
+              id='message'
+              placeholder='Description'
+              {...register('message', { required: 'Le message est requis' })}
+            />
+            {errors.message && <p>{errors.message.message}</p>}
           </div>
           <button type='submit' className={styles.submitButton}>
             Envoyer

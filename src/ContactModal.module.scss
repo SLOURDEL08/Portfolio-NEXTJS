@@ -128,6 +128,7 @@
         font-size: 18px;
 font-family: 'SanFrancisco'!important;
     font-weight: 200;
+    color:#aaa
    }
 }
 
@@ -167,3 +168,37 @@ font-family: 'SanFrancisco'!important;
 }
 
 
+
+
+
+.custom-select-container {
+    padding: 20px!important;
+}
+
+ .css-1jqq78o-placeholder{
+    margin-left: 20px!important;
+
+ }
+
+
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIcon input {
+  width: 100%;
+  padding-right: 50px; /* Ajoutez un espace pour l'icône */
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Empêche l'icône d'interférer avec le clic de l'utilisateur */
+  width:25px;
+z-index:10000;
+opacity: 1;}

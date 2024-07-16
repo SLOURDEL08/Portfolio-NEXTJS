@@ -1691,15 +1691,18 @@ padding: 20px;
 
 
 
-                   .css-1xc3v61-indicatorContainer,
-                   .css-1fdsijx-ValueContainer,
-                   .css-qbdosj-Input
-                  {
-    margin:0px!important;
-    padding: 0px!important;
- }
+             
 
 
- .css-1u9des2-indicatorSeparator{
-display: none!important;
- }
+
+
+
+
+/* styles.css */
+
+
+/* Ajoutez ces styles dans votre fichier CSS */
+/* styles.css */
+.css-1jqq78o-placeholder{
+  color:#aaa!important
+}
