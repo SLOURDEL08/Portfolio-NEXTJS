@@ -1,7 +1,4 @@
 import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
-
-dotenv.config(); // Load environment variables from .env file
 
 // Nodemailer transporter with credentials from environment variables
 const transporter = nodemailer.createTransport({
