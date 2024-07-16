@@ -1,16 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { useContactModal } from '@/app/modules/contact-modal/ModalContext';
 import styles from '@/ContactModal.module.scss'; // Assurez-vous que ce chemin est correct
 import { Typography } from '../typography/typography';
+import Image from 'next/image';
+import Select from 'react-select';
+import axios from 'axios';
 
 interface FormValues {
   firstName: string;
   lastName: string;
   email: string;
   message: string;
+  country: { label: string; value: string };
+  city: { label: string; value: string };
+  postalCode: string;
 }
+
+const customStyles = {
+  control: (provided: any) => ({
+    ...provided,
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    border: 'none',
+    outline: 'none',
+    width: '100%',
+    padding: '20px',
+    borderRadius: '0.5em',
+    fontSize: '18px',
+    fontFamily: 'SanFrancisco',
+    fontWeight: '600',
+    color: '#676767',
+  }),
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: '#676767',
+  }),
+};
 
 const ContactModal: React.FC = () => {
   const router = useRouter();
@@ -18,10 +44,23 @@ const ContactModal: React.FC = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<FormValues>();
 
+  const [countries, setCountries] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [postalCode, setPostalCode] = useState('');
+
   useEffect(() => {
+    axios.get('https://restcountries.com/v3.1/all').then((response) => {
+      const countryOptions = response.data.map((country: any) => ({
+        label: country.name.common,
+        value: country.cca2,
+      }));
+      setCountries(countryOptions);
+    });
+
     const handleRouteChange = (url: string) => {
       if (url !== '/contact') {
         closeContactModal();
@@ -45,42 +84,76 @@ const ContactModal: React.FC = () => {
     closeModal();
   };
 
+  const handleCountryChange = (selectedOption: any) => {
+    setValue('country', selectedOption);
+    axios
+      .get(
+        `http://api.geonames.org/searchJSON?country=${selectedOption.value}&featureClass=P&maxRows=1000&username=demo`
+      )
+      .then((response) => {
+        if (response.data && response.data.geonames) {
+          const cityOptions = response.data.geonames.map((city: any) => ({
+            label: city.name,
+            value: city.name,
+          }));
+          setCities(cityOptions);
+        } else {
+          setCities([]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching cities:', error);
+        setCities([]);
+      });
+  };
+
+  const handleCityChange = (selectedOption: any) => {
+    setValue('city', selectedOption);
+    // Optionally set postal code if available in the selectedOption
+    setPostalCode(selectedOption.postalCode || '');
+  };
+
   return (
     <div className={styles.modalOverlay}>
+      <button onClick={closeModal} className={styles.closeButton}>
+        <Image
+          src='/closering.png'
+          alt='icon close modal contact'
+          width='50'
+          height='50'
+          className='w-[50px] h-[50px] opacity-40 hover:opacity-100'
+        />
+      </button>
       <div className={styles.modalContent}>
-        <button onClick={closeModal} className={styles.closeButton}>
-          X
-        </button>
         <Typography
-          variant='h5'
+          variant='h2'
           weight='medium'
           theme='white'
           fontFamily='ClashDisplay'
-          className='text-center mb-6'
+          className='text-center mb-14'
         >
           Discutons ensemble !
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.formGroup}>
-            <label htmlFor='firstName'> </label>
-            <input
-              id='firstName'
-              placeholder='Nom'
-              {...register('firstName', { required: 'First name is required' })}
-            />
-            {errors.firstName && <p>{errors.firstName.message}</p>}
+          <div className={styles.formGroupRow}>
+            <div className={styles.formGroup}>
+              <input
+                id='firstName'
+                placeholder='Nom'
+                {...register('firstName', { required: 'First name is required' })}
+              />
+              {errors.firstName && <p>{errors.firstName.message}</p>}
+            </div>
+            <div className={styles.formGroup}>
+              <input
+                id='lastName'
+                placeholder='Prénom'
+                {...register('lastName', { required: 'Last name is required' })}
+              />
+              {errors.lastName && <p>{errors.lastName.message}</p>}
+            </div>
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor='lastName'></label>
-            <input
-              id='lastName'
-              placeholder='Prénom'
-              {...register('lastName', { required: 'Last name is required' })}
-            />
-            {errors.lastName && <p>{errors.lastName.message}</p>}
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor='email'> </label>
             <input
               id='email'
               type='email'
@@ -96,13 +169,40 @@ const ContactModal: React.FC = () => {
             {errors.email && <p>{errors.email.message}</p>}
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor='message'> </label>
             <textarea
-              placeholder='Description'
               id='message'
+              placeholder='Description'
               {...register('message', { required: 'Message is required' })}
             />
             {errors.message && <p>{errors.message.message}</p>}
+          </div>
+          <div className={styles.formGroupRow}>
+            <div className={styles.formGroup}>
+              <Select
+                placeholder='Pays'
+                options={countries}
+                onChange={handleCountryChange}
+                styles={customStyles}
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <Select
+                placeholder='Ville'
+                options={cities}
+                onChange={handleCityChange}
+                styles={customStyles}
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <input
+                id='postalCode'
+                placeholder='Code Postal'
+                value={postalCode}
+                {...register('postalCode', { required: 'Postal code is required' })}
+                className={styles.slec}
+              />
+              {errors.postalCode && <p>{errors.postalCode.message}</p>}
+            </div>
           </div>
           <button type='submit' className={styles.submitButton}>
             Envoyer
