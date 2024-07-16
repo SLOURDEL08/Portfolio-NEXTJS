@@ -113,7 +113,7 @@ const ContactModal: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     axios
-      .post('http://localhost:3001/send-mail', data) // Utilisez l'URL relative sans le domaine complet
+      .post('/api/send-mail', data)
       .then((response) => {
         console.log('Email sent successfully:', response.data);
         closeModal();
