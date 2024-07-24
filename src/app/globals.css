@@ -1671,7 +1671,13 @@ padding: 20px;
                 }
 
                
-
+.cesdede {
+  background-image: url('/cesde.png')!important;
+  background-size: cover!important; /* couvre complètement la div */
+  background-position: center!important;
+  background-repeat: no-repeat!important; /* assurez-vous que l'image ne se répète pas */
+  height: 100%!important; /* assure que la div utilise toute la hauteur disponible */
+}
 
                main {
                 margin: 0px auto;
@@ -1680,7 +1686,6 @@ padding: 20px;
 
                 .headmax {
                   margin: 0px auto;
-                    max-width: 2000px!important;
                     justify-content: space-between;
                   }
 

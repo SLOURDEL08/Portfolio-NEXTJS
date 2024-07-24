@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Layout from '@/app/modules/layout/layout';
 import Main from '@/app/modules/main/main';
 import Image from '../../node_modules/next/image';
@@ -32,17 +31,11 @@ const HomePage: React.FC = () => {
     <Layout>
       <TransitionPage>
         <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
-          <div className='image-container pt-2 w-[100%] max-[680px]:block flex gap-10 max-[900px]:pt-16'>
-            <div className='flex flex-col overflow-hidden items-start gap-2 profilpiced w-[30%] h-[auto] max-[680px]:h-[160px] max-[680px]:w-[160px]  max-[680px]:mb-8 rounded-WL max-[900px]:w-[40%]'>
-              <Image
-                src='/cesded.png'
-                width='599'
-                height='599'
-                alt='de'
-                className='h-full w-full object-cover'
-              />
+          <div className='image-container pt-2 w-full max-md:block flex gap-10 max-[900px]:pt-16 items-stretch'>
+            <div className=' overflow-hidden items-center gap-2 w-[30%] max-md:h-[160px] max-md:w-[160px] max-md:mb-8 rounded-WL max-[900px]:w-[40%]  relative !max-h'>
+              <Image src='/cesde.png' alt='de' fill className='object-cover' />
             </div>
-            <div className='flex flex-col items-start gap-4 w-[70%] max-[680px]:w-full h-[auto] max-[900px]:w-[60%]'>
+            <div className='flex flex-col items-start gap-4 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
               <div>
                 <AnimatedText />
                 <Typography
@@ -68,7 +61,7 @@ const HomePage: React.FC = () => {
               </Typography>
               <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
                 <div className='flex flex-wrap gap-6 items-center max-[900px]:py-2'>
-                  <Link href='/projects' className=''>
+                  <Link href='/aboutpage' className=''>
                     <div className='flex items-center gap-3 p-3 px-4 ovhea rounded-2xl  roundedlb'>
                       <Typography
                         component='span'
@@ -267,8 +260,8 @@ const HomePage: React.FC = () => {
                   </div>
                 </Parented>
               </div>
-              <Link href='/' className='h-[20%] w-full'>
-                <div className='flex justify-between items-center h-[100%] gradiended p-10 max-[900px]:p-8 rounded-3xl parentproject '>
+              <a href='/docs/cv.pdf' download='cv.pdf' className='h-[20%] w-full'>
+                <div className='flex justify-between items-center h-[100%] gradiended p-10 max-[900px]:p-8 rounded-3xl parentproject'>
                   <Typography
                     theme='white'
                     weight='bold'
@@ -279,9 +272,9 @@ const HomePage: React.FC = () => {
                   >
                     {t('index.download.cv')}
                   </Typography>
-                  <Image src='/download.png' width='30' height='30' alt='de' />
+                  <Image src='/download.png' width='30' height='30' alt='Download icon' />
                 </div>
-              </Link>
+              </a>
             </div>
 
             <Parented className='  flex flex-col gap-8   max-[900px]: w-[60%] sm:w-[100%]  max-[1280px]:w-[100%]'>

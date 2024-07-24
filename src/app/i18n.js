@@ -7,7 +7,91 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      Welcome: 'Welcome to React and react-i18next',
+      'Welcome': 'Welcome to my NextJS Portfolio',
+      'index.description':
+        'My name is Sébastien LOURDEL, I am 25 years old. I started developing 5 years ago with HTML/CSS and WordPress, and then continued to train to enhance my front-end development skills. I have been passionate about computers since I was young. My extensive use of the Adobe suite allows me to be comfortable with mockups, integrating graphic designs, and understanding UX/UI concepts.',
+      'index.button.first': 'My Resume',
+      'index.button.second': 'My Projects',
+      'madewith': 'Made with',
+      'index.titleexp': 'Recent Experiences',
+      'index.titleform': 'Education',
+      'index.titleproject': 'My Projects',
+      'index.download.cv': 'Download My Resume!',
+      'projectpage.description':
+        'Discover all my web development, graphic design, back-end, and front-end projects, and much more.',
+      'label.segmented': 'All',
+      'projetpage.title': 'My Projects',
+      'header.home': 'Welcome',
+      'header.cv': 'Resume',
+      'header.project': 'Projects',
+      'header.contact': 'Contact',
+      'about.title': 'A Few Details',
+      /* DIPLOME BLOCK */
+      'openclassroom.dip.title':
+        'Professional Title: Web and Application Developer (Associate Degree Equivalent, RNCP Level 5)',
+      'popschool.dip.title':
+        'Professional Title: Web and Mobile Application Developer (Associate Degree Equivalent, RNCP Level 5)',
+      'bac.dip.title': 'Baccalaureate in Management and Business Technologies',
+      /* FORMATION BLOCK */
+      'openclassroom.description':
+        'Web developer apprenticeship, creating functional front-end and back-end applications with SEO, responsive design, green coding, and agile methodologies.',
+      'popschool.description':
+        'Six-month training program in web and mobile application development at Popschool Valenciennes, covering languages, agile working methods, mobile development, and best practices.',
+      'bac.description':
+        'Baccalaureate in Management and Business Technologies at Arthur-Rimbaud High School in Sin-le-Noble',
+      'brevet.description': 'André Malraux Middle School in Lambres-lez-Douai',
+      /* EXPERIENCE BLOCK */
+      'freelance.description':
+        'Development of showcase websites, e-commerce platforms, or turnkey booking systems for freelancers or SMEs. Advertising campaigns, graphic design, SEO, tracking, and optimization.',
+      'flexpress.description':
+        'Package delivery for individuals and businesses (FedEx, Chronopost, GLS) using 14m3 trucks, and delivery of heavy items and kitchens to homes using 20m3 trucks. High-paced work and managing 8 to 12-hour days.',
+      'toast.exp.description':
+        'Development of WordPress sites, maintenance, feature additions, page creation, and sales funnel optimization. Design of mockups and prototypes, management of Facebook and Google Ads campaigns, and tracking via Google Tag Manager.',
+      'faurecia.description':
+        'Assembly of textiles for car seats, quality and safety control, quick intervention in case of line stoppage, and proficiency in various textile and metal assembly positions.',
+      'trigo.va.description':
+        'Quality control of aesthetic parts, segregation of non-compliant items, report writing, retouching of automotive parts, and maintaining production pace.',
+      'trigo.sin.description':
+        'Quality control of aesthetic parts for Renault Talisman, segregation of non-compliant items, retouching of parts, stock management, machine adjustments, and R-LINK tablet testing.',
+      'dk.description':
+        'Development and maintenance of WordPress sites, development of an intranet using HTML/CSS/PHP, optimization and SEO, design of mockups and prototypes.',
+      'graphic.description':
+        'Cutting and assembly of cardboard prototypes for large retailers. Machine supply, production line control, and equipment management for industrial packaging.',
+      /* PROJECT BLOCK */
+      'project.netflix.description.fr':
+        'Front-end development of the Netflix web application homepage, with integration of dynamic content, a slider for browsing movies and various categories. Design and optimization work for an enhanced user experience.',
+      'project.uber-eats.description.fr':
+        'Reproduction of the old Uber Eats homepage using Vue.js for a dynamic interface with a functional filter system in the search bar. Creation of dynamic pages for each restaurant with specific menus and real-time order management.',
+      'project.abc-renov.description.fr':
+        'Creation of a WordPress showcase site for a construction company based in Nice. Implementation of a multi-page site including contact forms, optimized SEO, and analytical tracking to improve visibility and visitor engagement.',
+      'project.booki.description.fr':
+        'Front-end project aiming to recreate a dynamic and responsive web page, in the style of Booking.com. Use of modern technologies for a smooth user interface and compatibility across different devices.',
+      'project.couvretanche.description.fr':
+        'Showcase site for an SME specializing in roofing, waterproofing, and insulation. Design inspired by a similar site, with a multi-page layout and contact forms, allowing clients to request quotes or information.',
+      'project.couvrassistance.description.fr':
+        'Showcase site for a company specializing in roofing assistance and renovation, with responsiveness for emergencies. Highlighting the services offered and testimonials from satisfied customers.',
+      'project.kasa.description.fr':
+        'Development of Kasa site pages, similar to Booking.com, allowing the display of available accommodations with detailed descriptions, host reviews, and online booking features.',
+      'project.ferrari.description.fr':
+        'Reproduction of the Ferrari Beverly Hills homepage in React, integrating elements such as the menu, animated header, and various blocks down to the footer. Optimization for performance and responsiveness.',
+      'project.ladigitoile.description.fr':
+        'Custom site creation for a web agency in WordPress, with added custom features and animations. Implementation of an interactive portfolio and contact forms to attract new clients.',
+      'project.lesvanniers.description.fr':
+        'WordPress showcase site with table reservation, dish ordering, and redirection to delivery services features. Highlighting dishes, menus, and the restaurant. SEO optimization to attract more local customers.',
+      'project.monvieuxgrimoire.description.fr':
+        'Back-end development of a book rating project, including authentication, route management, permissions, and CRUD operations on the database. Integration of a user rating and comment system.',
+      'project.paulsavine.description.fr':
+        'Showcase site for a company specializing in pharmacy layout and interior renovation. Presentation of completed projects and services offered, with before/after images to illustrate transformations.',
+      'project.rocketschool.description.fr':
+        'Development of landing pages for various specific RocketSchool programs, optimized for advertising and tracking with Google Tag Manager, adhering to the layout of the official site. Improving visitor conversion rates.',
+      'project.sirius.description.fr':
+        'WordPress showcase site for an event security and venue company. Redesign of the layout with animations, slider, and forms. Highlighting services offered and successfully secured events.',
+      'project.tesla.description.fr':
+        'Reproduction of the Tesla homepage, including a logic of vertically scrolling blocks, a mega menu with different sections, and hover animations. Optimization for performance and mobile compatibility.',
+      'project.toast.description.fr':
+        "Custom WordPress showcase site for a WebMarketing agency, with a personalized layout, manual slider, and lightbox. Integration of client testimonials and case studies to demonstrate the agency's expertise.",
+      'project.sophiebluel.description.fr':
+        "Front-end development of the artist SophieBluel's site, integrating dynamic content, database connection, and CRUD operations. Highlighting works and exhibitions with a modern and intuitive user interface.",
     },
   },
   es: {
@@ -106,13 +190,17 @@ const resources = {
   },
 };
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: 'fr',
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    resources,
+    lng: 'fr', // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
+    // if you're using a language detector, do not define the lng option
 
-  interpolation: {
-    escapeValue: false,
-  },
-});
+    interpolation: {
+      escapeValue: false, // react already safes from xss
+    },
+  });
 
 export default i18n;

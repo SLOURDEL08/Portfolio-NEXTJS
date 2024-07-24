@@ -1,0 +1,17 @@
+{
+  "welcome": "Bienvenue sur mon Portfolio NextJS",
+  "index": {
+    "description": "Voici la description en français.",
+    "button": {
+      "first": "Premier Bouton",
+      "second": "Deuxième Bouton"
+    },
+    "download": {
+      "cv": "Télécharger CV"
+    },
+    "titleexp": "Expérience",
+    "titleform": "Éducation",
+    "titleproject": "Projets"
+  },
+  "madewith": "Fait avec"
+}

@@ -252,7 +252,7 @@ export const Header: React.FC = () => {
               className='appearance-none bg-transparent optdd border-none'
             >
               <option value='fr'>🇫🇷</option>
-              <option value='en'>🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+              <option value='en'>🏴</option>
               <option value='es'>🇪🇸</option>
             </select>
           </div>
