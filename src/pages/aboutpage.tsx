@@ -50,18 +50,27 @@ const AboutPage: React.FC = () => {
                 className='h-full w-full object-cover '
               />
             </div>
-            <Parented className='w-[70%] flex flex-col gap-8 flex-grow'>
+            <Parented className='w-[70%] flex flex-col gap-8 flex-grow relative'>
               <Typography
                 theme='white'
                 weight='bold'
-                variant='h3'
+                variant='h4'
                 component='h1'
                 fontFamily='ClashDisplay'
                 className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
               >
                 {t('about.title')}
               </Typography>
-              <div className='flex gap-6 flex-wrap'>
+              <div className='flex gap-6 flex-wrap '>
+                <a
+                  href='/docs/cv.pdf'
+                  download='cv.pdf'
+                  className=' absolute right-10 top-10 rounded-xl border-stone-600'
+                >
+                  <div className='gradiended p-3 rounded-xl '>
+                    <Image src='/download.png' width='22' height='22' alt='Download icon' />
+                  </div>
+                </a>
                 <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-lg'>
                   <Typography
                     theme='graylight'
@@ -152,7 +161,7 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
               <div className='h-full text-left gap-6 flex items-start wrapf'>
-                <div className='flex gap-4 items-center p-3 px-4 rounded-xl w-max avail'>
+                {/*<div className='flex gap-3 items-center p-3 px-4 rounded-xl w-max avail'>
                   <div className='bg-green-500 rounded-3xl h-2 w-2'></div>
                   <Typography
                     theme='white'
@@ -160,11 +169,12 @@ const AboutPage: React.FC = () => {
                     variant='h4'
                     component='span'
                     fontFamily='SanFrancisco'
-                    className='max-md:text-2xl'
+                    className='max-md:text-2xl izi'
                   >
                     AvailableForWork
                   </Typography>
-                </div>
+                </div>*/}
+
                 <div className='horizontal-scroll-container'>
                   <div className='horizontal-scroll'>
                     <Typography
@@ -172,18 +182,18 @@ const AboutPage: React.FC = () => {
                       weight='bold'
                       variant='h4'
                       component='span'
-                      fontFamily='SanFrancisco'
-                      className=''
+                      fontFamily='ClashDisplay'
+                      className='weightGrow'
                     >
                       #France
                     </Typography>
                     <Typography
                       theme='graylight'
-                      weight='bold'
+                      weight='regular'
                       variant='h4'
                       component='span'
-                      fontFamily='SanFrancisco'
-                      className=''
+                      fontFamily='Inter'
+                      className='weightGrow'
                     >
                       #Europe
                     </Typography>
@@ -193,9 +203,49 @@ const AboutPage: React.FC = () => {
                       variant='h4'
                       component='span'
                       fontFamily='SanFrancisco'
-                      className=''
+                      className='weightGrow'
                     >
                       #World
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='extralight'
+                      variant='h4'
+                      component='span'
+                      fontFamily='Montserrat'
+                      className='weightGrow'
+                    >
+                      #Remote
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='light'
+                      variant='h4'
+                      component='span'
+                      fontFamily='SanFrancisco'
+                      className='italic weightGrow'
+                    >
+                      #Freelance
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='bold'
+                      variant='h4'
+                      component='span'
+                      fontFamily='ClashDisplay'
+                      className='weightGrow'
+                    >
+                      #France
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='regular'
+                      variant='h4'
+                      component='span'
+                      fontFamily='Inter'
+                      className='weightGrow'
+                    >
+                      #Europe
                     </Typography>
                     <Typography
                       theme='graylight'
@@ -203,7 +253,17 @@ const AboutPage: React.FC = () => {
                       variant='h4'
                       component='span'
                       fontFamily='SanFrancisco'
-                      className=''
+                      className='weightGrow'
+                    >
+                      #World
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='extralight'
+                      variant='h4'
+                      component='span'
+                      fontFamily='Montserrat'
+                      className='weightGrow'
                     >
                       #Remote
                     </Typography>
@@ -212,8 +272,8 @@ const AboutPage: React.FC = () => {
                       weight='bold'
                       variant='h4'
                       component='span'
-                      fontFamily='SanFrancisco'
-                      className=''
+                      fontFamily='ClashDisplay'
+                      className='weightGrow'
                     >
                       #Freelance
                     </Typography>
@@ -278,23 +338,27 @@ const AboutPage: React.FC = () => {
                     title='OpenClassRoom'
                     description={t('openclassroom.description')}
                     date='Nov 2022/2023'
+                    iCon='/ocrlogo.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='PopSchool'
                     description={t('popschool.description')}
                     date='Fev-Jui 2019'
+                    iCon='/poplogo.png'
                   />
 
                   <hr className='border-[#ffffff20]' />
-                  <LayerCV title='Bac STMG' description={t('bac.description')} date='Depuis 2020' />
+                  <LayerCV
+                    title='Bac STMG'
+                    description={t('bac.description')}
+                    date='Depuis 2020'
+                    iCon='/rimbaud.png'
+                  />
 
                   {isFirstDropdownOpen && (
                     <>
                       <hr className='border-[#ffffff20]' />
-
-                      <hr className='border-[#ffffff20]' />
-
                       <LayerCV
                         title='Brevet des collèges'
                         description={t('brevet.description')}
@@ -368,18 +432,21 @@ const AboutPage: React.FC = () => {
                     title='Toast Agency'
                     description={t('toast.exp.description')}
                     date='Nov 2022-2023'
+                    iCon='/symbol.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='FL Express'
                     description={t('flexpress.description')}
                     date='Nov 2020-2021'
+                    iCon='/flexpress.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='Graphic Packaging'
                     description={t('graphic.description')}
                     date='Juin-Aout 2020'
+                    iCon='/gp-logo.png'
                   />
                   {isSecondDropdownOpen && (
                     <>
@@ -388,30 +455,35 @@ const AboutPage: React.FC = () => {
                         title='TRIGO Networking'
                         description={t('trigo.va.description')}
                         date='Fev-Mai 2020'
+                        iCon='/trigo.jpeg'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Freelance'
                         description={t('freelance.description')}
                         date='Jan 2020'
+                        iCon='/slp.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='DK Group'
                         description={t('dk.description')}
                         date='Nov/Dec 2019'
+                        iCon='/dkgroup.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Faurecia'
                         description={t('faurecia.description')}
                         date='Fev-Juillet 2018'
+                        iCon='/faurecia.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Trigo Networking'
                         description={t('trigo.sin.description')}
                         date='2016-2017'
+                        iCon='/trigo.jpeg'
                       />
                     </>
                   )}
@@ -420,7 +492,7 @@ const AboutPage: React.FC = () => {
                   onClick={toggleSecondDropdown}
                   className='flex justify-center gap-4 items-center p-3 bg-[#00000040] rounded-xl opacity-80 hover:opacity-100'
                 >
-                  {isFirstDropdownOpen ? (
+                  {isSecondDropdownOpen ? (
                     <Typography
                       theme='white'
                       weight='medium'
@@ -448,7 +520,7 @@ const AboutPage: React.FC = () => {
                     width='20'
                     height='20'
                     alt='de'
-                    className={isFirstDropdownOpen ? 'rotate-90 transizion' : 'transizion'}
+                    className={isSecondDropdownOpen ? 'rotate-90 transizion' : 'transizion'}
                   />
                 </button>
               </div>

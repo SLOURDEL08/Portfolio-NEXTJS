@@ -1609,7 +1609,7 @@ padding: 20px;
                           
                           .horizontal-scroll {
                             display: flex;
-                            justify-content: flex-start;
+                            justify-content: center;
                             align-items: center;
                             animation: scroll 20s linear infinite;
                             gap:20px;
@@ -1624,11 +1624,11 @@ padding: 20px;
                             padding: 16px;
                           }
 
+                          
+
                           .avail {
-                            background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
                             background-size: 400% 400%;
                             animation: Gradient 10s ease infinite;z-index: 200;
-                            border:1px solid #7924e84d;
                           }
 
                           .rew{
@@ -1710,4 +1710,20 @@ padding: 20px;
 /* styles.css */
 .css-1jqq78o-placeholder{
   color:#aaa!important
+}
+
+
+.weightGrow:hover {
+       animation: fontWeightANIM 1s linear 0s infinite alternate both;
+
+}
+
+
+@keyframes fontWeightANIM {
+  from {
+    font-weight: 100;
+  }
+  to {
+    font-weight: 900;
+  }
 }
