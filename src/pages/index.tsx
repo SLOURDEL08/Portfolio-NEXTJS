@@ -35,17 +35,18 @@ const HomePage: React.FC = () => {
             <div className=' overflow-hidden items-center gap-2 w-[30%] max-md:h-[160px] max-md:w-[160px] max-md:mb-8 rounded-WL max-[900px]:w-[40%]  relative !max-h'>
               <Image src='/cesde.png' alt='de' fill className='object-cover' />
             </div>
-            <div className='flex flex-col items-start gap-4 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
+            <div className='flex flex-col items-start gap-6 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
               <div>
                 <AnimatedText />
                 <Typography
                   theme='white'
                   variant='h1'
                   component='h2'
+                  weight='regular'
                   fontFamily='ClashDisplay'
-                  className=' semib bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'
+                  className='  bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'
                 >
-                  {t('Welcome')}{' '}
+                  {t('Welcome')}
                 </Typography>
               </div>
 
@@ -93,7 +94,7 @@ const HomePage: React.FC = () => {
                     </div>
                   </Link>
                 </div>
-                <div className='flex mt-2  gap-6 justify-start items-center'>
+                <div className='flex mt-2  gap-8 justify-start items-center'>
                   <Typography
                     theme='gray'
                     weight='light'
@@ -104,27 +105,9 @@ const HomePage: React.FC = () => {
                   >
                     {t('madewith')}
                   </Typography>
-                  <Image
-                    src='/slider/nextjslong.png'
-                    width='200'
-                    height='200'
-                    alt='de'
-                    className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'
-                  />
-                  <Image
-                    src='/slider/tailwindlong.png'
-                    width='200'
-                    height='200'
-                    alt='de'
-                    className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'
-                  />
-                  <Image
-                    src='/slider/tipes.png'
-                    width='200'
-                    height='200'
-                    alt='de'
-                    className=' bg-[#ffffff20] w-[auto] h-[28px] p-2 rounded-lg translating'
-                  />
+                  <div className='color-div next'></div>
+                  <div className='color-div tailw'></div>
+                  <div className='color-div type'></div>
                 </div>
               </div>
             </div>

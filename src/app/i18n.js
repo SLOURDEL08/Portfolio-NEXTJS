@@ -101,7 +101,7 @@ const resources = {
   },
   fr: {
     translation: {
-      'Welcome': 'Bienvenue sur mon Portfolio NextJS',
+      'Welcome': 'Découvrez mon portfolio Front-End NextJs',
       'index.description':
         "Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI.",
       'index.button.first': 'Mon CV',
@@ -119,7 +119,7 @@ const resources = {
       'header.cv': 'CV',
       'header.project': 'Projets',
       'header.contact': 'Contact',
-      'about.title': 'Quelques informations',
+      'about.title': 'Développeur web front-end React/NextJs',
       /* DIPLOME BLOCK */
       'openclassroom.dip.title':
         'Titre professionnel bac +2 Développeur web et application (RNCP 5)',

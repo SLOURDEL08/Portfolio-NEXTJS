@@ -301,10 +301,25 @@ table {
   backdrop-filter: blur(2px);
 }
 
+
+
+
+
 .borbot b{
-  text-decoration: underline;
-  text-decoration-thickness:4px ;
+  text-decoration: none;
+  text-decoration-thickness:0px ;
   text-underline-offset: 10px;
+}
+
+.lottie-anim{
+  opacity: 0;
+  transition:0.2s ease-in-out infinite;
+}
+
+.dertoni:hover .lottie-anim{
+  opacity: 1;
+  transition:0.3s ease-in-out infinite;
+
 }
 
 .background-topgradient{
@@ -1648,6 +1663,60 @@ padding: 20px;
                             white-space: normal;
                             overflow-wrap: break-word;
                           }
+
+                          .texsto{
+                            -webkit-text-stroke: 2px #fff;
+                            color:transparent
+
+                          }
+
+.color-div.next {
+      width: 38px; /* largeur de votre logo */
+      height: 38px; /* hauteur de votre logo */
+background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);
+ background-size: 400% 400%;
+  animation: Gradient 10s ease infinite;
+      -webkit-mask-image: url('/nextjsico.png');
+      -webkit-mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-image: url('/nextjsico.png');
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    .color-div.type {
+      width: 38px; /* largeur de votre logo */
+      height: 38px; /* hauteur de votre logo */
+background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);  
+background-size: 400% 400%;
+  animation: Gradient 10s ease infinite;
+      -webkit-mask-image: url('/typelogo.png');
+      -webkit-mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-image: url('/typelogo.png');
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    .color-div.tailw {
+      width: 38px; /* largeur de votre logo */
+      height: 38px; /* hauteur de votre logo */
+background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);  
+  background-size: 400% 400%;
+  animation: Gradient 10s ease infinite;
+      -webkit-mask-image: url('/tailwlogo.png');
+      -webkit-mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-image: url('/tailwlogo.png');
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
 
 
                 .optdd{

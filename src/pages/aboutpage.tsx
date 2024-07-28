@@ -2,7 +2,6 @@ import Layout from '@/app/modules/layout/layout';
 import React, { useState, useEffect } from 'react';
 import '@/app/globals.scss';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
-import '@/app/globals.scss';
 import '@/app/globals.css';
 import '@/app/i18n';
 import '@/app/mediaqueries.css';
@@ -53,7 +52,7 @@ const AboutPage: React.FC = () => {
             <Parented className='w-[70%] flex flex-col gap-8 flex-grow relative'>
               <Typography
                 theme='white'
-                weight='bold'
+                weight='regular'
                 variant='h4'
                 component='h1'
                 fontFamily='ClashDisplay'
@@ -284,7 +283,14 @@ const AboutPage: React.FC = () => {
           </div>
 
           <div className='flex gap-10 justify-between max-[1000px]:flex-wrap'>
-            <Parented className='flex items-start gap-14 max-[1000px]:w-full w-1/3 laylay !p-0'>
+            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full w-1/3 laylay !p-0'>
+              <Image
+                src='/anim.gif'
+                alt='de'
+                width='200'
+                height='200'
+                className='absolute lottie-anim'
+              />
               <LayerCV
                 className='flex-col !items-end gap-4 !bg-[#00000000] !p-10 rounded-3xl'
                 title={t('openclassroom.dip.title')}
@@ -293,16 +299,32 @@ const AboutPage: React.FC = () => {
               />
             </Parented>
 
-            <Parented className='flex items-start gap-14  laylay max-[1000px]:w-full w-1/3 !p-0'>
+            <Parented className='flex dertoni items-start gap-14 dertoni  laylay max-[1000px]:w-full w-1/3 !p-0'>
+              <Image
+                src='/anim.gif'
+                alt='de'
+                width='200'
+                height='200'
+                className='absolute lottie-anim'
+              />
+
               <LayerCV
-                className=' flex-col !items-end gap-4 !bg-[#00000000] !p-10  rounded-3xl'
+                className=' flex-col !items-end gap-4 !bg-[#00000000] !p-10 w-full rounded-3xl'
                 title={t('popschool.dip.title')}
                 description='PopSchool - Valenciennes'
                 date='2020'
               />
             </Parented>
 
-            <Parented className='flex items-start gap-14 max-[1000px]:w-full laylay w-1/3 !p-0'>
+            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full laylay w-1/3 !p-0'>
+              <Image
+                src='/anim.gif'
+                alt='de'
+                width='200'
+                height='200'
+                className='absolute lottie-anim'
+              />
+
               <LayerCV
                 className=' !items-end flex-col gap-4 !p-10 !bg-[#00000000] rounded-3xl !text-white'
                 title={t('bac.dip.title')}
