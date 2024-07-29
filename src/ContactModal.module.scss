@@ -145,7 +145,7 @@
   }
 
   @media screen and (max-width: 551px) {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
 
     .formGroup {
       flex: none;
@@ -158,7 +158,7 @@
    
 
     .formGroupRow {
-      gap:16px
+      gap:20px
     }
   }
 
@@ -230,9 +230,9 @@ opacity: 1;}
           @media screen and (max-width: 551px) {
 
             .formGroup{
-
+              
              input,textarea {
-              padding: 15px;
+              padding: 12px;
       
             }  
           
