@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
               <Image src='/cesde.png' alt='de' fill className='object-cover' />
             </div>
             <div className='flex flex-col items-start gap-6 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
-              <div>
+              <div className='font-CD'>
                 <AnimatedText />
                 <Typography
                   theme='white'
