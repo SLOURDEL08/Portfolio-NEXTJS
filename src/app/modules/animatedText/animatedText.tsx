@@ -24,7 +24,7 @@ const TransitionWord = () => {
         fontFamily='ClashDisplay'
         className='bg-clip-text uppercase texsto text-transparent  bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight tracking-lighter  borbot max-[450px]:text-4xl  '
       >
-        <b>{words[currentWordIndex]}</b> &nbsp;👋
+        {words[currentWordIndex]} &nbsp;👋
       </Typography>
     </CSSTransition>
   );
