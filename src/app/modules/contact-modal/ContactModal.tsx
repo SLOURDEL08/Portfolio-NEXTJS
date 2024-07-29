@@ -25,7 +25,7 @@ const getCustomStyles = (isMobile: boolean) => ({
     border: 'none',
     outline: 'none',
     width: '100%',
-    height: isMobile ? '50px' : '60px', // Hauteur fixe
+    height: isMobile ? '52px' : '60px', // Hauteur fixe
     paddingLeft: isMobile ? '10px' : '20px',
     borderRadius: '0.5em',
     fontSize: isMobile ? '15px' : '18px',
@@ -40,14 +40,14 @@ const getCustomStyles = (isMobile: boolean) => ({
   }),
   valueContainer: (provided: any) => ({
     ...provided,
-    height: isMobile ? '50px' : '60px', // Hauteur fixe
+    height: isMobile ? '52px' : '60px', // Hauteur fixe
     display: 'flex',
     alignItems: 'center', // Centrer verticalement le contenu
     padding: '0px', // Assurez-vous que le padding est 0
   }),
   indicatorsContainer: (provided: any) => ({
     ...provided,
-    height: isMobile ? '50px' : '60px', // Hauteur fixe
+    height: isMobile ? '52px' : '60px', // Hauteur fixe
   }),
   menu: (provided: any) => ({
     ...provided,
@@ -161,7 +161,11 @@ const ContactModal: React.FC = () => {
         >
           Discutons ensemble !
         </Typography>
-        <form action='/send-mail' className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
+        <form
+          action='/send-mail'
+          className='space-y-6 max-zmd:space-y-4'
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className={styles.formGroupRow}>
             <div className={styles.formGroup}>
               <div className={styles.inputWithIcon}>

@@ -154,6 +154,14 @@
   }
 }
 
+@media screen and (max-width: 551px) {
+   
+
+    .formGroupRow {
+      gap:16px
+    }
+  }
+
 
 .submitButton {
   background-color: rgba(255, 255, 255, 0.1);
@@ -245,14 +253,3 @@ opacity: 1;}
 
 
 
-@media (max-width: 551px) {
-  .ContactModal_formGroup:nth-child(1),
-  .ContactModal_formGroup:nth-child(2) {
-    flex: 1;
-    min-width: 50%; /* Les deux premiers champs seront côte à côte */
-  }
-
-  .ContactModal_formGroup:nth-child(3) {
-    min-width: 100%; /* Le champ "Société" sera en dessous des deux premiers champs */
-  }
-}
