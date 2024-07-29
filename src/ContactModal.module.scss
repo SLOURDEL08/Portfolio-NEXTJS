@@ -6,7 +6,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5); // semi-transparent black
   display: flex;
-  align-items: center;
+  align-items: start;
   backdrop-filter: blur(20px);
   justify-content: center;
   z-index: 1000; // Ensure the modal is on top
@@ -216,3 +216,27 @@
   width:25px;
 z-index:10000;
 opacity: 1;}
+
+
+
+          @media screen and (max-width: 551px) {
+
+            .formGroup{
+
+             input,textarea {
+              padding: 15px;
+      
+            }  
+          
+              ::placeholder{
+            font-size:15px;
+          }
+
+          }  
+
+       
+
+           .css-bllysx-control{
+              padding-left:5px!important;
+            }
+          }

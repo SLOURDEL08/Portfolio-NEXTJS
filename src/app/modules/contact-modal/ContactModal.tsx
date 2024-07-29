@@ -18,7 +18,7 @@ interface FormValues {
   enterprise: string;
 }
 
-const customStyles = {
+const getCustomStyles = (isMobile: boolean) => ({
   control: (provided: any) => ({
     ...provided,
     backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -26,9 +26,9 @@ const customStyles = {
     outline: 'none',
     width: '100%',
     height: '60px', // Hauteur fixe
-    paddingLeft: '20px', // Assurez-vous que le padding est 0
+    paddingLeft: isMobile ? '10px' : '20px',
     borderRadius: '0.5em',
-    fontSize: '18px',
+    fontSize: isMobile ? '15px' : '18px',
     fontFamily: 'SanFrancisco',
     fontWeight: '300',
     color: '#aaa',
@@ -49,7 +49,6 @@ const customStyles = {
     ...provided,
     height: '60px', // Hauteur fixe
   }),
-
   menu: (provided: any) => ({
     ...provided,
     backgroundColor: 'rgba(255, 255, 255, 1)', // Fond du menu
@@ -68,7 +67,7 @@ const customStyles = {
       color: 'white',
     },
   }),
-};
+});
 
 const ContactModal: React.FC = () => {
   const router = useRouter();
@@ -81,6 +80,20 @@ const ContactModal: React.FC = () => {
   } = useForm<FormValues>();
 
   const [countries, setCountries] = useState<{ label: string; value: string }[]>([]);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 551);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     axios
@@ -232,7 +245,7 @@ const ContactModal: React.FC = () => {
                 placeholder='Pays'
                 options={countries}
                 onChange={handleCountryChange}
-                styles={customStyles}
+                styles={getCustomStyles(isMobile)}
                 className='custom-select-container'
               />
             </div>
