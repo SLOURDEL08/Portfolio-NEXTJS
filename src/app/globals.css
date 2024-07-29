@@ -309,6 +309,7 @@ table {
   text-decoration: none;
   text-decoration-thickness:0px ;
   text-underline-offset: 10px;
+  font-family: 'ClashDisplay'!important;
 }
 
 .lottie-anim{
