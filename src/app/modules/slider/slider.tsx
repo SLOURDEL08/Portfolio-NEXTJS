@@ -7,32 +7,45 @@ const Slider = ({ className = '' }) => {
     <div className={clsx('carousel-container', className)}>
       <div className='carousel-track'>
         {[
-          'html',
-          'css',
-          'sass',
-          'tailwind',
-          'bootstrap',
-          'js',
-          'php',
-          'react',
-          'nodejs',
-          'ts',
-          'mongo',
-          'sql',
-          'firebase',
-          'fig',
-          'photoshop',
+          'htmllog',
+          'csslog',
+          'jslog',
+          'reactlog',
+          'nodejslog',
+          'typelog',
+          'phplog',
+          'sasslog',
+          'taillog',
+          'boostraplog',
+          'figmall',
+          'photolog',
+          'mongodblog',
+          'sqlog',
+          'firebaselog',
+          'htmllog',
+          'csslog',
+          'jslog',
+          'reactlog',
+          'nodejslog',
+          'typelog',
+          'phplog',
+          'sasslog',
+          'taillog',
+          'boostraplog',
+          'figmall',
+          'photolog',
+          'mongodblog',
+          'sqlog',
+          'firebaselog',
         ].map((src) => (
           <div key={src} className='carousel-slide'>
-            <div className='image-wrapper'>
-              <Image
-                src={`/slider/${src}.png`}
-                width='1000'
-                height='1000'
-                alt={src}
-                className='masked-image object-contain'
-              />
-            </div>
+            <Image
+              src={`/animText/${src}.png`}
+              width='1000'
+              height='1000'
+              alt={src}
+              className='masked-image object-contain'
+            />
           </div>
         ))}
       </div>

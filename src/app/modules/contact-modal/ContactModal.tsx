@@ -144,11 +144,11 @@ const ContactModal: React.FC = () => {
           weight='medium'
           theme='white'
           fontFamily='ClashDisplay'
-          className='text-center mb-14'
+          className='text-center mb-14 max-zmd:mb-8 max-zmd:text-4xl max-zmd:text-left'
         >
           Discutons ensemble !
         </Typography>
-        <form action='/send-mail' onSubmit={handleSubmit(onSubmit)}>
+        <form action='/send-mail' className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.formGroupRow}>
             <div className={styles.formGroup}>
               <div className={styles.inputWithIcon}>
