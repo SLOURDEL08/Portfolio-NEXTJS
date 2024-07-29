@@ -649,8 +649,13 @@ opacity: 0.8;
   gap:60px
   }
 
+  .cvicon{
+    width:30px;
+    filter:grayscale(0.8)
+  }
+
 .profilpiced {
-  flex-grow: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
+  flex-shrink: 1;
   background-image: url('/cesded.png');
   background-position: 100%;
   background-size: cover;
@@ -661,7 +666,7 @@ opacity: 0.8;
 }
 
 .profilpiced:hover {
-  flex-grow: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
+  flex-shrink: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
   background-image: url('/cesded.png');
   background-position: 100%;
   background-size: cover;
@@ -1627,7 +1632,7 @@ padding: 20px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            animation: scroll 20s linear infinite;
+                            animation: scroll 15s linear infinite;
                             gap:20px;
                           }
                           
@@ -1827,7 +1832,7 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
   width: 50px;
   height: 50px;
   position: relative;
-  filter:grayscale(0.9);
+  filter:grayscale(0.8);
   transition:0.2s ease-in-out
 }
 

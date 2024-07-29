@@ -12,6 +12,7 @@ import LayerCV from '@/app/modules/layerCV/layerCV';
 import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
+import Link from 'next/link';
 
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -40,36 +41,29 @@ const AboutPage: React.FC = () => {
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
           <div className='flex gap-10 max-[1000px]:flex-wrap h-full w-full '>
-            <div className='flex flex-col overflow-hidden items-start gap-2 profilpiced  w-[30%] h-[auto]  max-[680px]:h-[160px] max-[1000px]:!flex-grow-0  max-[680px]:w-[160px] max-[680px]:mb-0 max-[680px]:mt-10 rounded-WL max-[900px]:w-[40%]'>
-              <Image
-                src='/cesded.png'
-                width='599'
-                height='599'
-                alt='de'
-                className='h-full w-full object-cover '
-              />
-            </div>
             <Parented className='w-[70%] flex flex-col gap-8 flex-grow relative'>
-              <Typography
-                theme='white'
-                weight='regular'
-                variant='h4'
-                component='h1'
-                fontFamily='ClashDisplay'
-                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
-              >
-                {t('about.title')}
-              </Typography>
-              <div className='flex gap-6 flex-wrap '>
+              <div className='flex justify-between'>
+                <Typography
+                  theme='white'
+                  weight='regular'
+                  variant='h4'
+                  component='h1'
+                  fontFamily='ClashDisplay'
+                  className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
+                >
+                  {t('about.title')}
+                </Typography>
                 <a
                   href='/docs/cv.pdf'
                   download='cv.pdf'
-                  className=' absolute right-10 top-10 rounded-xl border-stone-600'
+                  className='  right-10 top-10 rounded-xl border-stone-600'
                 >
                   <div className='gradiended p-3 rounded-xl '>
                     <Image src='/download.png' width='22' height='22' alt='Download icon' />
                   </div>
                 </a>
+              </div>
+              <div className='flex gap-6 flex-wrap '>
                 <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-lg'>
                   <Typography
                     theme='graylight'
@@ -159,7 +153,7 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
               </div>
-              <div className='h-full text-left gap-6 flex items-start wrapf'>
+              <div className=' text-left gap-6 flex items-start wrapf'>
                 {/*<div className='flex gap-3 items-center p-3 px-4 rounded-xl w-max avail'>
                   <div className='bg-green-500 rounded-3xl h-2 w-2'></div>
                   <Typography
@@ -280,10 +274,115 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
             </Parented>
+            <div className='flex flex-col gap-8 w-[30%] max-lg:w-full max-lg:flex-row max-md:flex-col'>
+              <Parented className='flex-grow flex flex-col  gap-4 items-start justify-center max-lg:w-3/5 max-md:w-full'>
+                <div className=' w-full'>
+                  <Typography
+                    theme='white'
+                    weight='medium'
+                    variant='body-lg'
+                    component='span'
+                    fontFamily='ClashDisplay'
+                    className=''
+                  >
+                    {`J'utilise le plus`}
+                  </Typography>
+                </div>
+                <div className='flex flex-wrap gap-4'>
+                  <Image
+                    src='/animText/htmllog.png'
+                    width='1000'
+                    height='1000'
+                    alt='htmllog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/csslog.png'
+                    width='1000'
+                    height='1000'
+                    alt='csslog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/jslog.png'
+                    width='1000'
+                    height='1000'
+                    alt='jslog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/reactlog.png'
+                    width='1000'
+                    height='1000'
+                    alt='reactlog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/nodejslog.png'
+                    width='1000'
+                    height='1000'
+                    alt='nodejslog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/typelog.png'
+                    width='1000'
+                    height='1000'
+                    alt='typelog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/phplog.png'
+                    width='1000'
+                    height='1000'
+                    alt='phplog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/sasslog.png'
+                    width='1000'
+                    height='1000'
+                    alt='sasslog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/taillog.png'
+                    width='1000'
+                    height='1000'
+                    alt='taillog'
+                    className='cvicon object-contain'
+                  />
+                  <Image
+                    src='/animText/figmall.png'
+                    width='1000'
+                    height='1000'
+                    alt='figmall'
+                    className='cvicon object-contain'
+                  />
+                </div>
+              </Parented>
+              <Parented className='flex-grow  flex flex-col  gap-6 items-start justify-center max-lg:w-2/5 max-md:w-full'>
+                <Link href='/projects' className='w-full'>
+                  <div className='flex items-center justify-between gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
+                    <Typography
+                      component='span'
+                      variant='lead'
+                      theme='white'
+                      weight='medium'
+                      fontFamily='ClashDisplay'
+                      className='max-[900px]:text-lg'
+                    >
+                      {t('index.button.second')}
+                    </Typography>
+                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                  </div>
+                </Link>
+              </Parented>
+            </div>
           </div>
 
           <div className='flex gap-10 justify-between max-[1000px]:flex-wrap'>
-            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full w-1/3 laylay !p-0'>
+            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full w-1/3 laylay !p-0 overhed'>
               <Image
                 src='/anim.gif'
                 alt='de'
@@ -292,14 +391,14 @@ const AboutPage: React.FC = () => {
                 className='absolute lottie-anim'
               />
               <LayerCV
-                className='flex-col !items-end gap-4 !bg-[#00000000] !p-10 rounded-3xl'
+                className='flex-col !items-end gap-4 !bg-[#00000000] !p-10 rounded-3xl '
                 title={t('openclassroom.dip.title')}
                 description='OpenClassRoom'
                 date='Nov 2023'
               />
             </Parented>
 
-            <Parented className='flex dertoni items-start gap-14 dertoni  laylay max-[1000px]:w-full w-1/3 !p-0'>
+            <Parented className='flex dertoni items-start gap-14 dertoni  laylay max-[1000px]:w-full w-1/3 !p-0 overhed'>
               <Image
                 src='/anim.gif'
                 alt='de'
@@ -316,7 +415,7 @@ const AboutPage: React.FC = () => {
               />
             </Parented>
 
-            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full laylay w-1/3 !p-0'>
+            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full laylay w-1/3 !p-0 overhed'>
               <Image
                 src='/anim.gif'
                 alt='de'
