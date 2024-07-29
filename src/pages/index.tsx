@@ -42,9 +42,9 @@ const HomePage: React.FC = () => {
                   theme='white'
                   variant='h1'
                   component='h2'
-                  weight='regular'
+                  weight='bold'
                   fontFamily='ClashDisplay'
-                  className='  bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'
+                  className='  bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl '
                 >
                   {t('Welcome')}
                 </Typography>
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
                 variant='lead'
                 component='p'
                 fontFamily='SanFrancisco'
-                className='text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose'
+                className='text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
               >
                 {t('index.description')}
               </Typography>

@@ -113,7 +113,7 @@
 @font-face {
   font-family: 'ClashDisplay';
   src: url('/fonts/ClashDisplay/ClashDisplay-bold.otf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: 800;
+  font-weight: bolder;
   font-style: normal;
 }
 
