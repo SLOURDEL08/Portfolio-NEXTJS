@@ -18,7 +18,7 @@ const TransitionWord = () => {
     <CSSTransition in={true} timeout={500} classNames='slide' key={words[currentWordIndex]}>
       <Typography
         theme='white'
-        weight='regular'
+        weight='bold'
         variant='h1'
         component='h1'
         fontFamily='ClashDisplay'
