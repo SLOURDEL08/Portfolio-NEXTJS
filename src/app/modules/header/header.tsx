@@ -112,7 +112,7 @@ export const Header: React.FC = () => {
               className='min-w-[26px] min-h-[26px]'
             />
           </div>
-          <div className='flex flex-col gap-3 items-center max-smd:hidden'>
+          <div className='flex flex-col gap-3 items-start justify-center max-smd:hidden'>
             <Typography
               theme='white'
               component='p'

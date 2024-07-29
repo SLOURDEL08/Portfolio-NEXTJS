@@ -5,6 +5,7 @@ import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import { ContactModalProvider, useContactModal } from '@/app/modules/contact-modal/ModalContext';
 import { ModalProvider } from '@/app/modules/modal-result/ModalContext';
 import ContactModal from '@/app/modules/contact-modal/ContactModal';
+import '@/app/globals.css';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
