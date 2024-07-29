@@ -157,7 +157,7 @@ const ContactModal: React.FC = () => {
           weight='medium'
           theme='white'
           fontFamily='ClashDisplay'
-          className='text-center mb-14 max-zmd:mb-8 max-zmd:text-3xl max-zmd:text-left'
+          className='text-center mb-14 max-zmd:mb-8 max-zmd:text-2xl max-zmd:text-left'
         >
           Discutons ensemble !
         </Typography>
