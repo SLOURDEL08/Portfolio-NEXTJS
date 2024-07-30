@@ -13,11 +13,7 @@ import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 import Link from 'next/link';
-import {
-  ImageSlideFront,
-  TextSlide,
-  ImageSlideBack,
-} from '/Applications/MAMP/htdocs/github/CVnext/cv-frontend/src/app/modules/textSlide/textSlide';
+import { ImageSlideFront, TextSlide, ImageSlideBack } from '@/app/modules/textSlide/textSlide';
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { locale, handleLanguageChange } = useLocale();
