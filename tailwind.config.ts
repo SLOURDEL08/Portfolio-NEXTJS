@@ -18,6 +18,7 @@ const config: Config = {
       'smd': '500px',
       'zmd': '551px',
       'md': '768px',
+      'mdd': '900px',
       'lg': '1024px',
       'xl': '1280px',
       'xml': '1150px',

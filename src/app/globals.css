@@ -1581,6 +1581,19 @@ padding: 20px;
 
 .overheed span{color:rgba(255, 255, 255, 0.837)!important; opacity: 1!important;}
 
+
+
+
+
+@keyframes bg-animation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .overheed span:nth-child(2){color:#a4a4a4!important; opacity: 1!important;}
                           .overhed{
                             background: linear-gradient(45deg, #ffffff20, #ffffff00, #ffffff20, #ffffff00, #ffffff20, #ffffff00);
@@ -1589,6 +1602,21 @@ padding: 20px;
                             line-height: 1;
                             box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
 
+                          }
+
+                            .overhd{
+                            background: linear-gradient(45deg, #ffffff10, #ffffff20, #ffffff10, #ffffff20, #ffffff10, #ffffff20);
+                            background-size: 400% 400%;
+                            animation: Gradient 10s ease infinite;z-index: 200;
+                            line-height: 1;
+                            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+
+                          }
+                            .overhd:hover {
+                           
+                            background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
+                            background-size: 400% 400%;
+                            animation: Gradient 10s ease infinite;z-index: 200;
                           }
                           .overhed:hover {
                            
@@ -1614,11 +1642,11 @@ padding: 20px;
 
 
                           @keyframes scroll {
-                            0% {
+                            20% {
                               transform: translateX(-100%);
                             }
-                            100% {
-                              transform: translateX(100%);
+                            80% {
+                              transform: translateX(80%);
                             }
                           }
                           
@@ -1632,7 +1660,7 @@ padding: 20px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            animation: scroll 15s linear infinite;
+                            animation: scroll 20s linear infinite;
                             gap:20px;
                           }
                           
@@ -1645,12 +1673,22 @@ padding: 20px;
                             padding: 16px;
                           }
 
+
+                          
                           
 
                           .avail {
                             background-size: 400% 400%;
                             animation: Gradient 10s ease infinite;z-index: 200;
                           }
+.imageslide-front{
+  width: 30px;
+}
+
+.image{
+  width: 40px;
+}
+
 
                           .rew{
                             justify-content: center!important;
@@ -1833,7 +1871,7 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
   height: 50px;
   position: relative;
   filter:grayscale(0.8);
-  transition:0.2s ease-in-out
+  transition:0.2s ease-in-out;
 }
 
 .masked-image:hover {
@@ -1847,5 +1885,60 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+
+
+.tag-list {
+  width: 100%;
+  display: flex;
+  gap:20px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+  }
+}
+
+.dertoni:hover p {
+color:white!important}
+
+.dertoni:hover span {
+color:white!important}
+
+.tag {
+  display: flex;
+  align-items: center;
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  border:none!important;
+margin:0px!important;
+}
+
+.fade {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

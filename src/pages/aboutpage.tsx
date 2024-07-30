@@ -13,7 +13,11 @@ import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 import Link from 'next/link';
-
+import {
+  ImageSlideFront,
+  TextSlide,
+  ImageSlideBack,
+} from '/Applications/MAMP/htdocs/github/CVnext/cv-frontend/src/app/modules/textSlide/textSlide';
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { locale, handleLanguageChange } = useLocale();
@@ -40,55 +44,45 @@ const AboutPage: React.FC = () => {
     <Layout>
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
-          <div className='flex gap-10 max-[1000px]:flex-wrap h-full w-full '>
-            <Parented className='w-[70%] flex flex-col gap-8 flex-grow relative'>
-              <div className='flex justify-between'>
-                <Typography
-                  theme='white'
-                  weight='regular'
-                  variant='h4'
-                  component='h1'
-                  fontFamily='ClashDisplay'
-                  className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
-                >
-                  {t('about.title')}
-                </Typography>
-                <a
-                  href='/docs/cv.pdf'
-                  download='cv.pdf'
-                  className='  right-10 top-10 rounded-xl border-stone-600'
-                >
-                  <div className='gradiended p-3 rounded-xl '>
-                    <Image src='/download.png' width='22' height='22' alt='Download icon' />
-                  </div>
-                </a>
-              </div>
-              <div className='flex gap-6 flex-wrap '>
-                <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-lg'>
+          <div className=' gap-10 max-[1000px]:flex-wrap h-full w-full '>
+            <Parented className='!px-0 max-mdd:mt-3 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-center flex flex-col gap-10 flex-grow relative overflow-hidden'>
+              <Typography
+                theme='white'
+                weight='regular'
+                variant='h3'
+                component='h1'
+                fontFamily='ClashDisplay'
+                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-normal   max-mdd:mr-2 max-mdd:leading-normal semib'
+              >
+                {t('about.title')}
+              </Typography>
+
+              <div className='flex max-mdd:justify-start items-center gap-6 flex-wrap w-full justify-center'>
+                <div className='flex gap-3 p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20] rounded-2xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg '
+                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm '
                   >
                     LOURDEL Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 p-2 px-3 bg-[#00000040] rounded-xl'>
+                <div className='flex gap-3 p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
                   >
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl'>
+                <div className='flex gap-2 items-center p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
                   <Image
                     src='/localpos.png'
                     width='20'
@@ -102,12 +96,12 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
                   >
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
+                <div className='flex gap-2 items-center p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl w-max'>
                   <Image src='/imail.png' width='25' height='24' alt='de' className='opacity-80' />
                   <Typography
                     theme='graylight'
@@ -115,12 +109,13 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
                   >
                     contact@slourdel.fr
                   </Typography>
                 </div>
-                <div className='overhed flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
+
+                <div className='overhed flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/linkedicon.png'
                     width='23'
@@ -134,12 +129,12 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
                   >
                     /Linkedin
                   </Typography>
                 </div>
-                <div className='overhed flex gap-2 items-center p-2 px-3 bg-[#00000040] rounded-xl w-max'>
+                <div className='overhed flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
                   <Image src='/github.png' width='22' height='22' alt='de' className='opacity-80' />
                   <Typography
                     theme='graylight'
@@ -153,8 +148,40 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
               </div>
-              <div className=' text-left gap-6 flex items-start wrapf'>
-                {/*<div className='flex gap-3 items-center p-3 px-4 rounded-xl w-max avail'>
+              <TextSlide />
+              <div className='flex gap-8 hidden'>
+                <Link href='/projects' className=''>
+                  <div className='flex items-center justify-between gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
+                    <Typography
+                      component='span'
+                      variant='body-lg'
+                      theme='white'
+                      weight='medium'
+                      fontFamily='ClashDisplay'
+                      className='max-[900px]:text-lg'
+                    >
+                      {t('index.button.second')}
+                    </Typography>
+                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                  </div>
+                </Link>
+                <Link href='/projects' className=''>
+                  <div className='flex items-center justify-between gap-3 p-3 px-4 ovhea rounded-2xl w-full roundedlb'>
+                    <Typography
+                      component='span'
+                      variant='body-lg'
+                      theme='white'
+                      weight='medium'
+                      fontFamily='ClashDisplay'
+                      className='max-[900px]:text-lg'
+                    >
+                      {t('index.download.cv')}
+                    </Typography>
+                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                  </div>
+                </Link>
+              </div>
+              {/*<div className='flex gap-3 items-center p-3 px-4 rounded-xl w-max avail'>
                   <div className='bg-green-500 rounded-3xl h-2 w-2'></div>
                   <Typography
                     theme='white'
@@ -167,149 +194,113 @@ const AboutPage: React.FC = () => {
                     AvailableForWork
                   </Typography>
                 </div>*/}
-
-                <div className='horizontal-scroll-container'>
-                  <div className='horizontal-scroll'>
+            </Parented>
+            <div className='flex max-xl:flex-col   gap-10 w-full max-md:flex-col'>
+              <div className='flex gap-10 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
+                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+                  <div className='flex items-center gap-3'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h4'
-                      component='span'
-                      fontFamily='ClashDisplay'
-                      className='weightGrow'
+                      variant='h5'
+                      fontFamily='SanFrancisco'
                     >
-                      #France
+                      🇫🇷
                     </Typography>
                     <Typography
                       theme='graylight'
                       weight='regular'
-                      variant='h4'
-                      component='span'
-                      fontFamily='Inter'
-                      className='weightGrow'
+                      variant='body-lg'
+                      fontFamily='SanFrancisco'
                     >
-                      #Europe
+                      Maternelle
                     </Typography>
+                  </div>
+                  <div className='flex items-center'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h4'
-                      component='span'
+                      variant='body-base'
                       fontFamily='SanFrancisco'
-                      className='weightGrow'
                     >
-                      #World
+                      (A2)
                     </Typography>
-                    <Typography
-                      theme='graylight'
-                      weight='extralight'
-                      variant='h4'
-                      component='span'
-                      fontFamily='Montserrat'
-                      className='weightGrow'
-                    >
-                      #Remote
-                    </Typography>
-                    <Typography
-                      theme='graylight'
-                      weight='light'
-                      variant='h4'
-                      component='span'
-                      fontFamily='SanFrancisco'
-                      className='italic weightGrow'
-                    >
-                      #Freelance
-                    </Typography>
+                  </div>
+                </div>
+                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+                  <div className='flex items-center gap-3'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h4'
-                      component='span'
-                      fontFamily='ClashDisplay'
-                      className='weightGrow'
+                      variant='h5'
+                      fontFamily='SanFrancisco'
                     >
-                      #France
+                      🏴󠁧󠁢󠁥󠁮󠁧󠁿
                     </Typography>
                     <Typography
                       theme='graylight'
                       weight='regular'
-                      variant='h4'
-                      component='span'
-                      fontFamily='Inter'
-                      className='weightGrow'
-                    >
-                      #Europe
-                    </Typography>
-                    <Typography
-                      theme='graylight'
-                      weight='bold'
-                      variant='h4'
-                      component='span'
+                      variant='body-lg'
                       fontFamily='SanFrancisco'
-                      className='weightGrow'
                     >
-                      #World
+                      Intermédiaire
                     </Typography>
-                    <Typography
-                      theme='graylight'
-                      weight='extralight'
-                      variant='h4'
-                      component='span'
-                      fontFamily='Montserrat'
-                      className='weightGrow'
-                    >
-                      #Remote
-                    </Typography>
+                  </div>
+                  <div className='flex items-center'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h4'
-                      component='span'
-                      fontFamily='ClashDisplay'
-                      className='weightGrow'
+                      variant='body-base'
+                      fontFamily='SanFrancisco'
                     >
-                      #Freelance
+                      (A2)
+                    </Typography>
+                  </div>
+                </div>
+                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
+                  <div className='flex items-center gap-3'>
+                    <Typography
+                      theme='graylight'
+                      weight='bold'
+                      variant='h5'
+                      fontFamily='SanFrancisco'
+                    >
+                      🇪🇸
+                    </Typography>
+                    <Typography
+                      theme='graylight'
+                      weight='regular'
+                      variant='body-lg'
+                      fontFamily='SanFrancisco'
+                    >
+                      Débutant
+                    </Typography>
+                  </div>
+                  <div className='flex items-center'>
+                    <Typography
+                      theme='graylight'
+                      weight='bold'
+                      variant='body-base'
+                      fontFamily='SanFrancisco'
+                    >
+                      (A2)
                     </Typography>
                   </div>
                 </div>
               </div>
-            </Parented>
-            <div className='flex flex-col gap-8 w-[30%] max-lg:w-full max-lg:flex-row max-md:flex-col'>
-              <Parented className='flex-grow flex flex-col  gap-4 items-start justify-center max-lg:w-3/5 max-md:w-full'>
-                <div className=' w-full'>
-                  <Typography
-                    theme='white'
-                    weight='medium'
-                    variant='body-lg'
-                    component='span'
-                    fontFamily='ClashDisplay'
-                    className=''
-                  >
-                    {`J'utilise le plus`}
-                  </Typography>
-                </div>
-                <div className='flex flex-wrap gap-4'>
-                  <Image
-                    src='/animText/htmllog.png'
-                    width='1000'
-                    height='1000'
-                    alt='htmllog'
-                    className='cvicon object-contain'
-                  />
-                  <Image
-                    src='/animText/csslog.png'
-                    width='1000'
-                    height='1000'
-                    alt='csslog'
-                    className='cvicon object-contain'
-                  />
-                  <Image
-                    src='/animText/jslog.png'
-                    width='1000'
-                    height='1000'
-                    alt='jslog'
-                    className='cvicon object-contain'
-                  />
+              <Parented className='flex-grow  text-center flex flex-col w-1/3 hover:none gap-4 items-start justify-between  max-md:w-full max-xl:w-full'>
+                <Typography
+                  theme='white'
+                  weight='light'
+                  variant='lead'
+                  component='p'
+                  fontFamily='SanFrancisco'
+                  className='text-left  w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
+                >
+                  {t('index.description')}
+                </Typography>
+
+                {/*<div className='flex flex-wrap justify-start gap-5'>
                   <Image
                     src='/animText/reactlog.png'
                     width='1000'
@@ -332,17 +323,10 @@ const AboutPage: React.FC = () => {
                     className='cvicon object-contain'
                   />
                   <Image
-                    src='/animText/phplog.png'
+                    src='/animText/nextjswhitelog.png'
                     width='1000'
                     height='1000'
                     alt='phplog'
-                    className='cvicon object-contain'
-                  />
-                  <Image
-                    src='/animText/sasslog.png'
-                    width='1000'
-                    height='1000'
-                    alt='sasslog'
                     className='cvicon object-contain'
                   />
                   <Image
@@ -352,37 +336,13 @@ const AboutPage: React.FC = () => {
                     alt='taillog'
                     className='cvicon object-contain'
                   />
-                  <Image
-                    src='/animText/figmall.png'
-                    width='1000'
-                    height='1000'
-                    alt='figmall'
-                    className='cvicon object-contain'
-                  />
-                </div>
-              </Parented>
-              <Parented className='flex-grow  flex flex-col  gap-6 items-start justify-center max-lg:w-2/5 max-md:w-full'>
-                <Link href='/projects' className='w-full'>
-                  <div className='flex items-center justify-between gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
-                    <Typography
-                      component='span'
-                      variant='lead'
-                      theme='white'
-                      weight='medium'
-                      fontFamily='ClashDisplay'
-                      className='max-[900px]:text-lg'
-                    >
-                      {t('index.button.second')}
-                    </Typography>
-                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
-                  </div>
-                </Link>
+                </div>*/}
               </Parented>
             </div>
           </div>
 
           <div className='flex gap-10 justify-between max-[1000px]:flex-wrap'>
-            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full w-1/3 laylay !p-0 overhed'>
+            <Parented className='flex flex-col gap-2 dertoni items-start  max-[1000px]:w-full w-1/3 laylay overhd'>
               <Image
                 src='/anim.gif'
                 alt='de'
@@ -390,15 +350,37 @@ const AboutPage: React.FC = () => {
                 height='200'
                 className='absolute lottie-anim'
               />
-              <LayerCV
-                className='flex-col !items-end gap-4 !bg-[#00000000] !p-10 rounded-3xl '
-                title={t('openclassroom.dip.title')}
-                description='OpenClassRoom'
-                date='Nov 2023'
-              />
+              <Typography
+                variant='lead'
+                weight='medium'
+                component='p'
+                theme='graylight'
+                fontFamily='ClashDisplay'
+              >
+                {t('openclassroom.dip.title')}
+              </Typography>
+              <div className='flex w-full justify-between gap-2'>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                >
+                  OpenClassRoom
+                </Typography>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                  className='text-right'
+                >
+                  Nov 2023
+                </Typography>
+              </div>
             </Parented>
 
-            <Parented className='flex dertoni items-start gap-14 dertoni  laylay max-[1000px]:w-full w-1/3 !p-0 overhed'>
+            <Parented className='flex flex-col gap-2 dertoni items-start  max-[1000px]:w-full w-1/3 laylay overhd'>
               <Image
                 src='/anim.gif'
                 alt='de'
@@ -406,16 +388,37 @@ const AboutPage: React.FC = () => {
                 height='200'
                 className='absolute lottie-anim'
               />
-
-              <LayerCV
-                className=' flex-col !items-end gap-4 !bg-[#00000000] !p-10 w-full rounded-3xl'
-                title={t('popschool.dip.title')}
-                description='PopSchool - Valenciennes'
-                date='2020'
-              />
+              <Typography
+                variant='lead'
+                weight='medium'
+                component='p'
+                theme='graylight'
+                fontFamily='ClashDisplay'
+              >
+                {t('popschool.dip.title')}
+              </Typography>
+              <div className='flex w-full justify-between gap-2'>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                >
+                  OpenClassRoom
+                </Typography>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                  className='text-right'
+                >
+                  Nov 2023
+                </Typography>
+              </div>
             </Parented>
 
-            <Parented className='flex dertoni items-start gap-14 max-[1000px]:w-full laylay w-1/3 !p-0 overhed'>
+            <Parented className='flex flex-col gap-2 dertoni items-start  max-[1000px]:w-full w-1/3 laylay overhd'>
               <Image
                 src='/anim.gif'
                 alt='de'
@@ -423,13 +426,34 @@ const AboutPage: React.FC = () => {
                 height='200'
                 className='absolute lottie-anim'
               />
-
-              <LayerCV
-                className=' !items-end flex-col gap-4 !p-10 !bg-[#00000000] rounded-3xl !text-white'
-                title={t('bac.dip.title')}
-                description='Lycée Arthur Rimabud - Sin le Noble'
-                date='Juin 2016'
-              />
+              <Typography
+                variant='lead'
+                component='p'
+                weight='medium'
+                theme='graylight'
+                fontFamily='ClashDisplay'
+              >
+                {t('bac.dip.title')}
+              </Typography>
+              <div className='flex w-full justify-between gap-2'>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                >
+                  OpenClassRoom
+                </Typography>
+                <Typography
+                  weight='extralight'
+                  theme='graylight'
+                  variant='body-base'
+                  fontFamily='ClashDisplay'
+                  className='text-right'
+                >
+                  Nov 2023
+                </Typography>
+              </div>
             </Parented>
           </div>
           <div className='flex items-start gap-10 wrapf'>
