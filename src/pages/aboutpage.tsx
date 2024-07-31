@@ -48,7 +48,7 @@ const AboutPage: React.FC = () => {
                 variant='h3'
                 component='h1'
                 fontFamily='ClashDisplay'
-                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-normal   max-mdd:mr-2 max-mdd:leading-normal semib'
+                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight   max-mdd:mr-2 max-mdd:leading-normal semib'
               >
                 {t('about.title')}
               </Typography>
