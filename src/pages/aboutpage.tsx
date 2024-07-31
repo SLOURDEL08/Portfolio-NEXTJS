@@ -41,14 +41,14 @@ const AboutPage: React.FC = () => {
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
           <div className=' gap-10 max-[1000px]:flex-wrap h-full w-full '>
-            <Parented className='!px-0 max-mdd:mt-3 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-center flex flex-col gap-10 flex-grow relative overflow-hidden'>
+            <Parented className='!px-0 max-mdd:mt-5 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-center flex flex-col gap-10 flex-grow relative overflow-hidden'>
               <Typography
                 theme='white'
                 weight='regular'
                 variant='h3'
                 component='h1'
                 fontFamily='ClashDisplay'
-                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight   max-mdd:mr-2 max-mdd:leading-normal semib'
+                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal semib'
               >
                 {t('about.title')}
               </Typography>
@@ -78,13 +78,13 @@ const AboutPage: React.FC = () => {
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
+                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
                   <Image
                     src='/localpos.png'
                     width='20'
                     height='21'
                     alt='de'
-                    className='opacity-80'
+                    className='opacity-80  w-3.5'
                   />
                   <Typography
                     theme='graylight'
@@ -97,8 +97,14 @@ const AboutPage: React.FC = () => {
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl w-max'>
-                  <Image src='/imail.png' width='25' height='24' alt='de' className='opacity-80' />
+                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl w-max'>
+                  <Image
+                    src='/imail.png'
+                    width='25'
+                    height='24'
+                    alt='de'
+                    className='opacity-80  w-5'
+                  />
                   <Typography
                     theme='graylight'
                     weight='bold'
