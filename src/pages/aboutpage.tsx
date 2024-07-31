@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
               </Typography>
 
               <div className='flex max-mdd:justify-start items-center gap-6 flex-wrap w-full justify-center'>
-                <div className='flex gap-3 p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20] rounded-2xl'>
+                <div className='flex gap-3 p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30] rounded-2xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
@@ -66,7 +66,7 @@ const AboutPage: React.FC = () => {
                     LOURDEL Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 p-3 px-4  bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
+                <div className='flex gap-3 p-3 px-4  bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
+                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl'>
                   <Image
                     src='/localpos.png'
                     width='20'
@@ -97,13 +97,13 @@ const AboutPage: React.FC = () => {
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl w-max'>
+                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl w-max'>
                   <Image
                     src='/imail.png'
                     width='25'
                     height='24'
                     alt='de'
-                    className='opacity-80  w-5'
+                    className='opacity-80  w-4'
                   />
                   <Typography
                     theme='graylight'
@@ -117,11 +117,11 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
 
-                <div className='overhed flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
+                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/linkedicon.png'
-                    width='23'
-                    height='23'
+                    width='21'
+                    height='21'
                     alt='de'
                     className='opacity-80'
                   />
@@ -136,8 +136,8 @@ const AboutPage: React.FC = () => {
                     /Linkedin
                   </Typography>
                 </div>
-                <div className='overhed flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
-                  <Image src='/github.png' width='22' height='22' alt='de' className='opacity-80' />
+                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
+                  <Image src='/github.png' width='20' height='20' alt='de' className='opacity-80' />
                   <Typography
                     theme='graylight'
                     weight='bold'
@@ -198,13 +198,13 @@ const AboutPage: React.FC = () => {
                 </div>*/}
             </Parented>
             <div className='flex max-xl:flex-col   gap-10 w-full max-md:flex-col'>
-              <div className='flex gap-10 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
-                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+              <div className='flex gap-8 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-3'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h5'
+                      variant='h4'
                       fontFamily='SanFrancisco'
                     >
                       🇫🇷
@@ -213,6 +213,7 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='regular'
                       variant='body-lg'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       Maternelle
@@ -223,18 +224,19 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='bold'
                       variant='body-base'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       (A2)
                     </Typography>
                   </div>
                 </div>
-                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-3'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h5'
+                      variant='h4'
                       fontFamily='SanFrancisco'
                     >
                       🏴󠁧󠁢󠁥󠁮󠁧󠁿
@@ -243,6 +245,7 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='regular'
                       variant='body-lg'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       Intermédiaire
@@ -253,18 +256,19 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='bold'
                       variant='body-base'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       (A2)
                     </Typography>
                   </div>
                 </div>
-                <div className='bg-[#ffffff20] hover:bg-[#ffffff30] flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-3'>
                     <Typography
                       theme='graylight'
                       weight='bold'
-                      variant='h5'
+                      variant='h4'
                       fontFamily='SanFrancisco'
                     >
                       🇪🇸
@@ -273,6 +277,7 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='regular'
                       variant='body-lg'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       Débutant
@@ -283,6 +288,7 @@ const AboutPage: React.FC = () => {
                       theme='graylight'
                       weight='bold'
                       variant='body-base'
+                      component='p'
                       fontFamily='SanFrancisco'
                     >
                       (A2)
@@ -290,14 +296,14 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <Parented className='flex-grow  text-center flex flex-col w-1/3 hover:none gap-4 items-start justify-between  max-md:w-full max-xl:w-full'>
+              <Parented className='flex-grow textedd  text-center flex flex-col w-1/3 hover:none gap-4 items-start justify-between  max-md:w-full max-xl:w-full'>
                 <Typography
-                  theme='white'
+                  theme='graylight'
                   weight='light'
                   variant='lead'
                   component='p'
                   fontFamily='SanFrancisco'
-                  className='text-left  w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
+                  className='text-left   w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
                 >
                   {t('index.description')}
                 </Typography>
@@ -350,7 +356,7 @@ const AboutPage: React.FC = () => {
                 alt='de'
                 width='200'
                 height='200'
-                className='absolute lottie-anim'
+                className='absolute -mt-10 lottie-anim'
               />
               <Typography
                 variant='lead'
@@ -388,7 +394,7 @@ const AboutPage: React.FC = () => {
                 alt='de'
                 width='200'
                 height='200'
-                className='absolute lottie-anim'
+                className='absolute lottie-anim -mt-10'
               />
               <Typography
                 variant='lead'
@@ -426,7 +432,7 @@ const AboutPage: React.FC = () => {
                 alt='de'
                 width='200'
                 height='200'
-                className='absolute lottie-anim'
+                className='absolute lottie-anim -mt-10'
               />
               <Typography
                 variant='lead'

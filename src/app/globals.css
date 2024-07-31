@@ -1595,6 +1595,24 @@ padding: 20px;
 }
 
 .overheed span:nth-child(2){color:#a4a4a4!important; opacity: 1!important;}
+
+.overhedz{
+  background: linear-gradient(45deg, #ffffff40, #ffffff10, #ffffff40, #ffffff10, #ffffff40, #ffffff10);
+                            background-size: 400% 400%;
+                            animation: Gradient 10s ease infinite;z-index: 200;
+                            line-height: 1;
+                            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.textedd:hover p{
+  color:white;
+}
+
+.overhedz:hover{
+  background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
+                            background-size: 400% 400%;
+                            animation: Gradient 10s ease infinite;z-index: 200;
+}
                           .overhed{
                             background: linear-gradient(45deg, #ffffff20, #ffffff00, #ffffff20, #ffffff00, #ffffff20, #ffffff00);
                             background-size: 400% 400%;
