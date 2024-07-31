@@ -61,19 +61,19 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm '
+                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base '
                   >
                     LOURDEL Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 p-3 px-4 bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
+                <div className='flex gap-3 p-3 px-4  bg-[#ffffff10] hover:bg-[#ffffff20]  rounded-2xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     25 ans
                   </Typography>
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     Arras, France
                   </Typography>
@@ -105,7 +105,7 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     contact@slourdel.fr
                   </Typography>
@@ -125,7 +125,7 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-sm semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     /Linkedin
                   </Typography>
@@ -138,7 +138,7 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-lg semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     /Github
                   </Typography>
