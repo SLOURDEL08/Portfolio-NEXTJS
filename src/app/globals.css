@@ -1377,6 +1377,12 @@ display: block;                          margin-top: 100px;
                 }
               }
 
+              .inputea:hover{
+                background: linear-gradient(45deg, #ffffff15, #ffffff20, #ffffff15, #ffffff20, #ffffff15, #ffffff20);
+                background-size: 400% 400%;
+                animation: Gradient 10s ease infinite;
+              }
+
               .translating{
                   transform:translate(0px, 0px);
                   transition:0.2s ease-in-out;
@@ -1927,6 +1933,10 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
     animation-direction: var(--direction);
     animation-duration: var(--duration);
   }
+}
+
+.btnsib{
+  font-size:19px;
 }
 
 .dertoni:hover p {
