@@ -375,6 +375,50 @@
       "mkt": "/projects/toast/mkt.png"
     
     }
+    },
+      {
+      "id": 18,
+      "title": "Coders Monkey",
+      "slug": "codersmonkey",
+      "image": "/projects/codersmonkey/homepage.png",
+      "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container.",
+      "symbol": "/projects/codersmonkey/symbol.jpg",
+      "categories": ["Full-stack"],
+      "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/codersmonkey/top-right.png",
+        "topleft": "/projects/codersmonkey/top-left.png",
+      "botright": "/projects/codersmonkey/bot-right.png",
+      "botleft": "/projects/codersmonkey/bot-left.png",
+      "big": "/projects/codersmonkey/big.png",
+      "vertical": "/projects/codersmonkey/vertical.png",
+      "mkt": "/projects/codersmonkey/mkt.png"
+    
+    }
+    },
+     {
+      "id": 19,
+      "title": "DietIA",
+      "slug": "dietia",
+      "image": "/projects/dietia/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/dietia/symbol.png",
+      "categories": ["Full-stack"],
+      "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+      "gallery": { 
+        "topright": "/projects/dietia/top-right.png",
+        "topleft": "/projects/dietia/top-left.png",
+      "botright": "/projects/dietia/bot-right.png",
+      "botleft": "/projects/dietia/bot-left.png",
+      "big": "/projects/dietia/big.png",
+      "vertical": "/projects/dietia/vertical.png",
+      "mkt": "/projects/dietia/mkt.png"
+    
+    }
     }
   ]
   

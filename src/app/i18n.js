@@ -186,21 +186,24 @@ const resources = {
         "Site vitrine sur-mesure WordPress pour une agence de WebMarketing, avec mise en page personnalisée, slider manuel et lightbox. Intégration de témoignages clients et de cas d'études pour démontrer l'expertise de l'agence.",
       'project.sophiebluel.description.fr':
         "Développement front-end du site de l'artiste SophieBluel, intégration de contenus dynamiques, connexion à une base de données et opérations CRUD. Mise en avant des œuvres et des expositions, avec une interface utilisateur moderne et intuitive.",
+      'project.codersmonkey.description.fr':
+        "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container.",
+      'project.dietia.description.fr':
+        "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..) ",
     },
   },
 };
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next) // important pour l'intégration avec React
   .init({
     resources,
-    lng: 'fr', // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    // if you're using a language detector, do not define the lng option
-
+    lng: 'fr', // langue par défaut
+    fallbackLng: 'fr', // langue de secours
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false, // désactivation de l'échappement, React s'occupe déjà de ça
     },
+    debug: true, // utile pour voir les messages de débogage
   });
 
 export default i18n;

@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'; // Import de useTranslation pour
 import { Project } from '@/app/modules/types/types';
 import projectsData from '@/app/data/project.json';
 
-const ProjectDetailsPage = () => {
+const ProjectDetailsPage: React.FC = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [selectedSection, setSelectedSection] = useState<string>('presentation');
   const router = useRouter();
@@ -37,11 +37,14 @@ const ProjectDetailsPage = () => {
     }
   }, [id, router]);
 
+  useEffect(() => {
+    console.log('Current language:', i18n.language);
+  }, [i18n]);
+
   if (!project) {
     return <div>Chargement en cours...</div>;
   }
 
-  // Fonction de gestionnaire d'événements pour basculer entre les sections
   const handleSectionClick = (section: string) => {
     setSelectedSection(section);
   };
@@ -243,7 +246,7 @@ const ProjectDetailsPage = () => {
                       className='w-[100%]  h-[200px] object-cover object-top rounded-xl  border-gray-800'
                     />
                     <div
-                      className='absolute top-0 right-0 backdrop-blur shadowed 	 px-4 py-2 bg-[#ffffff80]
+                      className='absolute top-0 right-0 backdrop-blur-sm shadowed mask	 px-3 py-1.5 bg-[#ffffff80]
 
  rounded-xl mt-4 mr-4  '
                     >
@@ -274,28 +277,30 @@ const ProjectDetailsPage = () => {
                   </div>
 
                   <div className='inline-flex justify-start gap-10 rounded-xl flex-wrap gap-y-4'>
-                    <Link
-                      href='https://github.com'
-                      className='flex gap-2 items-center overhed px-4 py-2 rounded-xl'
-                    >
-                      <Typography
-                        theme='white'
-                        weight='medium'
-                        variant='body-base'
-                        component='span'
-                        fontFamily='ClashDisplay'
-                        className=''
+                    {project.repoUrl && (
+                      <Link
+                        href={project.repoUrl}
+                        className='flex gap-2 items-center overhed px-4 py-2 rounded-xl'
                       >
-                        Github
-                      </Typography>
-                      <Image
-                        src='/top-right-arrow.png'
-                        width='800'
-                        height='500'
-                        alt='de'
-                        className='max-w-[14px] max-h-[14px]'
-                      />
-                    </Link>
+                        <Typography
+                          theme='white'
+                          weight='medium'
+                          variant='body-base'
+                          component='span'
+                          fontFamily='ClashDisplay'
+                          className=''
+                        >
+                          Repository
+                        </Typography>
+                        <Image
+                          src='/top-right-arrow.png'
+                          width='800'
+                          height='500'
+                          alt='de'
+                          className='max-w-[14px] max-h-[14px]'
+                        />
+                      </Link>
+                    )}
 
                     <Link
                       href='https://github.com'

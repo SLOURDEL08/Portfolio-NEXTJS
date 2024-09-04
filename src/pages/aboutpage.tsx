@@ -6,7 +6,6 @@ import '@/app/globals.css';
 import '@/app/i18n';
 import '@/app/mediaqueries.css';
 import { useTranslation } from 'react-i18next';
-import { useLocale } from '@/app/modules/useLocale';
 import Parented from '@/app/modules/parented/parented';
 import LayerCV from '@/app/modules/layerCV/layerCV';
 import Image from 'next/image';
@@ -16,7 +15,6 @@ import Link from 'next/link';
 import { ImageSlideFront, TextSlide, ImageSlideBack } from '@/app/modules/textSlide/textSlide';
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { locale, handleLanguageChange } = useLocale();
 
   useEffect(() => {
     // Exemple de logique avec i18n dans useEffect
@@ -217,17 +215,6 @@ const AboutPage: React.FC = () => {
                       fontFamily='SanFrancisco'
                     >
                       Maternelle
-                    </Typography>
-                  </div>
-                  <div className='flex items-center'>
-                    <Typography
-                      theme='graylight'
-                      weight='bold'
-                      variant='body-base'
-                      component='p'
-                      fontFamily='SanFrancisco'
-                    >
-                      (A2)
                     </Typography>
                   </div>
                 </div>

@@ -6,6 +6,7 @@ import { ContactModalProvider, useContactModal } from '@/app/modules/contact-mod
 import { ModalProvider } from '@/app/modules/modal-result/ModalContext';
 import ContactModal from '@/app/modules/contact-modal/ContactModal';
 import '@/app/globals.css';
+import i18n from '@/app/i18n';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -31,7 +32,7 @@ const Content: React.FC<{ Component: any; pageProps: any; router: any }> = ({
     const handleRouteChange = (url: string) => {
       if (url === '/contact') {
         openContactModal();
-      } else {
+      } else if (isContactModalOpen) {
         closeContactModal();
       }
     };
@@ -40,7 +41,7 @@ const Content: React.FC<{ Component: any; pageProps: any; router: any }> = ({
     return () => {
       nextRouter.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, [nextRouter, openContactModal, closeContactModal]);
+  }, [nextRouter, openContactModal, closeContactModal, isContactModalOpen]);
 
   return (
     <>
