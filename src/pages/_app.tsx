@@ -10,8 +10,6 @@ import nextI18NextConfig from '../../next-i18next.config.js';
 import '@/app/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
   return (
     <ContactModalProvider>
       <ModalProvider>
@@ -23,7 +21,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-const Content: React.FC<{ Component: any; pageProps: any }> = ({ Component, pageProps }) => {
+const Content: React.FC<{ Component: React.ComponentType<any>; pageProps: any }> = ({
+  Component,
+  pageProps,
+}) => {
   const { isContactModalOpen, openContactModal, closeContactModal } = useContactModal();
   const router = useRouter();
 
@@ -37,12 +38,10 @@ const Content: React.FC<{ Component: any; pageProps: any }> = ({ Component, page
     };
 
     const handleRouteChangeStart = () => {
-      // Empêcher le défilement pendant la transition
       document.body.style.overflow = 'hidden';
     };
 
     const handleRouteChangeComplete = () => {
-      // Réactiver le défilement après la transition
       document.body.style.overflow = 'unset';
       handleRouteChange(router.asPath);
     };

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import Layout from '@/app/modules/layout/layout';
 import Main from '@/app/modules/main/main';
 import Image from 'next/image';
@@ -12,10 +11,9 @@ import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import { useLocale } from '@/app/modules/useLocale';
 import Parented from '@/app/modules/parented/parented';
 import LayerCV from '@/app/modules/layerCV/layerCV';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-// Importez les autres styles nécessaires
 
 const HomePage: React.FC = () => {
   const { t, i18n } = useTranslation('common');
@@ -310,7 +308,7 @@ const HomePage: React.FC = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
