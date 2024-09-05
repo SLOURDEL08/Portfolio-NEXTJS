@@ -12,7 +12,6 @@ import Link from 'next/link';
 import projectsData from '@/app/data/project.json';
 import { useLocale } from '@/app/modules/useLocale';
 
-// Mise à jour du type Project
 interface Project {
   id: number;
   title: string;
@@ -49,7 +48,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   const [project, setProject] = useState<Project | null>(initialProject);
   const [selectedSection, setSelectedSection] = useState<string>('presentation');
   const router = useRouter();
-  const { locale, handleLanguageChange } = useLocale();
+  const { locale } = useLocale();
 
   useEffect(() => {
     if (!project && router.query.id) {
@@ -69,8 +68,10 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   }
 
   const handleSectionClick = (section: string) => {
-    setSelectedSection(section);
+    setSelectedSection(section.toLowerCase());
   };
+
+  const sections = ['presentation', 'ressources', 'gallery'];
 
   return (
     <Layout>
@@ -100,7 +101,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
 
           {/* Mobile menu */}
           <div className='mobileidmenu mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex  min-[900px]:hidden max-[900px]:mt-8 '>
-            {['presentation', 'ressources', 'gallery'].map((section) => (
+            {sections.map((section) => (
               <div
                 key={section}
                 className={`flex items-center justify-between gap-8 cursor-pointer handled max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 p-4 px-6 transit rounded-2xl ${
@@ -108,18 +109,16 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                 }`}
                 onClick={() => handleSectionClick(section)}
               >
-                {selectedSection === section && (
-                  <Typography
-                    theme='white'
-                    weight='medium'
-                    variant='lead'
-                    component='span'
-                    fontFamily='SanFrancisco'
-                    className='max-[500px]:text-lg'
-                  >
-                    {t(section)}
-                  </Typography>
-                )}
+                <Typography
+                  theme='white'
+                  weight='medium'
+                  variant='lead'
+                  component='span'
+                  fontFamily='SanFrancisco'
+                  className='max-[500px]:text-lg'
+                >
+                  {t(section)}
+                </Typography>
                 <Image
                   src={`/${section}.png`}
                   width={23}
@@ -134,7 +133,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
           <div className='flex pt-10 gap-10 min-[900px]:w-[100%] max-[900px]:block max-[900px]:pt-0'>
             {/* Desktop menu */}
             <div className='flex flex-col gap-8 w-[30%] max-[900px]:hidden'>
-              {['Presentation', 'Ressources', 'Gallery'].map((section) => (
+              {sections.map((section) => (
                 <div
                   key={section}
                   className={`p-4 px-6 w-full flex items-center cursor-pointer justify-between handled rounded-2xl ${
@@ -164,16 +163,16 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
             </div>
 
             {/* Content */}
-            <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[70%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject '>
+            <div className='bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[70%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject'>
               {selectedSection === 'presentation' && (
-                <div className='presentation-block flex flex-col gap-8 '>
+                <div className='presentation-block flex flex-col gap-8'>
                   <div className='liens-block relative overflow-hidden gap-10 max-[1100px]:flex-col'>
                     <Image
                       src={project.image}
                       width={800}
                       height={500}
                       alt='de'
-                      className='w-[100%]  h-[200px] object-cover object-top rounded-xl  border-gray-800'
+                      className='w-[100%] h-[200px] object-cover object-top rounded-xl border-gray-800'
                     />
                     <div className='absolute top-0 right-0 backdrop-blur-sm shadowed mask px-3 py-1 bg-[#ffffff60] rounded-lg mt-4 mr-4'>
                       <Typography
@@ -189,7 +188,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                     </div>
                   </div>
 
-                  <div className=''>
+                  <div>
                     <Typography
                       theme='graylight'
                       weight='light'
@@ -198,7 +197,14 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       fontFamily='SanFrancisco'
                       className='text-left w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose'
                     >
-                      {t('projects.netflix.description')}
+                      {project.description && typeof project.description === 'object'
+                        ? project.description[locale as keyof typeof project.description] ||
+                          project.description['en'] ||
+                          Object.values(project.description)[0] ||
+                          'Description not available'
+                        : typeof project.description === 'string'
+                        ? project.description
+                        : 'Description not available'}{' '}
                     </Typography>
                   </div>
 
@@ -253,9 +259,9 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                   </div>
                 </div>
               )}
-              {selectedSection === 'ressources' && project.gallery && (
+              {selectedSection === 'ressources' && (
                 <div className='documentation-block flex flex-col gap-8'>
-                  <div className=''>
+                  <div>
                     <div className='flex gap-8'>
                       <div className='flex flex-col gap-8 w-[100%]'>
                         <div className='exp-sec'>
@@ -300,7 +306,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                           width={500}
                           height={300}
                           alt='top left'
-                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                         />
                       </div>
                       <div className='w-[70%]'>
@@ -309,19 +315,19 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                           width={500}
                           height={300}
                           alt='top right'
-                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                         />
                       </div>
                     </div>
                     <div className='flex max-[550px]:flex-col gap-8'>
-                      <div className='flex gap-8 flex-wrap  max-[550px]:w-full w-[70%]'>
+                      <div className='flex gap-8 flex-wrap max-[550px]:w-full w-[70%]'>
                         <div className='w-[100%]'>
                           <Image
                             src={project.gallery.big}
                             width={500}
                             height={300}
                             alt='big'
-                            className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                            className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                           />
                         </div>
                         <div className='flex w-full gap-8'>
@@ -331,7 +337,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                               width={500}
                               height={300}
                               alt='bottom right'
-                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                             />
                           </div>
                           <div className='w-[40%]'>
@@ -340,19 +346,19 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                               width={500}
                               height={300}
                               alt='bottom left'
-                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                             />
                           </div>
                         </div>
                       </div>
-                      <div className='flex gap-8 flex-wrap  max-[550px]:w-full w-[30%]'>
+                      <div className='flex gap-8 flex-wrap max-[550px]:w-full w-[30%]'>
                         <div className='w-[100%]'>
                           <Image
                             src={project.gallery.vertical}
                             width={500}
                             height={300}
                             alt='vertical'
-                            className=' w-[100%]  max-[550px]:max-h-[250px] h-full imglong  transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
+                            className='w-[100%] max-[550px]:max-h-[250px] h-full imglong transitioned hover:brightness-150 object-cover object-left rounded-3xl'
                           />
                         </div>
                       </div>

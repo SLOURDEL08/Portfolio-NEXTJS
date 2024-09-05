@@ -1,4 +1,11 @@
 {
+
+  
+  "general": {
+    "welcome": "Welcome on my NextJs Portfolio",
+    "madewith": "Build with",
+    "all": "All"
+  },
   "welcome": "Welcome to my NextJS Portfolio",
   "index": {
     "description": "This is the description in English.",

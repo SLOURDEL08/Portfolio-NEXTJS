@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -15,8 +15,8 @@ export const Header: React.FC = () => {
   const [hasText, setHasText] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { t, i18n } = useTranslation('common');
-  const modalRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const modalRef = useRef<HTMLDivElement>(null);
   const { openModal, closeModal, isModalOpen, searchResults } = useModal();
   const { openContactModal } = useContactModal();
 
@@ -77,9 +77,12 @@ export const Header: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  const handleLanguageChange = useCallback(
+    (lang: string) => {
+      router.push(router.pathname, router.asPath, { locale: lang });
+    },
+    [router]
+  );
 
   return (
     <header
@@ -243,7 +246,7 @@ export const Header: React.FC = () => {
           </div>
           <div className='navbar-end flex gap-6 max-[]:hidden'>
             <select
-              value={i18n.language}
+              value={router.locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               className='appearance-none bg-transparent optdd border-none'
             >
