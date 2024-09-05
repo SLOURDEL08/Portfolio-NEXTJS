@@ -13,13 +13,12 @@ import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 import Link from 'next/link';
 import { ImageSlideFront, TextSlide, ImageSlideBack } from '@/app/modules/textSlide/textSlide';
+import { useLocale } from '@/app/modules/useLocale';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetServerSideProps } from 'next';
 const AboutPage: React.FC = () => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    // Exemple de logique avec i18n dans useEffect
-    console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+  const { t } = useTranslation('common');
+  const { locale, handleLanguageChange } = useLocale();
 
   const [showMore, setShowMore] = useState(false);
 
@@ -352,7 +351,7 @@ const AboutPage: React.FC = () => {
                 theme='graylight'
                 fontFamily='ClashDisplay'
               >
-                {t('openclassroom.dip.title')}
+                {t('education.openclassroom.title')}
               </Typography>
               <div className='flex w-full justify-between gap-2'>
                 <Typography
@@ -390,7 +389,7 @@ const AboutPage: React.FC = () => {
                 theme='graylight'
                 fontFamily='ClashDisplay'
               >
-                {t('popschool.dip.title')}
+                {t('education.popschool.title')}
               </Typography>
               <div className='flex w-full justify-between gap-2'>
                 <Typography
@@ -399,7 +398,7 @@ const AboutPage: React.FC = () => {
                   variant='body-base'
                   fontFamily='ClashDisplay'
                 >
-                  OpenClassRoom
+                  PopSchool
                 </Typography>
                 <Typography
                   weight='extralight'
@@ -408,7 +407,7 @@ const AboutPage: React.FC = () => {
                   fontFamily='ClashDisplay'
                   className='text-right'
                 >
-                  Nov 2023
+                  Janv 2020
                 </Typography>
               </div>
             </Parented>
@@ -428,7 +427,7 @@ const AboutPage: React.FC = () => {
                 theme='graylight'
                 fontFamily='ClashDisplay'
               >
-                {t('bac.dip.title')}
+                {t('education.bac.title')}
               </Typography>
               <div className='flex w-full justify-between gap-2'>
                 <Typography
@@ -437,7 +436,7 @@ const AboutPage: React.FC = () => {
                   variant='body-base'
                   fontFamily='ClashDisplay'
                 >
-                  OpenClassRoom
+                  Lycée Arthur Rimbaud
                 </Typography>
                 <Typography
                   weight='extralight'
@@ -446,7 +445,7 @@ const AboutPage: React.FC = () => {
                   fontFamily='ClashDisplay'
                   className='text-right'
                 >
-                  Nov 2023
+                  2016
                 </Typography>
               </div>
             </Parented>
@@ -470,20 +469,20 @@ const AboutPage: React.FC = () => {
                     fontFamily='SanFrancisco'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
-                    {t('index.titleform')}
+                    {t('index.title.form')}
                   </Typography>
                 </div>
                 <div className='exp-sec grid h-max'>
                   <LayerCV
                     title='OpenClassRoom'
-                    description={t('openclassroom.description')}
+                    description={t('education.openclassroom.description')}
                     date='Nov 2022/2023'
                     iCon='/ocrlogo.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='PopSchool'
-                    description={t('popschool.description')}
+                    description={t('education.popschool.description')}
                     date='Fev-Jui 2019'
                     iCon='/poplogo.png'
                   />
@@ -491,7 +490,7 @@ const AboutPage: React.FC = () => {
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='Bac STMG'
-                    description={t('bac.description')}
+                    description={t('education.bac.description')}
                     date='Depuis 2020'
                     iCon='/rimbaud.png'
                   />
@@ -501,7 +500,7 @@ const AboutPage: React.FC = () => {
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Brevet des collèges'
-                        description={t('brevet.description')}
+                        description={t('education.brevet.description')}
                         date='2013'
                       />
                     </>
@@ -521,7 +520,7 @@ const AboutPage: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='tracking-widest'
                     >
-                      FERMER
+                      {t('about.collapse.close')}
                     </Typography>
                   ) : (
                     <Typography
@@ -532,7 +531,7 @@ const AboutPage: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='tracking-widest'
                     >
-                      VOIR PLUS
+                      {t('about.collapse.more')}
                     </Typography>
                   )}
                   <Image
@@ -564,27 +563,27 @@ const AboutPage: React.FC = () => {
                     fontFamily='SanFrancisco'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
-                    {t('index.titleexp')}
+                    {t('index.title.exp')}
                   </Typography>
                 </div>
                 <div className='exp-sec grid'>
                   <LayerCV
                     title='Toast Agency'
-                    description={t('toast.exp.description')}
+                    description={t('experience.toast.description')}
                     date='Nov 2022-2023'
                     iCon='/symbol.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='FL Express'
-                    description={t('flexpress.description')}
+                    description={t('experience.flexpress.description')}
                     date='Nov 2020-2021'
                     iCon='/flexpress.png'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='Graphic Packaging'
-                    description={t('graphic.description')}
+                    description={t('experience.graphic.description')}
                     date='Juin-Aout 2020'
                     iCon='/gp-logo.png'
                   />
@@ -593,35 +592,35 @@ const AboutPage: React.FC = () => {
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='TRIGO Networking'
-                        description={t('trigo.va.description')}
+                        description={t('experience.trigo.va.description')}
                         date='Fev-Mai 2020'
                         iCon='/trigo.jpeg'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Freelance'
-                        description={t('freelance.description')}
+                        description={t('experience.freelance.description')}
                         date='Jan 2020'
                         iCon='/slp.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='DK Group'
-                        description={t('dk.description')}
+                        description={t('experience.dk.description')}
                         date='Nov/Dec 2019'
                         iCon='/dkgroup.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Faurecia'
-                        description={t('faurecia.description')}
+                        description={t('experience.faurecia.description')}
                         date='Fev-Juillet 2018'
                         iCon='/faurecia.png'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Trigo Networking'
-                        description={t('trigo.sin.description')}
+                        description={t('experience.trigo.sin.description')}
                         date='2016-2017'
                         iCon='/trigo.jpeg'
                       />
@@ -641,7 +640,7 @@ const AboutPage: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='tracking-widest'
                     >
-                      FERMER
+                      {t('about.collapse.close')}
                     </Typography>
                   ) : (
                     <Typography
@@ -652,7 +651,7 @@ const AboutPage: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='tracking-widest'
                     >
-                      VOIR PLUS
+                      {t('about.collapse.more')}
                     </Typography>
                   )}
                   <Image
@@ -670,6 +669,14 @@ const AboutPage: React.FC = () => {
       </TransitionPage>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+    },
+  };
 };
 
 export default AboutPage;

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import '@/app/globals.scss';
-import { useTranslation } from 'react-i18next';
-import { Typography } from '@/app/modules/typography/typography';
+import { useTranslation } from 'next-i18next';
+import { GetServerSideProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import Link from 'next/link';
-import '@/app/i18n';
-import { useLocale } from '@/app/modules/useLocale';
-import useResponsiveProjects from '@/app/modules/segmentedControl/useResponsiveProjects'; // Importer le hook personnalisé
-import { Project } from '@/app/modules/types/types'; // Importer le type partagé
+import { Typography } from '@/app/modules/typography/typography';
+import useResponsiveProjects from '@/app/modules/segmentedControl/useResponsiveProjects';
+import { Project } from '@/app/modules/types/types';
+
+import '@/app/globals.scss';
 
 interface SegmentedProps {
   useFilters?: boolean;
@@ -16,8 +17,7 @@ interface SegmentedProps {
   responsiveBreakpoints?: { [key: string]: number };
   className?: string;
   onProjectChange?: (project: Project) => void;
-  selectedProjectIndex?: number; // Ajoutez cette ligne pour déclarer la prop selectedProjectIndex
-  frontEndProject?: boolean; // Ajoutez cette ligne pour déclarer la prop frontEndProject
+  frontEndProject?: boolean;
 }
 
 const Segmented: React.FC<SegmentedProps> = ({
@@ -27,43 +27,45 @@ const Segmented: React.FC<SegmentedProps> = ({
   responsiveBreakpoints = {},
   className = '',
   onProjectChange,
-  frontEndProject = false, // Ajoutez cette ligne pour initialiser la prop frontEndProject
+  frontEndProject = false,
 }) => {
-  const { t, i18n } = useTranslation(); // Appel de useTranslation en haut du composant
-  const { locale, handleLanguageChange } = useLocale(); // Appel de useLocale en haut du composant
+  const { t, i18n } = useTranslation('common');
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedFilter, setSelectedFilter] = useState('Tous');
+  const [isLoading, setIsLoading] = useState(true);
   const responsiveNumProjects = useResponsiveProjects(
     numProjects === 'all' ? Infinity : numProjects,
     responsiveBreakpoints
   );
 
   useEffect(() => {
-    // Dépendance ajoutée : i18n
-    console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
-
-  useEffect(() => {
-    import('@/app/data/project.json')
-      .then((json) => {
-        const data = json.default as Project[]; // Type assertion here
-        let filteredData = data;
+    const loadProjects = async () => {
+      try {
+        const { default: projectsData } = await import('@/app/data/project.json');
+        let filteredData = projectsData as Project[];
 
         if (frontEndProject) {
-          filteredData = data.filter((project) => project.categories.includes('Front-end'));
+          filteredData = filteredData.filter((project) => project.categories.includes('Front-end'));
         }
 
-        const shuffledData = shuffleArray(filteredData); // Mélange les projets
+        const shuffledData = shuffleArray(filteredData);
         const limitedProjects =
           responsiveNumProjects === Infinity
             ? shuffledData
             : shuffledData.slice(0, responsiveNumProjects);
+
         setProjects(limitedProjects);
         if (onProjectChange && limitedProjects.length > 0) {
-          onProjectChange(limitedProjects[0]); // Assuming onProjectChange expects a Project
+          onProjectChange(limitedProjects[0]);
         }
-      })
-      .catch((error) => console.error('Erreur lors du chargement des données:', error));
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Erreur lors du chargement des données:', error);
+        setIsLoading(false);
+      }
+    };
+
+    loadProjects();
   }, [responsiveNumProjects, onProjectChange, frontEndProject]);
 
   function shuffleArray(array: any[]) {
@@ -86,12 +88,8 @@ const Segmented: React.FC<SegmentedProps> = ({
 
   const gridColsClass = `${numCols}`;
 
-  if (
-    typeof numCols === 'string' &&
-    !['grid-cols-2', 'grid-cols-4', 'grid-cols-3', 'grid-col'].includes(numCols)
-  ) {
-    console.error("numCols doit être soit 'grid-cols-2' soit 'grid-cols-4'.");
-    return null;
+  if (isLoading || !i18n.isInitialized) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -107,7 +105,7 @@ const Segmented: React.FC<SegmentedProps> = ({
               onChange={() => handleFilterChange('Tous')}
             />
             <label htmlFor='five-1' className='tdf'>
-              {t('label.segmented')}
+              {t('general.all')}
             </label>
             {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', 'Design'].map((category) => (
               <React.Fragment key={category}>
@@ -139,12 +137,12 @@ const Segmented: React.FC<SegmentedProps> = ({
               !project.categories.includes(selectedFilter) &&
               'hidden'
             }`}
-            onClick={() => handleProjectSelect(project)} // Appeler handleProjectSelect lors de la sélection d'un projet
+            onClick={() => handleProjectSelect(project)}
           >
             <Image
               src={project.image}
-              width='500'
-              height='500'
+              width={500}
+              height={500}
               alt={project.title}
               className='h-[100%] w-[100%] rounded-3xl object-cover object-left grayzc'
             />
@@ -155,8 +153,8 @@ const Segmented: React.FC<SegmentedProps> = ({
                     <div className='flex items-center gap-4'>
                       <Image
                         src={project.symbol}
-                        width='25'
-                        height='25'
+                        width={25}
+                        height={25}
                         alt='de'
                         className='min-h-[25px] min-w-[25px] object-cover rounded shadowingsymbol'
                       />
@@ -177,8 +175,8 @@ const Segmented: React.FC<SegmentedProps> = ({
                     >
                       <Image
                         src='/top-right-arrow.png'
-                        width='15'
-                        height='15'
+                        width={15}
+                        height={15}
                         alt=''
                         className='grayscale-2'
                       />
@@ -199,6 +197,14 @@ const Segmented: React.FC<SegmentedProps> = ({
       </div>
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+    },
+  };
 };
 
 export default Segmented;

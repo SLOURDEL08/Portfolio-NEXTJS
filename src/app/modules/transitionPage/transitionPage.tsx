@@ -16,14 +16,9 @@ const variants = {
 const TransitionPage = ({ children }: TransitionPageProps) => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const currentPath = router.pathname;
 
   useEffect(() => {
-    const handleStart = (url: string) => {
-      if (url !== currentPath) {
-        setLoading(true);
-      }
-    };
+    const handleStart = () => setLoading(true);
     const handleComplete = () => setLoading(false);
 
     router.events.on('routeChangeStart', handleStart);
@@ -35,37 +30,31 @@ const TransitionPage = ({ children }: TransitionPageProps) => {
       router.events.off('routeChangeComplete', handleComplete);
       router.events.off('routeChangeError', handleComplete);
     };
-  }, [router, currentPath]);
+  }, [router]);
+
+  useEffect(() => {
+    if (loading) {
+      // Désactiver le défilement pendant la transition
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Réactiver le défilement après la transition
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [loading]);
 
   return (
-    <AnimatePresence mode='wait'>
-      {loading && (
-        <motion.div
-          key="transition"
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={variants}
-          transition={{ duration: 0.4 }}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            zIndex: 10,
-            pointerEvents: 'none',
-          }}
-        ></motion.div>
-      )}
+    <AnimatePresence mode='wait' initial={false}>
       <motion.div
-        key={router.route}
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        key={router.asPath}
+        initial='initial'
+        animate='animate'
+        exit='exit'
         variants={variants}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.3 }}
       >
         {children}
       </motion.div>

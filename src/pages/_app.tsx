@@ -1,32 +1,31 @@
 import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { appWithTranslation } from 'next-i18next';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import { ContactModalProvider, useContactModal } from '@/app/modules/contact-modal/ModalContext';
 import { ModalProvider } from '@/app/modules/modal-result/ModalContext';
 import ContactModal from '@/app/modules/contact-modal/ContactModal';
+import nextI18NextConfig from '../../next-i18next.config.js';
 import '@/app/globals.css';
-import i18n from '@/app/i18n';
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
-    <TransitionPage>
-      <ContactModalProvider>
-        <ModalProvider>
-          <Content Component={Component} pageProps={pageProps} router={router} />
-        </ModalProvider>
-      </ContactModalProvider>
-    </TransitionPage>
+    <ContactModalProvider>
+      <ModalProvider>
+        <TransitionPage>
+          <Content Component={Component} pageProps={pageProps} />
+        </TransitionPage>
+      </ModalProvider>
+    </ContactModalProvider>
   );
 }
 
-const Content: React.FC<{ Component: any; pageProps: any; router: any }> = ({
-  Component,
-  pageProps,
-  router,
-}) => {
+const Content: React.FC<{ Component: any; pageProps: any }> = ({ Component, pageProps }) => {
   const { isContactModalOpen, openContactModal, closeContactModal } = useContactModal();
-  const nextRouter = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -37,18 +36,31 @@ const Content: React.FC<{ Component: any; pageProps: any; router: any }> = ({
       }
     };
 
-    nextRouter.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      nextRouter.events.off('routeChangeComplete', handleRouteChange);
+    const handleRouteChangeStart = () => {
+      // Empêcher le défilement pendant la transition
+      document.body.style.overflow = 'hidden';
     };
-  }, [nextRouter, openContactModal, closeContactModal, isContactModalOpen]);
+
+    const handleRouteChangeComplete = () => {
+      // Réactiver le défilement après la transition
+      document.body.style.overflow = 'unset';
+      handleRouteChange(router.asPath);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+    };
+  }, [router, openContactModal, closeContactModal, isContactModalOpen]);
 
   return (
     <>
-      <Component {...pageProps} key={router.route} />
+      <Component {...pageProps} />
       {isContactModalOpen && <ContactModal />}
     </>
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);

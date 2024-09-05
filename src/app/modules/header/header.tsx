@@ -1,24 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import projects from '@/app/data/project.json';
-import { Typography } from '../typography/typography';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
+import { Typography } from '../typography/typography';
 import { ModalResult } from '../modal-result/ModalResult';
 import { useModal } from '../modal-result/ModalContext';
 import { useContactModal } from '@/app/modules/contact-modal/ModalContext';
-
-import i18n from 'i18next';
+import projects from '@/app/data/project.json';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [hasText, setHasText] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation('common');
   const modalRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  const { openModal, closeModal, isModalOpen, searchResults } = useModal(); // Use the modal context
+  const { openModal, closeModal, isModalOpen, searchResults } = useModal();
+  const { openContactModal } = useContactModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,14 +51,12 @@ export const Header: React.FC = () => {
     }
   };
 
-  const { openContactModal } = useContactModal();
-
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchText = e.target.value;
     setSearchText(searchText);
     setHasText(searchText.trim() !== '');
     if (searchText.trim() === '') {
-      closeModal(); // Clear modal results if search text is cleared
+      closeModal();
     } else {
       filterProjects(searchText);
     }
@@ -72,23 +70,15 @@ export const Header: React.FC = () => {
       );
       return titleMatches || tagMatches;
     });
-    openModal(filteredProjects); // Open modal with search results
+    openModal(filteredProjects);
   };
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const { t, i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language);
-
-  useEffect(() => {
-    console.log('Current language:', i18n.language);
-  }, [i18n]);
-
-  const handleLanguageChange = (language: string) => {
-    setSelectedLanguage(language);
-    i18n.changeLanguage(language);
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -143,7 +133,11 @@ export const Header: React.FC = () => {
               </div>
             </div>
             <div className='flex  justify-between gap-12 max-xml:hidden'>
-              <Link href='/' className='opacity-60 hover:opacity-100 flex gap-3 items-center'>
+              <Link
+                href='/'
+                passHref
+                className='opacity-60 hover:opacity-100 flex gap-3 items-center'
+              >
                 <Image
                   width='100'
                   height='100'
@@ -163,6 +157,7 @@ export const Header: React.FC = () => {
               </Link>
               <Link
                 href='/aboutpage'
+                passHref
                 className='opacity-60 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
@@ -183,6 +178,7 @@ export const Header: React.FC = () => {
                 </Typography>
               </Link>
               <Link
+                passHref
                 href='/projects'
                 className='opacity-60 hover:opacity-100 flex gap-3 items-center'
               >
@@ -247,7 +243,7 @@ export const Header: React.FC = () => {
           </div>
           <div className='navbar-end flex gap-6 max-[]:hidden'>
             <select
-              value={selectedLanguage}
+              value={i18n.language}
               onChange={(e) => handleLanguageChange(e.target.value)}
               className='appearance-none bg-transparent optdd border-none'
             >

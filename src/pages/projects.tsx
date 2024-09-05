@@ -1,29 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { GetServerSideProps } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '@/app/modules/layout/layout';
 import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
 import projectsData from '@/app/data/project.json';
 import Main from '@/app/modules/main/main';
 import Segmented from '@/app/modules/segmentedControl/segmented';
-import '@/app/globals.scss';
-import '@/app/i18n';
-import '@/app/modules/types/types';
 import Link from 'next/link';
 import Slider from '@/app/modules/slider/slider';
-import { useLocale } from '@/app/modules/useLocale';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
-import { useTranslation } from 'react-i18next';
+
+// Importez ces styles si nécessaire
+import '@/app/globals.scss';
+
+interface Project {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  description: string | { fr: string; en: string; es: string };
+  symbol: string;
+  categories: string[];
+  tags: string[];
+  link: string;
+  hoverBackgroundColor: string;
+  repoUrl?: string;
+  pageUrl?: string;
+  gallery: {
+    topleft: string;
+    topright: string;
+    big: string;
+    botright: string;
+    botleft: string;
+    vertical: string;
+    mkt: string;
+  };
+}
 
 const Projects: React.FC = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { t, i18n } = useTranslation('common');
 
   const nextProject = () => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
       setIsTransitioning(false);
-    }, 300); // La durée de la transition
+    }, 300);
   };
 
   const prevProject = () => {
@@ -33,29 +59,38 @@ const Projects: React.FC = () => {
         (prevIndex) => (prevIndex - 1 + projectsData.length) % projectsData.length
       );
       setIsTransitioning(false);
-    }, 300); // La durée de la transition
+    }, 300);
   };
 
-  const project = projectsData[currentProjectIndex];
+  const project: Project = projectsData[currentProjectIndex] as Project;
 
-  const { t, i18n } = useTranslation();
-  const { locale, handleLanguageChange } = useLocale();
+  const getProjectDescription = (project: Project): string => {
+    if (typeof project.description === 'string') {
+      return project.description;
+    }
 
-  useEffect(() => {
-    // Exemple de logique avec i18n dans useEffect
-    console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+    const translationKey = `projects.${project.slug}.description`;
+    const description = t(translationKey);
+    if (description !== translationKey) {
+      return description;
+    }
+
+    return (
+      project.description[i18n.language as keyof typeof project.description] ||
+      project.description.fr
+    );
+  };
 
   return (
     <Layout>
       <TransitionPage>
-        <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8 '>
+        <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8'>
           <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
-            <div className='flex gap-8 max-[500px]:gap-6 items-center justify-center '>
+            <div className='flex gap-8 max-[500px]:gap-6 items-center justify-center'>
               <Image
                 src='/applelay.png'
-                width='50'
-                height='50'
+                width={50}
+                height={50}
                 alt='de'
                 className='filesimg bg-[#ffffffcc] p-2 rounded-xl max-[500px]:w-[40px] max-[500px]:h-[40px]'
               />
@@ -67,7 +102,7 @@ const Projects: React.FC = () => {
                 fontFamily='ClashDisplay'
                 className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
               >
-                {t('projetpage.title')}
+                {t('index.title.project')}
               </Typography>
             </div>
             <Typography
@@ -76,24 +111,24 @@ const Projects: React.FC = () => {
               variant='lead'
               component='p'
               fontFamily='SanFrancisco'
-              className='text-center strocked  max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose  max-[450px]:leading-loose leading-loose w-[80%] m-auto'
+              className='text-center strocked max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose max-[450px]:leading-loose leading-loose w-[80%] m-auto'
             >
-              {t('projectpage.description')}
+              {t('index.description')}
             </Typography>
           </div>
-          <div className=' rounded-3xl mb-14 max-[900px]:mb-10'>
+          <div className='rounded-3xl hidden mb-14 max-[900px]:mb-10'>
             <Slider className='projage ' />
           </div>
-          <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20]  max-[900px]:rounded-3xl '>
-            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8  parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
+          <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20] max-[900px]:rounded-3xl'>
+            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8 parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
               <div
                 key={project.id}
                 className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
               >
                 <Image
                   src={project.image}
-                  width='500'
-                  height='500'
+                  width={500}
+                  height={500}
                   alt={project.title}
                   className='h-[100%] w-[100%] rounded-2xl object-cover object-left grayzc'
                 />
@@ -110,8 +145,8 @@ const Projects: React.FC = () => {
                 <div className='flex items-center gap-4'>
                   <Image
                     src={project.symbol}
-                    width='50'
-                    height='50'
+                    width={50}
+                    height={50}
                     alt={project.title}
                     className='h-[40px] w-[40px] rounded-lg'
                   />
@@ -127,7 +162,7 @@ const Projects: React.FC = () => {
                   </Typography>
                 </div>
 
-                <div className='flex justify-start items-center flex-wrap gap-x-6  capitalize gap-y-5 tranlating'>
+                <div className='flex justify-start items-center flex-wrap gap-x-6 capitalize gap-y-5 tranlating'>
                   {project.tags.slice(0, 4).map((tag, index) => (
                     <Typography
                       key={index}
@@ -136,7 +171,7 @@ const Projects: React.FC = () => {
                       variant='body-sm'
                       component='span'
                       fontFamily='SanFrancisco'
-                      className='p-2 px-4 bg-[#00000030] rounded-xl '
+                      className='p-2 px-4 bg-[#00000030] rounded-xl'
                     >
                       <b className='fonted'>#</b>
                       {tag}
@@ -151,7 +186,7 @@ const Projects: React.FC = () => {
                   fontFamily='Inter'
                   className='leading-8 strocked'
                 >
-                  {t(`project.${project.slug}.description.${i18n.language}`)}
+                  {getProjectDescription(project)}
                 </Typography>
                 <div className='flex gap-4 absolute top-10 right-10 btnresponsivee'>
                   <button
@@ -160,20 +195,20 @@ const Projects: React.FC = () => {
                   >
                     <Image
                       src='/larrow.png'
-                      width='200'
-                      height='200'
+                      width={200}
+                      height={200}
                       alt=''
-                      className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px] '
+                      className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]'
                     />
                   </button>
                   <button
-                    className='ovhea flex gap-1 justify-center items-center p-3 px-4  rounded-full'
+                    className='ovhea flex gap-1 justify-center items-center p-3 px-4 rounded-full'
                     onClick={nextProject}
                   >
                     <Image
                       src='/rarrow.png'
-                      width='200'
-                      height='200'
+                      width={200}
+                      height={200}
                       alt=''
                       className='grayscale-2 w-[15px] h-[15px] max-[900px]:w-[10px] max-[900px]:h-[10px]'
                     />
@@ -192,21 +227,29 @@ const Projects: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='text-left strocked w-[100%] tracking-widest leading-relaxed'
                     >
-                      {'EN SAVOIR PLUS'}
+                      {t('learnMore')}
                     </Typography>
-                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                    <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className=' bg-[#ffffff20] parentproject p-10 max-[900px]:p-8 rounded-3xl w-[100%]'>
+          <div className='bg-[#ffffff20] parentproject p-10 max-[900px]:p-8 rounded-3xl w-[100%]'>
             <Segmented className='proppage' useFilters={true} numCols='grid-cols-4' />
           </div>
         </Main>
       </TransitionPage>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+    },
+  };
 };
 
 export default Projects;

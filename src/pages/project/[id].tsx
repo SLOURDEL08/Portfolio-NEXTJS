@@ -1,45 +1,68 @@
 import React, { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '@/app/modules/layout/layout';
 import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
 import Main from '@/app/modules/main/main';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next'; // Import de useTranslation pour la traduction
-import { Project } from '@/app/modules/types/types';
 import projectsData from '@/app/data/project.json';
+import { useLocale } from '@/app/modules/useLocale';
 
-const ProjectDetailsPage: React.FC = () => {
-  const [project, setProject] = useState<Project | null>(null);
+// Mise à jour du type Project
+interface Project {
+  id: number;
+  title: string;
+  slug: string;
+  image: string;
+  description: {
+    fr: string;
+    en: string;
+    es: string;
+  };
+  symbol: string;
+  categories: string[];
+  tags: string[];
+  link: string;
+  hoverBackgroundColor: string;
+  repoUrl: string;
+  pageUrl: string;
+  gallery: {
+    topleft: string;
+    topright: string;
+    big: string;
+    botright: string;
+    botleft: string;
+    vertical: string;
+  };
+}
+
+interface ProjectDetailsPageProps {
+  project: Project | null;
+}
+
+const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initialProject }) => {
+  const { t } = useTranslation('common');
+  const [project, setProject] = useState<Project | null>(initialProject);
   const [selectedSection, setSelectedSection] = useState<string>('presentation');
   const router = useRouter();
-  const { id } = router.query;
-  const { t, i18n } = useTranslation(); // Utilisation de useTranslation pour la traduction
+  const { locale, handleLanguageChange } = useLocale();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data: Project[] = projectsData as Project[];
-        const foundProject = data.find((project) => project.id.toString() === id);
-        if (foundProject) {
-          setProject(foundProject);
-        } else {
-          router.push('/404');
-        }
-      } catch (error) {
-        console.error('Erreur lors du chargement des données:', error);
+    if (!project && router.query.id) {
+      const foundProject = projectsData.find((p) => p.id.toString() === router.query.id) as
+        | Project
+        | undefined;
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        router.push('/404');
       }
-    };
-
-    if (id) {
-      fetchData();
     }
-  }, [id, router]);
-
-  useEffect(() => {
-    console.log('Current language:', i18n.language);
-  }, [i18n]);
+  }, [router, project]);
 
   if (!project) {
     return <div>Chargement en cours...</div>;
@@ -57,8 +80,8 @@ const ProjectDetailsPage: React.FC = () => {
             <div className='flex gap-8 items-center justify-center max-[900px]:justify-start max-md:gap-4 '>
               <Image
                 src={project.symbol}
-                width='50'
-                height='50'
+                width={50}
+                height={50}
                 alt='de'
                 className='min-w-[45px] min-h-[45px] object-cover filesimg rounded-xl max-[900px]:w-[45px] max-[900px]:h-[45px] shadowingsymbol'
               />
@@ -75,188 +98,91 @@ const ProjectDetailsPage: React.FC = () => {
             </div>
           </div>
 
+          {/* Mobile menu */}
           <div className='mobileidmenu mt-10 py-0 rounded-3xl w-[100%] max-[900px]:w-[100%] flex justify-start gap-10 max-[900px]:gap-8 max-[700px]:flex  min-[900px]:hidden max-[900px]:mt-8 '>
-            <div
-              className={`flex items-center justify-between gap-8 cursor-pointer handled max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 p-4 px-6 transit rounded-2xl ${
-                selectedSection === 'presentation' ? 'activesection' : ''
-              }`}
-              onClick={() => handleSectionClick('presentation')}
-            >
-              {selectedSection === 'presentation' && (
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
-                >
-                  Présentation
-                </Typography>
-              )}
-              <Image
-                src='/dashboard.png'
-                width='23'
-                height='23'
-                alt='de'
-                className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-              />
-            </div>
-            <div
-              className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${
-                selectedSection === 'ressources' ? 'activesection' : ''
-              }`}
-              onClick={() => handleSectionClick('ressources')}
-            >
-              {selectedSection === 'ressources' && (
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
-                >
-                  Ressources
-                </Typography>
-              )}
-              <Image
-                src='/open-file.png'
-                width='25'
-                height='25'
-                alt='de'
-                className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-              />
-            </div>
-
-            <div
-              className={`flex items-center justify-between gap-8 cursor-pointer max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 handled p-4 px-6 transit rounded-2xl ${
-                selectedSection === 'gallery' ? 'activesection' : ''
-              }`}
-              onClick={() => handleSectionClick('gallery')}
-            >
-              {selectedSection === 'gallery' && (
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
-                >
-                  Gallery
-                </Typography>
-              )}
-              <Image
-                src='/gallery.png'
-                width='25'
-                height='25'
-                alt='de'
-                className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-              />
-            </div>
+            {['presentation', 'ressources', 'gallery'].map((section) => (
+              <div
+                key={section}
+                className={`flex items-center justify-between gap-8 cursor-pointer handled max-[500px]:p-3 max-[500px]:px-4 max-[500px]:gap-4 p-4 px-6 transit rounded-2xl ${
+                  selectedSection === section ? 'activesection' : ''
+                }`}
+                onClick={() => handleSectionClick(section)}
+              >
+                {selectedSection === section && (
+                  <Typography
+                    theme='white'
+                    weight='medium'
+                    variant='lead'
+                    component='span'
+                    fontFamily='SanFrancisco'
+                    className='max-[500px]:text-lg'
+                  >
+                    {t(section)}
+                  </Typography>
+                )}
+                <Image
+                  src={`/${section}.png`}
+                  width={23}
+                  height={23}
+                  alt={section}
+                  className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
+                />
+              </div>
+            ))}
           </div>
 
           <div className='flex pt-10 gap-10 min-[900px]:w-[100%] max-[900px]:block max-[900px]:pt-0'>
+            {/* Desktop menu */}
             <div className='flex flex-col gap-8 w-[30%] max-[900px]:hidden'>
-              <div
-                className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${
-                  selectedSection === 'presentation' ? 'activesection' : ''
-                }`}
-                onClick={() => handleSectionClick('presentation')}
-              >
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
+              {['Presentation', 'Ressources', 'Gallery'].map((section) => (
+                <div
+                  key={section}
+                  className={`p-4 px-6 w-full flex items-center cursor-pointer justify-between handled rounded-2xl ${
+                    selectedSection === section ? 'activesection' : ''
+                  }`}
+                  onClick={() => handleSectionClick(section)}
                 >
-                  Présentation
-                </Typography>
-                <Image
-                  src='/dashboard.png'
-                  width='23'
-                  height='23'
-                  alt='de'
-                  className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-                />
-              </div>
-              <div
-                className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${
-                  selectedSection === 'ressources' ? 'activesection' : ''
-                }`}
-                onClick={() => handleSectionClick('ressources')}
-              >
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
-                >
-                  Ressources
-                </Typography>
-                <Image
-                  src='/open-file.png'
-                  width='25'
-                  height='25'
-                  alt='de'
-                  className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-                />
-              </div>
-              <div
-                className={`p-4 px-6 w-full flex cursor-pointer justify-between handled rounded-2xl ${
-                  selectedSection === 'gallery' ? 'activesection' : ''
-                }`}
-                onClick={() => handleSectionClick('gallery')}
-              >
-                <Typography
-                  theme='white'
-                  weight='medium'
-                  variant='lead'
-                  component='span'
-                  fontFamily='SanFrancisco'
-                  className='max-[500px]:text-lg'
-                >
-                  Gallery
-                </Typography>
-                <Image
-                  src='/gallery.png'
-                  width='25'
-                  height='25'
-                  alt='de'
-                  className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
-                />
-              </div>
+                  <Typography
+                    theme='white'
+                    weight='medium'
+                    variant='lead'
+                    component='span'
+                    fontFamily='SanFrancisco'
+                    className='max-[500px]:text-lg'
+                  >
+                    {t(section)}
+                  </Typography>
+                  <Image
+                    src={`/${section}.png`}
+                    width={23}
+                    height={23}
+                    alt={section}
+                    className='max-[500px]:w-[20px] max-[500px]:h-[20px]'
+                  />
+                </div>
+              ))}
             </div>
 
+            {/* Content */}
             <div className=' bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-[70%] max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject '>
-              {/* Affichage conditionnel des sections */}
               {selectedSection === 'presentation' && (
                 <div className='presentation-block flex flex-col gap-8 '>
                   <div className='liens-block relative overflow-hidden gap-10 max-[1100px]:flex-col'>
                     <Image
                       src={project.image}
-                      width='800'
-                      height='500'
+                      width={800}
+                      height={500}
                       alt='de'
                       className='w-[100%]  h-[200px] object-cover object-top rounded-xl  border-gray-800'
                     />
-                    <div
-                      className='absolute top-0 right-0 backdrop-blur-sm shadowed mask	 px-3 py-1.5 bg-[#ffffff80]
-
- rounded-xl mt-4 mr-4  '
-                    >
+                    <div className='absolute top-0 right-0 backdrop-blur-sm shadowed mask px-3 py-1 bg-[#ffffff60] rounded-lg mt-4 mr-4'>
                       <Typography
                         theme='black'
                         weight='medium'
                         variant='body-base'
                         component='p'
-                        fontFamily='Inter'
-                        className=''
+                        fontFamily='ClashDisplay'
+                        className='text-transparen'
                       >
                         09/2014
                       </Typography>
@@ -272,7 +198,7 @@ const ProjectDetailsPage: React.FC = () => {
                       fontFamily='SanFrancisco'
                       className='text-left w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose'
                     >
-                      {t(`project.${project.slug}.description.${i18n.language}`)}
+                      {t('projects.netflix.description')}
                     </Typography>
                   </div>
 
@@ -294,9 +220,9 @@ const ProjectDetailsPage: React.FC = () => {
                         </Typography>
                         <Image
                           src='/top-right-arrow.png'
-                          width='800'
-                          height='500'
-                          alt='de'
+                          width={14}
+                          height={14}
+                          alt='arrow'
                           className='max-w-[14px] max-h-[14px]'
                         />
                       </Link>
@@ -314,13 +240,13 @@ const ProjectDetailsPage: React.FC = () => {
                         fontFamily='ClashDisplay'
                         className=''
                       >
-                        Maquette
+                        Inspiration
                       </Typography>
                       <Image
                         src='/top-right-arrow.png'
-                        width='800'
-                        height='500'
-                        alt='de'
+                        width={14}
+                        height={14}
+                        alt='arrow'
                         className='max-w-[14px] max-h-[14px]'
                       />
                     </Link>
@@ -341,7 +267,7 @@ const ProjectDetailsPage: React.FC = () => {
                             fontFamily='ClashDisplay'
                             className=''
                           >
-                            Quelques mots clés &nbsp;&nbsp;⬇️
+                            {t('keywords')} &nbsp;&nbsp;⬇️
                           </Typography>
                           <div className='flex justify-start items-center flex-wrap gap-x-8 capitalize gap-y-6 italic mt-6'>
                             {project.tags.map((tag, index) => (
@@ -371,18 +297,18 @@ const ProjectDetailsPage: React.FC = () => {
                       <div className='w-[30%]'>
                         <Image
                           src={project.gallery.topleft}
-                          width='500'
-                          height='300'
-                          alt='de'
+                          width={500}
+                          height={300}
+                          alt='top left'
                           className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                         />
                       </div>
                       <div className='w-[70%]'>
                         <Image
                           src={project.gallery.topright}
-                          width='500'
-                          height='300'
-                          alt='de'
+                          width={500}
+                          height={300}
+                          alt='top right'
                           className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                         />
                       </div>
@@ -392,9 +318,9 @@ const ProjectDetailsPage: React.FC = () => {
                         <div className='w-[100%]'>
                           <Image
                             src={project.gallery.big}
-                            width='500'
-                            height='300'
-                            alt='de'
+                            width={500}
+                            height={300}
+                            alt='big'
                             className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                           />
                         </div>
@@ -402,18 +328,18 @@ const ProjectDetailsPage: React.FC = () => {
                           <div className='w-[60%]'>
                             <Image
                               src={project.gallery.botright}
-                              width='500'
-                              height='300'
-                              alt='de'
+                              width={500}
+                              height={300}
+                              alt='bottom right'
                               className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                             />
                           </div>
                           <div className='w-[40%]'>
                             <Image
                               src={project.gallery.botleft}
-                              width='500'
-                              height='300'
-                              alt='de'
+                              width={500}
+                              height={300}
+                              alt='bottom left'
                               className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                             />
                           </div>
@@ -423,9 +349,9 @@ const ProjectDetailsPage: React.FC = () => {
                         <div className='w-[100%]'>
                           <Image
                             src={project.gallery.vertical}
-                            width='500'
-                            height='300'
-                            alt='de'
+                            width={500}
+                            height={300}
+                            alt='vertical'
                             className=' w-[100%]  max-[550px]:max-h-[250px] h-full imglong  transitioned hover:brightness-150 object-cover object-left  rounded-3xl'
                           />
                         </div>
@@ -434,13 +360,24 @@ const ProjectDetailsPage: React.FC = () => {
                   </div>
                 </div>
               )}
-              {/* Ajoutez des conditions similaires pour d'autres sections */}
             </div>
           </div>
         </Main>
       </TransitionPage>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ locale, params }) => {
+  const { id } = params as { id: string };
+  const project = projectsData.find((p) => p.id.toString() === id) as Project | undefined;
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+      project: project || null,
+    },
+  };
 };
 
 export default ProjectDetailsPage;

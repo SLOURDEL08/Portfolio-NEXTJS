@@ -1,38 +1,43 @@
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Layout from '@/app/modules/layout/layout';
 import Main from '@/app/modules/main/main';
-import Image from '../../node_modules/next/image';
+import Image from 'next/image';
 import { Typography } from '@/app/modules/typography/typography';
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import AnimatedText from '@/app/modules/animatedText/animatedText';
 import Slider from '@/app/modules/slider/slider';
-import '@/app/globals.scss';
 import Segmented from '@/app/modules/segmentedControl/segmented';
 import TransitionPage from '@/app/modules/transitionPage/transitionPage';
-import '@/app/globals.scss';
-import '@/app/globals.css';
-import '@/app/i18n';
-import '@/app/mediaqueries.css';
-import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/app/modules/useLocale';
 import Parented from '@/app/modules/parented/parented';
 import LayerCV from '@/app/modules/layerCV/layerCV';
+import { GetServerSideProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+// Importez les autres styles nécessaires
 
 const HomePage: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const { locale, handleLanguageChange } = useLocale();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Exemple de logique avec i18n dans useEffect
-    console.log('Current language:', i18n.language);
-  }, [i18n]); // Ajoutez 'i18n' comme dépendance ici
+    if (i18n.isInitialized) {
+      setIsLoading(false);
+    }
+  }, [i18n]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Layout>
       <TransitionPage>
-        <Main className='overflow-hidden    p-24 max-[900px]:p-14 max-[450px]:p-8'>
+        <Main className='overflow-hidden p-24 max-[900px]:p-14 max-[450px]:p-8'>
           <div className='image-container pt-2 w-full max-md:block flex gap-10 max-[900px]:pt-16 items-stretch'>
-            <div className=' overflow-hidden items-center gap-2 w-[30%] max-md:h-[160px] max-md:w-[160px] max-md:mb-8 rounded-WL max-[900px]:w-[40%]  relative !max-h'>
+            <div className='overflow-hidden items-center gap-2 w-[30%] max-md:h-[160px] max-md:w-[160px] max-md:mb-8 rounded-WL max-[900px]:w-[40%] relative !max-h'>
               <Image src='/cesde.png' alt='de' fill className='object-cover' />
             </div>
             <div className='flex flex-col items-start gap-6 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
@@ -44,9 +49,9 @@ const HomePage: React.FC = () => {
                   component='h2'
                   weight='bold'
                   fontFamily='ClashDisplay'
-                  className='  bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl '
+                  className='bg-clip-text text-transparent bg-gradient-to-g from-white to-[#AAAAAA] text-left z-10 leading-none max-[900px]:text-5xl max-[680px]:leading-tight max-[450px]:text-4xl'
                 >
-                  {t('Welcome')}
+                  {t('general.welcome')}
                 </Typography>
               </div>
 
@@ -63,7 +68,7 @@ const HomePage: React.FC = () => {
               <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
                 <div className='flex flex-wrap gap-6 items-center max-[900px]:py-2'>
                   <Link href='/aboutpage' className=''>
-                    <div className='flex items-center gap-3 p-3 px-4 ovhea rounded-2xl  roundedlb'>
+                    <div className='flex items-center gap-3 p-3 px-4 ovhea rounded-2xl roundedlb'>
                       <Typography
                         component='span'
                         variant='lead'
@@ -74,12 +79,12 @@ const HomePage: React.FC = () => {
                       >
                         {t('index.button.first')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                      <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
                     </div>
                   </Link>
 
                   <Link href='/projects' className=''>
-                    <div className='flex items-center gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
+                    <div className='flex items-center gap-3 p-3 px-4 overhed rounded-2xl roundedlb'>
                       <Typography
                         component='span'
                         variant='lead'
@@ -90,20 +95,20 @@ const HomePage: React.FC = () => {
                       >
                         {t('index.button.second')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                      <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
                     </div>
                   </Link>
                 </div>
-                <div className='flex mt-2  gap-8 justify-start items-center'>
+                <div className='flex mt-2 gap-8 justify-start items-center'>
                   <Typography
                     theme='gray'
                     weight='light'
                     variant='body-xs'
                     component='p'
                     fontFamily='SanFrancisco'
-                    className=' uppercase'
+                    className='uppercase'
                   >
-                    {t('madewith')}
+                    {t('general.madewith')}
                   </Typography>
                   <div className='color-div next'></div>
                   <div className='color-div tailw'></div>
@@ -115,17 +120,17 @@ const HomePage: React.FC = () => {
 
           <div className='flex flex-row gap-10 mt-10 max-[1280px]:flex-wrap revezed'>
             {/* Blocs de gauche */}
-            <div className='flex flex-nowrap flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%]  max-[1280px]:w-[100%]'>
+            <div className='flex flex-nowrap flex-col max-[1280px]:flex-row max-[1280px]:flex-wrap justify-between gap-10 w-[40%] max-[1280px]:w-[100%]'>
               {/* Premier bloc */}
-              <div className='w-full flex flex-col justify-between h-[100%] gap-10 max-[900px]:flex-col  max-[1280px]:flex-row'>
-                <Parented className='flex justify-start  max-[1280px]:w-[50%] max-[900px]:w-full '>
-                  <div className='  w-[100%] flex flex-col justify-between gap-8'>
+              <div className='w-full flex flex-col justify-between h-[100%] gap-10 max-[900px]:flex-col max-[1280px]:flex-row'>
+                <Parented className='flex justify-start max-[1280px]:w-[50%] max-[900px]:w-full'>
+                  <div className='w-[100%] flex flex-col justify-between gap-8'>
                     <div className='flex items-center justify-between'>
                       <div className='flex items-center gap-5'>
                         <Image
                           src='/work.png'
-                          width='45'
-                          height='45'
+                          width={45}
+                          height={45}
                           alt='de'
                           className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                         />
@@ -138,23 +143,23 @@ const HomePage: React.FC = () => {
                           fontFamily='SanFrancisco'
                           className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                         >
-                          {t('index.titleexp')}
+                          {t('index.title.exp')}
                         </Typography>
                       </div>
-                      <Link href='/aboutpage' className='click-parented  rounded-full'>
+                      <Link href='/aboutpage' className='click-parented rounded-full'>
                         <Image
                           src='/top-right-arrow.png'
-                          width='22'
-                          height='22'
+                          width={22}
+                          height={22}
                           alt='de'
-                          className='opacity-70 hover:opacity-100 '
+                          className='opacity-70 hover:opacity-100'
                         />
                       </Link>
                     </div>
                     <div className='exp-sec grid'>
                       <LayerCV
                         title='Freelance'
-                        description={t('freelance.description')}
+                        description={t('experience.freelance.description')}
                         date='Depuis 2020'
                         shortV
                         iCon='/symbol.png'
@@ -163,16 +168,15 @@ const HomePage: React.FC = () => {
                       <LayerCV
                         iCon='/symbol.png'
                         title='ToastAgency'
-                        description={t('toast.exp.description')}
+                        description={t('experience.toast.description')}
                         date='Nov 2022/2023'
                         shortV
                       />
-
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         iCon='/flexpress.png'
                         title='FL Express'
-                        description={t('flexpress.description')}
+                        description={t('experience.flexpress.description')}
                         date='Depuis 2020'
                         shortV
                       />
@@ -181,13 +185,13 @@ const HomePage: React.FC = () => {
                 </Parented>
                 {/* Deuxième bloc */}
                 <Parented className='flex justify-start max-[1280px]:w-[50%] max-[900px]:w-full'>
-                  <div className='  w-[100%] flex flex-col justify-between gap-8'>
+                  <div className='w-[100%] flex flex-col justify-between gap-8'>
                     <div className='flex items-center justify-between'>
                       <div className='flex items-center gap-5'>
                         <Image
                           src='/formexp.png'
-                          width='45'
-                          height='45'
+                          width={45}
+                          height={45}
                           alt='de'
                           className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                         />
@@ -200,41 +204,39 @@ const HomePage: React.FC = () => {
                           fontFamily='SanFrancisco'
                           className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                         >
-                          {t('index.titleform')}
+                          {t('index.title.form')}
                         </Typography>
                       </div>
-                      <Link href='/aboutpage' className='click-parented  rounded-full'>
+                      <Link href='/aboutpage' className='click-parented rounded-full'>
                         <Image
                           src='/top-right-arrow.png'
-                          width='22'
-                          height='22'
+                          width={22}
+                          height={22}
                           alt='de'
-                          className='opacity-70 hover:opacity-100 '
+                          className='opacity-70 hover:opacity-100'
                         />
                       </Link>
                     </div>
                     <div className='exp-sec grid'>
                       <LayerCV
                         title='OpenClassRoom'
-                        description={t('openclassroom.description')}
+                        description={t('education.openclassroom.description')}
                         date='Nov 2022/2023'
                         shortV
                         iCon='/ocrlogo.png'
                       />
-
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='PopSchool'
-                        description={t('popschool.description')}
+                        description={t('education.popschool.description')}
                         date='Fev-Jui 2019'
                         shortV
                         iCon='/poplogo.png'
                       />
-
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Baccalauréat STMG'
-                        description={t('bac.description')}
+                        description={t('education.bac.description')}
                         date='Depuis 2020'
                         shortV
                         iCon='/rimbaud.png'
@@ -255,18 +257,18 @@ const HomePage: React.FC = () => {
                   >
                     {t('index.download.cv')}
                   </Typography>
-                  <Image src='/download.png' width='30' height='30' alt='Download icon' />
+                  <Image src='/download.png' width={30} height={30} alt='Download icon' />
                 </div>
               </a>
             </div>
 
-            <Parented className='  flex flex-col gap-8   max-[900px]: w-[60%] sm:w-[100%]  max-[1280px]:w-[100%]'>
+            <Parented className='flex flex-col gap-8 max-[900px]: w-[60%] sm:w-[100%] max-[1280px]:w-[100%]'>
               <div className='flex justify-between'>
                 <div className='flex items-center gap-5'>
                   <Image
                     src='/applelay.png'
-                    width='45'
-                    height='45'
+                    width={45}
+                    height={45}
                     alt='de'
                     className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                   />
@@ -279,14 +281,14 @@ const HomePage: React.FC = () => {
                     fontFamily='SanFrancisco'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
-                    {t('index.titleproject')}
+                    {t('index.title.project')}
                   </Typography>
                 </div>
                 <Link
                   href='/projects'
                   className='click-parented flex justify-center px-4 gap-3 items-center p-3 rounded-full'
                 >
-                  <Image src='/top-right-arrow.png' width='20' height='20' alt='de' />
+                  <Image src='/top-right-arrow.png' width={20} height={20} alt='de' />
                 </Link>
               </div>
               <Segmented
@@ -306,6 +308,14 @@ const HomePage: React.FC = () => {
       </TransitionPage>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+    },
+  };
 };
 
 export default HomePage;
