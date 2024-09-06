@@ -1,0 +1,83 @@
+.contactContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.glassForm {
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.select {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.select > div {
+  background: transparent;
+  border: none;
+}
+
+.submitButton {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #6a11cb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #6a11cb;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .glassForm {
+    padding: 2rem;
+  }
+}

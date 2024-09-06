@@ -6,7 +6,6 @@ import { useTranslation } from 'next-i18next';
 import { Typography } from '../typography/typography';
 import { ModalResult } from '../modal-result/ModalResult';
 import { useModal } from '../modal-result/ModalContext';
-import { useContactModal } from '@/app/modules/contact-modal/ModalContext';
 import projects from '@/app/data/project.json';
 
 export const Header: React.FC = () => {
@@ -18,7 +17,6 @@ export const Header: React.FC = () => {
   const router = useRouter();
   const modalRef = useRef<HTMLDivElement>(null);
   const { openModal, closeModal, isModalOpen, searchResults } = useModal();
-  const { openContactModal } = useContactModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,7 +137,7 @@ export const Header: React.FC = () => {
               <Link
                 href='/'
                 passHref
-                className='opacity-60 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -161,7 +159,7 @@ export const Header: React.FC = () => {
               <Link
                 href='/aboutpage'
                 passHref
-                className='opacity-60 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -183,7 +181,7 @@ export const Header: React.FC = () => {
               <Link
                 passHref
                 href='/projects'
-                className='opacity-60 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hoveredmenu hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -202,9 +200,10 @@ export const Header: React.FC = () => {
                   {t('header.project')}
                 </Typography>
               </Link>
-              <button
-                onClick={openContactModal}
-                className='opacity-60 hover:opacity-100 flex gap-3 items-center'
+              <Link
+                passHref
+                href='/contact'
+                className='opacity-60 hoveredmenu hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -222,7 +221,7 @@ export const Header: React.FC = () => {
                 >
                   {t('header.contact')}
                 </Typography>
-              </button>
+              </Link>
             </div>
             <div
               className={`bg-[#ffffff20] ${
@@ -235,7 +234,7 @@ export const Header: React.FC = () => {
                   value={searchText}
                   onChange={handleSearchChange}
                   placeholder='Recherche'
-                  className='focus:outline-none border-none text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent'
+                  className='focus:outline-none border-none  text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent'
                   onClick={handleSearchClick}
                 />
                 <kbd className=' max-[900px:hidden pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded'>
@@ -347,7 +346,6 @@ export const Header: React.FC = () => {
                 </Link>
 
                 <button
-                  onClick={openContactModal}
                   className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/contact' ? 'activesection' : ''
                   }`}

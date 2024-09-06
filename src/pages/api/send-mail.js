@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 
-// Nodemailer transporter with credentials from environment variables
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
@@ -10,32 +9,44 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async function handler(req, res) {
+  console.log('Received request:', req.method);
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Only POST requests allowed' });
   }
 
+  console.log('Request body:', req.body);
+
   const { firstName, lastName, email, message, country, city, enterprise } = req.body;
 
+  if (!firstName || !lastName || !email || !message) {
+    console.log('Missing required fields');
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
   const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_TO, // Use environment variable for recipient email
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_TO,
     subject: `Message from ${firstName} ${lastName}`,
     text: `
       Name: ${firstName} ${lastName}
-      Enterprise: ${enterprise}
+      Enterprise: ${enterprise || 'Not specified'}
       Email: ${email}
-      Country: ${country.label}
-      City: ${city}
+      Country: ${country?.label || 'Not specified'}
+      City: ${city || 'Not specified'}
       Message: ${message}
     `,
   };
 
+  console.log('Mail options:', mailOptions);
+
   try {
+    console.log('Attempting to send email...');
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
+    console.log('Email sent successfully:', info.response);
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ message: 'Error sending email' });
+    console.error('Error details:', error);
+    res.status(500).json({ message: 'Error sending email', error: error.message });
   }
 }

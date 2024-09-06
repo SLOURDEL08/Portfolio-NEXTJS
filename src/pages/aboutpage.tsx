@@ -19,9 +19,8 @@ import { GetServerSideProps } from 'next';
 const AboutPage: React.FC = () => {
   const { t } = useTranslation('common');
   const { locale, handleLanguageChange } = useLocale();
-
   const [showMore, setShowMore] = useState(false);
-
+  const [isMounted, setIsMounted] = useState(false);
   const [isFirstDropdownOpen, setIsFirstDropdownOpen] = useState(false);
   const [isSecondDropdownOpen, setIsSecondDropdownOpen] = useState(false);
 
@@ -32,6 +31,13 @@ const AboutPage: React.FC = () => {
   const toggleSecondDropdown = () => {
     setIsSecondDropdownOpen(!isSecondDropdownOpen);
   };
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // ou un loader
+  }
 
   return (
     <Layout>

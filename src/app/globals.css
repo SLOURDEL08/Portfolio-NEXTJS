@@ -1295,10 +1295,14 @@ border:none;
         transition: 0.3s ease-in-out;
       }
 
+      .hoveredmenu{
+ackground: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.1) 10.08%, rgba(255, 255, 255, 0.1) 89.27%, rgba(255, 255, 255, 0.00) 100%) !important;
+      }
+
       .transz .border-none{
         color:white!important;
         font-weight:500;
-        font-size:0.9rem;
+        font-size:16px;
       }
 
 #placeholder{
@@ -1969,4 +1973,9 @@ margin:0px!important;
   100% {
     transform: translateX(-50%);
   }
+}
+
+
+.modal-overlay{
+  max-height: 90vh!important;
 }
