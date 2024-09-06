@@ -89,12 +89,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'ClashDisplay';
-  src: url('/fonts/ClashDisplay/ClashDisplay-Regular.otf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'ClashDisplay';
@@ -1295,8 +1290,8 @@ border:none;
         transition: 0.3s ease-in-out;
       }
 
-      .hoveredmenu{
-ackground: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.1) 10.08%, rgba(255, 255, 255, 0.1) 89.27%, rgba(255, 255, 255, 0.00) 100%) !important;
+      .hoveredmenu:hover{
+background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.00) 100%) !important;
       }
 
       .transz .border-none{
@@ -1791,25 +1786,29 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
       mask-repeat: no-repeat;
       mask-position: center;
     }
-
+.search-container:hover input::placeholder,
+.search-container input:focus::placeholder {
+  color: white;transition:0.3s ease-in-out
+}
 
                 .optdd{
-                  background: rgb(255, 255, 255, 0.15);
-                  border-radius: 0.375rem;
-                  padding: 0.5rem;
-                  font-size: 1.2rem;
-                  transition:0.3s ease-in-out
+                  background: rgb(255, 255, 255, 0.20);
+                  padding: 0.5rem 0.6rem;
+                  opacity: 0.60;
+                  transition:0.2s ease-in-out all;
+                  cursor: pointer;
+                  
                 }
 
                 .optdd:hover{
-                  background: rgb(255, 255, 255, 0.20);
+                  opacity: 1;
+                  transition:0.2s ease-in-out all;
 
                 }
 
                 select:focus {
                   outline: none; /* Supprime la bordure bleue par défaut */
                   border: none; /* Ajoute une nouvelle bordure avec la couleur et l'épaisseur de votre choix */
-                  border-radius: 0.375rem;
 
                 }
 

@@ -127,18 +127,18 @@ const HomePage: React.FC = () => {
                       <div className='flex items-center gap-5'>
                         <Image
                           src='/work.png'
-                          width={45}
-                          height={45}
+                          width={40}
+                          height={40}
                           alt='de'
                           className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                         />
 
                         <Typography
                           theme='white'
-                          weight='bold'
+                          weight='regular'
                           variant='h5'
                           component='span'
-                          fontFamily='SanFrancisco'
+                          fontFamily='ClashDisplay'
                           className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                         >
                           {t('index.title.exp')}
@@ -188,18 +188,18 @@ const HomePage: React.FC = () => {
                       <div className='flex items-center gap-5'>
                         <Image
                           src='/formexp.png'
-                          width={45}
-                          height={45}
+                          width={40}
+                          height={40}
                           alt='de'
                           className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                         />
 
                         <Typography
                           theme='white'
-                          weight='bold'
+                          weight='regular'
                           variant='h5'
                           component='span'
-                          fontFamily='SanFrancisco'
+                          fontFamily='ClashDisplay'
                           className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                         >
                           {t('index.title.form')}
@@ -265,18 +265,18 @@ const HomePage: React.FC = () => {
                 <div className='flex items-center gap-5'>
                   <Image
                     src='/applelay.png'
-                    width={45}
-                    height={45}
+                    width={40}
+                    height={40}
                     alt='de'
                     className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                   />
 
                   <Typography
                     theme='white'
-                    weight='bold'
+                    weight='regular'
                     variant='h5'
                     component='span'
-                    fontFamily='SanFrancisco'
+                    fontFamily='ClashDisplay'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
                     {t('index.title.project')}

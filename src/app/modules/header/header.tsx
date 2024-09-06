@@ -127,17 +127,17 @@ export const Header: React.FC = () => {
           </div>
         </div>
         <div className='w-8/12 flex justify-end gap-8 max-[900px]:gap-6 items-center max-md:w-[100%]'>
-          <div className='navbar-end flex gap-8 max-[900px]:gap-6 items-center '>
+          <div className='navbar-end flex gap-6 max-[900px]:gap-6 items-cener '>
             <div className='justify-between gap-12 hidden max-xml:flex'>
               <div onClick={handleMenuToggle} className='cursor-pointer'>
                 <Image width='30' height='30' alt='menu icon' src='/menuwhite.png' className='' />
               </div>
             </div>
-            <div className='flex  justify-between gap-12 max-xml:hidden'>
+            <div className='flex  justify-between gap-6 max-xml:hidden'>
               <Link
                 href='/'
                 passHref
-                className='opacity-60 hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hover:bg-[#ffffff20] rounded-xl p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -149,9 +149,9 @@ export const Header: React.FC = () => {
                 <Typography
                   theme='white'
                   variant='body-base'
-                  fontFamily='SanFrancisco'
+                  fontFamily='ClashDisplay'
                   weight='medium'
-                  className='hover:text-white transition trande ease-in-out'
+                  className='hover:text-white transition trande mt-0.5 ease-in-out'
                 >
                   {t('header.home')}
                 </Typography>
@@ -159,7 +159,7 @@ export const Header: React.FC = () => {
               <Link
                 href='/aboutpage'
                 passHref
-                className='opacity-60 hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hover:bg-[#ffffff20]  rounded-xl p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -171,9 +171,9 @@ export const Header: React.FC = () => {
                 <Typography
                   theme='white'
                   variant='body-base'
-                  fontFamily='SanFrancisco'
+                  fontFamily='ClashDisplay'
                   weight='medium'
-                  className='hover:text-white trande transition ease-in-out hover:opacity-100'
+                  className='hover:text-white trande transition mt-0.5 ease-in-out hover:opacity-100'
                 >
                   {t('header.cv')}
                 </Typography>
@@ -181,7 +181,7 @@ export const Header: React.FC = () => {
               <Link
                 passHref
                 href='/projects'
-                className='opacity-60 hoveredmenu hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60  hover:bg-[#ffffff20]  rounded-xl p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -193,9 +193,9 @@ export const Header: React.FC = () => {
                 <Typography
                   theme='white'
                   variant='body-base'
-                  fontFamily='SanFrancisco'
+                  fontFamily='ClashDisplay'
                   weight='medium'
-                  className='hover:text-white trande transition ease-in-out hover:opacity-100'
+                  className='hover:text-white trande transition mt-0.5 ease-in-out hover:opacity-100'
                 >
                   {t('header.project')}
                 </Typography>
@@ -203,7 +203,7 @@ export const Header: React.FC = () => {
               <Link
                 passHref
                 href='/contact'
-                className='opacity-60 hoveredmenu hover:bg-white/10 rounded-lg p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
+                className='opacity-60 hover:bg-[#ffffff20]   rounded-xl p-2.5 px-4 hover:opacity-100 flex gap-3 items-center'
               >
                 <Image
                   width='100'
@@ -215,9 +215,9 @@ export const Header: React.FC = () => {
                 <Typography
                   theme='white'
                   variant='body-base'
-                  fontFamily='SanFrancisco'
+                  fontFamily='ClashDisplay'
                   weight='medium'
-                  className='hover:text-white trande transition ease-in-out hover:opacity-100'
+                  className='hover:text-white trande transition mt-0.5 ease-in-out hover:opacity-100'
                 >
                   {t('header.contact')}
                 </Typography>
@@ -226,28 +226,26 @@ export const Header: React.FC = () => {
             <div
               className={`bg-[#ffffff20] ${
                 hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'
-              } active:bg-[#7A24E8] focus-within:bg-[#7A24E8]  transz hover:text-white contain-searchform p-2.5 rounded-md px-4 relative formtypesearch`}
+              } active:bg-[#7A24E8] focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-xl px-4 relative formtypesearch flex items-center search-container`}
             >
-              <label className='searchbar'>
+              <label className='searchbar w-full relative flex items-center'>
                 <input
                   type='text'
                   value={searchText}
                   onChange={handleSearchChange}
                   placeholder='Recherche'
-                  className='focus:outline-none border-none  text-[#ffffff80] plh placeholder:text-[#ffffff80] w-full bg-transparent'
+                  className='focus:outline-none placeholder:text-white/40 border-none text-[#ffffff80] plh w-full bg-transparent pr-16 placeholder-shown:text-[#ffffff00] hover:placeholder-white focus:placeholder-white'
                   onClick={handleSearchClick}
                 />
-                <kbd className=' max-[900px:hidden pointer-events-none absolute right-2 top-[6px] text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded'>
+                <kbd className='max-[900px]:hidden pointer-events-none absolute right-0 text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded flex items-center justify-center'>
                   ⌘ K
                 </kbd>
               </label>
             </div>
-          </div>
-          <div className='navbar-end flex gap-6 max-[]:hidden'>
             <select
               value={router.locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
-              className='appearance-none bg-transparent optdd border-none'
+              className='appearance-none bg-transparent  rounded-xl text-2xl optdd border-none'
             >
               <option value='fr'>🇫🇷</option>
               <option value='en'>🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>

@@ -56,36 +56,43 @@ const AboutPage: React.FC = () => {
                 {t('about.title')}
               </Typography>
 
-              <div className='flex max-mdd:justify-start items-center gap-6 flex-wrap w-full justify-center'>
-                <div className='flex gap-3 p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30] rounded-2xl'>
+              <div className='flex max-mdd:justify-start items-ceter gap-6 flex-wrap w-full justify-center'>
+                <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-xl'>
+                  <Image
+                    src='/userz.png'
+                    width='25'
+                    height='25'
+                    alt='de'
+                    className='opacity-80 group-hover:invert  w-3.5'
+                  />
                   <Typography
                     theme='graylight'
-                    weight='bold'
+                    weight='medium'
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base '
+                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg '
                   >
-                    LOURDEL Sébastien
+                    <b>LOURDEL</b> Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 p-3 px-4  bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl'>
+                <div className='flex gap-3 p-3 px-4 brder  border hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] rounded-xl'>
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
                   >
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl'>
+                <div className='flex gap-3 items-center justify-start p-3 px-4 border border-[#494949] bg-[#ffffff0b] hover:bg-[#e5e5e5]  rounded-xl'>
                   <Image
                     src='/localpos.png'
                     width='20'
-                    height='21'
+                    height='20'
                     alt='de'
                     className='opacity-80  w-3.5'
                   />
@@ -95,12 +102,12 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
                   >
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-2 items-center justify-start p-3 px-4 bg-[#ffffff20] hover:bg-[#ffffff30]  rounded-2xl w-max'>
+                <div className='flex gap-3 items-center justify-start bg-[#ffffff0b] p-3 px-4 border-[#494949] border hover:bg-[#e5e5e5]  rounded-xl w-max'>
                   <Image
                     src='/imail.png'
                     width='25'
@@ -114,13 +121,13 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
                   >
                     contact@slourdel.fr
                   </Typography>
                 </div>
 
-                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
+                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
                   <Image
                     src='/linkedicon.png'
                     width='21'
@@ -134,12 +141,12 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text hidden text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     /Linkedin
                   </Typography>
                 </div>
-                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-2xl w-max'>
+                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
                   <Image src='/github.png' width='20' height='20' alt='de' className='opacity-80' />
                   <Typography
                     theme='graylight'
@@ -147,7 +154,7 @@ const AboutPage: React.FC = () => {
                     variant='lead'
                     component='h1'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text hidden text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
                     /Github
                   </Typography>
@@ -462,17 +469,17 @@ const AboutPage: React.FC = () => {
                 <div className='flex items-center gap-5'>
                   <Image
                     src='/formexp.png'
-                    width='45'
-                    height='45'
+                    width='40'
+                    height='40'
                     alt='de'
                     className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                   />
                   <Typography
                     theme='white'
-                    weight='bold'
+                    weight='regular'
                     variant='h5'
                     component='span'
-                    fontFamily='SanFrancisco'
+                    fontFamily='ClashDisplay'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
                     {t('index.title.form')}
@@ -521,9 +528,9 @@ const AboutPage: React.FC = () => {
                     <Typography
                       theme='white'
                       weight='medium'
-                      variant='body-base'
+                      variant='body-lg'
                       component='span'
-                      fontFamily='ClashDisplay'
+                      fontFamily='SanFrancisco'
                       className='tracking-widest'
                     >
                       {t('about.collapse.close')}
@@ -532,9 +539,9 @@ const AboutPage: React.FC = () => {
                     <Typography
                       theme='white'
                       weight='medium'
-                      variant='body-base'
+                      variant='body-lg'
                       component='span'
-                      fontFamily='ClashDisplay'
+                      fontFamily='SanFrancisco'
                       className='tracking-widest'
                     >
                       {t('about.collapse.more')}
@@ -556,17 +563,17 @@ const AboutPage: React.FC = () => {
                 <div className='flex items-center gap-5'>
                   <Image
                     src='/work.png'
-                    width='45'
-                    height='45'
+                    width='40'
+                    height='40'
                     alt='de'
                     className='filesimg bg-[#ffffffcc] p-2 rounded-xl'
                   />
                   <Typography
                     theme='white'
-                    weight='bold'
+                    weight='regular'
                     variant='h5'
                     component='span'
-                    fontFamily='SanFrancisco'
+                    fontFamily='ClashDisplay'
                     className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
                   >
                     {t('index.title.exp')}
@@ -641,9 +648,9 @@ const AboutPage: React.FC = () => {
                     <Typography
                       theme='white'
                       weight='medium'
-                      variant='body-base'
+                      variant='body-lg'
                       component='span'
-                      fontFamily='ClashDisplay'
+                      fontFamily='SanFrancisco'
                       className='tracking-widest'
                     >
                       {t('about.collapse.close')}
@@ -652,9 +659,9 @@ const AboutPage: React.FC = () => {
                     <Typography
                       theme='white'
                       weight='medium'
-                      variant='body-base'
+                      variant='body-lg'
                       component='span'
-                      fontFamily='ClashDisplay'
+                      fontFamily='SanFrancisco'
                       className='tracking-widest'
                     >
                       {t('about.collapse.more')}
