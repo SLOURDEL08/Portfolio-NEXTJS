@@ -130,10 +130,10 @@ const AboutPage: React.FC = () => {
                 <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
                   <Image
                     src='/linkedicon.png'
-                    width='21'
-                    height='21'
+                    width='25'
+                    height='25'
                     alt='de'
-                    className='opacity-80'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6'
                   />
                   <Typography
                     theme='graylight'
@@ -147,7 +147,13 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
                 <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
-                  <Image src='/github.png' width='20' height='20' alt='de' className='opacity-80' />
+                  <Image
+                    src='/github.png'
+                    width='25'
+                    height='25'
+                    alt='de'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6'
+                  />
                   <Typography
                     theme='graylight'
                     weight='bold'
@@ -208,9 +214,9 @@ const AboutPage: React.FC = () => {
                 </div>*/}
             </Parented>
             <div className='flex max-xl:flex-col   gap-10 w-full max-md:flex-col'>
-              <div className='flex gap-8 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
+              <div className='flex gap-10 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
                 <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
-                  <div className='flex items-center gap-3'>
+                  <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
                       weight='bold'
@@ -221,17 +227,17 @@ const AboutPage: React.FC = () => {
                     </Typography>
                     <Typography
                       theme='graylight'
-                      weight='regular'
+                      weight='medium'
                       variant='body-lg'
                       component='p'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                     >
                       Maternelle
                     </Typography>
                   </div>
                 </div>
                 <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
-                  <div className='flex items-center gap-3'>
+                  <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
                       weight='bold'
@@ -242,10 +248,10 @@ const AboutPage: React.FC = () => {
                     </Typography>
                     <Typography
                       theme='graylight'
-                      weight='regular'
+                      weight='medium'
                       variant='body-lg'
                       component='p'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                     >
                       Intermédiaire
                     </Typography>
@@ -263,7 +269,7 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
                 <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
-                  <div className='flex items-center gap-3'>
+                  <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
                       weight='bold'
@@ -274,10 +280,10 @@ const AboutPage: React.FC = () => {
                     </Typography>
                     <Typography
                       theme='graylight'
-                      weight='regular'
+                      weight='medium'
                       variant='body-lg'
                       component='p'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                     >
                       Débutant
                     </Typography>
