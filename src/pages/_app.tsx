@@ -6,6 +6,7 @@ import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import { ContactModalProvider, useContactModal } from '@/app/modules/contact-modal/ModalContext';
 import { ModalProvider } from '@/app/modules/modal-result/ModalContext';
 import ContactModal from '@/app/modules/contact-modal/ContactModal';
+import { Header } from '@/app/modules/header/header'; // Assurez-vous que le chemin est correct
 import nextI18NextConfig from '../../next-i18next.config.js';
 import '@/app/globals.css';
 
@@ -13,15 +14,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ContactModalProvider>
       <ModalProvider>
-        <TransitionPage>
-          <Content Component={Component} pageProps={pageProps} />
+        <TransitionPage header={<Header />}>
+          <Component {...pageProps} />
         </TransitionPage>
       </ModalProvider>
     </ContactModalProvider>
   );
 }
 
-const Content: React.FC<{ Component: React.ComponentType<any>; pageProps: any }> = ({
+const AppContent: React.FC<{ Component: React.ComponentType<any>; pageProps: any }> = ({
   Component,
   pageProps,
 }) => {
@@ -38,11 +39,10 @@ const Content: React.FC<{ Component: React.ComponentType<any>; pageProps: any }>
     };
 
     const handleRouteChangeStart = () => {
-      document.body.style.overflow = 'hidden';
+      // Nous ne désactivons plus le défilement ici, car TransitionPage gère cela
     };
 
     const handleRouteChangeComplete = () => {
-      document.body.style.overflow = 'unset';
       handleRouteChange(router.asPath);
     };
 
@@ -55,10 +55,10 @@ const Content: React.FC<{ Component: React.ComponentType<any>; pageProps: any }>
   }, [router, openContactModal, closeContactModal, isContactModalOpen]);
 
   return (
-    <>
+    <TransitionPage header={<Header />}>
       <Component {...pageProps} />
       {isContactModalOpen && <ContactModal />}
-    </>
+    </TransitionPage>
   );
 };
 

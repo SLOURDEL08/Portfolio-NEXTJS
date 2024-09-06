@@ -5,21 +5,33 @@ import '@/app/globals.css';
 
 type TransitionPageProps = {
   children: ReactNode;
+  header?: ReactNode; // Ajout de la propriété header optionnelle
 };
 
-const variants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
+const pageVariants = {
+  initial: {
+    opacity: 0,
+    filter: 'blur(4px)',
+  },
+  in: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: { duration: 0.3 },
+  },
+  out: {
+    opacity: 0,
+    filter: 'blur(4px)',
+    transition: { duration: 0.3 },
+  },
 };
 
-const TransitionPage = ({ children }: TransitionPageProps) => {
-  const [loading, setLoading] = useState(false);
+const TransitionPage = ({ children, header }: TransitionPageProps) => {
+  const [isChanging, setIsChanging] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
+    const handleStart = () => setIsChanging(true);
+    const handleComplete = () => setIsChanging(false);
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
@@ -33,32 +45,33 @@ const TransitionPage = ({ children }: TransitionPageProps) => {
   }, [router]);
 
   useEffect(() => {
-    if (loading) {
-      // Désactiver le défilement pendant la transition
+    if (isChanging) {
       document.body.style.overflow = 'hidden';
     } else {
-      // Réactiver le défilement après la transition
       document.body.style.overflow = 'unset';
     }
 
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [loading]);
+  }, [isChanging]);
 
   return (
-    <AnimatePresence mode='wait' initial={false}>
-      <motion.div
-        key={router.asPath}
-        initial='initial'
-        animate='animate'
-        exit='exit'
-        variants={variants}
-        transition={{ duration: 0.3 }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <>
+      {header && <div className='fixed top-0 left-0 right-0 z-50'>{header}</div>}
+      <AnimatePresence mode='wait'>
+        <motion.div
+          key={router.asPath}
+          initial='initial'
+          animate='in'
+          exit='out'
+          variants={pageVariants}
+          style={{ paddingTop: header ? '/* hauteur de votre header */' : 0 }}
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 };
 

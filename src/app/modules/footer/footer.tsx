@@ -19,8 +19,8 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className='navbar bg-[linear-gradient(#ffffff10,#ffffff05)] border-t border-stone-800  w-full p-24 max-[900px]:p-14 '>
-      <div className='flex gap-20 justify-between  max-[900px]:justify-start max-[900px]:gap-14 order-2'>
-        <div className='flex gap-16 justify-between w-[45%]'>
+      <div className='flex gap-20 justify-between  max-[900px]:justify-start max-[900px]:gap-14 max-lg:flex-col order-2'>
+        <div className='flex gap-20 justify-between w-[45%] max-lg:w-full max-lg:gap-28'>
           <div className='p-6  h-min max-w-28	min-w-[100px] min-h-[100px]  tr rounded-3xl order-first'>
             <Image
               width='400'
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
               className='w-[100%] h-[100%]'
             />
           </div>
-          <div className=' flex gap-8  justify-between w-full'>
+          <div className=' flex gap-10 max-lg:gap-20  justify- w-full'>
             <div className='flex flex-col gap-2'>
               <Typography
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=' text-left space-y-6 w-[55%]'>
+        <div className=' text-left space-y-6 w-[55%] max-lg:w-full'>
           <Typography
             theme='white'
             fontFamily='ClashDisplay'
