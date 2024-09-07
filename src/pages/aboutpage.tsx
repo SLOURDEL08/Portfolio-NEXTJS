@@ -44,121 +44,158 @@ const AboutPage: React.FC = () => {
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
           <div className=' gap-10 max-[1000px]:flex-wrap h-full w-full '>
-            <Parented className='!px-0 max-mdd:mt-5 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-center flex flex-col gap-10 flex-grow relative overflow-hidden'>
-              <Typography
-                theme='white'
-                weight='regular'
-                variant='h3'
-                component='h1'
-                fontFamily='ClashDisplay'
-                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-center max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal semib'
-              >
-                {t('about.title')}
-              </Typography>
+            <Parented className='!px-0 max-mdd:mt-5 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-start flex gap-10 flex-grow relative overflow-hidden'>
+              <div className='flex flex-col gap-6'>
+                <Typography
+                  theme='white'
+                  weight='medium'
+                  variant='h3'
+                  component='h1'
+                  fontFamily='ClashDisplay'
+                  className='bg-clip-text	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-normal max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
+                >
+                  {t('about.title')}
+                </Typography>
+                <div className='flex gap-8 hidden'>
+                  <Link href='/projects' className=''>
+                    <div className='flex items-center justify-between gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
+                      <Typography
+                        component='span'
+                        variant='body-lg'
+                        theme='white'
+                        weight='medium'
+                        fontFamily='ClashDisplay'
+                        className='max-[900px]:text-lg'
+                      >
+                        {t('index.button.second')}
+                      </Typography>
+                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                    </div>
+                  </Link>
+                  <Link href='/projects' className=''>
+                    <div className='flex items-center justify-between gap-3 p-3 px-4 ovhea rounded-2xl w-full roundedlb'>
+                      <Typography
+                        component='span'
+                        variant='body-lg'
+                        theme='white'
+                        weight='medium'
+                        fontFamily='ClashDisplay'
+                        className='max-[900px]:text-lg'
+                      >
+                        {t('index.download.cv')}
+                      </Typography>
+                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                    </div>
+                  </Link>
+                </div>
+              </div>
 
-              <div className='flex max-mdd:justify-start items-ceter gap-6 flex-wrap w-full justify-center'>
-                <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-xl'>
+              <div className='flex max-mdd:justify-start  gap-6 flex-wrap w-full justify-end'>
+                <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-2xl'>
                   <Image
-                    src='/userz.png'
-                    width='25'
-                    height='25'
+                    src='/utili.png'
+                    width='22'
+                    height='22'
                     alt='de'
-                    className='opacity-80 group-hover:invert  w-3.5'
+                    className='opacity-80 invert hover group-hover:invert-0'
                   />
                   <Typography
                     theme='graylight'
-                    weight='medium'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg '
+                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base'
                   >
                     <b>LOURDEL</b> Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 p-3 px-4 brder  border hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] rounded-xl'>
+                <div className='flex gap-3 group p-3 px-4 brder items-center border hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] rounded-2xl'>
+                  <Image
+                    src='/gateau.png'
+                    width='22'
+                    height='22'
+                    alt='de'
+                    className='opacity-80 invert hover group-hover:invert-0'
+                  />
                   <Typography
                     theme='graylight'
-                    weight='bold'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
+                    className='bg-clip-text group-hover:text-black text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
                   >
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-3 items-center justify-start p-3 px-4 border border-[#494949] bg-[#ffffff0b] hover:bg-[#e5e5e5]  rounded-xl'>
+                <div className='flex gap-3 group items-center justify-start p-3 px-4 border border-[#494949] bg-[#ffffff0b] hover:bg-[#e5e5e5]  rounded-2xl'>
                   <Image
-                    src='/localpos.png'
-                    width='20'
-                    height='20'
+                    src='/lieu.png'
+                    width='22'
+                    height='22'
                     alt='de'
-                    className='opacity-80  w-3.5'
+                    className='opacity-80 invert hover group-hover:invert-0'
                   />
                   <Typography
                     theme='graylight'
-                    weight='bold'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
+                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
                   >
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-3 items-center justify-start bg-[#ffffff0b] p-3 px-4 border-[#494949] border hover:bg-[#e5e5e5]  rounded-xl w-max'>
+                <div className='flex gap-3 group items-center justify-start bg-[#ffffff0b] p-3 px-4 border-[#494949] border hover:bg-[#e5e5e5]  rounded-2xl w-max'>
                   <Image
-                    src='/imail.png'
-                    width='25'
-                    height='24'
+                    src='/e-mail.png'
+                    width='22'
+                    height='22'
                     alt='de'
-                    className='opacity-80  w-4'
+                    className='opacity-80 invert hover group-hover:invert-0'
                   />
                   <Typography
                     theme='graylight'
-                    weight='bold'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg semib'
+                    className='bg-clip-text  text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
                   >
                     contact@slourdel.fr
                   </Typography>
                 </div>
 
-                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
+                <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/linkedicon.png'
                     width='25'
                     height='25'
                     alt='de'
-                    className='opacity-80 max-mdd:w-6 max-mdd:h-6'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-5 max-smd:h-5'
                   />
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text hidden text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
+                    className='bg-clip-text hidden text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base '
                   >
                     /Linkedin
                   </Typography>
                 </div>
-                <div className='overhedz flex gap-2 items-center p-3 px-4 bg-[#00000040] rounded-xl w-max'>
+                <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/github.png'
                     width='25'
                     height='25'
                     alt='de'
-                    className='opacity-80 max-mdd:w-6 max-mdd:h-6'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-5 max-smd:h-5'
                   />
                   <Typography
                     theme='graylight'
                     weight='bold'
                     variant='lead'
-                    component='h1'
+                    component='span'
                     fontFamily='SanFrancisco'
                     className='bg-clip-text hidden text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-base semib'
                   >
@@ -166,39 +203,7 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
               </div>
-              <TextSlide />
-              <div className='flex gap-8 hidden'>
-                <Link href='/projects' className=''>
-                  <div className='flex items-center justify-between gap-3 p-3 px-4 overhed rounded-2xl  roundedlb'>
-                    <Typography
-                      component='span'
-                      variant='body-lg'
-                      theme='white'
-                      weight='medium'
-                      fontFamily='ClashDisplay'
-                      className='max-[900px]:text-lg'
-                    >
-                      {t('index.button.second')}
-                    </Typography>
-                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
-                  </div>
-                </Link>
-                <Link href='/projects' className=''>
-                  <div className='flex items-center justify-between gap-3 p-3 px-4 ovhea rounded-2xl w-full roundedlb'>
-                    <Typography
-                      component='span'
-                      variant='body-lg'
-                      theme='white'
-                      weight='medium'
-                      fontFamily='ClashDisplay'
-                      className='max-[900px]:text-lg'
-                    >
-                      {t('index.download.cv')}
-                    </Typography>
-                    <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
-                  </div>
-                </Link>
-              </div>
+
               {/*<div className='flex gap-3 items-center p-3 px-4 rounded-xl w-max avail'>
                   <div className='bg-green-500 rounded-3xl h-2 w-2'></div>
                   <Typography
@@ -214,8 +219,8 @@ const AboutPage: React.FC = () => {
                 </div>*/}
             </Parented>
             <div className='flex max-xl:flex-col   gap-10 w-full max-md:flex-col'>
-              <div className='flex gap-10 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
-                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+              <div className='flex gap-8 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] tra justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
@@ -236,7 +241,7 @@ const AboutPage: React.FC = () => {
                     </Typography>
                   </div>
                 </div>
-                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] tra justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
@@ -268,7 +273,7 @@ const AboutPage: React.FC = () => {
                     </Typography>
                   </div>
                 </div>
-                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
+                <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] tra flex items-center justify-between gap-3 p-4 px-5 rounded-2xl max-md:w-full w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-4'>
                     <Typography
                       theme='graylight'
@@ -304,10 +309,10 @@ const AboutPage: React.FC = () => {
               <Parented className='flex-grow textedd  text-center flex flex-col w-1/3 hover:none gap-4 items-start justify-between  max-md:w-full max-xl:w-full'>
                 <Typography
                   theme='graylight'
-                  weight='light'
+                  weight='extralight'
                   variant='lead'
                   component='p'
-                  fontFamily='SanFrancisco'
+                  fontFamily='Montserrat'
                   className='text-left   w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
                 >
                   {t('index.description')}
@@ -482,11 +487,11 @@ const AboutPage: React.FC = () => {
                   />
                   <Typography
                     theme='white'
-                    weight='regular'
+                    weight='medium'
                     variant='h5'
                     component='span'
                     fontFamily='ClashDisplay'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded '
                   >
                     {t('index.title.form')}
                   </Typography>
@@ -576,11 +581,11 @@ const AboutPage: React.FC = () => {
                   />
                   <Typography
                     theme='white'
-                    weight='regular'
+                    weight='medium'
                     variant='h5'
                     component='span'
                     fontFamily='ClashDisplay'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded '
                   >
                     {t('index.title.exp')}
                   </Typography>

@@ -55,15 +55,15 @@ const HomePage: React.FC = () => {
 
               <Typography
                 theme='gray'
-                weight='light'
+                weight='extralight'
                 variant='lead'
                 component='p'
-                fontFamily='SanFrancisco'
+                fontFamily='Montserrat'
                 className='text-left strocked w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose -mt-2'
               >
                 {t('index.description')}
               </Typography>
-              <div className='flex gap-10 gap-y-4 justify-between flex-wrap'>
+              <div className='flex gap-6 gap-y-4 justify-between flex-wrap'>
                 <div className='flex flex-wrap gap-6 items-center max-[900px]:py-2'>
                   <Link href='/aboutpage' className=''>
                     <div className='flex items-center gap-3 p-3 px-4 ovhea rounded-2xl roundedlb'>
@@ -101,7 +101,7 @@ const HomePage: React.FC = () => {
                   <Typography
                     theme='gray'
                     weight='light'
-                    variant='body-xs'
+                    variant='body-sm'
                     component='p'
                     fontFamily='SanFrancisco'
                     className='uppercase'
@@ -135,11 +135,11 @@ const HomePage: React.FC = () => {
 
                         <Typography
                           theme='white'
-                          weight='regular'
+                          weight='medium'
                           variant='h5'
                           component='span'
                           fontFamily='ClashDisplay'
-                          className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
+                          className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded '
                         >
                           {t('index.title.exp')}
                         </Typography>
@@ -150,7 +150,7 @@ const HomePage: React.FC = () => {
                           width={22}
                           height={22}
                           alt='de'
-                          className='opacity-70 hover:opacity-100'
+                          className='opacity-100 mt-1'
                         />
                       </Link>
                     </div>
@@ -196,11 +196,11 @@ const HomePage: React.FC = () => {
 
                         <Typography
                           theme='white'
-                          weight='regular'
+                          weight='medium'
                           variant='h5'
                           component='span'
                           fontFamily='ClashDisplay'
-                          className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
+                          className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA]  text-left underlineded '
                         >
                           {t('index.title.form')}
                         </Typography>
@@ -273,11 +273,11 @@ const HomePage: React.FC = () => {
 
                   <Typography
                     theme='white'
-                    weight='regular'
+                    weight='medium'
                     variant='h5'
                     component='span'
                     fontFamily='ClashDisplay'
-                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded semib'
+                    className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left underlineded '
                   >
                     {t('index.title.project')}
                   </Typography>

@@ -680,14 +680,18 @@ opacity: 0.8;
   
 
 }
+
+.tra{
+  transition:0.3s ease-in-out all;
+}
 .parentproject:hover{
   background-color: #ffffff30;
   transition: 0.3s ease-in-out;
 }
 .parentproject:hover .underlineded{
 text-decoration: underline;
-text-decoration-thickness: 2px;
-text-underline-offset: 10px;
+text-decoration-thickness: 1.8px;
+text-underline-offset: 8px;
 }
 
 .underlineded.projectpp{
@@ -1797,6 +1801,8 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
                   opacity: 0.60;
                   transition:0.2s ease-in-out all;
                   cursor: pointer;
+                  line-height: 1;
+                  padding-top: 15px;
                   
                 }
 
@@ -1977,4 +1983,21 @@ margin:0px!important;
 
 .modal-overlay{
   max-height: 90vh!important;
+}
+
+
+.css-1fdsijx-ValueContainer{
+  display: none!important;
+}
+
+.form_contact_formGroup__ee2Ok{
+  height: auto!important;
+}
+
+.css-1u9des2-indicatorSeparator{
+  width: 0px!important;
+}
+
+.css-1xc3v61-indicatorContainer{
+  padding:1rem!important;
 }

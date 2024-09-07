@@ -39,7 +39,7 @@ const LayerCV: React.FC<LayerCVProps> = ({ title, description, date, className, 
 
   return (
     <div
-      className={`flex flex-col gap-2 conthover flex-nowrap justify-start items-start expLine hover:bg-[#ffffff10] max-[900px]:py-4 p-4 px-4 ${className}`}
+      className={`flex flex-col gap-1 conthover flex-nowrap justify-start items-start expLine hover:bg-[#ffffff10] max-[900px]:py-4 p-4 px-4 ${className}`}
     >
       {/* Contenu principal avec conthover sur la div parent */}
       <div className='flex justify-between w-full items-center gap-3 relative group'>
@@ -58,7 +58,7 @@ const LayerCV: React.FC<LayerCVProps> = ({ title, description, date, className, 
         <div className='flex items-center gap-3'>
           <Typography
             theme='gray'
-            weight='bold'
+            weight='medium'
             variant='body-lg'
             component='span'
             fontFamily='ClashDisplay'
@@ -89,8 +89,8 @@ const LayerCV: React.FC<LayerCVProps> = ({ title, description, date, className, 
             weight='extralight'
             variant='body-base'
             component='span'
-            fontFamily='SanFrancisco'
-            className={`italic ${shortV ? 'limitedtext' : ''}`}
+            fontFamily='Montserrat'
+            className={` ${shortV ? 'limitedtext' : ''}`}
           >
             {description}
           </Typography>

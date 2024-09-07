@@ -1,17 +1,14 @@
 .contactContainer {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  width: 60%;
 }
 
 .glassForm {
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 3rem;
   width: 100%;
-  max-width: 1000px;
 }
 
 .title {
@@ -24,12 +21,24 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
 }
+
+.formGroupRow {
+  display: flex;
+  gap: 1.5rem;
+}
+.formGroupRow  div{
+width: 100%; height: 100%;}
+.formGroupRow  input{
+width: 100%;height: 100%;}
+.formGroupRow  select{
+width: 100%; height: 100%;}
 
 .formGroup label {
   margin-bottom: 0.5rem;

@@ -85,8 +85,8 @@ const Projects: React.FC = () => {
     <Layout>
       <TransitionPage>
         <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8'>
-          <div className='grid grid-cols-1 pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
-            <div className='flex gap-8 max-[500px]:gap-6 items-center justify-center'>
+          <div className='flex max-lg:flex-col justify-between items-start pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
+            <div className='flex  gap-8 max-[500px]:gap-6 items-center justify-center'>
               <Image
                 src='/applelay.png'
                 width={50}
@@ -95,23 +95,23 @@ const Projects: React.FC = () => {
                 className='filesimg bg-[#ffffffcc] p-2 rounded-xl max-[500px]:w-[40px] max-[500px]:h-[40px]'
               />
               <Typography
-                theme='graylight'
-                weight='bold'
+                theme='white'
+                weight='medium'
                 variant='h3'
                 component='h1'
                 fontFamily='ClashDisplay'
-                className='bg-clip-text text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-[900px]:text-2xl semib'
+                className='bg-clip-text 	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
               >
                 {t('index.title.project')}
               </Typography>
             </div>
             <Typography
               theme='gray'
-              weight='light'
-              variant='lead'
+              weight='extralight'
+              variant='body-lg'
               component='p'
-              fontFamily='SanFrancisco'
-              className='text-center strocked max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose max-[450px]:leading-loose leading-loose w-[80%] m-auto'
+              fontFamily='Montserrat'
+              className='text-right w-[500px] max-lg:text-left max-lg:w-full strocked max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose max-[450px]:leading-loose leading-loose  '
             >
               {t('index.description')}
             </Typography>
