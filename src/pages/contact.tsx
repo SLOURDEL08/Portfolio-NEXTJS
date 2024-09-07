@@ -117,11 +117,11 @@ const ContactPage: React.FC = () => {
                   className='opacity-80  invert-0'
                 />
                 <Typography
-                  theme='graylight'
+                  theme='black'
                   variant='lead'
                   component='span'
                   fontFamily='SanFrancisco'
-                  className='bg-clip-text  text-transparent text-black text-left projectpp max-mdd:text-lg max-smd:text-base '
+                  className='  text-left projectpp max-mdd:text-lg max-smd:text-base '
                 >
                   contact@slourdel.fr
                 </Typography>

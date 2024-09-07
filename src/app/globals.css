@@ -1802,7 +1802,7 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
                   transition:0.2s ease-in-out all;
                   cursor: pointer;
                   line-height: 1;
-                  padding-top: 15px;
+                  padding-top: 12px;
                   
                 }
 
@@ -2000,4 +2000,23 @@ margin:0px!important;
 
 .css-1xc3v61-indicatorContainer{
   padding:1rem!important;
+}
+
+
+.css-1nmdiq5-menu{
+  background: #3F3B41!important;
+  color:white!important;
+  height: 400!important;
+}
+
+
+
+.form_contact_formGroupRow__cCh_Q div{
+  height: min-content!important;
+}
+
+.css-d7l1ni-option{
+  background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d)!important;
+  background-size: 400% 400%!important;
+  animation: Gradient 10s ease infinite!important;
 }

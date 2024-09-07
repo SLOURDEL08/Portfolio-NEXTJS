@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
       <TransitionPage>
         <Main className='p-24 flex flex-col gap-10 max-[900px]:p-14 max-[450px]:p-8'>
           <div className=' gap-10 max-[1000px]:flex-wrap h-full w-full '>
-            <Parented className='!px-0 max-mdd:mt-5 bg-transparent hover:bg-transparent max-mdd:gap-6 w-full items-start flex gap-10 flex-grow relative overflow-hidden'>
+            <Parented className='!px-0 max-mdd:mt-5 bg-transparent hover:bg-transparent max-lg:justify-start  max-mdd:gap-6 w-full max-lg:flex-wrap items-start flex gap-10  relative overflow-hidden'>
               <div className='flex flex-col gap-6'>
                 <Typography
                   theme='white'
@@ -90,14 +90,14 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className='flex max-mdd:justify-start  gap-6 flex-wrap w-full justify-end'>
+              <div className='flex  max-lg:justify-start  gap-6 flex-wrap w-full justify-end'>
                 <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-2xl'>
                   <Image
                     src='/utili.png'
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
                   />
                   <Typography
                     theme='graylight'
@@ -115,7 +115,7 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
                   />
                   <Typography
                     theme='graylight'
@@ -133,7 +133,7 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
                   />
                   <Typography
                     theme='graylight'
@@ -151,7 +151,7 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
                   />
                   <Typography
                     theme='graylight'
@@ -219,7 +219,7 @@ const AboutPage: React.FC = () => {
                 </div>*/}
             </Parented>
             <div className='flex max-xl:flex-col   gap-10 w-full max-md:flex-col'>
-              <div className='flex gap-8 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
+              <div className='flex gap-8 max-xl:gap-10 max-md:flex-col max-mdd:gap-8 max-xl:flex-nowrap flex-wrap w-[250px] max-xl:w-full'>
                 <div className='bg-[#ffffff20] textedd hover:bg-[#ffffff30] tra justify-between flex items-center gap-3 p-4 px-5 rounded-2xl w-full max-md:w-full max-xl:w-1/3'>
                   <div className='flex items-center gap-4'>
                     <Typography

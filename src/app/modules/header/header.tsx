@@ -128,7 +128,7 @@ export const Header: React.FC = () => {
         </div>
         <div className='w-8/12 flex justify-end gap-8 max-[900px]:gap-6 items-center max-md:w-[100%]'>
           <div className='navbar-end flex gap-6 max-[900px]:gap-6 items-cener '>
-            <div className='justify-between gap-12 hidden max-xml:flex'>
+            <div className='justify-between gap-12 hidden max-xml:flex items-center'>
               <div onClick={handleMenuToggle} className='cursor-pointer'>
                 <Image width='30' height='30' alt='menu icon' src='/menuwhite.png' className='' />
               </div>
@@ -234,7 +234,7 @@ export const Header: React.FC = () => {
                   value={searchText}
                   onChange={handleSearchChange}
                   placeholder='Recherche'
-                  className='focus:outline-none placeholder:text-white/40 border-none text-[#ffffff80] plh w-full bg-transparent pr-16 placeholder-shown:text-[#ffffff00] hover:placeholder-white focus:placeholder-white'
+                  className='focus:outline-none  placeholder:text-white/40 border-none text-[#ffffff80] plh w-36 bg-transparent pr-16 placeholder-shown:text-[#ffffff00] hover:placeholder-white focus:placeholder-white'
                   onClick={handleSearchClick}
                 />
                 <kbd className='max-[900px]:hidden pointer-events-none absolute right-0 text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded flex items-center justify-center'>
@@ -343,7 +343,8 @@ export const Header: React.FC = () => {
                   ) : null}
                 </Link>
 
-                <button
+                <Link
+                  href='/contact'
                   className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/contact' ? 'activesection' : ''
                   }`}
@@ -366,7 +367,7 @@ export const Header: React.FC = () => {
                       Contact
                     </Typography>
                   ) : null}
-                </button>
+                </Link>
               </div>
             </div>
           </ul>
