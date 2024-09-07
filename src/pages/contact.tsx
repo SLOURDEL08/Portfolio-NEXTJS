@@ -94,8 +94,8 @@ const ContactPage: React.FC = () => {
   return (
     <Layout>
       <Main className='overflow-hidden py-24 p-24 max-[900px]:p-8'>
-        <div className='flex'>
-          <div className='w-[40%] space-y-8'>
+        <div className='flex gap-10 max-[900px]:pt-16 max-mdd:flex-wrap'>
+          <div className='w-[40%] space-y-6 max-mdd:w-full'>
             {' '}
             <Typography
               theme='white'
@@ -103,18 +103,18 @@ const ContactPage: React.FC = () => {
               variant='h3'
               component='h1'
               fontFamily='ClashDisplay'
-              className='bg-clip-text 	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-relaxed max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
+              className='bg-clip-text 	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-tight max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
             >
               {t('Travaillons ensemble')}
             </Typography>
-            <div className='flex max-mdd:justify-start  gap-6 flex-wrap w-full justify-start'>
+            <div className='flex max-mdd:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-start'>
               <div className='flex gap-3 group items-center justify-start p-3 px-4 border-[#494949] border bg-[#e5e5e5]  rounded-2xl w-max'>
                 <Image
                   src='/e-mail.png'
                   width='22'
                   height='22'
                   alt='de'
-                  className='opacity-80  invert-0'
+                  className='opacity-80  invert-0 max-smd:w-4'
                 />
                 <Typography
                   theme='black'

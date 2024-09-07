@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
                   variant='h3'
                   component='h1'
                   fontFamily='ClashDisplay'
-                  className='bg-clip-text	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-normal max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
+                  className='bg-clip-text	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] max-smd:text-2xl max-smd:leading-10 text-left max-mdd:text-left projectpp leading-normal max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
                 >
                   {t('about.title')}
                 </Typography>
@@ -90,7 +90,7 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className='flex  max-lg:justify-start  gap-6 flex-wrap w-full justify-end'>
+              <div className='flex  max-lg:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-end'>
                 <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-2xl'>
                   <Image
                     src='/utili.png'

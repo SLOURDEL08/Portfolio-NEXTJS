@@ -8,31 +8,37 @@
 @font-face {
   font-family: 'SanFrancisco';
   src: url('/fonts/SanFrancisco/SFProDisplay-Black.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: black;
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'SanFrancisco';
   src: url('/fonts/SanFrancisco/SFProDisplay-Bold.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: bold;
+  font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: 'SanFrancisco';
   src: url('/fonts/SanFrancisco/SFProDisplay-Light.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: light;
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SanFrancisco';
+  src: url('/fonts/SanFrancisco/SFProDisplay-UltraLight.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: 'SanFrancisco';
   src: url('/fonts/SanFrancisco/SFProDisplay-Medium.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: medium;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'SanFrancisco';
   src: url('/fonts/SanFrancisco/SFProDisplay-Regular.ttf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: regular;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -89,7 +95,12 @@
   font-style: normal;
 }
 
-
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay/ClashDisplay-Regular.otf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'ClashDisplay';
@@ -101,7 +112,7 @@
 @font-face {
   font-family: 'ClashDisplay';
   src: url('/fonts/ClashDisplay/ClashDisplay-Semibold.otf') format('truetype'); /* Ajoutez des lignes pour chaque poids de police */
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1424,7 +1435,6 @@ display: block;                          margin-top: 100px;
               background-size: 400% 400%;
               animation: Gradient 10s ease infinite;
             transition:0.2s ease-in-out;
-           
             }
 
 

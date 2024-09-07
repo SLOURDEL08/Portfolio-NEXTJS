@@ -40,6 +40,18 @@ export const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenuOpen(false);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
+
   const handleSearchClick = () => {
     if (window.scrollY === 0) {
       window.scrollBy({
@@ -269,7 +281,7 @@ export const Header: React.FC = () => {
               <div className='flex items-center gap-4 mt-10 max-[900px]:mt-6 flex-wrap hidened'>
                 <Link
                   href='/'
-                  className={`handled p-3 px-4 flex items-center  max-[900px]:gap-3 justify-center gap-4 rounded-lg ${
+                  className={`handled p-3 px-4 max-[900px]:px-3 flex items-center  max-[900px]:gap-3 justify-center gap-4 rounded-lg ${
                     router.pathname === '/' ? 'activesection' : ''
                   }`}
                 >
@@ -284,9 +296,9 @@ export const Header: React.FC = () => {
                     <Typography
                       theme='white'
                       variant='lead'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                       weight='medium'
-                      className=' max-[900px]:text-lg'
+                      className=' max-[900px]:text-lg max-xml:leading-none !leading-none'
                     >
                       Accueil
                     </Typography>
@@ -294,7 +306,7 @@ export const Header: React.FC = () => {
                 </Link>
                 <Link
                   href='/aboutpage'
-                  className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
+                  className={`handled p-3 px-4 max-[900px]:px-3 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/aboutpage' ? 'activesection' : ''
                   }`}
                 >
@@ -309,9 +321,9 @@ export const Header: React.FC = () => {
                     <Typography
                       theme='white'
                       variant='lead'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                       weight='medium'
-                      className=' max-[900px]:text-lg'
+                      className=' max-[900px]:text-lg max-xml:leading-none !leading-none'
                     >
                       CV
                     </Typography>
@@ -319,7 +331,7 @@ export const Header: React.FC = () => {
                 </Link>
                 <Link
                   href='/projects'
-                  className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
+                  className={`handled p-3 px-4 max-[900px]:px-3 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/projects' ? 'activesection' : ''
                   }`}
                 >
@@ -334,9 +346,9 @@ export const Header: React.FC = () => {
                     <Typography
                       theme='white'
                       variant='lead'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                       weight='medium'
-                      className=' max-[900px]:text-lg'
+                      className=' max-[900px]:text-lg max-xml:leading-none !leading-none'
                     >
                       Projets
                     </Typography>
@@ -345,7 +357,7 @@ export const Header: React.FC = () => {
 
                 <Link
                   href='/contact'
-                  className={`handled p-3 px-4 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
+                  className={`handled p-3 px-4 max-[900px]:px-3 max-[900px]:gap-3 flex items-center justify-center gap-4 rounded-lg ${
                     router.pathname === '/contact' ? 'activesection' : ''
                   }`}
                 >
@@ -360,9 +372,9 @@ export const Header: React.FC = () => {
                     <Typography
                       theme='white'
                       variant='lead'
-                      fontFamily='SanFrancisco'
+                      fontFamily='ClashDisplay'
                       weight='medium'
-                      className=' max-[900px]:text-lg'
+                      className=' max-[900px]:text-lg max-xml:leading-none !leading-none'
                     >
                       Contact
                     </Typography>
