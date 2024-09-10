@@ -111,7 +111,7 @@
     "lesvanniers": {
       "description": "Site vitrine WordPress avec fonctionnalités de réservation de table, commande de plats et redirection vers les services de livraison. Mise en avant des plats, menus et du restaurant. Optimisation SEO pour attirer plus de clients locaux."
     },
-    "monvieuxgrimoire": {
+    "mon-vieux-grimoire": {
       "description": "Développement back-end d'un projet de notation de livres, incluant authentification, gestion des routes, permissions et opérations CRUD sur la base de données. Intégration d'un système de notation et de commentaires des utilisateurs."
     },
     "paul-savine": {
@@ -129,7 +129,7 @@
     "toast-collectif": {
       "description": "Site vitrine sur-mesure WordPress pour une agence de WebMarketing, avec mise en page personnalisée, slider manuel et lightbox. Intégration de témoignages clients et de cas d'études pour démontrer l'expertise de l'agence."
     },
-    "sophiebluel": {
+    "sophie-bluel": {
       "description": "Développement front-end du site de l'artiste SophieBluel, intégration de contenus dynamiques, connexion à une base de données et opérations CRUD. Mise en avant des œuvres et des expositions, avec une interface utilisateur moderne et intuitive."
     },
     "coders-monkey": {
