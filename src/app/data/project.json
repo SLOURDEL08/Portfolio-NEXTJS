@@ -12,6 +12,7 @@
       "hoverBackgroundColor": "#370000d0",
       "repoUrl": "https://uber.com",
       "pageUrl":"https://youtube.com",
+      "date":"08/1998",
       "gallery": { 
         "topright": "/projects/netflix/top-right.png",
         "topleft": "/projects/netflix/top-left.png",
@@ -26,8 +27,8 @@
     },
     {
       "id": 2,
-      "title": "Uber Eats",
-      "slug": "uber-eats",
+      "title": "Uber Eat",
+      "slug": "uber-eat",
       "image": "/projects/uber/homepage.png",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
       "symbol": "/projects/uber/symbol.png",
@@ -35,6 +36,7 @@
       "tags": ["VueJs", "Javascript", "Homepage", "JSON","Filter", "Front-end", "Component", "Dynamique", "Router", "Responsive", "SearchBar", "VueRouter", "Integration"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/uber/top-right.png",
         "topleft": "/projects/uber/top-left.png",
@@ -57,6 +59,7 @@
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/alliance/top-right.png",
         "topleft": "/projects/alliance/top-left.png",
@@ -79,6 +82,7 @@
       "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/bookihtml/top-right.png",
         "topleft": "/projects/bookihtml/top-left.png",
@@ -101,6 +105,7 @@
       "tags": ["WORDPRESS", "MEGAMENU", "CSS", "RESPONSIVE","SUR-MESURE", "FORMULAIRE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/couvretanche/top-right.png",
         "topleft": "/projects/couvretanche/top-left.png",
@@ -123,6 +128,7 @@
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","SUR-MESURE", "FRONT", "FIGMA", "MAQUETTE", "OVH"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/couvrassistance/top-right.png",
         "topleft": "/projects/couvrassistance/top-left.png",
@@ -137,7 +143,7 @@
     {
       "id": 7,
       "title": "FerrariBeverly",
-      "slug": "ferrari",
+      "slug": "ferrari-beverly",
       "image": "/projects/ferraribeverlyhills/homepage.png",
       "description": "Reproduction de la page d'accueil du site FerrariBeverly en react en reprenant les différentes éléments comme le menu, le header animé et les différentes bloc jusqu'au footer ",
       "symbol": "/projects/ferraribeverlyhills/symbol.png",
@@ -145,6 +151,7 @@
       "tags": ["REACTJS", "JSON", "JS", "RESPONSIVE","CAROUSEL", "ANIMATION", "FORM", "FRONTEND"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/ferraribeverlyhills/top-right.png",
         "topleft": "/projects/ferraribeverlyhills/top-left.png",
@@ -167,6 +174,7 @@
       "tags": ["ReactJs", "CSS", "JS", "RESPONSIVE","MODAL", "COLLAPSE", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "FIGMA"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/kasareact/top-right.png",
         "topleft": "/projects/kasareact/top-left.png",
@@ -189,6 +197,7 @@
       "tags": ["WORDPRESS", "MAQUETTE", "JS", "RESPONSIVE","FILTERS", "FRONT", "SECTION", "COLLAPSE", "ANIMATION", "DESIGN"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/ladigitoile/top-right.png",
         "topleft": "/projects/ladigitoile/top-left.png",
@@ -211,6 +220,7 @@
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","ORDER", "FRONT"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/lesvanniers/top-right.png",
         "topleft": "/projects/lesvanniers/top-left.png",
@@ -225,7 +235,7 @@
     {
       "id": 11,
       "title": "MonVieuxGrimoire",
-      "slug": "monvieuxgrimoire",
+      "slug": "mon-vieux-grimoire",
       "image": "/projects/monvieuxgrimoire/homepage.png",
       "description": "Développement de la partie back-end d'un projet de notation de livre avec authentification gestion des routes, des permissions et du crud avec la base de donnée.",
       "symbol": "/projects/monvieuxgrimoire/symbol.png",
@@ -233,6 +243,7 @@
       "tags": ["NODEJS", "OPENCLASSROOM", "JAVACRIPT", "EXPRESSJS", "MONGODB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH", "FORMATION"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/monvieuxgrimoire/top-right.png",
         "topleft": "/projects/monvieuxgrimoire/top-left.png",
@@ -247,7 +258,7 @@
     {
       "id": 12,
       "title": "PaulSavine",
-      "slug": "paulsavine",
+      "slug": "paul-savine",
       "image": "/projects/paulsavine/homepage.png",
       "description": "Site vitrine pour une société spécialisé dans l'agencement de pharmacie et la rénovation intérieur.",
       "symbol": "/projects/paulsavine/symbol.png",
@@ -255,6 +266,7 @@
       "tags": ["WORDPRESS", "SEO", "RESPONSIVE", "BLOG", "MAQUETTE", "DESIGN", "GOOGLE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/paulsavine/top-right.png",
         "topleft": "/projects/paulsavine/top-left.png",
@@ -269,7 +281,7 @@
     {
       "id": 13,
       "title": "RocketSchool",
-      "slug": "rocketschool",
+      "slug": "rocket-school",
       "image": "/projects/rocketlanding/homepage.png",
       "description": "Développement de landing page pour plusieurs filiére spécifiqueet optimisation pour publicité, tracking google tag manager et mise en page selon site officiel rocketschool ",
       "symbol": "/projects/rocketlanding/symbol.png",
@@ -277,6 +289,7 @@
       "tags": ["LANDINGPAGE", "TRACKING", "INTEGRATION", "CREATION", "OPTIMISATION", "TAGMANAGER", "LEADPAGE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/rocketlanding/top-right.png",
         "topleft": "/projects/rocketlanding/top-left.png",
@@ -299,6 +312,7 @@
       "tags": ["WORDPRESS", "ELEMENTOR", "ANIMATION", "SLIDER", "CSS", "RESPONSIVE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/sirius/top-right.png",
         "topleft": "/projects/sirius/top-left.png",
@@ -313,7 +327,7 @@
     {
       "id": 15,
       "title": "SophieBluel",
-      "slug": "sophiebluel",
+      "slug": "sophie-bluel",
       "image": "/projects/sophiedesign/homepage.png",
       "description": "Développement de la partie front-end du site de SophieBluel Artiste, intégration des elements dynamique, connexion avec base donnée et crud",
       "symbol": "/projects/sophiedesign/symbol.png",
@@ -321,6 +335,7 @@
       "tags": ["OPENCLASSROOM", "INREGRATION", "JAVASCRIPT", "JSON", "RESPONSIVE", "FORM", "CRUD"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/sophiedesign/top-right.png",
         "topleft": "/projects/sophiedesign/top-left.png",
@@ -343,6 +358,7 @@
       "tags": ["ReactJs", "Y-Scroll", "MegaMenu", "Homepage", "Integration", "SectionScroll", "useState", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/teslahome/top-right.png",
         "topleft": "/projects/teslahome/top-left.png",
@@ -357,7 +373,7 @@
     {
       "id": 17,
       "title": "Toast Collectif",
-      "slug": "toast",
+      "slug": "toast-collectif",
       "image": "/projects/toast/homepage.png",
       "description": "Site vitrine wordpress sur-mesure pour une WebMarketing agency, mise en page sur-mesure avec slider à la main et lightbox",
       "symbol": "/projects/toast/symbol.png",
@@ -365,6 +381,7 @@
       "tags": ["Wordpress", "JS", "CSS", "Responsive", "Tracking", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/toast/top-right.png",
         "topleft": "/projects/toast/top-left.png",
@@ -379,7 +396,7 @@
       {
       "id": 18,
       "title": "Coders Monkey",
-      "slug": "codersmonkey",
+      "slug": "coders-monkey",
       "image": "/projects/codersmonkey/homepage.png",
       "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container.",
       "symbol": "/projects/codersmonkey/symbol.jpg",
@@ -387,6 +404,7 @@
       "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/codersmonkey/top-right.png",
         "topleft": "/projects/codersmonkey/top-left.png",
@@ -401,7 +419,7 @@
      {
       "id": 19,
       "title": "DietIA",
-      "slug": "dietia",
+      "slug": "diet-ia",
       "image": "/projects/dietia/homepage.png",
       "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
       "symbol": "/projects/dietia/symbol.png",
@@ -409,6 +427,7 @@
       "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
       "gallery": { 
         "topright": "/projects/dietia/top-right.png",
         "topleft": "/projects/dietia/top-left.png",

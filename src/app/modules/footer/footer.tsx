@@ -30,13 +30,13 @@ export const Footer: React.FC = () => {
               className='w-[100%] h-[100%]'
             />
           </div>
-          <div className=' flex gap-6 max-lg:gap-20 max-foot:justify-between max-foot:flex-wrap  justify- w-full'>
+          <div className=' flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:flex-wrap  justify- w-full'>
             <div className='flex flex-col gap-2'>
               <Typography
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Accueil
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 CV
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Projets
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Contact
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Github
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Gitlab
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Linkedin
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
                 className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
                 theme='gray'
                 variant='body-lg'
-                weight='extralight'
+                weight='light'
                 fontFamily='SanFrancisco'
               >
                 Behance

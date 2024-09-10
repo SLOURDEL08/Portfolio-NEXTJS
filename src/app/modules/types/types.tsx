@@ -1,6 +1,6 @@
 // types.ts
 export interface Project {
-    id: number;
+  id: number;
   title: string;
   categories: string[];
   tags: string[];
@@ -8,6 +8,7 @@ export interface Project {
   symbol: string;
   link: string;
   pageUrl?: string;
+  date: string;
   description?: {
     fr?: string;
     en?: string;
@@ -23,5 +24,4 @@ export interface Project {
     vertical: string;
   };
   slug: string; // Ajouter la propriété slug ici
-  }
-  
+}

@@ -83,7 +83,7 @@
     "netflix": {
       "description": "Front-end development of Netflix's web application homepage, with dynamic content integration, a slider to navigate through movies and various categories. Design and optimization for a better user experience."
     },
-    "uber-eats": {
+    "uber-eat": {
       "description": "Reproduction of the old Uber Eats homepage, using Vue.js for a dynamic interface with a functional filter system in the search bar. Creation of dynamic pages for each restaurant with specific menus and real-time order management."
     },
     "abc-renov": {

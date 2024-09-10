@@ -91,7 +91,7 @@ const AboutPage: React.FC = () => {
               </div>
 
               <div className='flex  max-lg:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-end'>
-                <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] group rounded-2xl'>
+                <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#2b2b2b] bg-[#ffffff15] group rounded-2xl'>
                   <Image
                     src='/utili.png'
                     width='22'
@@ -109,7 +109,7 @@ const AboutPage: React.FC = () => {
                     <b>LOURDEL</b> Sébastien
                   </Typography>
                 </div>
-                <div className='flex gap-3 group p-3 px-4 brder items-center border hover:bg-[#e5e5e5] border-[#494949] bg-[#ffffff0b] rounded-2xl'>
+                <div className='flex gap-3 group p-3 px-4 brder items-center border hover:bg-[#e5e5e5] border-[#2b2b2b] bg-[#ffffff15] rounded-2xl'>
                   <Image
                     src='/gateau.png'
                     width='22'
@@ -127,7 +127,7 @@ const AboutPage: React.FC = () => {
                     25 ans
                   </Typography>
                 </div>
-                <div className='flex gap-3 group items-center justify-start p-3 px-4 border border-[#494949] bg-[#ffffff0b] hover:bg-[#e5e5e5]  rounded-2xl'>
+                <div className='flex gap-3 group items-center justify-start p-3 px-4 border border-[#2b2b2b] bg-[#ffffff15] hover:bg-[#e5e5e5]  rounded-2xl'>
                   <Image
                     src='/lieu.png'
                     width='22'
@@ -145,7 +145,7 @@ const AboutPage: React.FC = () => {
                     Arras, France
                   </Typography>
                 </div>
-                <div className='flex gap-3 group items-center justify-start bg-[#ffffff0b] p-3 px-4 border-[#494949] border hover:bg-[#e5e5e5]  rounded-2xl w-max'>
+                <div className='flex gap-3 group items-center justify-start bg-[#ffffff15] p-3 px-4 border-[#2b2b2b] border hover:bg-[#e5e5e5]  rounded-2xl w-max'>
                   <Image
                     src='/e-mail.png'
                     width='22'
@@ -164,7 +164,7 @@ const AboutPage: React.FC = () => {
                   </Typography>
                 </div>
 
-                <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
+                <div className='overhedz flex gap-2 border-[#2b2b2b] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/linkedicon.png'
                     width='25'
@@ -183,7 +183,7 @@ const AboutPage: React.FC = () => {
                     /Linkedin
                   </Typography>
                 </div>
-                <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
+                <div className='overhedz flex gap-2 border-[#2b2b2b] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
                     src='/github.png'
                     width='25'

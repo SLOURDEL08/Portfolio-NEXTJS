@@ -11,6 +11,7 @@ import TransitionPage from '@/app/modules/transitionPage/transitionPage';
 import Link from 'next/link';
 import projectsData from '@/app/data/project.json';
 import { useLocale } from '@/app/modules/useLocale';
+import ProjectGallery from '@/app/modules/ProjectGallery/ProjectGallery';
 
 interface Project {
   id: number;
@@ -26,6 +27,7 @@ interface Project {
   categories: string[];
   tags: string[];
   link: string;
+  date: string;
   hoverBackgroundColor: string;
   repoUrl: string;
   pageUrl: string;
@@ -51,8 +53,8 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   const { locale } = useLocale();
 
   useEffect(() => {
-    if (!project && router.query.id) {
-      const foundProject = projectsData.find((p) => p.id.toString() === router.query.id) as
+    if (!project && router.query.slug) {
+      const foundProject = projectsData.find((p) => p.slug === router.query.slug) as
         | Project
         | undefined;
       if (foundProject) {
@@ -71,7 +73,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
     setSelectedSection(section.toLowerCase());
   };
 
-  const sections = ['presentation', 'ressources', 'gallery'];
+  const sections = ['Presentation', 'Ressources', 'Gallery'];
 
   return (
     <Layout>
@@ -174,16 +176,16 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       alt='de'
                       className='w-[100%] h-[200px] object-cover object-top rounded-xl border-gray-800'
                     />
-                    <div className='absolute top-0 right-0 backdrop-blur-sm shadowed mask px-3 py-1 bg-[#ffffff60] rounded-lg mt-4 mr-4'>
+                    <div className='absolute ovhea grayscale  top-4 right-4 px-3 py-1 rounded-lg bg-gradient-to-br from-white/70 to-black/30 backdrop-filter backdrop-blur-sm'>
                       <Typography
-                        theme='black'
+                        theme='white'
                         weight='medium'
                         variant='body-base'
                         component='p'
                         fontFamily='ClashDisplay'
-                        className='text-transparen'
+                        className='white '
                       >
-                        09/2014
+                        {project.date}
                       </Typography>
                     </div>
                   </div>
@@ -197,14 +199,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       fontFamily='SanFrancisco'
                       className='text-left w-[100%] max-[680px]:text-lg max-[450px]:text-lg max-[680px]:leading-loose max-[450px]:leading-loose leading-loose'
                     >
-                      {project.description && typeof project.description === 'object'
-                        ? project.description[locale as keyof typeof project.description] ||
-                          project.description['en'] ||
-                          Object.values(project.description)[0] ||
-                          'Description not available'
-                        : typeof project.description === 'string'
-                        ? project.description
-                        : 'Description not available'}{' '}
+                      {t(`projects.${project.slug}.description`)}
                     </Typography>
                   </div>
 
@@ -297,74 +292,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                 </div>
               )}
               {selectedSection === 'gallery' && project.gallery && (
-                <div className='gallery-block flex flex-col gap-8'>
-                  <div className='liens-block flex flex-col gap-8'>
-                    <div className='flex gap-8'>
-                      <div className='w-[30%]'>
-                        <Image
-                          src={project.gallery.topleft}
-                          width={500}
-                          height={300}
-                          alt='top left'
-                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                        />
-                      </div>
-                      <div className='w-[70%]'>
-                        <Image
-                          src={project.gallery.topright}
-                          width={500}
-                          height={300}
-                          alt='top right'
-                          className='h-[100px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                        />
-                      </div>
-                    </div>
-                    <div className='flex max-[550px]:flex-col gap-8'>
-                      <div className='flex gap-8 flex-wrap max-[550px]:w-full w-[70%]'>
-                        <div className='w-[100%]'>
-                          <Image
-                            src={project.gallery.big}
-                            width={500}
-                            height={300}
-                            alt='big'
-                            className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                          />
-                        </div>
-                        <div className='flex w-full gap-8'>
-                          <div className='w-[60%]'>
-                            <Image
-                              src={project.gallery.botright}
-                              width={500}
-                              height={300}
-                              alt='bottom right'
-                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                            />
-                          </div>
-                          <div className='w-[40%]'>
-                            <Image
-                              src={project.gallery.botleft}
-                              width={500}
-                              height={300}
-                              alt='bottom left'
-                              className='h-[200px] w-[100%] transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className='flex gap-8 flex-wrap max-[550px]:w-full w-[30%]'>
-                        <div className='w-[100%]'>
-                          <Image
-                            src={project.gallery.vertical}
-                            width={500}
-                            height={300}
-                            alt='vertical'
-                            className='w-[100%] max-[550px]:max-h-[250px] h-full imglong transitioned hover:brightness-150 object-cover object-left rounded-3xl'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ProjectGallery project={project} />
               )}
             </div>
           </div>
@@ -374,14 +302,29 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ locale, params }) => {
-  const { id } = params as { id: string };
-  const project = projectsData.find((p) => p.id.toString() === id) as Project | undefined;
+export const getServerSideProps: GetServerSideProps = async ({ params, locale, res }) => {
+  const { slug } = params as { slug: string };
+  let project = projectsData.find((p) => p.slug === slug);
+
+  if (!project) {
+    // Vérifier si le slug est un ancien ID
+    const projectById = projectsData.find((p) => p.id.toString() === slug);
+    if (projectById) {
+      res.setHeader('Location', `/project/${projectById.slug}`);
+      res.statusCode = 301;
+      res.end();
+      return { props: {} };
+    }
+    return { notFound: true };
+  }
+
+  // Charger les traductions
+  const translations = await serverSideTranslations(locale || 'en', ['common']);
 
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
-      project: project || null,
+      project,
+      ...translations,
     },
   };
 };

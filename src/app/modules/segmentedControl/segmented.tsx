@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
-import { GetServerSideProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Typography } from '@/app/modules/typography/typography';
 import useResponsiveProjects from '@/app/modules/segmentedControl/useResponsiveProjects';
 import { Project } from '@/app/modules/types/types';
-
-import '@/app/globals.scss';
 
 interface SegmentedProps {
   useFilters?: boolean;
@@ -31,8 +27,10 @@ const Segmented: React.FC<SegmentedProps> = ({
 }) => {
   const { t, i18n } = useTranslation('common');
   const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [selectedFilter, setSelectedFilter] = useState('Tous');
   const [isLoading, setIsLoading] = useState(true);
+
   const responsiveNumProjects = useResponsiveProjects(
     numProjects === 'all' ? Infinity : numProjects,
     responsiveBreakpoints
@@ -55,6 +53,7 @@ const Segmented: React.FC<SegmentedProps> = ({
             : shuffledData.slice(0, responsiveNumProjects);
 
         setProjects(limitedProjects);
+        setFilteredProjects(limitedProjects);
         if (onProjectChange && limitedProjects.length > 0) {
           onProjectChange(limitedProjects[0]);
         }
@@ -67,6 +66,10 @@ const Segmented: React.FC<SegmentedProps> = ({
 
     loadProjects();
   }, [responsiveNumProjects, onProjectChange, frontEndProject]);
+
+  useEffect(() => {
+    applyFilters();
+  }, [selectedFilter, projects]);
 
   function shuffleArray(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -86,6 +89,15 @@ const Segmented: React.FC<SegmentedProps> = ({
     }
   };
 
+  const applyFilters = () => {
+    if (selectedFilter === 'Tous') {
+      setFilteredProjects(projects);
+    } else {
+      const filtered = projects.filter((project) => project.categories.includes(selectedFilter));
+      setFilteredProjects(filtered);
+    }
+  };
+
   const gridColsClass = `${numCols}`;
 
   if (isLoading || !i18n.isInitialized) {
@@ -95,7 +107,7 @@ const Segmented: React.FC<SegmentedProps> = ({
   return (
     <div className={`w-full h-full ${className}`}>
       {useFilters && !frontEndProject && (
-        <section className='fivefilter'>
+        <section className='fivefilter mb-8'>
           <div className='segmented-controls square'>
             <input
               id='five-1'
@@ -107,7 +119,7 @@ const Segmented: React.FC<SegmentedProps> = ({
             <label htmlFor='five-1' className='tdf'>
               {t('general.all')}
             </label>
-            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', 'Design'].map((category) => (
+            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress'].map((category) => (
               <React.Fragment key={category}>
                 <input
                   id={`five-${category.toLowerCase()}`}
@@ -124,19 +136,12 @@ const Segmented: React.FC<SegmentedProps> = ({
       )}
 
       <div
-        className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3 mediagride  max-[900px]:grid-cols-2 gap-8 ${
-          useFilters ? 'mt-8' : ''
-        }`}
+        className={`justify-center h-full grid ${gridColsClass} max-[1279px]:grid-cols-3 mediagride max-[900px]:grid-cols-2 gap-8`}
       >
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className={`project-item projectadow w-[100%] flex items-end h-[100%] rounded-3xl relative ${
-              useFilters &&
-              selectedFilter !== 'Tous' &&
-              !project.categories.includes(selectedFilter) &&
-              'hidden'
-            }`}
+            className='project-item projectadow w-[100%] flex items-end h-[100%] rounded-3xl relative'
             onClick={() => handleProjectSelect(project)}
           >
             <Image
@@ -171,7 +176,7 @@ const Segmented: React.FC<SegmentedProps> = ({
                     </div>
                     <Link
                       className='p-3 rounded-full linaked min-w-[32px] w-[35px]'
-                      href={`/project/${project.id}`}
+                      href={`/project/${project.slug}`}
                     >
                       <Image
                         src='/top-right-arrow.png'
@@ -197,14 +202,6 @@ const Segmented: React.FC<SegmentedProps> = ({
       </div>
     </div>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
-    },
-  };
 };
 
 export default Segmented;

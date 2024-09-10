@@ -84,7 +84,7 @@
     "netflix": {
       "description": "Développement front-end de la page d'accueil de l'application web Netflix, avec intégration de contenu dynamique, un slider pour naviguer parmi les films et les catégories variées. Travail de design et d'optimisation pour une meilleure expérience utilisateur."
     },
-    "uber-eats": {
+    "uber-eat": {
       "description": "Reproduction de l'ancienne page d'accueil d'Uber Eats, utilisant Vue.js pour une interface dynamique avec un système de filtres fonctionnel dans la barre de recherche. Création de pages dynamiques pour chaque restaurant avec menus spécifiques et gestion des commandes en temps réel."
     },
     "abc-renov": {

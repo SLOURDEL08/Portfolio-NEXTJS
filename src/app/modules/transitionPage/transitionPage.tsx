@@ -16,12 +16,12 @@ const pageVariants = {
   in: {
     opacity: 1,
     filter: 'blur(0px)',
-    transition: { duration: 0.3 },
+    transition: { duration: 0.4 },
   },
   out: {
     opacity: 0,
     filter: 'blur(4px)',
-    transition: { duration: 0.3 },
+    transition: { duration: 0.4 },
   },
 };
 

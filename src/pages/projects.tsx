@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
             <Slider className='projage ' />
           </div>
           <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20] max-[900px]:rounded-3xl'>
-            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8 parentprojecting p-10 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
+            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8 parentprojecting p-4 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
               <div
                 key={project.id}
                 className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
@@ -134,6 +134,7 @@ const Projects: React.FC = () => {
                 />
               </div>
             </div>
+
             <div
               className={`w-3/5 bg-[#ffffff20] max-[900px]:bg-[#ffffff00] max-[900px]:pt-5 parentprojected p-10 max-[900px]:p-8 carouzel relative rounded-3xl max-[900px]:w-[100%]`}
             >
@@ -167,14 +168,13 @@ const Projects: React.FC = () => {
                     <Typography
                       key={index}
                       theme='graylight'
-                      weight='extralight'
+                      weight='regular'
                       variant='body-sm'
                       component='span'
                       fontFamily='SanFrancisco'
-                      className='p-2 px-4 bg-[#00000030] rounded-xl'
+                      className='p-2 px-4 bg-[#00000030] hover:bg-[#d5d5d5] hover:text-black uppercase rounded-xl'
                     >
-                      <b className='fonted'>#</b>
-                      {tag}
+                      #{tag}
                     </Typography>
                   ))}
                 </div>
@@ -186,7 +186,7 @@ const Projects: React.FC = () => {
                   fontFamily='Inter'
                   className='leading-8 strocked'
                 >
-                  {getProjectDescription(project)}
+                  {t(`projects.${project.slug}.description`)}
                 </Typography>
                 <div className='flex gap-4 absolute top-10 right-10 btnresponsivee'>
                   <button
@@ -217,7 +217,7 @@ const Projects: React.FC = () => {
                 <div className='flex'>
                   <Link
                     className='custom-button btt gradient-text flex gap-2 justify-start items-center border rounded-full'
-                    href={`/project/${project.id}`}
+                    href={`/project/${project.slug}`}
                   >
                     <Typography
                       theme='white'

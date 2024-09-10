@@ -395,7 +395,7 @@ export const Header: React.FC = () => {
           >
             {searchResults.slice(0, 3).map((result) => (
               <div className='' key={result.id}>
-                <Link href={result.link} passHref>
+                <Link href={`/project/${result.slug}`} passHref>
                   <div className=''>
                     <div className='result-item'>
                       <Image src={result.symbol} alt={result.title} width={300} height={300} />
