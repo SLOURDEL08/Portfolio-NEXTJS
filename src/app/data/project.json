@@ -12,7 +12,7 @@
       "hoverBackgroundColor": "#370000d0",
       "repoUrl": "https://uber.com",
       "pageUrl":"https://youtube.com",
-      "date":"08/1998",
+      "date":"10/2023",
       "gallery": { 
         "topright": "/projects/netflix/top-right.png",
         "topleft": "/projects/netflix/top-left.png",
@@ -36,7 +36,7 @@
       "tags": ["VueJs", "Javascript", "Homepage", "JSON","Filter", "Front-end", "Component", "Dynamique", "Router", "Responsive", "SearchBar", "VueRouter", "Integration"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"11/2023",
       "gallery": { 
         "topright": "/projects/uber/top-right.png",
         "topleft": "/projects/uber/top-left.png",
@@ -59,7 +59,7 @@
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"08/2022",
       "gallery": { 
         "topright": "/projects/alliance/top-right.png",
         "topleft": "/projects/alliance/top-left.png",
@@ -82,7 +82,7 @@
       "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"10/2O22",
       "gallery": { 
         "topright": "/projects/bookihtml/top-right.png",
         "topleft": "/projects/bookihtml/top-left.png",
@@ -105,7 +105,7 @@
       "tags": ["WORDPRESS", "MEGAMENU", "CSS", "RESPONSIVE","SUR-MESURE", "FORMULAIRE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"11/2022",
       "gallery": { 
         "topright": "/projects/couvretanche/top-right.png",
         "topleft": "/projects/couvretanche/top-left.png",
@@ -128,7 +128,7 @@
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","SUR-MESURE", "FRONT", "FIGMA", "MAQUETTE", "OVH"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"06/2024",
       "gallery": { 
         "topright": "/projects/couvrassistance/top-right.png",
         "topleft": "/projects/couvrassistance/top-left.png",
@@ -151,7 +151,7 @@
       "tags": ["REACTJS", "JSON", "JS", "RESPONSIVE","CAROUSEL", "ANIMATION", "FORM", "FRONTEND"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"08/2022",
       "gallery": { 
         "topright": "/projects/ferraribeverlyhills/top-right.png",
         "topleft": "/projects/ferraribeverlyhills/top-left.png",
@@ -174,7 +174,7 @@
       "tags": ["ReactJs", "CSS", "JS", "RESPONSIVE","MODAL", "COLLAPSE", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "FIGMA"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"09/2022",
       "gallery": { 
         "topright": "/projects/kasareact/top-right.png",
         "topleft": "/projects/kasareact/top-left.png",
@@ -197,7 +197,7 @@
       "tags": ["WORDPRESS", "MAQUETTE", "JS", "RESPONSIVE","FILTERS", "FRONT", "SECTION", "COLLAPSE", "ANIMATION", "DESIGN"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"03/2024",
       "gallery": { 
         "topright": "/projects/ladigitoile/top-right.png",
         "topleft": "/projects/ladigitoile/top-left.png",
@@ -220,7 +220,7 @@
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","ORDER", "FRONT"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"06/2024",
       "gallery": { 
         "topright": "/projects/lesvanniers/top-right.png",
         "topleft": "/projects/lesvanniers/top-left.png",
@@ -243,7 +243,7 @@
       "tags": ["NODEJS", "OPENCLASSROOM", "JAVACRIPT", "EXPRESSJS", "MONGODB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH", "FORMATION"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"06/2023",
       "gallery": { 
         "topright": "/projects/monvieuxgrimoire/top-right.png",
         "topleft": "/projects/monvieuxgrimoire/top-left.png",
@@ -266,7 +266,7 @@
       "tags": ["WORDPRESS", "SEO", "RESPONSIVE", "BLOG", "MAQUETTE", "DESIGN", "GOOGLE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"02/2024",
       "gallery": { 
         "topright": "/projects/paulsavine/top-right.png",
         "topleft": "/projects/paulsavine/top-left.png",
@@ -289,7 +289,7 @@
       "tags": ["LANDINGPAGE", "TRACKING", "INTEGRATION", "CREATION", "OPTIMISATION", "TAGMANAGER", "LEADPAGE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"11/2022",
       "gallery": { 
         "topright": "/projects/rocketlanding/top-right.png",
         "topleft": "/projects/rocketlanding/top-left.png",
@@ -312,7 +312,7 @@
       "tags": ["WORDPRESS", "ELEMENTOR", "ANIMATION", "SLIDER", "CSS", "RESPONSIVE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"01/2024",
       "gallery": { 
         "topright": "/projects/sirius/top-right.png",
         "topleft": "/projects/sirius/top-left.png",
@@ -335,7 +335,7 @@
       "tags": ["OPENCLASSROOM", "INREGRATION", "JAVASCRIPT", "JSON", "RESPONSIVE", "FORM", "CRUD"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"02/2023",
       "gallery": { 
         "topright": "/projects/sophiedesign/top-right.png",
         "topleft": "/projects/sophiedesign/top-left.png",
@@ -358,7 +358,7 @@
       "tags": ["ReactJs", "Y-Scroll", "MegaMenu", "Homepage", "Integration", "SectionScroll", "useState", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"04/2022",
       "gallery": { 
         "topright": "/projects/teslahome/top-right.png",
         "topleft": "/projects/teslahome/top-left.png",
@@ -381,7 +381,7 @@
       "tags": ["Wordpress", "JS", "CSS", "Responsive", "Tracking", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"04/2023",
       "gallery": { 
         "topright": "/projects/toast/top-right.png",
         "topleft": "/projects/toast/top-left.png",
@@ -404,7 +404,7 @@
       "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"06/2024",
       "gallery": { 
         "topright": "/projects/codersmonkey/top-right.png",
         "topleft": "/projects/codersmonkey/top-left.png",
@@ -427,7 +427,7 @@
       "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"07/2024",
       "gallery": { 
         "topright": "/projects/dietia/top-right.png",
         "topleft": "/projects/dietia/top-left.png",
@@ -443,22 +443,114 @@
       "id": 20,
       "title": "GameZone",
       "slug": "game-zone",
-      "image": "/projects/dietia/homepage.png",
+      "image": "/projects/GameZone/homepage.png",
       "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
-      "symbol": "/projects/dietia/symbol.png",
-      "categories": ["Full-stack"],
-      "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
+      "symbol": "/projects/GameZone/symbol.png",
+      "categories": ["Autres"],
+      "tags": ["html", "css"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-          "date":"08/1998",
+          "date":"03/2019",
       "gallery": { 
-        "topright": "/projects/dietia/top-right.png",
-        "topleft": "/projects/dietia/top-left.png",
-      "botright": "/projects/dietia/bot-right.png",
-      "botleft": "/projects/dietia/bot-left.png",
-      "big": "/projects/dietia/big.png",
-      "vertical": "/projects/dietia/vertical.png",
-      "mkt": "/projects/dietia/mkt.png"
+        "topright": "/projects/GameZone/top-right.png",
+        "topleft": "/projects/GameZone/top-left.png",
+      "botright": "/projects/GameZone/bot-right.png",
+      "botleft": "/projects/GameZone/bot-left.png",
+      "big": "/projects/GameZone/big.png",
+      "vertical": "/projects/GameZone/vertical.png",
+      "mkt": "/projects/GameZone/mkt.png"
+    
+    }
+    },
+         {
+      "id": 21,
+      "title": "ServDrone",
+      "slug": "serv-drone",
+      "image": "/projects/ServDrone/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/ServDrone/symbol.png",
+      "categories": ["Autres"],
+      "tags": ["Html", "Css"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+          "date":"02/2019",
+      "gallery": { 
+        "topright": "/projects/ServDrone/top-right.png",
+        "topleft": "/projects/ServDrone/top-left.png",
+      "botright": "/projects/ServDrone/bot-right.png",
+      "botleft": "/projects/ServDrone/bot-left.png",
+      "big": "/projects/ServDrone/big.png",
+      "vertical": "/projects/ServDrone/vertical.png",
+      "mkt": "/projects/ServDrone/mkt.png"
+    
+    }
+    },
+         {
+      "id": 22,
+      "title": "Digitalizerr",
+      "slug": "digitalizerr",
+      "image": "/projects/digitalizerr/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/digitalizerr/symbol.png",
+      "categories": ["Autres"],
+      "tags": ["Figma","Photoshop","Pinterest","Dribble"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+          "date":"11/2020",
+      "gallery": { 
+        "topright": "/projects/digitalizerr/top-right.png",
+        "topleft": "/projects/digitalizerr/top-left.png",
+      "botright": "/projects/digitalizerr/bot-right.png",
+      "botleft": "/projects/digitalizerr/bot-left.png",
+      "big": "/projects/digitalizerr/big.png",
+      "vertical": "/projects/digitalizerr/vertical.png",
+      "mkt": "/projects/digitalizerr/mkt.png"
+    
+    }
+    },
+            {
+      "id": 23,
+      "title": "WebAgency",
+      "slug": "webagency",
+      "image": "/projects/webagency/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/webagency/symbol.png",
+      "categories": ["Autres"],
+      "tags": ["Figma","Photoshop","Pinterest","Dribble"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+          "date":"03/2021",
+      "gallery": { 
+        "topright": "/projects/webagency/top-right.png",
+        "topleft": "/projects/webagency/top-left.png",
+      "botright": "/projects/webagency/bot-right.png",
+      "botleft": "/projects/webagency/bot-left.png",
+      "big": "/projects/webagency/big.png",
+      "vertical": "/projects/webagency/vertical.png",
+      "mkt": "/projects/webagency/mkt.png"
+    
+    }
+    },
+    {
+      "id": 24,
+      "title": "CV1",
+      "slug": "cv1",
+      "image": "/projects/cv1/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/cv1/symbol.png",
+      "categories": ["Front-end"],
+      "tags": ["React","Javascript","Router","Json"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+          "date":"03/2021",
+      "gallery": { 
+        "topright": "/projects/cv1/top-right.png",
+        "topleft": "/projects/cv1/top-left.png",
+      "botright": "/projects/cv1/bot-right.png",
+      "botleft": "/projects/cv1/bot-left.png",
+      "big": "/projects/cv1/big.png",
+      "vertical": "/projects/cv1/vertical.png",
+      "mkt": "/projects/cv1/mkt.png"
     
     }
     }

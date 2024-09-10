@@ -119,7 +119,7 @@ const Segmented: React.FC<SegmentedProps> = ({
             <label htmlFor='five-1' className='tdf'>
               {t('general.all')}
             </label>
-            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress'].map((category) => (
+            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', 'Autres'].map((category) => (
               <React.Fragment key={category}>
                 <input
                   id={`five-${category.toLowerCase()}`}
