@@ -75,6 +75,20 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
 
   const sections = ['Presentation', 'Ressources', 'Gallery'];
 
+  const getNextProject = () => {
+    const currentIndex = projectsData.findIndex((p) => p.id === project.id);
+    return projectsData[(currentIndex + 1) % projectsData.length];
+  };
+
+  // Fonction pour obtenir le projet précédent
+  const getPreviousProject = () => {
+    const currentIndex = projectsData.findIndex((p) => p.id === project.id);
+    return projectsData[(currentIndex - 1 + projectsData.length) % projectsData.length];
+  };
+
+  const nextProject = getNextProject();
+  const previousProject = getPreviousProject();
+
   return (
     <Layout>
       <TransitionPage>
@@ -295,6 +309,38 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                 <ProjectGallery project={project} />
               )}
             </div>
+          </div>
+          <div className='flex justify-between items-center mt-10'>
+            <Link href={`/project/${previousProject.slug}`} passHref>
+              <div className='flex items-center cursor-pointer hover:opacity-80 opacity-55 transition-all'>
+                <Image src='/larrow.png' width={16} height={16} alt='Previous' />
+                <Typography
+                  theme='white'
+                  weight='medium'
+                  variant='body-base'
+                  component='span'
+                  fontFamily='ClashDisplay'
+                  className='ml-2'
+                >
+                  {previousProject.title}
+                </Typography>
+              </div>
+            </Link>
+            <Link href={`/project/${nextProject.slug}`} passHref>
+              <div className='flex items-center cursor-pointer hover:opacity-80 opacity-55 transition-all'>
+                <Typography
+                  theme='white'
+                  weight='medium'
+                  variant='body-base'
+                  component='span'
+                  fontFamily='ClashDisplay'
+                  className='mr-2'
+                >
+                  {nextProject.title}
+                </Typography>
+                <Image src='/rarrow.png' width={16} height={16} alt='Next' />
+              </div>
+            </Link>
           </div>
         </Main>
       </TransitionPage>

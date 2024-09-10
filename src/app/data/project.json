@@ -438,6 +438,29 @@
       "mkt": "/projects/dietia/mkt.png"
     
     }
+    },
+     {
+      "id": 20,
+      "title": "GameZone",
+      "slug": "game-zone",
+      "image": "/projects/dietia/homepage.png",
+      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
+      "symbol": "/projects/dietia/symbol.png",
+      "categories": ["Full-stack"],
+      "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+          "date":"08/1998",
+      "gallery": { 
+        "topright": "/projects/dietia/top-right.png",
+        "topleft": "/projects/dietia/top-left.png",
+      "botright": "/projects/dietia/bot-right.png",
+      "botleft": "/projects/dietia/bot-left.png",
+      "big": "/projects/dietia/big.png",
+      "vertical": "/projects/dietia/vertical.png",
+      "mkt": "/projects/dietia/mkt.png"
+    
+    }
     }
   ]
   

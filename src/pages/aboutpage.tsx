@@ -97,14 +97,14 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-5'
                   />
                   <Typography
                     theme='graylight'
                     variant='lead'
                     component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base'
+                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-lg'
                   >
                     <b>LOURDEL</b> Sébastien
                   </Typography>
@@ -115,14 +115,14 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-5'
                   />
                   <Typography
                     theme='graylight'
                     variant='lead'
                     component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text group-hover:text-black text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
+                    className='bg-clip-text group-hover:text-black text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-lg '
                   >
                     25 ans
                   </Typography>
@@ -133,14 +133,14 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-5'
                   />
                   <Typography
                     theme='graylight'
                     variant='lead'
                     component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
+                    className='bg-clip-text text-transparent group-hover:text-black bg-gradient-to-b from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-lg '
                   >
                     Arras, France
                   </Typography>
@@ -151,14 +151,14 @@ const AboutPage: React.FC = () => {
                     width='22'
                     height='22'
                     alt='de'
-                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-4'
+                    className='opacity-80 invert hover group-hover:invert-0 max-smd:w-5'
                   />
                   <Typography
                     theme='graylight'
                     variant='lead'
                     component='span'
                     fontFamily='SanFrancisco'
-                    className='bg-clip-text  text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-base '
+                    className='bg-clip-text  text-transparent group-hover:text-black bg-gradient-to-b  from-white to-[#AAAAAA] text-left projectpp max-mdd:text-lg max-smd:text-lg '
                   >
                     contact@slourdel.fr
                   </Typography>
@@ -170,7 +170,7 @@ const AboutPage: React.FC = () => {
                     width='25'
                     height='25'
                     alt='de'
-                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-5 max-smd:h-5'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-6 max-smd:h-6'
                   />
                   <Typography
                     theme='graylight'
@@ -189,7 +189,7 @@ const AboutPage: React.FC = () => {
                     width='25'
                     height='25'
                     alt='de'
-                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-5 max-smd:h-5'
+                    className='opacity-80 max-mdd:w-6 max-mdd:h-6 max-smd:w-6 max-smd:h-6'
                   />
                   <Typography
                     theme='graylight'

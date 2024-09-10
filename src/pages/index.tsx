@@ -14,6 +14,7 @@ import LayerCV from '@/app/modules/layerCV/layerCV';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import IndexSkeleton from '@/app/modules/skeleton/index/IndexSkeleton';
 
 const HomePage: React.FC = () => {
   const { t, i18n } = useTranslation('common');
@@ -21,13 +22,28 @@ const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     if (i18n.isInitialized) {
-      setIsLoading(false);
+      // Ajoute un délai minimum de 500ms avant de masquer le squelette
+      timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 0);
     }
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
   }, [i18n]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <Layout>
+        <TransitionPage>
+          <IndexSkeleton />
+        </TransitionPage>
+      </Layout>
+    );
   }
 
   return (
