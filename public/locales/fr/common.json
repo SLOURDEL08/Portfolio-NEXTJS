@@ -102,7 +102,7 @@
     "kasa": {
       "description": "Développement des pages du site Kasa, similaire à Booking.com, permettant l'affichage des hébergements disponibles avec des descriptions détaillées, des avis sur les hôtes, et des fonctionnalités de réservation en ligne."
     },
-    "ferrari": {
+    "ferrari-beverly": {
       "description": "Reproduction de la page d'accueil du site Ferrari Beverly Hills en React, avec intégration des éléments tels que le menu, l'en-tête animé et les différents blocs jusqu'au pied de page. Optimisation pour les performances et la réactivité."
     },
     "ladigitoile": {
@@ -114,10 +114,10 @@
     "monvieuxgrimoire": {
       "description": "Développement back-end d'un projet de notation de livres, incluant authentification, gestion des routes, permissions et opérations CRUD sur la base de données. Intégration d'un système de notation et de commentaires des utilisateurs."
     },
-    "paulsavine": {
+    "paul-savine": {
       "description": "Site vitrine pour une entreprise spécialisée dans l'agencement de pharmacies et la rénovation intérieure. Présentation des projets réalisés et des services offerts, avec des images avant/après pour illustrer les transformations."
     },
-    "rocketschool": {
+    "rocket-school": {
       "description": "Développement de landing pages pour plusieurs filières spécifiques de RocketSchool, optimisées pour la publicité et le suivi avec Google Tag Manager, en respectant la mise en page du site officiel. Amélioration du taux de conversion des visiteurs."
     },
     "sirius": {
@@ -126,16 +126,16 @@
     "tesla": {
       "description": "Reproduction de la page d'accueil du site Tesla, incluant une logique de blocs qui défilent verticalement, un méga menu avec différentes sections et animations au survol. Optimisation pour la performance et la compatibilité mobile."
     },
-    "toast": {
+    "toast-collectif": {
       "description": "Site vitrine sur-mesure WordPress pour une agence de WebMarketing, avec mise en page personnalisée, slider manuel et lightbox. Intégration de témoignages clients et de cas d'études pour démontrer l'expertise de l'agence."
     },
     "sophiebluel": {
       "description": "Développement front-end du site de l'artiste SophieBluel, intégration de contenus dynamiques, connexion à une base de données et opérations CRUD. Mise en avant des œuvres et des expositions, avec une interface utilisateur moderne et intuitive."
     },
-    "codersmonkey": {
+    "coders-monkey": {
       "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container."
     },
-    "dietia": {
+    "diet-ia": {
       "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)"
     }
   }
