@@ -25,7 +25,7 @@ const StarRating: React.FC<StarRatingProps> = ({ onChange }) => {
           fill={star <= rating ? 'currentColor' : 'none'}
           viewBox='0 5 24 24'
           stroke='currentColor'
-          strokeWidth={2}
+          strokeWidth={1}
         >
           <path
             strokeLinecap='round'

@@ -19,8 +19,8 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className='navbar bg-[linear-gradient(#ffffff10,#ffffff05)] border-t border-stone-800  w-full p-24 max-[900px]:p-14 '>
-      <div className='flex gap-20 justify-between  max-[900px]:justify-start max-[900px]:gap-14 max-lg:flex-col order-2'>
-        <div className='flex gap-20 max-foot:flex-wrap justify-between w-[45%] max-lg:w-full max-lg:gap-28'>
+      <div className='flex gap-20 max-foot:gap-14 justify-between  max-[900px]:justify-start max-[900px]:gap-14 max-lg:flex-col order-2'>
+        <div className='flex gap-20 max-foot:gap-14 max-foot:flex-wrap justify-between w-[45%] max-lg:w-full max-lg:gap-28'>
           <div className='p-6  h-min max-w-28	min-w-[100px] min-h-[100px]  tr rounded-3xl order-first'>
             <Image
               width='400'
@@ -30,10 +30,10 @@ export const Footer: React.FC = () => {
               className='w-[100%] h-[100%]'
             />
           </div>
-          <div className=' flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:flex-wrap  justify- w-full'>
-            <div className='flex flex-col gap-2'>
+          <div className=' flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:gap-4 max-foot:justify-between  justify- w-full'>
+            <div className='flex flex-col gap-3'>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                 Accueil
               </Typography>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
                 CV
               </Typography>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
                 Projets
               </Typography>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -69,9 +69,9 @@ export const Footer: React.FC = () => {
                 Contact
               </Typography>
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-3'>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
                 Github
               </Typography>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -89,9 +89,9 @@ export const Footer: React.FC = () => {
                 Gitlab
               </Typography>
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-3'>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
                 Linkedin
               </Typography>
               <Typography
-                className='mb-2 hover:text-white transition ease-in-out max-[1250px]:text-lg'
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
