@@ -426,9 +426,9 @@
       "id": 18,
       "title": "Coders Monkey",
       "slug": "coders-monkey",
-      "image": "/projects-opti/codersmonkey/homepage.webp",
+      "image": "/projects/codersmonkey/homepage.webp",
       "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container.",
-      "symbol": "/projects-opti/codersmonkey/symbol.webp",
+      "symbol": "/projects/codersmonkey/symbol.webp",
       "categories": ["Full-stack"],
       "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
       "link": "/uber-eats-project-page",
@@ -437,13 +437,13 @@
 
           "date":"06/2024",
       "gallery": { 
-        "topright": "/projects-opti/codersmonkey/top-right.webp",
-        "topleft": "/projects-opti/codersmonkey/top-left.webp",
-      "botright": "/projects-opti/codersmonkey/bot-right.webp",
-      "botleft": "/projects-opti/codersmonkey/bot-left.webp",
-      "big": "/projects-opti/codersmonkey/big.webp",
-      "vertical": "/projects-opti/codersmonkey/vertical.webp",
-      "mkt": "/projects-opti/codersmonkey/mkt.webp"
+        "topright": "/projects/codersmonkey/top-right.webp",
+        "topleft": "/projects/codersmonkey/top-left.webp",
+      "botright": "/projects/codersmonkey/bot-right.webp",
+      "botleft": "/projects/codersmonkey/bot-left.webp",
+      "big": "/projects/codersmonkey/big.webp",
+      "vertical": "/projects/codersmonkey/vertical.webp",
+      "mkt": "/projects/codersmonkey/mkt.webp"
     
     }
     },

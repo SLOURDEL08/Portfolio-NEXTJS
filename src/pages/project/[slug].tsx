@@ -76,7 +76,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   const sections = ['Presentation', 'Ressources', 'Gallery'];
 
   const getSectionImagePath = (section: string) => {
-    return `/images/${section.toLowerCase()}.png`;
+    return `/${section.toLowerCase()}.png`;
   };
 
   const getNextProject = () => {
