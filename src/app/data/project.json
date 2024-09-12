@@ -466,22 +466,22 @@
       "id": 21,
       "title": "ServDrone",
       "slug": "serv-drone",
-      "image": "/projects/ServDrone/homepage.png",
+      "image": "/projects/servdrone-pop/homepage.png",
       "description": "Première création d'un site web en html et css sans maquette, projet rapide en binome lors de ma formation a Popschool. Uniquement la construction d'une page et des redictions. Premier projet de développement",
-      "symbol": "/projects/ServDrone/symbol.png",
+      "symbol": "/projects/servdrone-pop/symbol.png",
       "categories": ["Autres"],
       "tags": ["Html", "Css"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
           "date":"02/2019",
       "gallery": { 
-        "topright": "/projects/ServDrone/top-right.png",
-        "topleft": "/projects/ServDrone/top-left.png",
-      "botright": "/projects/ServDrone/bot-right.png",
-      "botleft": "/projects/ServDrone/bot-left.png",
-      "big": "/projects/ServDrone/big.png",
-      "vertical": "/projects/ServDrone/vertical.png",
-      "mkt": "/projects/ServDrone/mkt.png"
+        "topright": "/projects/servdrone-pop/top-right.png",
+        "topleft": "/projects/servdrone-pop/top-left.png",
+      "botright": "/projects/servdrone-pop/bot-right.png",
+      "botleft": "/projects/servdrone-pop/bot-left.png",
+      "big": "/projects/servdrone-pop/big.png",
+      "vertical": "/projects/servdrone-pop/vertical.png",
+      "mkt": "/projects/servdrone-pop/mkt.png"
     
     }
     },
