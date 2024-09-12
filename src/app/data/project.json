@@ -443,22 +443,22 @@
       "id": 20,
       "title": "GameZone",
       "slug": "game-zone",
-      "image": "/projects/GameZone/homepage.png",
+      "image": "/projects/game-zone/homepage.png",
       "description": "Mon deuxieme projet d'intégration d'une maquette d'un site web pour un parc d'attraction, projet en groupe. Première utilisation de javascript et navbar fonctionnel",
-      "symbol": "/projects/GameZone/symbol.png",
+      "symbol": "/projects/game-zone/symbol.png",
       "categories": ["Autres"],
       "tags": ["Formation","PopSchool","Html", "Css", "Javascript"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
           "date":"03/2019",
       "gallery": { 
-        "topright": "/projects/GameZone/top-right.png",
-        "topleft": "/projects/GameZone/top-left.png",
-      "botright": "/projects/GameZone/bot-right.png",
-      "botleft": "/projects/GameZone/bot-left.png",
-      "big": "/projects/GameZone/big.png",
-      "vertical": "/projects/GameZone/vertical.png",
-      "mkt": "/projects/GameZone/mkt.png"
+        "topright": "/projects/game-zone/top-right.png",
+        "topleft": "/projects/game-zone/top-left.png",
+      "botright": "/projects/game-zone/bot-right.png",
+      "botleft": "/projects/game-zone/bot-left.png",
+      "big": "/projects/game-zone/big.png",
+      "vertical": "/projects/game-zone/vertical.png",
+      "mkt": "/projects/game-zone/mkt.png"
     
     }
     },
@@ -533,24 +533,24 @@
     },
     {
       "id": 24,
-      "title": "CV1",
-      "slug": "cv1",
-      "image": "/projects/cv1/homepage.png",
+      "title": "Portfolio v1",
+      "slug": "Portfolio-v1",
+      "image": "/projects/portfolio-first/homepage.png",
       "description": "Prémière version de mon portfolio en ligne, durant ma formation OpenClassRoom. ",
-      "symbol": "/projects/cv1/symbol.png",
+      "symbol": "/projects/portfolio-first/symbol.png",
       "categories": ["Front-end"],
       "tags": ["React","Javascript","Router","Json"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
           "date":"03/2021",
       "gallery": { 
-        "topright": "/projects/cv1/top-right.png",
-        "topleft": "/projects/cv1/top-left.png",
-      "botright": "/projects/cv1/bot-right.png",
-      "botleft": "/projects/cv1/bot-left.png",
-      "big": "/projects/cv1/big.png",
-      "vertical": "/projects/cv1/vertical.png",
-      "mkt": "/projects/cv1/mkt.png"
+        "topright": "/projects/portfolio-first/top-right.png",
+        "topleft": "/projects/portfolio-first/top-left.png",
+      "botright": "/projects/portfolio-first/bot-right.png",
+      "botleft": "/projects/portfolio-first/bot-left.png",
+      "big": "/projects/portfolio-first/big.png",
+      "vertical": "/projects/portfolio-first/vertical.png",
+      "mkt": "/projects/portfolio-first/mkt.png"
     
     }
     }
