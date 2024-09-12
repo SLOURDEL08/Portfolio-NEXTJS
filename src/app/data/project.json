@@ -3,24 +3,23 @@
       "id": 1,
       "title": "Netflix",
       "slug": "netflix",
-      "image": "/projects/netflix/homepage.png",
+      "image": "/projects/netflix/homepage.webp",
       "description": "Développement front-end page d'accueil application web Netflix, intégration contenu dynanmique, slider pour voir les différentes films et différentes catégories.",
-      "symbol": "/projects/netflix/symbol.png",
+      "symbol": "/projects/netflix/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs","Front-end", "Integration", "JSON", "Carousel"],
       "link": "/netflix-project-page",
       "hoverBackgroundColor": "#370000d0",
-      "repoUrl": "https://uber.com",
-      "pageUrl":"https://youtube.com",
+      "repoUrl": "https://github.com/SLOURDEL08/Reactflix",
       "date":"10/2023",
       "gallery": { 
-        "topright": "/projects/netflix/top-right.png",
-        "topleft": "/projects/netflix/top-left.png",
-      "botright": "/projects/netflix/bot-right.png",
-      "botleft": "/projects/netflix/bot-left.png",
-      "big": "/projects/netflix/big.png",
-      "vertical": "/projects/netflix/vertical.png",
-      "mkt": "/projects/netflix/mkt.png"
+        "topright": "/projects/netflix/top-right.webp",
+        "topleft": "/projects/netflix/top-left.webp",
+      "botright": "/projects/netflix/bot-right.webp",
+      "botleft": "/projects/netflix/bot-left.webp",
+      "big": "/projects/netflix/big.webp",
+      "vertical": "/projects/netflix/vertical.webp",
+      "mkt": "/projects/netflix/mkt.webp"
     
     }
     
@@ -29,22 +28,23 @@
       "id": 2,
       "title": "Uber Eat",
       "slug": "uber-eat",
-      "image": "/projects/uber/homepage.png",
+      "image": "/projects/uber/homepage.webp",
       "description": "Projet réplique ancienne page uber eats, dynamique en Vue Js avec un systeme de filtres fonctionnel directement dans la search bar. Création de page dynamique selon le restaurant avec menu approprié.",
-      "symbol": "/projects/uber/symbol.png",
+      "symbol": "/projects/uber/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["VueJs", "Javascript", "Homepage", "JSON","Filter", "Front-end", "Component", "Dynamique", "Router", "Responsive", "SearchBar", "VueRouter", "Integration"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/UberEats",
           "date":"11/2023",
       "gallery": { 
-        "topright": "/projects/uber/top-right.png",
-        "topleft": "/projects/uber/top-left.png",
-      "botright": "/projects/uber/bot-right.png",
-      "botleft": "/projects/uber/bot-left.png",
-      "big": "/projects/uber/big.png",
-      "vertical": "/projects/uber/vertical.png",
-      "mkt": "/projects/uber/mkt.png"
+        "topright": "/projects/uber/top-right.webp",
+        "topleft": "/projects/uber/top-left.webp",
+      "botright": "/projects/uber/bot-right.webp",
+      "botleft": "/projects/uber/bot-left.webp",
+      "big": "/projects/uber/big.webp",
+      "vertical": "/projects/uber/vertical.webp",
+      "mkt": "/projects/uber/mkt.webp"
     
     }
     },
@@ -52,22 +52,24 @@
       "id": 3,
       "title": "Alliance Batiment",
       "slug": "abc-renov",
-      "image": "/projects/alliance/homepage.png",
+      "image": "/projects/alliance/homepage.webp",
       "description": "Construction d'un site vitrine Wordpress pour une entreprise de BTP qui étend son activité sur Nice. Mise en place d'un site multiplage avec formulaire, référencement et tracking",
-      "symbol": "/projects/alliance/symbol.png",
+      "symbol": "/projects/alliance/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://abc26.fr/",
+
           "date":"08/2022",
       "gallery": { 
-        "topright": "/projects/alliance/top-right.png",
-        "topleft": "/projects/alliance/top-left.png",
-      "botright": "/projects/alliance/bot-right.png",
-      "botleft": "/projects/alliance/bot-left.png",
-      "big": "/projects/alliance/big.png",
-      "vertical": "/projects/alliance/vertical.png",
-      "mkt": "/projects/alliance/mkt.png"
+        "topright": "/projects/alliance/top-right.webp",
+        "topleft": "/projects/alliance/top-left.webp",
+      "botright": "/projects/alliance/bot-right.webp",
+      "botleft": "/projects/alliance/bot-left.webp",
+      "big": "/projects/alliance/big.webp",
+      "vertical": "/projects/alliance/vertical.webp",
+      "mkt": "/projects/alliance/mkt.webp"
     
     }
     },
@@ -75,22 +77,24 @@
       "id": 4,
       "title": "Booki",
       "slug": "booki",
-      "image": "/projects/bookihtml/homepage.png",
+      "image": "/projects/bookihtml/homepage.webp",
       "description": "Projet Front-end, reproduire une page dynamique et responsive style booking.",
-      "symbol": "/projects/bookihtml/symbol.png",
+      "symbol": "/projects/bookihtml/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/BOOKI",
+
           "date":"10/2O22",
       "gallery": { 
-        "topright": "/projects/bookihtml/top-right.png",
-        "topleft": "/projects/bookihtml/top-left.png",
-      "botright": "/projects/bookihtml/bot-right.png",
-      "botleft": "/projects/bookihtml/bot-left.png",
-      "big": "/projects/bookihtml/big.png",
-      "vertical": "/projects/bookihtml/vertical.png",
-      "mkt": "/projects/bookihtml/mkt.png"
+        "topright": "/projects/bookihtml/top-right.webp",
+        "topleft": "/projects/bookihtml/top-left.webp",
+      "botright": "/projects/bookihtml/bot-right.webp",
+      "botleft": "/projects/bookihtml/bot-left.webp",
+      "big": "/projects/bookihtml/big.webp",
+      "vertical": "/projects/bookihtml/vertical.webp",
+      "mkt": "/projects/bookihtml/mkt.webp"
     
     }
     },
@@ -98,22 +102,23 @@
       "id": 5,
       "title": "Couvretanche",
       "slug": "couvretanche",
-      "image": "/projects/couvretanche/homepage.png",
+      "image": "/projects/couvretanche/homepage.webp",
       "description": "Site vitrine pour une PME spécialisé dans les toitures, couverture, l'éténchéité et l'isolation. Inspiration d'un site similaire pour la mise en page et le design, multipages avec formulaires.",
-      "symbol": "/projects/couvretanche/symbol.png",
+      "symbol": "/projects/couvretanche/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "MEGAMENU", "CSS", "RESPONSIVE","SUR-MESURE", "FORMULAIRE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://couvretanche.fr",
           "date":"11/2022",
       "gallery": { 
-        "topright": "/projects/couvretanche/top-right.png",
-        "topleft": "/projects/couvretanche/top-left.png",
-      "botright": "/projects/couvretanche/bot-right.png",
-      "botleft": "/projects/couvretanche/bot-left.png",
-      "big": "/projects/couvretanche/big.png",
-      "vertical": "/projects/couvretanche/vertical.png",
-      "mkt": "/projects/couvretanche/mkt.png"
+        "topright": "/projects/couvretanche/top-right.webp",
+        "topleft": "/projects/couvretanche/top-left.webp",
+      "botright": "/projects/couvretanche/bot-right.webp",
+      "botleft": "/projects/couvretanche/bot-left.webp",
+      "big": "/projects/couvretanche/big.webp",
+      "vertical": "/projects/couvretanche/vertical.webp",
+      "mkt": "/projects/couvretanche/mkt.webp"
     
     }
     },
@@ -121,22 +126,24 @@
       "id": 6,
       "title": "Couvrassistance",
       "slug": "couvrassistance",
-      "image": "/projects/couvrassistance/homepage.png",
+      "image": "/projects/couvrassistance/homepage.webp",
       "description": "Site vitrine pour une entreprise spécialisé dans l'assistance et la rénovation de toiture et couverture en urgence ou dans délais tres court.",
-      "symbol": "/projects/couvrassistance/symbol.png",
+      "symbol": "/projects/couvrassistance/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","SUR-MESURE", "FRONT", "FIGMA", "MAQUETTE", "OVH"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://couvrassistance.fr",
+
           "date":"06/2024",
       "gallery": { 
-        "topright": "/projects/couvrassistance/top-right.png",
-        "topleft": "/projects/couvrassistance/top-left.png",
-      "botright": "/projects/couvrassistance/bot-right.png",
-      "botleft": "/projects/couvrassistance/bot-left.png",
-      "big": "/projects/couvrassistance/big.png",
-      "vertical": "/projects/couvrassistance/vertical.png",
-      "mkt": "/projects/couvrassistance/mkt.png"
+        "topright": "/projects/couvrassistance/top-right.webp",
+        "topleft": "/projects/couvrassistance/top-left.webp",
+      "botright": "/projects/couvrassistance/bot-right.webp",
+      "botleft": "/projects/couvrassistance/bot-left.webp",
+      "big": "/projects/couvrassistance/big.webp",
+      "vertical": "/projects/couvrassistance/vertical.webp",
+      "mkt": "/projects/couvrassistance/mkt.webp"
     
     }
     },
@@ -144,22 +151,24 @@
       "id": 7,
       "title": "FerrariBeverly",
       "slug": "ferrari-beverly",
-      "image": "/projects/ferraribeverlyhills/homepage.png",
+      "image": "/projects/ferraribeverlyhills/homepage.webp",
       "description": "Reproduction de la page d'accueil du site FerrariBeverly en react en reprenant les différentes éléments comme le menu, le header animé et les différentes bloc jusqu'au footer ",
-      "symbol": "/projects/ferraribeverlyhills/symbol.png",
+      "symbol": "/projects/ferraribeverlyhills/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["REACTJS", "JSON", "JS", "RESPONSIVE","CAROUSEL", "ANIMATION", "FORM", "FRONTEND"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/FerrariBeverly",
+
           "date":"08/2022",
       "gallery": { 
-        "topright": "/projects/ferraribeverlyhills/top-right.png",
-        "topleft": "/projects/ferraribeverlyhills/top-left.png",
-      "botright": "/projects/ferraribeverlyhills/bot-right.png",
-      "botleft": "/projects/ferraribeverlyhills/bot-left.png",
-      "big": "/projects/ferraribeverlyhills/big.png",
-      "vertical": "/projects/ferraribeverlyhills/vertical.png",
-      "mkt": "/projects/ferraribeverlyhills/mkt.png"
+        "topright": "/projects/ferraribeverlyhills/top-right.webp",
+        "topleft": "/projects/ferraribeverlyhills/top-left.webp",
+      "botright": "/projects/ferraribeverlyhills/bot-right.webp",
+      "botleft": "/projects/ferraribeverlyhills/bot-left.webp",
+      "big": "/projects/ferraribeverlyhills/big.webp",
+      "vertical": "/projects/ferraribeverlyhills/vertical.webp",
+      "mkt": "/projects/ferraribeverlyhills/mkt.webp"
     
     }
     },
@@ -167,22 +176,24 @@
       "id": 8,
       "title": "KASA ",
       "slug": "kasa",
-      "image": "/projects/kasareact/homepage.png",
+      "image": "/projects/kasareact/homepage.webp",
       "description": "Construction des différentes pages du site Kasa (similaire booking) qui permet d'afficher les hébergements disponible avec différentes informations comme la description du lieu l'avis sur l'hébergeur ",
-      "symbol": "/projects/kasareact/symbol.png",
+      "symbol": "/projects/kasareact/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs", "CSS", "JS", "RESPONSIVE","MODAL", "COLLAPSE", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "FIGMA"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/KASA",
+
           "date":"09/2022",
       "gallery": { 
-        "topright": "/projects/kasareact/top-right.png",
-        "topleft": "/projects/kasareact/top-left.png",
-      "botright": "/projects/kasareact/bot-right.png",
-      "botleft": "/projects/kasareact/bot-left.png",
-      "big": "/projects/kasareact/big.png",
-      "vertical": "/projects/kasareact/vertical.png",
-      "mkt": "/projects/kasareact/mkt.png"
+        "topright": "/projects/kasareact/top-right.webp",
+        "topleft": "/projects/kasareact/top-left.webp",
+      "botright": "/projects/kasareact/bot-right.webp",
+      "botleft": "/projects/kasareact/bot-left.webp",
+      "big": "/projects/kasareact/big.webp",
+      "vertical": "/projects/kasareact/vertical.webp",
+      "mkt": "/projects/kasareact/mkt.webp"
     
     }
     },
@@ -190,22 +201,24 @@
       "id": 9,
       "title": "LaDigitoile",
       "slug": "ladigitoile",
-      "image": "/projects/ladigitoile/homepage.png",
+      "image": "/projects/ladigitoile/homepage.webp",
       "description": "Construction d'un site WebAgency sur-mesure, sur wordpress avec ajout de fonctionnalité sur-mesure, animation.",
-      "symbol": "/projects/ladigitoile/symbol.png",
+      "symbol": "/projects/ladigitoile/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["WORDPRESS", "MAQUETTE", "JS", "RESPONSIVE","FILTERS", "FRONT", "SECTION", "COLLAPSE", "ANIMATION", "DESIGN"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://ladigitoile.fr",
+
           "date":"03/2024",
       "gallery": { 
-        "topright": "/projects/ladigitoile/top-right.png",
-        "topleft": "/projects/ladigitoile/top-left.png",
-      "botright": "/projects/ladigitoile/bot-right.png",
-      "botleft": "/projects/ladigitoile/bot-left.png",
-      "big": "/projects/ladigitoile/big.png",
-      "vertical": "/projects/ladigitoile/vertical.png",
-      "mkt": "/projects/ladigitoile/mkt.png"
+        "topright": "/projects/ladigitoile/top-right.webp",
+        "topleft": "/projects/ladigitoile/top-left.webp",
+      "botright": "/projects/ladigitoile/bot-right.webp",
+      "botleft": "/projects/ladigitoile/bot-left.webp",
+      "big": "/projects/ladigitoile/big.webp",
+      "vertical": "/projects/ladigitoile/vertical.webp",
+      "mkt": "/projects/ladigitoile/mkt.webp"
     
     }
     },
@@ -213,22 +226,24 @@
       "id": 10,
       "title": "LesVanniers",
       "slug": "lesvanniers",
-      "image": "/projects/lesvanniers/homepage.png",
+      "image": "/projects/lesvanniers/homepage.webp",
       "description": "Site vitrine wordpress avec fonctionnalité de réservation de table, commande de plat ou redirection vers livraison. Mise en avant des plats , des menus et du restaurant.",
-      "symbol": "/projects/lesvanniers/symbol.png",
+      "symbol": "/projects/lesvanniers/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","ORDER", "FRONT"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://lesvanniers.fr",
+
           "date":"06/2024",
       "gallery": { 
-        "topright": "/projects/lesvanniers/top-right.png",
-        "topleft": "/projects/lesvanniers/top-left.png",
-      "botright": "/projects/lesvanniers/bot-right.png",
-      "botleft": "/projects/lesvanniers/bot-left.png",
-      "big": "/projects/lesvanniers/big.png",
-      "vertical": "/projects/lesvanniers/vertical.png",
-      "mkt": "/projects/lesvanniers/mkt.png"
+        "topright": "/projects/lesvanniers/top-right.webp",
+        "topleft": "/projects/lesvanniers/top-left.webp",
+      "botright": "/projects/lesvanniers/bot-right.webp",
+      "botleft": "/projects/lesvanniers/bot-left.webp",
+      "big": "/projects/lesvanniers/big.webp",
+      "vertical": "/projects/lesvanniers/vertical.webp",
+      "mkt": "/projects/lesvanniers/mkt.webp"
     
     }
     },
@@ -236,22 +251,24 @@
       "id": 11,
       "title": "MonVieuxGrimoire",
       "slug": "mon-vieux-grimoire",
-      "image": "/projects/monvieuxgrimoire/homepage.png",
+      "image": "/projects/monvieuxgrimoire/homepage.webp",
       "description": "Développement de la partie back-end d'un projet de notation de livre avec authentification gestion des routes, des permissions et du crud avec la base de donnée.",
-      "symbol": "/projects/monvieuxgrimoire/symbol.png",
+      "symbol": "/projects/monvieuxgrimoire/symbol.webp",
       "categories": ["Back-end"],
       "tags": ["NODEJS", "OPENCLASSROOM", "JAVACRIPT", "EXPRESSJS", "MONGODB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH", "FORMATION"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/MonVieuxGrimoire",
+
           "date":"06/2023",
       "gallery": { 
-        "topright": "/projects/monvieuxgrimoire/top-right.png",
-        "topleft": "/projects/monvieuxgrimoire/top-left.png",
-      "botright": "/projects/monvieuxgrimoire/bot-right.png",
-      "botleft": "/projects/monvieuxgrimoire/bot-left.png",
-      "big": "/projects/monvieuxgrimoire/big.png",
-      "vertical": "/projects/monvieuxgrimoire/vertical.png",
-      "mkt": "/projects/monvieuxgrimoire/mkt.png"
+        "topright": "/projects/monvieuxgrimoire/top-right.webp",
+        "topleft": "/projects/monvieuxgrimoire/top-left.webp",
+      "botright": "/projects/monvieuxgrimoire/bot-right.webp",
+      "botleft": "/projects/monvieuxgrimoire/bot-left.webp",
+      "big": "/projects/monvieuxgrimoire/big.webp",
+      "vertical": "/projects/monvieuxgrimoire/vertical.webp",
+      "mkt": "/projects/monvieuxgrimoire/mkt.webp"
     
     }
     },
@@ -259,22 +276,24 @@
       "id": 12,
       "title": "PaulSavine",
       "slug": "paul-savine",
-      "image": "/projects/paulsavine/homepage.png",
+      "image": "/projects/paulsavine/homepage.webp",
       "description": "Site vitrine pour une société spécialisé dans l'agencement de pharmacie et la rénovation intérieur.",
-      "symbol": "/projects/paulsavine/symbol.png",
+      "symbol": "/projects/paulsavine/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "SEO", "RESPONSIVE", "BLOG", "MAQUETTE", "DESIGN", "GOOGLE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://paulsavine.fr",
+
           "date":"02/2024",
       "gallery": { 
-        "topright": "/projects/paulsavine/top-right.png",
-        "topleft": "/projects/paulsavine/top-left.png",
-      "botright": "/projects/paulsavine/bot-right.png",
-      "botleft": "/projects/paulsavine/bot-left.png",
-      "big": "/projects/paulsavine/big.png",
-      "vertical": "/projects/paulsavine/vertical.png",
-      "mkt": "/projects/paulsavine/mkt.png"
+        "topright": "/projects/paulsavine/top-right.webp",
+        "topleft": "/projects/paulsavine/top-left.webp",
+      "botright": "/projects/paulsavine/bot-right.webp",
+      "botleft": "/projects/paulsavine/bot-left.webp",
+      "big": "/projects/paulsavine/big.webp",
+      "vertical": "/projects/paulsavine/vertical.webp",
+      "mkt": "/projects/paulsavine/mkt.webp"
     
     }
     },
@@ -282,22 +301,25 @@
       "id": 13,
       "title": "RocketSchool",
       "slug": "rocket-school",
-      "image": "/projects/rocketlanding/homepage.png",
+      "image": "/projects/rocketlanding/homepage.webp",
       "description": "Développement de landing page pour plusieurs filiére spécifiqueet optimisation pour publicité, tracking google tag manager et mise en page selon site officiel rocketschool ",
-      "symbol": "/projects/rocketlanding/symbol.png",
+      "symbol": "/projects/rocketlanding/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["LANDINGPAGE", "TRACKING", "INTEGRATION", "CREATION", "OPTIMISATION", "TAGMANAGER", "LEADPAGE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "http://master.rocket-school.com/",
+            "pageUrl":"https://www.behance.net/gallery/180229181/Rocket-School",
+
           "date":"11/2022",
       "gallery": { 
-        "topright": "/projects/rocketlanding/top-right.png",
-        "topleft": "/projects/rocketlanding/top-left.png",
-      "botright": "/projects/rocketlanding/bot-right.png",
-      "botleft": "/projects/rocketlanding/bot-left.png",
-      "big": "/projects/rocketlanding/big.png",
-      "vertical": "/projects/rocketlanding/vertical.png",
-      "mkt": "/projects/rocketlanding/mkt.png"
+        "topright": "/projects/rocketlanding/top-right.webp",
+        "topleft": "/projects/rocketlanding/top-left.webp",
+      "botright": "/projects/rocketlanding/bot-right.webp",
+      "botleft": "/projects/rocketlanding/bot-left.webp",
+      "big": "/projects/rocketlanding/big.webp",
+      "vertical": "/projects/rocketlanding/vertical.webp",
+      "mkt": "/projects/rocketlanding/mkt.webp"
     
     }
     },
@@ -305,22 +327,24 @@
       "id": 14,
       "title": "Sirius",
       "slug": "sirius",
-      "image": "/projects/sirius/homepage.png",
+      "image": "/projects/sirius/homepage.webp",
       "description": "Wordpress vitrine pour une société dans la sécurité de lieu, dévénement et autre. Refonte de la mise en page avec animation , slider , formulaire.",
-      "symbol": "/projects/sirius/top-left.png",
+      "symbol": "/projects/sirius/top-left.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "ELEMENTOR", "ANIMATION", "SLIDER", "CSS", "RESPONSIVE"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://siriussecurite.fr",
+
           "date":"01/2024",
       "gallery": { 
-        "topright": "/projects/sirius/top-right.png",
-        "topleft": "/projects/sirius/top-left.png",
-      "botright": "/projects/sirius/bot-right.png",
-      "botleft": "/projects/sirius/bot-left.png",
-      "big": "/projects/sirius/big.png",
-      "vertical": "/projects/sirius/vertical.png",
-      "mkt": "/projects/sirius/mkt.png"
+        "topright": "/projects/sirius/top-right.webp",
+        "topleft": "/projects/sirius/top-left.webp",
+      "botright": "/projects/sirius/bot-right.webp",
+      "botleft": "/projects/sirius/bot-left.webp",
+      "big": "/projects/sirius/big.webp",
+      "vertical": "/projects/sirius/vertical.webp",
+      "mkt": "/projects/sirius/mkt.webp"
     
     }
     },
@@ -328,22 +352,24 @@
       "id": 15,
       "title": "SophieBluel",
       "slug": "sophie-bluel",
-      "image": "/projects/sophiedesign/homepage.png",
+      "image": "/projects/sophiedesign/homepage.webp",
       "description": "Développement de la partie front-end du site de SophieBluel Artiste, intégration des elements dynamique, connexion avec base donnée et crud",
-      "symbol": "/projects/sophiedesign/symbol.png",
+      "symbol": "/projects/sophiedesign/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["OPENCLASSROOM", "INREGRATION", "JAVASCRIPT", "JSON", "RESPONSIVE", "FORM", "CRUD"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/SophieBluel",
+
           "date":"02/2023",
       "gallery": { 
-        "topright": "/projects/sophiedesign/top-right.png",
-        "topleft": "/projects/sophiedesign/top-left.png",
-      "botright": "/projects/sophiedesign/bot-right.png",
-      "botleft": "/projects/sophiedesign/bot-left.png",
-      "big": "/projects/sophiedesign/big.png",
-      "vertical": "/projects/sophiedesign/vertical.png",
-      "mkt": "/projects/sophiedesign/mkt.png"
+        "topright": "/projects/sophiedesign/top-right.webp",
+        "topleft": "/projects/sophiedesign/top-left.webp",
+      "botright": "/projects/sophiedesign/bot-right.webp",
+      "botleft": "/projects/sophiedesign/bot-left.webp",
+      "big": "/projects/sophiedesign/big.webp",
+      "vertical": "/projects/sophiedesign/vertical.webp",
+      "mkt": "/projects/sophiedesign/mkt.webp"
     
     }
     },
@@ -351,22 +377,23 @@
       "id": 16,
       "title": "Tesla",
       "slug": "tesla",
-      "image": "/projects/teslahome/homepage.png",
+      "image": "/projects/teslahome/homepage.webp",
       "description": "Reproduction de la page d'accueil du site Tesla avec la logique de bloc qui slide vers le base, mega menu avec différentes section et hover animation.",
-      "symbol": "/projects/teslahome/symbol.png",
+      "symbol": "/projects/teslahome/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs", "Y-Scroll", "MegaMenu", "Homepage", "Integration", "SectionScroll", "useState", ""],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+
           "date":"04/2022",
       "gallery": { 
-        "topright": "/projects/teslahome/top-right.png",
-        "topleft": "/projects/teslahome/top-left.png",
-      "botright": "/projects/teslahome/bot-right.png",
-      "botleft": "/projects/teslahome/bot-left.png",
-      "big": "/projects/teslahome/big.png",
-      "vertical": "/projects/teslahome/vertical.png",
-      "mkt": "/projects/teslahome/mkt.png"
+        "topright": "/projects/teslahome/top-right.webp",
+        "topleft": "/projects/teslahome/top-left.webp",
+      "botright": "/projects/teslahome/bot-right.webp",
+      "botleft": "/projects/teslahome/bot-left.webp",
+      "big": "/projects/teslahome/big.webp",
+      "vertical": "/projects/teslahome/vertical.webp",
+      "mkt": "/projects/teslahome/mkt.webp"
     
     }
     },
@@ -374,22 +401,24 @@
       "id": 17,
       "title": "Toast Collectif",
       "slug": "toast-collectif",
-      "image": "/projects/toast/homepage.png",
+      "image": "/projects/toast/homepage.webp",
       "description": "Site vitrine wordpress sur-mesure pour une WebMarketing agency, mise en page sur-mesure avec slider à la main et lightbox",
-      "symbol": "/projects/toast/symbol.png",
+      "symbol": "/projects/toast/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "JS", "CSS", "Responsive", "Tracking", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://toast-collectif.fr",
+
           "date":"04/2023",
       "gallery": { 
-        "topright": "/projects/toast/top-right.png",
-        "topleft": "/projects/toast/top-left.png",
-      "botright": "/projects/toast/bot-right.png",
-      "botleft": "/projects/toast/bot-left.png",
-      "big": "/projects/toast/big.png",
-      "vertical": "/projects/toast/vertical.png",
-      "mkt": "/projects/toast/mkt.png"
+        "topright": "/projects/toast/top-right.webp",
+        "topleft": "/projects/toast/top-left.webp",
+      "botright": "/projects/toast/bot-right.webp",
+      "botleft": "/projects/toast/bot-left.webp",
+      "big": "/projects/toast/big.webp",
+      "vertical": "/projects/toast/vertical.webp",
+      "mkt": "/projects/toast/mkt.webp"
     
     }
     },
@@ -397,22 +426,24 @@
       "id": 18,
       "title": "Coders Monkey",
       "slug": "coders-monkey",
-      "image": "/projects/codersmonkey/homepage.png",
+      "image": "/projects-opti/codersmonkey/homepage.webp",
       "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container.",
-      "symbol": "/projects/codersmonkey/symbol.jpg",
+      "symbol": "/projects-opti/codersmonkey/symbol.webp",
       "categories": ["Full-stack"],
       "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://gitlab.com/coders-monkeys00",
+
           "date":"06/2024",
       "gallery": { 
-        "topright": "/projects/codersmonkey/top-right.png",
-        "topleft": "/projects/codersmonkey/top-left.png",
-      "botright": "/projects/codersmonkey/bot-right.png",
-      "botleft": "/projects/codersmonkey/bot-left.png",
-      "big": "/projects/codersmonkey/big.png",
-      "vertical": "/projects/codersmonkey/vertical.png",
-      "mkt": "/projects/codersmonkey/mkt.png"
+        "topright": "/projects-opti/codersmonkey/top-right.webp",
+        "topleft": "/projects-opti/codersmonkey/top-left.webp",
+      "botright": "/projects-opti/codersmonkey/bot-right.webp",
+      "botleft": "/projects-opti/codersmonkey/bot-left.webp",
+      "big": "/projects-opti/codersmonkey/big.webp",
+      "vertical": "/projects-opti/codersmonkey/vertical.webp",
+      "mkt": "/projects-opti/codersmonkey/mkt.webp"
     
     }
     },
@@ -420,91 +451,49 @@
       "id": 19,
       "title": "DietIA",
       "slug": "diet-ia",
-      "image": "/projects/dietia/homepage.png",
+      "image": "/projects/dietia/homepage.webp",
       "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)",
-      "symbol": "/projects/dietia/symbol.png",
+      "symbol": "/projects/dietia/symbol.webp",
       "categories": ["Full-stack"],
       "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "repoUrl": "https://github.com/SLOURDEL08/diet-ia",
+
           "date":"07/2024",
       "gallery": { 
-        "topright": "/projects/dietia/top-right.png",
-        "topleft": "/projects/dietia/top-left.png",
-      "botright": "/projects/dietia/bot-right.png",
-      "botleft": "/projects/dietia/bot-left.png",
-      "big": "/projects/dietia/big.png",
-      "vertical": "/projects/dietia/vertical.png",
-      "mkt": "/projects/dietia/mkt.png"
+        "topright": "/projects/dietia/top-right.webp",
+        "topleft": "/projects/dietia/top-left.webp",
+      "botright": "/projects/dietia/bot-right.webp",
+      "botleft": "/projects/dietia/bot-left.webp",
+      "big": "/projects/dietia/big.webp",
+      "vertical": "/projects/dietia/vertical.webp",
+      "mkt": "/projects/dietia/mkt.webp"
     
     }
     },
-     {
-      "id": 20,
-      "title": "GameZone",
-      "slug": "game-zone",
-      "image": "/projects/game-zone/homepage.png",
-      "description": "Mon deuxieme projet d'intégration d'une maquette d'un site web pour un parc d'attraction, projet en groupe. Première utilisation de javascript et navbar fonctionnel",
-      "symbol": "/projects/game-zone/symbol.png",
-      "categories": ["Autres"],
-      "tags": ["Formation","PopSchool","Html", "Css", "Javascript"],
-      "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700d0",
-          "date":"03/2019",
-      "gallery": { 
-        "topright": "/projects/game-zone/top-right.png",
-        "topleft": "/projects/game-zone/top-left.png",
-      "botright": "/projects/game-zone/bot-right.png",
-      "botleft": "/projects/game-zone/bot-left.png",
-      "big": "/projects/game-zone/big.png",
-      "vertical": "/projects/game-zone/vertical.png",
-      "mkt": "/projects/game-zone/mkt.png"
-    
-    }
-    },
-         {
-      "id": 21,
-      "title": "ServDrone",
-      "slug": "serv-drone",
-      "image": "/projects/servdrone-pop/homepage.png",
-      "description": "Première création d'un site web en html et css sans maquette, projet rapide en binome lors de ma formation a Popschool. Uniquement la construction d'une page et des redictions. Premier projet de développement",
-      "symbol": "/projects/servdrone-pop/symbol.png",
-      "categories": ["Autres"],
-      "tags": ["Html", "Css"],
-      "link": "/uber-eats-project-page",
-      "hoverBackgroundColor": "#073700d0",
-          "date":"02/2019",
-      "gallery": { 
-        "topright": "/projects/servdrone-pop/top-right.png",
-        "topleft": "/projects/servdrone-pop/top-left.png",
-      "botright": "/projects/servdrone-pop/bot-right.png",
-      "botleft": "/projects/servdrone-pop/bot-left.png",
-      "big": "/projects/servdrone-pop/big.png",
-      "vertical": "/projects/servdrone-pop/vertical.png",
-      "mkt": "/projects/servdrone-pop/mkt.png"
-    
-    }
-    },
+     
          {
       "id": 22,
       "title": "Digitalizerr",
       "slug": "digitalizerr",
-      "image": "/projects/digitalizerr/homepage.png",
+      "image": "/projects/digitalizerr/homepage.webp",
       "description": "Maquette fictive pour une Agence web, design epuré avec lueur en background. Construction sur Figma avec l'aide de Photosop par moment.",
-      "symbol": "/projects/digitalizerr/symbol.png",
+      "symbol": "/projects/digitalizerr/symbol.webp",
       "categories": ["Autres"],
       "tags": ["Figma","Photoshop","Pinterest","Dribble"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+
           "date":"11/2020",
       "gallery": { 
-        "topright": "/projects/digitalizerr/top-right.png",
-        "topleft": "/projects/digitalizerr/top-left.png",
-      "botright": "/projects/digitalizerr/bot-right.png",
-      "botleft": "/projects/digitalizerr/bot-left.png",
-      "big": "/projects/digitalizerr/big.png",
-      "vertical": "/projects/digitalizerr/vertical.png",
-      "mkt": "/projects/digitalizerr/mkt.png"
+        "topright": "/projects/digitalizerr/top-right.webp",
+        "topleft": "/projects/digitalizerr/top-left.webp",
+      "botright": "/projects/digitalizerr/bot-right.webp",
+      "botleft": "/projects/digitalizerr/bot-left.webp",
+      "big": "/projects/digitalizerr/big.webp",
+      "vertical": "/projects/digitalizerr/vertical.webp",
+      "mkt": "/projects/digitalizerr/mkt.webp"
     
     }
     },
@@ -512,22 +501,23 @@
       "id": 23,
       "title": "WebAgency",
       "slug": "webagency",
-      "image": "/projects/webagency/homepage.png",
+      "image": "/projects/webagency/homepage.webp",
       "description": "Maquette site vitrine pour un projet personnel, création d'un design simple et d'une identité. Maquette développé sur Figma et intrégré ensuite.",
-      "symbol": "/projects/webagency/symbol.png",
+      "symbol": "/projects/webagency/symbol.webp",
       "categories": ["Autres"],
       "tags": ["Figma","Photoshop","Pinterest","Dribble"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+
           "date":"03/2021",
       "gallery": { 
-        "topright": "/projects/webagency/top-right.png",
-        "topleft": "/projects/webagency/top-left.png",
-      "botright": "/projects/webagency/bot-right.png",
-      "botleft": "/projects/webagency/bot-left.png",
-      "big": "/projects/webagency/big.png",
-      "vertical": "/projects/webagency/vertical.png",
-      "mkt": "/projects/webagency/mkt.png"
+        "topright": "/projects/webagency/top-right.webp",
+        "topleft": "/projects/webagency/top-left.webp",
+      "botright": "/projects/webagency/bot-right.webp",
+      "botleft": "/projects/webagency/bot-left.webp",
+      "big": "/projects/webagency/big.webp",
+      "vertical": "/projects/webagency/vertical.webp",
+      "mkt": "/projects/webagency/mkt.webp"
     
     }
     },
@@ -535,22 +525,25 @@
       "id": 24,
       "title": "Portfolio v1",
       "slug": "Portfolio-v1",
-      "image": "/projects/portfolio-first/homepage.png",
+      "image": "/projects/portfolio-first/homepage.webp",
       "description": "Prémière version de mon portfolio en ligne, durant ma formation OpenClassRoom. ",
-      "symbol": "/projects/portfolio-first/symbol.png",
+      "symbol": "/projects/portfolio-first/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["React","Javascript","Router","Json"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://slourdel08.github.io/CV/#/portfolio",
+            "repoUrl":"https://github.com/SLOURDEL08/CV",
+
           "date":"03/2021",
       "gallery": { 
-        "topright": "/projects/portfolio-first/top-right.png",
-        "topleft": "/projects/portfolio-first/top-left.png",
-      "botright": "/projects/portfolio-first/bot-right.png",
-      "botleft": "/projects/portfolio-first/bot-left.png",
-      "big": "/projects/portfolio-first/big.png",
-      "vertical": "/projects/portfolio-first/vertical.png",
-      "mkt": "/projects/portfolio-first/mkt.png"
+        "topright": "/projects/portfolio-first/top-right.webp",
+        "topleft": "/projects/portfolio-first/top-left.webp",
+      "botright": "/projects/portfolio-first/bot-right.webp",
+      "botleft": "/projects/portfolio-first/bot-left.webp",
+      "big": "/projects/portfolio-first/big.webp",
+      "vertical": "/projects/portfolio-first/vertical.webp",
+      "mkt": "/projects/portfolio-first/mkt.webp"
     
     }
     }

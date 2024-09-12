@@ -1,0 +1,141 @@
+{
+  "general": {
+    "welcome": "Descubre mi portafolio Front-End NextJs",
+    "madewith": "Hecho con",
+    "all": "Todos"
+  },
+  "index": {
+    "description": "Mi nombre es Sébastien LOURDEL, tengo 25 años y comencé a desarrollar hace 5 años con HTML/CSS y WordPress. Desde entonces, he seguido formándome para mejorar mis habilidades como desarrollador front-end. Desde pequeño me ha apasionado la informática, y he utilizado mucho la suite de Adobe, lo que hoy me permite estar cómodo con los bocetos, la integración gráfica y los conceptos de UX/UI.",
+    "button": {
+      "first": "Mi CV",
+      "second": "Mis proyectos"
+    },
+    "title": {
+      "exp": "Últimas experiencias",
+      "form": "Formación",
+      "project": "Mis proyectos"
+    },
+    "download": {
+      "cv": "¡Descarga mi CV!"
+    }
+  },
+  "header": {
+    "home": "Inicio",
+    "cv": "CV",
+    "project": "Proyectos",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Desarrollador web front-end React/NextJs",
+    "collapse": {
+      "more": "Ver más",
+      "close": "Cerrar"
+    }
+  },
+  "education": {
+    "openclassroom": {
+      "title": "Título profesional bac +2 Desarrollador web y aplicaciones (RNCP 5)",
+      "description": "Aprendizaje de desarrollador web, creación de aplicaciones funcionales front-end/back-end con conceptos de SEO, responsive, código verde y trabajo ágil."
+    },
+    "popschool": {
+      "title": "Título profesional bac +2 Desarrollador web y aplicaciones móviles (RNCP 5)",
+      "description": "Curso de formación de seis meses en Popschool Valenciennes, aprendiendo lenguajes de programación, métodos ágiles, desarrollo móvil y buenas prácticas."
+    },
+    "bac": {
+      "title": "Bachillerato en Ciencias y Tecnologías de la Gestión Empresarial",
+      "description": "Bachillerato en Ciencias y Tecnologías de la Gestión Empresarial en el Lycée Arthur-Rimbaud en Sin-le-Noble."
+    },
+    "brevet": {
+      "description": "Colegio André Malraux Lambres-lez-Douai"
+    }
+  },
+  "experience": {
+    "freelance": {
+      "description": "Desarrollo de sitios web de presentación, comercio electrónico o soluciones de reservas llave en mano para autónomos y pequeñas empresas. Campañas publicitarias, diseño gráfico, SEO, seguimiento y optimización."
+    },
+    "flexpress": {
+      "description": "Entrega de paquetes para particulares y empresas (Fedex, Chronopost, GLS) utilizando camiones de 14m3 y transporte de piezas pesadas y cocinas con camiones de 20m3. Trabajo de ritmo rápido y gestión de jornadas de 8 a 12 horas."
+    },
+    "toast": {
+      "description": "Desarrollo de sitios web en WordPress, mantenimiento, adición de funcionalidades, creación de páginas y optimización de embudos de ventas. Diseño de maquetas y prototipos, gestión de campañas publicitarias en Facebook y Google Ads, y seguimiento mediante Google Tag Manager."
+    },
+    "faurecia": {
+      "description": "Montaje de textiles para asientos de automóviles, control de calidad y seguridad, intervención rápida en caso de parada de la línea de producción y dominio de los diferentes materiales y puestos de montaje de textiles y metales."
+    },
+    "trigo": {
+      "va": {
+        "description": "Control de calidad de las piezas estéticas, segregación de artículos no conformes, redacción de informes, retoques de piezas automotrices y mantenimiento del ritmo de producción."
+      },
+      "sin": {
+        "description": "Control de calidad de las piezas estéticas para Renault Talisman, segregación de artículos no conformes, retoques de piezas, gestión de inventarios, ajuste de máquinas y pruebas de tabletas R-LINK."
+      }
+    },
+    "dk": {
+      "description": "Desarrollo y mantenimiento de sitios web en WordPress, desarrollo de una intranet con HTML/CSS/PHP, optimización, SEO y diseño de maquetas y prototipos."
+    },
+    "graphic": {
+      "description": "Corte y montaje de prototipos de cartón para grandes distribuidores. Abastecimiento de máquinas, control de la línea de producción y gestión de equipos para empaques industriales."
+    }
+  },
+  "projects": {
+    "title": "Mis proyectos",
+    "description": "Encuentra todos mis proyectos de desarrollo web, diseño gráfico, back/front-end y más.",
+    "netflix": {
+      "description": "Desarrollo front-end de la página de inicio de la aplicación web de Netflix, con integración de contenido dinámico, un deslizador para navegar entre las películas y las diferentes categorías. Diseño y optimización para una mejor experiencia de usuario."
+    },
+    "uber-eat": {
+      "description": "Reproducción de la antigua página de inicio de Uber Eats, utilizando Vue.js para una interfaz dinámica con un sistema de filtros funcional en la barra de búsqueda. Creación de páginas dinámicas para cada restaurante con menús específicos y gestión de pedidos en tiempo real."
+    },
+    "abc-renov": {
+      "description": "Creación de un sitio web de presentación en WordPress para una empresa de construcción con sede en Niza. Configuración de un sitio multipágina que incluye formularios de contacto, SEO optimizado y seguimiento analítico para mejorar la visibilidad y el compromiso de los visitantes."
+    },
+    "booki": {
+      "description": "Proyecto front-end dirigido a recrear una página web dinámica y responsive, al estilo de Booking.com. Usando tecnologías modernas para una interfaz de usuario fluida y compatibilidad en diferentes dispositivos."
+    },
+    "couvretanche": {
+      "description": "Sitio de presentación para una pequeña empresa especializada en techos, cubiertas, impermeabilización y aislamiento. Diseño inspirado en un sitio similar, con un diseño multipágina e integración de formularios de contacto, permitiendo a los clientes solicitar presupuestos o información."
+    },
+    "couvrassistance": {
+      "description": "Sitio de presentación para una empresa especializada en asistencia y renovación de techos y cubiertas, con capacidad de respuesta para emergencias. Destacando los servicios ofrecidos y testimonios de clientes satisfechos."
+    },
+    "kasa": {
+      "description": "Desarrollo de páginas para Kasa, un sitio similar a Booking.com, que permite mostrar alojamientos disponibles con descripciones detalladas, opiniones y funcionalidades de reserva en línea."
+    },
+    "ferrari": {
+      "description": "Reproducción de la página de inicio del sitio de Ferrari Beverly Hills en React, con integración de elementos como el menú, la cabecera animada y los diferentes bloques hasta el pie de página. Optimización para rendimiento y capacidad de respuesta."
+    },
+    "ladigitoile": {
+      "description": "Sitio personalizado para una agencia WebAgency en WordPress, con funciones personalizadas y animaciones añadidas. Implementación de un portafolio interactivo y formularios de contacto para atraer nuevos clientes."
+    },
+    "lesvanniers": {
+      "description": "Sitio de presentación en WordPress con funciones de reserva de mesas, pedido de comidas y redirección a servicios de entrega. Destacando los platos, menús y el restaurante. Optimización SEO para atraer más clientes locales."
+    },
+    "monvieuxgrimoire": {
+      "description": "Desarrollo back-end de un proyecto de calificación de libros, que incluye autenticación, gestión de rutas, permisos y operaciones CRUD en la base de datos. Integración de un sistema de calificación y comentarios de usuarios."
+    },
+    "paulsavine": {
+      "description": "Sitio de presentación para una empresa especializada en la organización de farmacias y renovación de interiores. Presentación de los proyectos realizados y los servicios ofrecidos, con imágenes de antes/después para ilustrar las transformaciones."
+    },
+    "rocketschool": {
+      "description": "Desarrollo de páginas de destino para varias ramas específicas de RocketSchool, optimizadas para publicidad y seguimiento con Google Tag Manager, respetando el diseño del sitio oficial. Mejora de la tasa de conversión de visitantes."
+    },
+    "sirius": {
+      "description": "Sitio de presentación en WordPress para una empresa de seguridad de eventos. Rediseño del diseño con animaciones, controles deslizantes y formularios. Destacando los servicios ofrecidos y los eventos asegurados con éxito."
+    },
+    "tesla": {
+      "description": "Reproducción de la página de inicio del sitio de Tesla, incluyendo una lógica de bloques que se desplazan verticalmente, un mega menú con varias secciones y animaciones al pasar el cursor. Optimización para el rendimiento y la compatibilidad móvil."
+    },
+    "toast": {
+      "description": "Sitio de presentación personalizado en WordPress para una agencia de marketing web, con diseño personalizado, deslizador manual y lightbox. Integración de testimonios de clientes y estudios de casos para demostrar la experiencia de la agencia."
+    },
+    "sophiebluel": {
+      "description": "Desarrollo front-end del sitio de la artista SophieBluel, integración de contenido dinámico, conexión a la base de datos y operaciones CRUD. Destacando las obras y exposiciones, con una interfaz de usuario moderna e intuitiva."
+    },
+    "codersmonkey": {
+      "description": "Proyecto full-stack desarrollado en Next JS para el front-end y Firebase para el back-end de la aplicación. Proyecto escalable diseñado para facilitar las modificaciones, utilizando el modelo Vue/Container."
+    },
+    "dietia": {
+      "description": "WebApp full-stack en NextJs, que genera recetas según los objetivos del usuario. El objetivo final es conectar cada cuenta a una IA que guiará al usuario en su proyecto (generación de comidas, estimación de pérdida de peso/ganancia muscular...)."
+    }
+  }
+}

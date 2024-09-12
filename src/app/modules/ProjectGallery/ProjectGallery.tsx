@@ -41,7 +41,7 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
   ];
 
   return (
-    <div className='gallery-block flex flex-col gap-8'>
+    <div className='gallery-block w-full flex flex-col gap-8'>
       <div className='main-image-container w-full h-[400px] relative rounded-3xl overflow-hidden'>
         <Image
           src={activeImage}
@@ -65,30 +65,28 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
       </div>
 
       <div
-        className='thumbnail-container p-4 px-10 -mx-10 -my-4 overflow-x-auto whitespace-nowrap'
+        className='thumbnail-container w-full overflow-x-auto'
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        <div className='inline-flex gap-8'>
+        <div className='inline-flex gap-4 pb-4'>
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className={`cursor-pointer w-[200px] h-[150px] relative rounded-2xl overflow-hidden transition-all duration-300 ${
-                activeImage === image ? '' : ''
+              className={`cursor-pointer w-[180px] h-[135px] relative rounded-2xl overflow-hidden flex-shrink-0 transition-all duration-300 ${
+                activeImage === image ? ' ' : ''
               }`}
               onClick={() => setActiveImage(image)}
             >
-              <div className='w-full h-full overflow-hidden'>
-                <Image
-                  src={image}
-                  layout='fill'
-                  objectFit='cover'
-                  alt={`Gallery thumbnail ${index + 1}`}
-                  className='transition-all duration-300 ease-in-out hover:scale-110'
-                />
-                {activeImage !== image && (
-                  <div className='absolute inset-0 bg-black bg-opacity-50  backdrop-blur-xs grayscale transition-all duration-300 ease-in-out hover:opacity-0'></div>
-                )}
-              </div>
+              <Image
+                src={image}
+                layout='fill'
+                objectFit='cover'
+                alt={`Gallery thumbnail ${index + 1}`}
+                className='transition-all duration-300 ease-in-out hover:scale-110'
+              />
+              {activeImage !== image && (
+                <div className='absolute inset-0 bg-black bg-opacity-50 backdrop-blur-xs grayscale transition-all duration-300 ease-in-out hover:opacity-0'></div>
+              )}
             </div>
           ))}
         </div>
