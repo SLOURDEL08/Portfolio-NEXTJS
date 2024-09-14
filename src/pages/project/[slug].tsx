@@ -73,7 +73,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
     setSelectedSection(section.toLowerCase());
   };
 
-  const sections = ['Presentation', 'Ressources', 'Gallery'];
+  const sections = ['presentation', 'ressources', 'gallery'];
 
   const getSectionImagePath = (section: string) => {
     return `/${section.toLowerCase()}.png`;
