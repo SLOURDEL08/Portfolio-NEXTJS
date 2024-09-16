@@ -179,7 +179,7 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
                 <Typography
-                  theme='white'
+                  theme='graylight'
                   weight='light'
                   variant='body-base'
                   component='p'

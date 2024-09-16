@@ -254,7 +254,7 @@ const AboutPage: React.FC = () => {
                     <Typography
                       theme='graylight'
                       weight='medium'
-                      variant='body-lg'
+                      variant='body-base'
                       component='p'
                       fontFamily='ClashDisplay'
                     >
@@ -269,7 +269,7 @@ const AboutPage: React.FC = () => {
                       component='p'
                       fontFamily='SanFrancisco'
                     >
-                      (A2)
+                      (B2/C1)
                     </Typography>
                   </div>
                 </div>

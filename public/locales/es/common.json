@@ -2,7 +2,11 @@
   "general": {
     "welcome": "Descubre mi portafolio Front-End NextJs",
     "madewith": "Hecho con",
-    "all": "Todos"
+    "all": "Todos",
+    "learnMore": "En savoir plus",
+        "other": "Autres"
+        
+
   },
   "index": {
     "description": "Mi nombre es Sébastien LOURDEL, tengo 25 años y comencé a desarrollar hace 5 años con HTML/CSS y WordPress. Desde entonces, he seguido formándome para mejorar mis habilidades como desarrollador front-end. Desde pequeño me ha apasionado la informática, y he utilizado mucho la suite de Adobe, lo que hoy me permite estar cómodo con los bocetos, la integración gráfica y los conceptos de UX/UI.",
