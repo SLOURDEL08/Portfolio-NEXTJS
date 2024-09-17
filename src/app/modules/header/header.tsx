@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter, withRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { Typography } from '../typography/typography';
 import { ModalResult } from '../modal-result/ModalResult';
@@ -93,6 +93,20 @@ export const Header: React.FC = () => {
     },
     [router]
   );
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setSearchText('');
+      setHasText(false);
+      closeModal();
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router, closeModal]);
 
   return (
     <header

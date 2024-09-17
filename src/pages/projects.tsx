@@ -227,7 +227,7 @@ const Projects: React.FC = () => {
                       fontFamily='ClashDisplay'
                       className='text-left strocked w-[100%] tracking-widest leading-relaxed'
                     >
-                      {t('learnMore')}
+                      {t('general.learnMore')}
                     </Typography>
                     <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
                   </Link>
