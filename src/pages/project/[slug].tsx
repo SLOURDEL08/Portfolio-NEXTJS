@@ -27,6 +27,7 @@ interface Project {
   symbol: string;
   categories: string[];
   tags: string[];
+  stackUse: string[];
   link: string;
   date: string;
   hoverBackgroundColor: string;
@@ -52,6 +53,18 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   const [selectedSection, setSelectedSection] = useState<string>('presentation');
   const router = useRouter();
   const { locale } = useLocale();
+
+  const getRepoInfo = (url: string) => {
+    if (url.includes('github.com')) {
+      return { icon: '/github.png', text: 'GitHub' };
+    } else if (url.includes('gitlab.com')) {
+      return { icon: '/gitlab.png', text: 'GitLab' };
+    } else {
+      return { icon: '/globe.png', text: 'Repository' };
+    }
+  };
+
+  const repoInfo = project?.repoUrl ? getRepoInfo(project.repoUrl) : null;
 
   useEffect(() => {
     if (!project && router.query.slug) {
@@ -124,9 +137,9 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
             {sections.map((section) => (
               <div
                 key={section}
-                className={`flex items-center min-w-20 justify-between cursor-pointer handled 
+                className={`flex items-center min-w-14 justify-between cursor-pointer handled 
         max-[500px]:p-3 max-[500px]:px-4 p-4 px-6 rounded-2xl transition-all duration-300 ease-in-out
-        ${selectedSection === section.toLowerCase() ? 'activesection flex-1' : 'flex-none w-12'}`}
+        ${selectedSection === section.toLowerCase() ? 'activesection flex-1' : 'flex-none'}`}
                 onClick={() => handleSectionClick(section)}
               >
                 {selectedSection === section.toLowerCase() ? (
@@ -163,6 +176,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
               </div>
             ))}
           </div>
+
           <div className='flex  gap-10 min-w-[30%] w-full max-[900px]:hidden'>
             {sections.map((section) => (
               <div
@@ -196,7 +210,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
             {/* Desktop menu */}
 
             {/* Content */}
-            <div className='bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl w-full max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject'>
+            <div className='bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl group w-full max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject'>
               <div className='section-content w-full  h-full'>
                 {selectedSection === 'presentation' && (
                   <div className='presentation-block flex max-mdd:flex-wrap  gap-8 w-full'>
@@ -206,7 +220,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                         width={800}
                         height={500}
                         alt='de'
-                        className='w-[800px] h-[400px] max-mdd:h-40 max-mdd:w-full object-cover object-top rounded-3xl border-gray-800'
+                        className='w-[800px] h-full max-mdd:h-40 max-mdd:w-full object-cover object-top rounded-3xl border-gray-800'
                       />
                       <div className='absolute ovhea grayscale  top-4 right-4 px-3 py-1 rounded-lg bg-gradient-to-br from-white/70 to-black/30 backdrop-filter backdrop-blur-sm'>
                         <Typography
@@ -222,7 +236,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       </div>
                     </div>
 
-                    <div className='flex flex-col gap-8 justify-between'>
+                    <div className='flex flex-col gap-10 justify-between'>
                       <Typography
                         theme='graylight'
                         weight='light'
@@ -233,54 +247,80 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       >
                         {t(`projects.${project.slug}.description`)}
                       </Typography>
+                      <div className='flex gap-10 items-center flex-wrap'>
+                        {project.stackUse?.map((tech, index) => (
+                          <div
+                            key={index}
+                            className='dashedbox flex items-center gap-3 p-4 py-3 rounded-xl'
+                          >
+                            <Image
+                              src={`/stackUse/${tech.toLowerCase()}.png`}
+                              width={24}
+                              height={24}
+                              alt={`${tech} icon`}
+                              className='opacity-60 brightness-400 max-h-5 w-auto tran group-hover:opacity-100'
+                            />
+                            <Typography
+                              theme='graylight'
+                              weight='light'
+                              variant='body-lg'
+                              component='p'
+                              fontFamily='SanFrancisco'
+                              className='text-left w-[100%] tran opacity-60 group-hover:opacity-100 max-[680px]:text-lg max-[450px]:text-lg'
+                            >
+                              {tech}
+                            </Typography>
+                          </div>
+                        ))}
+                      </div>
                       <div className='inline-flex justify-start gap-10 rounded-xl flex-wrap gap-y-4'>
-                        {project.repoUrl && (
+                        {project?.repoUrl && (
                           <Link
                             href={project.repoUrl}
-                            className='flex gap-2 items-center overhed px-4 py-2 rounded-xl'
+                            className='flex gap-2 grouper items-center overhed px-4 py-2.5 rounded-xl'
                           >
+                            <Image
+                              src={repoInfo?.icon || '/globe.png'}
+                              width={18}
+                              height={18}
+                              alt={repoInfo?.text || 'Repository'}
+                              className='max-w-[18px] max-h-[18px]'
+                            />
                             <Typography
                               theme='white'
                               weight='medium'
                               variant='body-base'
                               component='span'
-                              fontFamily='ClashDisplay'
-                              className=''
+                              fontFamily='Montserrat'
+                              className='grouper-hover:text-white tracking-wider tran uppercase'
                             >
-                              Repository
+                              {repoInfo?.text || 'Repository'}
                             </Typography>
-                            <Image
-                              src='/top-right-arrow.png'
-                              width={14}
-                              height={14}
-                              alt='arrow'
-                              className='max-w-[14px] max-h-[14px]'
-                            />
                           </Link>
                         )}
 
                         {project.pageUrl && (
                           <Link
                             href={project.pageUrl}
-                            className='flex gap-2 items-center overhed px-4 py-2 rounded-xl'
+                            className='flex gap-2 items-center overhed px-4 py-2.5 rounded-xl'
                           >
+                            <Image
+                              src='/globe.png'
+                              width={18}
+                              height={18}
+                              alt='arrow'
+                              className='max-w-[18px] max-h-[18px]'
+                            />
                             <Typography
                               theme='white'
                               weight='medium'
                               variant='body-base'
                               component='span'
                               fontFamily='ClashDisplay'
-                              className=''
+                              className='uppercase'
                             >
-                              Lien vers la page
+                              page
                             </Typography>
-                            <Image
-                              src='/top-right-arrow.png'
-                              width={14}
-                              height={14}
-                              alt='arrow'
-                              className='max-w-[14px] max-h-[14px]'
-                            />
                           </Link>
                         )}
                       </div>
@@ -289,7 +329,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                 )}
                 {selectedSection === 'ressources' && (
                   <div className='documentation-block overflow-hidden flex flex-col gap-8 w-full'>
-                    <div>
+                    <div className='space-y-10'>
                       <div className='flex gap-8'>
                         <div className='flex  gap-8 w-[100%]'>
                           <div className='exp-sec flex  items-center'>
@@ -299,13 +339,169 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                               variant='lead'
                               component='span'
                               fontFamily='ClashDisplay'
-                              className='min-w-60 capitalize'
+                              className='min-w-20 capitalize'
                             >
-                              {t('general.keywords')} &nbsp;&nbsp;⬇️
+                              {t('Tags')}
                             </Typography>
-                            <InfiniteTagCarousel tags={project.tags} />
+                            <div className='flex items-center'>
+                              <Typography
+                                theme='white'
+                                weight='light'
+                                variant='h2'
+                                component='span'
+                                fontFamily='ClashDisplay'
+                                className='-mr-1'
+                              >
+                                {t('[')}
+                              </Typography>
+                              <InfiniteTagCarousel tags={project.tags} />
+                              <Typography
+                                theme='white'
+                                weight='light'
+                                variant='h2'
+                                component='span'
+                                fontFamily='ClashDisplay'
+                                className='-ml-1'
+                              >
+                                {t(']')}
+                              </Typography>
+                            </div>
                           </div>
-                          <div></div>
+                        </div>
+                      </div>
+                      <div className='space-y-8'>
+                        <div className='flex flex-wrap gap-y-6  w-full justify-start gap-10'>
+                          <Typography
+                            theme='white'
+                            weight='medium'
+                            variant='lead'
+                            component='span'
+                            fontFamily='ClashDisplay'
+                            className='min-w-60 flex items-center gap-3'
+                          >
+                            <Image
+                              src='/listsl.png'
+                              alt='icon note'
+                              className='invert'
+                              width={24}
+                              height={24}
+                            />
+                            {t('Principales tâches :')}
+                          </Typography>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
+                          <div className=' flex gap-2 items-center rounded-xl'>
+                            <Image
+                              alt='icone droite'
+                              src='/fleches-droites.png'
+                              width={16}
+                              height={16}
+                              className='invert'
+                            />
+                            <Typography
+                              component='span'
+                              weight='light'
+                              variant='body-lg'
+                              theme='graylight'
+                              fontFamily='ClashDisplay'
+                              className=''
+                            >
+                              Développement de la page daccueil
+                            </Typography>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -8,6 +8,8 @@
       "symbol": "/projects/netflix/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs","Front-end", "Integration", "JSON", "Carousel"],
+                        "stackUse":["ReactJs","JavaScript", "JSON"],
+
       "link": "/netflix-project-page",
       "hoverBackgroundColor": "#370000d0",
       "repoUrl": "https://github.com/SLOURDEL08/Reactflix",
@@ -33,6 +35,8 @@
       "symbol": "/projects/uber/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["VueJs", "Javascript", "Homepage", "JSON","Filter", "Front-end", "Component", "Dynamique", "Router", "Responsive", "SearchBar", "VueRouter", "Integration"],
+                        "stackUse":["VueJs","JavaScript", "JSON"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/UberEats",
@@ -57,6 +61,8 @@
       "symbol": "/projects/alliance/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "Elementor", "SEO", "FORMS","FILTERS", "ANIMATION", "SLIDER", "RESPONSIVE", "TRACKING", "MARKETING"],
+                        "stackUse":["Wordpress","JavaScript", "CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://abc26.fr/",
@@ -82,6 +88,8 @@
       "symbol": "/projects/bookihtml/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["HTML", "CSS", "JS", "RESPONSIVE","FILTERS", "FRONT", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "BOOKING", "FIGMA", ""],
+                        "stackUse":["HTML","CSS", "Figma"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/BOOKI",
@@ -107,6 +115,8 @@
       "symbol": "/projects/couvretanche/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "MEGAMENU", "CSS", "RESPONSIVE","SUR-MESURE", "FORMULAIRE"],
+                        "stackUse":["Wordpress","JavaScript", "CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://couvretanche.fr",
@@ -131,6 +141,8 @@
       "symbol": "/projects/couvrassistance/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","SUR-MESURE", "FRONT", "FIGMA", "MAQUETTE", "OVH"],
+                  "stackUse":["Wordpress","JavaScript", "CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://couvrassistance.fr",
@@ -156,6 +168,8 @@
       "symbol": "/projects/ferraribeverlyhills/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["REACTJS", "JSON", "JS", "RESPONSIVE","CAROUSEL", "ANIMATION", "FORM", "FRONTEND"],
+                  "stackUse":["ReactJs","JavaScript", "JSON", "CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/FerrariBeverly",
@@ -181,6 +195,8 @@
       "symbol": "/projects/kasareact/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs", "CSS", "JS", "RESPONSIVE","MODAL", "COLLAPSE", "FORMATION", "OPENCLASSROOM", "MAQUETTE", "FIGMA"],
+                  "stackUse":["ReactJs","JavaScript", "CSS", "Figma"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/KASA",
@@ -206,6 +222,8 @@
       "symbol": "/projects/ladigitoile/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["WORDPRESS", "MAQUETTE", "JS", "RESPONSIVE","FILTERS", "FRONT", "SECTION", "COLLAPSE", "ANIMATION", "DESIGN"],
+                  "stackUse":["Wordpress","JavaScript", "CSS", "PHP"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://ladigitoile.fr",
@@ -231,6 +249,8 @@
       "symbol": "/projects/lesvanniers/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "CSS", "JS", "RESPONSIVE","ORDER", "FRONT"],
+                  "stackUse":["Wordpress","CSS", "JavaScript"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://lesvanniers.fr",
@@ -256,6 +276,8 @@
       "symbol": "/projects/monvieuxgrimoire/symbol.webp",
       "categories": ["Back-end"],
       "tags": ["NODEJS", "OPENCLASSROOM", "JAVACRIPT", "EXPRESSJS", "MONGODB", "CRUD", "API", "RESTFUL", "SERVER", "AUTH", "FORMATION"],
+                  "stackUse":["NodeJs","JavaScript", "MongoDB", "API"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/MonVieuxGrimoire",
@@ -281,6 +303,8 @@
       "symbol": "/projects/paulsavine/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "SEO", "RESPONSIVE", "BLOG", "MAQUETTE", "DESIGN", "GOOGLE"],
+                  "stackUse":["Wordpress","HTML", "CSS", "JavaScript"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://paulsavine.fr",
@@ -306,10 +330,12 @@
       "symbol": "/projects/rocketlanding/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["LANDINGPAGE", "TRACKING", "INTEGRATION", "CREATION", "OPTIMISATION", "TAGMANAGER", "LEADPAGE"],
+      "stackUse":["Javascript","CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
-            "repoUrl": "http://master.rocket-school.com/",
-            "pageUrl":"https://www.behance.net/gallery/180229181/Rocket-School",
+            "repoUrl": "https://www.behance.net/gallery/180229181/Rocket-School",
+            "pageUrl":"http://master.rocket-school.com/",
 
           "date":"11/2022",
       "gallery": { 
@@ -332,6 +358,8 @@
       "symbol": "/projects/sirius/top-left.webp",
       "categories": ["Wordpress"],
       "tags": ["WORDPRESS", "ELEMENTOR", "ANIMATION", "SLIDER", "CSS", "RESPONSIVE"],
+                  "stackUse":["Wordpress","CSS", "JavaScript"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://siriussecurite.fr",
@@ -357,6 +385,8 @@
       "symbol": "/projects/sophiedesign/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["OPENCLASSROOM", "INREGRATION", "JAVASCRIPT", "JSON", "RESPONSIVE", "FORM", "CRUD"],
+                  "stackUse":["Javascript","HTML","CSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/SophieBluel",
@@ -382,6 +412,8 @@
       "symbol": "/projects/teslahome/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["ReactJs", "Y-Scroll", "MegaMenu", "Homepage", "Integration", "SectionScroll", "useState", ""],
+                  "stackUse":["ReactJs","Javascript"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
 
@@ -406,6 +438,8 @@
       "symbol": "/projects/toast/symbol.webp",
       "categories": ["Wordpress"],
       "tags": ["Wordpress", "JS", "CSS", "Responsive", "Tracking", "Maquette"],
+                  "stackUse":["Wordpress","JavaScript", "Figma", "PHP"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://toast-collectif.fr",
@@ -432,6 +466,7 @@
       "categories": ["Full-stack"],
       "tags": ["Firebase", "NextJS", "TypeScript", "ReactHookForm", "Onboarding", "Maquette"],
       "link": "/uber-eats-project-page",
+      "stackUse":["Firebase","NextJs","Typescript", "TailwindCSS", "Figma"],
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://gitlab.com/coders-monkeys00",
 
@@ -456,6 +491,8 @@
       "symbol": "/projects/dietia/symbol.webp",
       "categories": ["Full-stack"],
       "tags": ["MongoDB", "NextJS", "TypeScript", "API","Auth","JWT", "WebApp", "Skeleton", "Loading", "Update"],
+            "stackUse":["MongoDB","NextJs", "TypeScript", "TailwindCSS"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "repoUrl": "https://github.com/SLOURDEL08/diet-ia",
@@ -482,6 +519,8 @@
       "symbol": "/projects/digitalizerr/symbol.webp",
       "categories": ["Autres"],
       "tags": ["Figma","Photoshop","Pinterest","Dribble"],
+            "stackUse":["Figma","Photoshop"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
 
@@ -506,6 +545,8 @@
       "symbol": "/projects/webagency/symbol.webp",
       "categories": ["Autres"],
       "tags": ["Figma","Photoshop","Pinterest","Dribble"],
+      "stackUse":["Figma","Photoshop"],
+
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
 
@@ -530,6 +571,7 @@
       "symbol": "/projects/portfolio-first/symbol.webp",
       "categories": ["Front-end"],
       "tags": ["React","Javascript","Router","Json"],
+      "stackUse":["ReactJs","JavaScript","JSON"],
       "link": "/uber-eats-project-page",
       "hoverBackgroundColor": "#073700d0",
             "pageUrl": "https://slourdel08.github.io/CV/#/portfolio",

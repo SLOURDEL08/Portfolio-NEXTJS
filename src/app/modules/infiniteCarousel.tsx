@@ -16,10 +16,12 @@ const InfiniteTagCarousel: React.FC<InfiniteTagCarouselProps> = ({ tags }) => {
   }, [tags]);
 
   return (
-    <div className='tag-carousel-container overflow-hidden w-full'>
+    <div className='tag-carousel-container overflow-hidden w-full relative'>
+      <div className='fade-overlay left-fade'></div>
+      <div className='fade-overlay right-fade'></div>
       <div
         ref={carouselRef}
-        className='tag-carousel flex'
+        className='tag-carousel flex !w-[800px]'
         style={{
           animation: `scrollTags ${tags.length * 2}s linear infinite`,
           width: `${carouselWidth * 2}px`,

@@ -449,6 +449,13 @@ table {
 }
 
 
+
+
+
+.tag-carousel-container {
+  position: relative;
+}
+
 @keyframes scrollTags {
   0% {
     transform: translateX(0);
@@ -458,14 +465,54 @@ table {
   }
 }
 
-.tag-carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
 .tag-carousel {
   display: flex;
+  animation: scrollTags linear infinite;
 }
+
+.tag-item {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tag-carousel:hover .tag-item {
+  opacity: 1;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+.tag-item {
+  animation: fadeInOut 4s linear infinite;
+}
+
+/* Ajustez ces valeurs en fonction de la largeur de votre conteneur */
+.tag-carousel-container::before,
+.tag-carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.group:hover .dashedbox{
+background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23F4F4F429' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+border-radius: 10px;background-color: #ffffff08;
+opacity: 1;
+}
+
+
+
+.dashedbox{
+background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%237C7C7C2E' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+border-radius: 10px;background-color: #ffffff08;
+transition:0.4s ease-in-out
+}
+
 
 @keyframes skeleton-loading {
   0% {
@@ -475,7 +522,9 @@ table {
     transform: translateX(100%);
   }
 }
-
+.grouper:hover span{
+  color:white
+}
 .css-19bb58m{
 display: none!important;
 }
@@ -1194,6 +1243,11 @@ box-shadow: 10px -10px 100px 100px #ffffff6e;
               .transitioned{
                 transition: 0.3s ease-in-out;
                 opacity: 0.9;
+              }
+
+              .tran{
+                                transition: 0.3s ease-in-out all;
+
               }
 
               .transitioned:hover{
