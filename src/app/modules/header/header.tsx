@@ -252,7 +252,7 @@ export const Header: React.FC = () => {
             <div
               className={`bg-[#ffffff20] ${
                 hasText ? 'bg-[#7A24E8]' : 'hover:bg-[#7A24E8]'
-              } active:bg-[#7A24E8] focus-within:bg-[#7A24E8] transz hover:text-white contain-searchform p-2.5 rounded-xl px-4 relative formtypesearch flex items-center search-container`}
+              } active:bg-[#7A24E8] focus-within:bg-[#7A24E8] group transz hover:text-white contain-searchform p-2.5 rounded-xl px-4 relative formtypesearch flex items-center search-container`}
             >
               <label className='searchbar w-full relative flex items-center'>
                 <input
@@ -260,10 +260,10 @@ export const Header: React.FC = () => {
                   value={searchText}
                   onChange={handleSearchChange}
                   placeholder='Recherche'
-                  className='focus:outline-none  placeholder:text-white/40 border-none text-[#ffffff80] plh w-36 bg-transparent pr-16 placeholder-shown:text-[#ffffff00] hover:placeholder-white focus:placeholder-white'
+                  className='focus:outline-none p-0  placeholder:text-white/40 border-none text-[#ffffff80] plh w-36 bg-transparent pr-16 placeholder-shown:text-[#ffffff00] hover:placeholder-white focus:placeholder-white'
                   onClick={handleSearchClick}
                 />
-                <kbd className='max-[900px]:hidden pointer-events-none absolute right-0 text-[#909090] bg-[#00000060] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded flex items-center justify-center'>
+                <kbd className='max-[900px]:hidden pointer-events-none absolute right-0 text-[#909090] bg-[#00000060] group-hover:bg-[#000000bd] oft backdrop-blur-xl border-[#6a6a6a] whitespace-nowrap border-[1px] text-xs py-1 px-2 rounded flex items-center justify-center'>
                   ⌘ K
                 </kbd>
               </label>

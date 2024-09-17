@@ -9,6 +9,7 @@ import styles from '@/app/styles/form.contact.module.css';
 import axios, { AxiosError } from 'axios';
 import Image from 'next/image';
 import Main from '@/app/modules/main/main';
+import Link from 'next/link';
 
 interface FormValues {
   firstName: string;
@@ -108,7 +109,10 @@ const ContactPage: React.FC = () => {
               {t('Travaillons ensemble')}
             </Typography>
             <div className='flex max-mdd:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-start'>
-              <div className='flex gap-3 group items-center justify-start p-3 px-4 border-[#494949] border bg-[#e5e5e5]  rounded-2xl w-max'>
+              <Link
+                href='mailto:contact@slourdel.fr'
+                className='flex gap-3 group items-center justify-start p-3 px-4 border-[#494949] border bg-[#e5e5e5]  rounded-2xl w-max'
+              >
                 <Image
                   src='/e-mail.png'
                   width='22'
@@ -125,9 +129,12 @@ const ContactPage: React.FC = () => {
                 >
                   contact@slourdel.fr
                 </Typography>
-              </div>
+              </Link>
 
-              <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
+              <Link
+                href='https://www.linkedin.com/in/s%C3%A9bastien-lourdel-297715151/'
+                className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'
+              >
                 <Image
                   src='/linkedicon.png'
                   width='30'
@@ -145,8 +152,11 @@ const ContactPage: React.FC = () => {
                 >
                   /Linkedin
                 </Typography>
-              </div>
-              <div className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
+              </Link>
+              <Link
+                href='https://github.com/SLOURDEL08'
+                className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'
+              >
                 <Image
                   src='/github.png'
                   width='25'
@@ -164,7 +174,7 @@ const ContactPage: React.FC = () => {
                 >
                   /Github
                 </Typography>
-              </div>
+              </Link>
             </div>
           </div>
           <div className={styles.contactContainer}>

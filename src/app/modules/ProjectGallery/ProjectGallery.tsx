@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useImageViewer } from '@/app/modules/ImageViewer/ViewerContext'; // Assurez-vous que le chemin d'importation est correct
 
 interface Project {
   id: number;
@@ -30,6 +31,7 @@ interface Project {
 
 const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
   const [activeImage, setActiveImage] = useState(project.gallery.big);
+  const { openViewer } = useImageViewer();
 
   const galleryImages = [
     project.gallery.big,
@@ -40,9 +42,20 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
     project.gallery.vertical,
   ];
 
+  const handleMainImageClick = () => {
+    openViewer(galleryImages, galleryImages.indexOf(activeImage));
+  };
+
+  const handleThumbnailClick = (image: string) => {
+    setActiveImage(image);
+  };
+
   return (
-    <div className='gallery-block w-full flex flex-col gap-8'>
-      <div className='main-image-container w-full h-[400px] relative rounded-3xl overflow-hidden'>
+    <div className='gallery-block w-full flex flex-col gap-10'>
+      <div
+        className='main-image-container w-full h-[400px] relative rounded-3xl overflow-hidden cursor-pointer'
+        onClick={handleMainImageClick}
+      >
         <Image
           src={activeImage}
           layout='fill'
@@ -54,9 +67,12 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
           {galleryImages.map((image, index) => (
             <button
               key={index}
-              onClick={() => setActiveImage(image)}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleThumbnailClick(image);
+              }}
               className={`w-10 h-2 rounded-full transition-all duration-300 ${
-                activeImage === image ? 'ovhea' : 'bg-gray-400/40 hover:bg-gray-400'
+                activeImage === image ? 'ovhea' : 'bg-black/60 hover:bg-gray-400'
               }`}
               aria-label={`View image ${index + 1}`}
             />
@@ -65,17 +81,17 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
       </div>
 
       <div
-        className='thumbnail-container overflow-hidden  '
+        className='thumbnail-container overflow-hidden overflow-x-auto'
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        <div className='inline-flex  gap-10'>
+        <div className='inline-flex gap-10'>
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className={`cursor-pointer w-[180px] h-[135px] relative rounded-2xl overflow-hidden  transition-all duration-300 ${
-                activeImage === image ? ' ' : ''
+              className={`cursor-pointer w-[180px] h-[135px] relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                activeImage === image ? '' : ''
               }`}
-              onClick={() => setActiveImage(image)}
+              onClick={() => handleThumbnailClick(image)}
             >
               <Image
                 src={image}
