@@ -4,11 +4,12 @@
     "madewith": "Fait avec",
     "all": "Tous",
     "learnMore": "En savoir plus",
-        "other": "Autres"
-
+            "worktogether":"Travaillons Ensemble",
+    "other": "Autres",
+    "projectpage": "J'ai démarré sur WordPress avec HTML, CSS, JS, PHP pour ensuite évoluer vers React, NextJs, NodeJs, TypeScript avec de vraies applications complexes."
   },
   "index": {
-    "description": "Je m'appelle Sébastien LOURDEL j'ai 25 ans, j'ai commencé le développement il y a 5 ans par HTML/CSS et Wordpress puis j'ai continué de me former pour développer mes compétences de développeur front-end. Je suis passionné depuis petit par l'informatique, j'ai beaucoup utilisé la suite Adobe ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de création graphique et la notion d'UX/UI.",
+    "description": "Je m'appelle Sébastien LOURDEL, j'ai 25 ans. J'ai commencé le développement il y a 5 ans par HTML/CSS et WordPress, puis j'ai continué à me former pour développer mes compétences de développeur front-end. Je suis passionné depuis tout petit par l'informatique. J'ai beaucoup utilisé la suite Adobe, ce qui me permet aujourd'hui d'être à l'aise avec les maquettes, l'intégration de créations graphiques et la notion d'UX/UI.",
     "button": {
       "first": "Mon CV",
       "second": "Mes projets"
@@ -33,21 +34,20 @@
     "collapse": {
       "more": "Voir plus",
       "close": "Fermer"
-      
     }
   },
   "education": {
     "openclassroom": {
-      "title": "Titre professionnel bac +2 Développeur web et application (RNCP 5)",
-      "description": "Alternance développeur web, création d'application front-end / back-end fonctionnel avec les notions de seo, responsive, green code et travail agile"
+      "title": "Titre professionnel Bac +2 Développeur web et application (RNCP 5)",
+      "description": "Alternance développeur web, création d'applications front-end / back-end fonctionnelles avec les notions de SEO, responsive, green code et travail agile"
     },
     "popschool": {
-      "title": "Titre professionnel bac +2 Développeur web et application mobile (RNCP 5)",
-      "description": "Formation de 6 mois de développeur web et application mobile à Popschool Valenciennes, apprentissage des languages, des methodes de travail agiles, le développement mobile les bonnes pratique."
+      "title": "Titre professionnel Bac +2 Développeur web et application mobile (RNCP 5)",
+      "description": "Formation de 6 mois de développeur web et application mobile à Popschool Valenciennes, apprentissage des langages, des méthodes de travail agiles, le développement mobile et les bonnes pratiques."
     },
     "bac": {
-      "title": "Baccalauréat sciences et technologies du management et de la gestion",
-      "description": "Bacclauréat Sciences et technologies du management et de la gestion à Sin-le-Noble au Lycée Arthur-Rimbaud"
+      "title": "Baccalauréat Sciences et Technologies du Management et de la Gestion",
+      "description": "Baccalauréat Sciences et Technologies du Management et de la Gestion à Sin-le-Noble au Lycée Arthur-Rimbaud"
     },
     "brevet": {
       "description": "Collège André Malraux Lambres-lez-Douai"
@@ -55,7 +55,7 @@
   },
   "experience": {
     "freelance": {
-      "description": "Développement de site vitrine, e-commerce ou booking clé en main pour des auto-entrepreneur, ou PME. Campagne publicitaire, graphisme, seo, tracking, optimisation."
+      "description": "Développement de sites vitrine, e-commerce ou booking clé en main pour des auto-entrepreneurs ou PME. Campagne publicitaire, graphisme, SEO, tracking, optimisation."
     },
     "flexpress": {
       "description": "Livraison de colis pour particuliers et professionnels (Fedex, Chronopost, GLS) avec camions de 14m3 et transport de pièces lourdes et cuisines à domicile avec camions de 20m3. Travail à cadence élevée et gestion des journées de 8 à 12 heures."
@@ -78,12 +78,12 @@
       "description": "Développement et maintenance de sites WordPress, développement d'un intranet en HTML/CSS/PHP, optimisation et SEO, conception de maquettes et prototypes."
     },
     "graphic": {
-      "description": "Découpe et assemblage de prototypes de cartons pour la grande distribution. Approvisionnement des machines, contrôle de la ligne de production et gestion des équipements pour les emballages industriels"
+      "description": "Découpe et assemblage de prototypes de cartons pour la grande distribution. Approvisionnement des machines, contrôle de la ligne de production et gestion des équipements pour les emballages industriels."
     }
   },
   "projects": {
     "title": "Mes projets",
-    "description": "Retrouvrez tous mes projets de développement web, de graphisme, back/front-end et bien plus..",
+    "description": "Retrouvez tous mes projets de développement web, de graphisme, back/front-end et bien plus..",
     "netflix": {
       "description": "Développement front-end de la page d'accueil de l'application web Netflix, avec intégration de contenu dynamique, un slider pour naviguer parmi les films et les catégories variées. Travail de design et d'optimisation pour une meilleure expérience utilisateur."
     },
@@ -133,13 +133,25 @@
       "description": "Site vitrine sur-mesure WordPress pour une agence de WebMarketing, avec mise en page personnalisée, slider manuel et lightbox. Intégration de témoignages clients et de cas d'études pour démontrer l'expertise de l'agence."
     },
     "sophie-bluel": {
-      "description": "Développement front-end du site de l'artiste SophieBluel, intégration de contenus dynamiques, connexion à une base de données et opérations CRUD. Mise en avant des œuvres et des expositions, avec une interface utilisateur moderne et intuitive."
+      "description": "Développement front-end du site de l'artiste Sophie Bluel, intégration de contenus dynamiques, connexion à une base de données et opérations CRUD. Mise en avant des œuvres et des expositions, avec une interface utilisateur moderne et intuitive."
     },
     "coders-monkey": {
-      "description": "Projet full stack développé sur Next JS pour le front-end et firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifié les modifications, utilisations du modéle Vue/Container."
+      "description": "Projet full stack développé sur Next.js pour le front-end et Firebase pour le back-end de l'application. Projet évolutif et pensé pour simplifier les modifications, utilisation du modèle Vue/Container."
     },
     "diet-ia": {
-      "description": "WebApp full-stack sur NextJs, génération de recette selon objectif. La finalité serait de relié chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)"
-    }
+      "description": "WebApp full-stack sur Next.js, génération de recettes selon objectif. La finalité serait de relier chaque compte à une IA qui accompagnerait l'utilisateur sur son projet (génération de plats, estimation perte de poids/prise de muscle..)."
+    },
+    "portfolio-v1": {
+      "description": "Première version de mon portfolio en ligne, réalisée durant ma formation OpenClassrooms."
+    },
+    "webagency": {
+      "description": "Maquette site vitrine pour un projet personnel, création d'un design simple et d'une identité. Maquette développée sur Figma puis intégrée."
+    },
+    "digitalizerr": {
+      "description": "Maquette fictive pour une Agence web, design épuré avec lueur en arrière-plan. Construction sur Figma avec l'aide de Photoshop par moments."
+    },
+    "acolyte-ws": {
+  "description": "Reproduction de la page d'accueil du site Acolyte.ws en Vue et NuxtJs, avec animation de défilement et locomotive scroll"
+}
   }
 }

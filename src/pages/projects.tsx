@@ -113,7 +113,7 @@ const Projects: React.FC = () => {
               fontFamily='Montserrat'
               className='text-right w-[500px] max-lg:text-left max-lg:w-full strocked max-[680px]:text-lg max-[450px]:text-base max-[450px]:w-full max-[680px]:leading-loose max-[450px]:leading-loose leading-loose  '
             >
-              {t('index.description')}
+              {t('general.projectpage')}
             </Typography>
           </div>
           <div className='rounded-3xl hidden mb-14 max-[900px]:mb-10'>

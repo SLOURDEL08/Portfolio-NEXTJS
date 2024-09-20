@@ -565,7 +565,7 @@
     {
       "id": 24,
       "title": "Portfolio v1",
-      "slug": "Portfolio-v1",
+      "slug": "portfolio-v1",
       "image": "/projects/portfolio-first/homepage.webp",
       "description": "Prémière version de mon portfolio en ligne, durant ma formation OpenClassRoom. ",
       "symbol": "/projects/portfolio-first/symbol.webp",
@@ -586,6 +586,33 @@
       "big": "/projects/portfolio-first/big.webp",
       "vertical": "/projects/portfolio-first/vertical.webp",
       "mkt": "/projects/portfolio-first/mkt.webp"
+    
+    }
+    },
+     {
+      "id": 25,
+      "title": "Acolyte WS",
+      "slug": "acolyte-ws",
+      "image": "/projects/acolyte/homepage.webp",
+      "description": "Prémière version de mon portfolio en ligne, durant ma formation OpenClassRoom. ",
+      "symbol": "/projects/acolyte/symbol.webp",
+      "categories": ["Front-end"],
+      "tags": ["VueJs","Nuxt","GSAP","Locomotive"],
+      "stackUse":["Vue","Nuxt","TailwindCSS"],
+      "link": "/uber-eats-project-page",
+      "hoverBackgroundColor": "#073700d0",
+            "pageUrl": "https://acolyte-mu.vercel.app/",
+            "repoUrl":"https://github.com/SLOURDEL08/Acolyte",
+
+          "date":"03/2021",
+      "gallery": { 
+        "topright": "/projects/acolyte/top-right.webp",
+        "topleft": "/projects/acolyte/top-left.webp",
+      "botright": "/projects/acolyte/bot-right.webp",
+      "botleft": "/projects/acolyte/bot-left.webp",
+      "big": "/projects/acolyte/big.webp",
+      "vertical": "/projects/acolyte/vertical.webp",
+      "mkt": "/projects/acolyte/mkt.webp"
     
     }
     }

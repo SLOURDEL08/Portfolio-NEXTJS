@@ -4,8 +4,10 @@
     "madewith": "Made with",
     "all": "All",
     "learnMore": "Learn More",
-    "other": "Autres",
-    "keywords": "Keywords"
+    "other": "Others",
+        "worktogether":"Let's Work Together",
+    "keywords": "Keywords",
+    "projectpage": "I started with WordPress using HTML, CSS, JS, PHP, and then evolved to React, NextJs, NodeJs, TypeScript with real complex applications."
   },
   "index": {
     "description": "My name is Sébastien LOURDEL, I am 25 years old, and I started developing 5 years ago with HTML/CSS and WordPress. Since then, I have continued to train and expand my front-end development skills. I've been passionate about computers since I was young, and I've used the Adobe suite extensively, which today allows me to be comfortable with mockups, graphic integration, and UX/UI concepts.",
@@ -37,11 +39,11 @@
   },
   "education": {
     "openclassroom": {
-      "title": "Professional Degree bac +2 Web and Application Developer (RNCP 5)",
+      "title": "Professional Degree Bac +2 Web and Application Developer (RNCP 5)",
       "description": "Web developer apprenticeship, creating functional front-end/back-end applications with SEO, responsive design, green code, and agile work methods."
     },
     "popschool": {
-      "title": "Professional Degree bac +2 Web and Mobile Application Developer (RNCP 5)",
+      "title": "Professional Degree Bac +2 Web and Mobile Application Developer (RNCP 5)",
       "description": "Six-month training course in web and mobile application development at Popschool Valenciennes, learning programming languages, agile work methods, mobile development, and best practices."
     },
     "bac": {
@@ -104,7 +106,7 @@
     "kasa": {
       "description": "Development of the pages for Kasa, a site similar to Booking.com, allowing the display of available accommodations with detailed descriptions, reviews, and online booking functionalities."
     },
-    "ferrari": {
+    "ferrari-beverly": {
       "description": "Reproduction of the Ferrari Beverly Hills homepage in React, with integration of elements such as the menu, animated header, and various blocks down to the footer. Optimization for performance and responsiveness."
     },
     "ladigitoile": {
@@ -113,13 +115,13 @@
     "lesvanniers": {
       "description": "WordPress showcase site with table reservation, food ordering functionalities, and redirection to delivery services. Highlighting dishes, menus, and the restaurant. SEO optimization to attract more local customers."
     },
-    "monvieuxgrimoire": {
+    "mon-vieux-grimoire": {
       "description": "Back-end development of a book rating project, including authentication, route management, permissions, and CRUD operations on the database. Integration of a user rating and comment system."
     },
-    "paulsavine": {
+    "paul-savine": {
       "description": "Showcase site for a company specialized in pharmacy layout and interior renovation. Presentation of completed projects and services offered, with before/after images to illustrate transformations."
     },
-    "rocketschool": {
+    "rocket-school": {
       "description": "Development of landing pages for several specific branches of RocketSchool, optimized for advertising and tracking with Google Tag Manager, following the layout of the official site. Improvement of visitor conversion rates."
     },
     "sirius": {
@@ -128,17 +130,29 @@
     "tesla": {
       "description": "Reproduction of Tesla's homepage, including a vertically scrolling block logic, a mega menu with various sections, and hover animations. Optimization for performance and mobile compatibility."
     },
-    "toast": {
+    "toast-collectif": {
       "description": "Custom WordPress showcase site for a WebMarketing agency, with personalized layout, manual slider, and lightbox. Integration of client testimonials and case studies to demonstrate the agency's expertise."
     },
-    "sophiebluel": {
-      "description": "Front-end development of artist SophieBluel's site, integration of dynamic content, database connection, and CRUD operations. Highlighting works and exhibitions, with a modern and intuitive user interface."
+    "sophie-bluel": {
+      "description": "Front-end development of artist Sophie Bluel's site, integration of dynamic content, database connection, and CRUD operations. Highlighting works and exhibitions, with a modern and intuitive user interface."
     },
-    "codersmonkey": {
-      "description": "Full-stack project developed on Next JS for the front-end and Firebase for the application's back-end. Scalable project designed for easy modifications, using the Vue/Container model."
+    "coders-monkey": {
+      "description": "Full-stack project developed on Next.js for the front-end and Firebase for the application's back-end. Scalable project designed for easy modifications, using the Vue/Container model."
     },
-    "dietia": {
-      "description": "Full-stack WebApp on NextJs, generating recipes according to goals. The final goal is to connect each account to an AI that will guide the user through their project (meal generation, weight loss/muscle gain estimation...)."
-    }
+    "diet-ia": {
+      "description": "Full-stack WebApp on Next.js, generating recipes according to goals. The final goal is to connect each account to an AI that will guide the user through their project (meal generation, weight loss/muscle gain estimation...)."
+    },
+    "portfoliov1": {
+      "description": "First version of my online portfolio, created during my OpenClassrooms training."
+    },
+    "webagency": {
+      "description": "Showcase site mockup for a personal project, creating a simple design and identity. Mockup developed on Figma and then integrated."
+    },
+    "digitalizerr": {
+      "description": "Fictional mockup for a Web Agency, clean design with background glow. Built on Figma with occasional help from Photoshop."
+    },
+    "acolyte-ws": {
+  "description": "Reproduction of the homepage of the Acolyte.ws site in Vue and NuxtJs, with scroll animation and locomotive scroll"
+}
   }
 }

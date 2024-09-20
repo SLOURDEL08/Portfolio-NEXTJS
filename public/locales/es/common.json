@@ -3,10 +3,11 @@
     "welcome": "Descubre mi portafolio Front-End NextJs",
     "madewith": "Hecho con",
     "all": "Todos",
-    "learnMore": "En savoir plus",
-        "other": "Autres"
-        
-
+    "learnMore": "Saber más",
+    "other": "Otros",
+    "keywords": "Palabras clave",
+    "worktogether":"Trabajemos juntos",
+    "projectpage": "Comencé con WordPress usando HTML, CSS, JS, PHP, y luego evolucioné a React, NextJs, NodeJs, TypeScript con aplicaciones complejas reales."
   },
   "index": {
     "description": "Mi nombre es Sébastien LOURDEL, tengo 25 años y comencé a desarrollar hace 5 años con HTML/CSS y WordPress. Desde entonces, he seguido formándome para mejorar mis habilidades como desarrollador front-end. Desde pequeño me ha apasionado la informática, y he utilizado mucho la suite de Adobe, lo que hoy me permite estar cómodo con los bocetos, la integración gráfica y los conceptos de UX/UI.",
@@ -38,11 +39,11 @@
   },
   "education": {
     "openclassroom": {
-      "title": "Título profesional bac +2 Desarrollador web y aplicaciones (RNCP 5)",
+      "title": "Título profesional Bac +2 Desarrollador web y aplicaciones (RNCP 5)",
       "description": "Aprendizaje de desarrollador web, creación de aplicaciones funcionales front-end/back-end con conceptos de SEO, responsive, código verde y trabajo ágil."
     },
     "popschool": {
-      "title": "Título profesional bac +2 Desarrollador web y aplicaciones móviles (RNCP 5)",
+      "title": "Título profesional Bac +2 Desarrollador web y aplicaciones móviles (RNCP 5)",
       "description": "Curso de formación de seis meses en Popschool Valenciennes, aprendiendo lenguajes de programación, métodos ágiles, desarrollo móvil y buenas prácticas."
     },
     "bac": {
@@ -105,7 +106,7 @@
     "kasa": {
       "description": "Desarrollo de páginas para Kasa, un sitio similar a Booking.com, que permite mostrar alojamientos disponibles con descripciones detalladas, opiniones y funcionalidades de reserva en línea."
     },
-    "ferrari": {
+    "ferrari-beverly": {
       "description": "Reproducción de la página de inicio del sitio de Ferrari Beverly Hills en React, con integración de elementos como el menú, la cabecera animada y los diferentes bloques hasta el pie de página. Optimización para rendimiento y capacidad de respuesta."
     },
     "ladigitoile": {
@@ -114,13 +115,13 @@
     "lesvanniers": {
       "description": "Sitio de presentación en WordPress con funciones de reserva de mesas, pedido de comidas y redirección a servicios de entrega. Destacando los platos, menús y el restaurante. Optimización SEO para atraer más clientes locales."
     },
-    "monvieuxgrimoire": {
+    "mon-vieux-grimoire": {
       "description": "Desarrollo back-end de un proyecto de calificación de libros, que incluye autenticación, gestión de rutas, permisos y operaciones CRUD en la base de datos. Integración de un sistema de calificación y comentarios de usuarios."
     },
-    "paulsavine": {
+    "paul-savine": {
       "description": "Sitio de presentación para una empresa especializada en la organización de farmacias y renovación de interiores. Presentación de los proyectos realizados y los servicios ofrecidos, con imágenes de antes/después para ilustrar las transformaciones."
     },
-    "rocketschool": {
+    "rocket-school": {
       "description": "Desarrollo de páginas de destino para varias ramas específicas de RocketSchool, optimizadas para publicidad y seguimiento con Google Tag Manager, respetando el diseño del sitio oficial. Mejora de la tasa de conversión de visitantes."
     },
     "sirius": {
@@ -129,17 +130,29 @@
     "tesla": {
       "description": "Reproducción de la página de inicio del sitio de Tesla, incluyendo una lógica de bloques que se desplazan verticalmente, un mega menú con varias secciones y animaciones al pasar el cursor. Optimización para el rendimiento y la compatibilidad móvil."
     },
-    "toast": {
+    "toast-collectif": {
       "description": "Sitio de presentación personalizado en WordPress para una agencia de marketing web, con diseño personalizado, deslizador manual y lightbox. Integración de testimonios de clientes y estudios de casos para demostrar la experiencia de la agencia."
     },
-    "sophiebluel": {
-      "description": "Desarrollo front-end del sitio de la artista SophieBluel, integración de contenido dinámico, conexión a la base de datos y operaciones CRUD. Destacando las obras y exposiciones, con una interfaz de usuario moderna e intuitiva."
+    "sophie-bluel": {
+      "description": "Desarrollo front-end del sitio de la artista Sophie Bluel, integración de contenido dinámico, conexión a la base de datos y operaciones CRUD. Destacando las obras y exposiciones, con una interfaz de usuario moderna e intuitiva."
     },
-    "codersmonkey": {
-      "description": "Proyecto full-stack desarrollado en Next JS para el front-end y Firebase para el back-end de la aplicación. Proyecto escalable diseñado para facilitar las modificaciones, utilizando el modelo Vue/Container."
+    "coders-monkey": {
+      "description": "Proyecto full-stack desarrollado en Next.js para el front-end y Firebase para el back-end de la aplicación. Proyecto escalable diseñado para facilitar las modificaciones, utilizando el modelo Vue/Container."
     },
-    "dietia": {
-      "description": "WebApp full-stack en NextJs, que genera recetas según los objetivos del usuario. El objetivo final es conectar cada cuenta a una IA que guiará al usuario en su proyecto (generación de comidas, estimación de pérdida de peso/ganancia muscular...)."
-    }
+    "diet-ia": {
+      "description": "WebApp full-stack en Next.js, que genera recetas según los objetivos del usuario. El objetivo final es conectar cada cuenta a una IA que guiará al usuario en su proyecto (generación de comidas, estimación de pérdida de peso/ganancia muscular...)."
+    },
+    "portfoliov1": {
+      "description": "Primera versión de mi portfolio en línea, creada durante mi formación en OpenClassrooms."
+    },
+    "webagency": {
+      "description": "Maqueta de sitio de presentación para un proyecto personal, creando un diseño simple y una identidad. Maqueta desarrollada en Figma y luego integrada."
+    },
+    "digitalizerr": {
+      "description": "Maqueta ficticia para una Agencia web, diseño limpio con un resplandor en el fondo. Construida en Figma con ayuda ocasional de Photoshop."
+    },
+    "acolyte-ws": {
+  "description": "Reproducción de la página de inicio del sitio Acolyte.ws en Vue y NuxtJs, con animación de desplazamiento y locomotive scroll"
+}
   }
 }

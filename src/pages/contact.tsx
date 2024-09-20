@@ -106,7 +106,7 @@ const ContactPage: React.FC = () => {
               fontFamily='ClashDisplay'
               className='bg-clip-text 	 text-transparent bg-gradient-to-b from-white to-[#AAAAAA] text-left max-mdd:text-left projectpp leading-tight max-mdd:text-4xl max-md:text-3xl max-md:leading-tight max  max-mdd:mr-2 max-mdd:leading-normal '
             >
-              {t('Travaillons ensemble')}
+              {t('general.worktogether')}
             </Typography>
             <div className='flex max-mdd:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-start'>
               <Link

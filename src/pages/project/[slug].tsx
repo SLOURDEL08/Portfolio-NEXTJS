@@ -213,14 +213,14 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
             <div className='bg-[#ffffff20] p-10 max-[900px]:p-8 rounded-3xl group w-full max-[900px]:w-[100%] max-[900px]:mt-8 max-[900px]:mb-4 parentproject'>
               <div className='section-content w-full  h-full'>
                 {selectedSection === 'presentation' && (
-                  <div className='presentation-block flex max-mdd:flex-wrap  gap-8 w-full'>
-                    <div className='liens-block relative overflow-hidden gap-10  max-mdd:w-full  max-[1100px]:flex-col'>
+                  <div className='presentation-block flex max-mdd:flex-wrap  gap-10 w-full'>
+                    <div className='liens-block max-w-[400px] relative overflow-hidden gap-10  max-mdd:w-full  max-[1100px]:flex-col'>
                       <Image
                         src={project.image}
                         width={800}
                         height={500}
                         alt='de'
-                        className='w-[800px] h-full max-mdd:h-40 max-mdd:w-full object-cover object-top rounded-3xl border-gray-800'
+                        className='w-full h-full max-mdd:h-40 max-mdd:w-full object-cover object-top rounded-3xl border-gray-800'
                       />
                       <div className='absolute ovhea grayscale  top-4 right-4 px-3 py-1 rounded-lg bg-gradient-to-br from-white/70 to-black/30 backdrop-filter backdrop-blur-sm'>
                         <Typography
@@ -247,16 +247,16 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                       >
                         {t(`projects.${project.slug}.description`)}
                       </Typography>
-                      <div className='flex gap-10 items-center flex-wrap'>
+                      <div className='flex gap-8 items-center flex-wrap'>
                         {project.stackUse?.map((tech, index) => (
                           <div
                             key={index}
-                            className='dashedbox flex items-center gap-3 p-4 py-3 rounded-xl'
+                            className='dashedbox flex items-center gap-3 p-4 py-2 rounded-xl'
                           >
                             <Image
                               src={`/stackUse/${tech.toLowerCase()}.png`}
-                              width={24}
-                              height={24}
+                              width={20}
+                              height={20}
                               alt={`${tech} icon`}
                               className='opacity-60 brightness-400 max-h-5 w-auto tran group-hover:opacity-100'
                             />
@@ -273,7 +273,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                           </div>
                         ))}
                       </div>
-                      <div className='inline-flex justify-start gap-10 rounded-xl flex-wrap gap-y-4'>
+                      <div className='inline-flex justify-start gap-6 rounded-xl flex-wrap gap-y-4'>
                         {project?.repoUrl && (
                           <Link
                             href={project.repoUrl}
@@ -288,11 +288,11 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             />
                             <Typography
                               theme='white'
-                              weight='medium'
+                              weight='light'
                               variant='body-base'
                               component='span'
-                              fontFamily='Montserrat'
-                              className='grouper-hover:text-white tracking-wider tran uppercase'
+                              fontFamily='SanFrancisco'
+                              className='grouper-hover:text-white tracking-wide tran '
                             >
                               {repoInfo?.text || 'Repository'}
                             </Typography>
@@ -313,13 +313,13 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             />
                             <Typography
                               theme='white'
-                              weight='medium'
+                              weight='light'
                               variant='body-base'
                               component='span'
-                              fontFamily='ClashDisplay'
-                              className='uppercase'
+                              fontFamily='SanFrancisco'
+                              className=' tracking-wide'
                             >
-                              page
+                              Page
                             </Typography>
                           </Link>
                         )}
