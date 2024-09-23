@@ -28,7 +28,7 @@ const Segmented: React.FC<SegmentedProps> = ({
   const { t, i18n } = useTranslation('common');
   const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [selectedFilter, setSelectedFilter] = useState('Tous');
+  const [selectedFilter, setSelectedFilter] = useState('Front-end');
   const [isLoading, setIsLoading] = useState(true);
 
   const responsiveNumProjects = useResponsiveProjects(
@@ -90,9 +90,12 @@ const Segmented: React.FC<SegmentedProps> = ({
   };
 
   const applyFilters = () => {
-    if (selectedFilter === 'Tous') {
-      setFilteredProjects(projects);
+    if (selectedFilter === 'Front-end') {
+      // Filtrer les projets qui ont la catégorie "Front-end"
+      const filtered = projects.filter((project) => project.categories.includes('Front-end'));
+      setFilteredProjects(filtered);
     } else {
+      // Filtrer les projets selon la catégorie sélectionnée
       const filtered = projects.filter((project) => project.categories.includes(selectedFilter));
       setFilteredProjects(filtered);
     }
@@ -113,24 +116,24 @@ const Segmented: React.FC<SegmentedProps> = ({
               id='five-1'
               name='five'
               type='radio'
-              checked={selectedFilter === 'Tous'}
-              onChange={() => handleFilterChange('Tous')}
+              checked={selectedFilter === 'Front-end'}
+              onChange={() => handleFilterChange('Front-end')}
             />
-            <label htmlFor='five-1' className='tdf'>
-              {t('general.all')}
-            </label>
-            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', t('other')].map((category) => (
-              <React.Fragment key={category}>
-                <input
-                  id={`five-${category.toLowerCase()}`}
-                  name='five'
-                  type='radio'
-                  checked={selectedFilter === category}
-                  onChange={() => handleFilterChange(category)}
-                />
-                <label htmlFor={`five-${category.toLowerCase()}`}>{category}</label>
-              </React.Fragment>
-            ))}
+
+            {['Front-end', 'Back-end', 'Full-stack', 'Wordpress', t('general.other')].map(
+              (category) => (
+                <React.Fragment key={category}>
+                  <input
+                    id={`five-${category.toLowerCase()}`}
+                    name='five'
+                    type='radio'
+                    checked={selectedFilter === category}
+                    onChange={() => handleFilterChange(category)}
+                  />
+                  <label htmlFor={`five-${category.toLowerCase()}`}>{category}</label>
+                </React.Fragment>
+              )
+            )}
           </div>
         </section>
       )}

@@ -483,7 +483,7 @@ $tipColour: $primaryColour;
     .segmented-controls{
       flex-wrap: wrap;
       justify-content: center;
-      gap:10px;
+      gap:10px 0px;
           }
 
     .segmented-controls.square{
