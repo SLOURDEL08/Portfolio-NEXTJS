@@ -2154,3 +2154,41 @@ margin:0px!important;
   background-size: 400% 400%!important;
   animation: Gradient 10s ease infinite!important;
 }
+
+
+
+
+.bgleft-gradient-gallery{
+  background: linear-gradient(to left, transparent, #000000);
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+
+}
+
+.bgleft-gradient-gallery:hover{
+  background: linear-gradient(to left, #00000000 , #000000);
+  opacity: 1;
+    transition: 0.2s ease-in-out all;
+
+}
+
+.bgright-gradient-gallery{
+  background: linear-gradient(to right, transparent, #000000);
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+
+.bgright-gradient-gallery:hover{
+  background: linear-gradient(to right, transparent, #000000);
+  opacity: 1;
+  transition: 0.2s ease-in-out all;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

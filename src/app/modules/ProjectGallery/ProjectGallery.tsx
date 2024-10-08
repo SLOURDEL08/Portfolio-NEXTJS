@@ -30,10 +30,11 @@ interface Project {
 }
 
 const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
-  const [activeImage, setActiveImage] = useState(project.gallery.big);
+  const [activeImage, setActiveImage] = useState(project.image);
   const { openViewer } = useImageViewer();
 
   const galleryImages = [
+    project.image,
     project.gallery.big,
     project.gallery.topleft,
     project.gallery.topright,
@@ -63,7 +64,17 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
           alt='Main gallery image'
           className='transition-all duration-300 ease-in-out object-top object-cover'
         />
-        <div className='dots-container left-1/2 -translate-x-1/2 bottom-6 absolute flex justify-center gap-3 my-2'>
+
+        <div>
+          <div className='bgleft-gradient-gallery w-80 h-full flex items-center absolute left-0 top-1/2 -translate-y-1/2'>
+            <Image alt='icon next' width={60} height={60} src='/larrow.png' className='m-auto' />
+          </div>
+          <div className='bgright-gradient-gallery justify-end pr-20 z-50 w-80 m h-full flex items-center  absolute right-0 top-1/2 -translate-y-1/2'>
+            <Image alt='icon next' width={60} height={60} src='/rarrow.png' className='' />
+          </div>
+        </div>
+
+        <div className='dots-container left-1/2 -translate-x-1/2 bottom-6 absolute flex justify-center gap-4 my-2'>
           {galleryImages.map((image, index) => (
             <button
               key={index}
@@ -71,8 +82,8 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
                 e.stopPropagation();
                 handleThumbnailClick(image);
               }}
-              className={`w-10 h-2 rounded-full transition-all duration-300 ${
-                activeImage === image ? 'ovhea' : 'bg-black/60 hover:bg-gray-400'
+              className={`w-10 p-0 h-3 rounded-full transition-all duration-300 ${
+                activeImage === image ? 'ovhea' : 'bg-black/60 hover:bg-[#7A24E8]'
               }`}
               aria-label={`View image ${index + 1}`}
             />

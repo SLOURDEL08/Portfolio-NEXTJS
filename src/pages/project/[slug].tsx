@@ -26,6 +26,7 @@ interface Project {
   };
   symbol: string;
   categories: string[];
+  tasks: string[];
   tags: string[];
   stackUse: string[];
   link: string;
@@ -388,120 +389,29 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             />
                             {t('Principales tâches :')}
                           </Typography>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
-                          <div className=' flex gap-2 items-center rounded-xl'>
-                            <Image
-                              alt='icone droite'
-                              src='/fleches-droites.png'
-                              width={16}
-                              height={16}
-                              className='invert'
-                            />
-                            <Typography
-                              component='span'
-                              weight='light'
-                              variant='body-lg'
-                              theme='graylight'
-                              fontFamily='ClashDisplay'
-                              className=''
-                            >
-                              Développement de la page daccueil
-                            </Typography>
-                          </div>
+                          {project.tasks
+                            .filter((task) => task.trim()) // Filter out empty tasks
+                            .map((task, index) => (
+                              <div key={index} className='flex gap-2 items-center rounded-xl'>
+                                <Image
+                                  alt='icone droite'
+                                  src='/fleches-droites.png' // Adjust the path of the image as needed
+                                  width={16}
+                                  height={16}
+                                  className='invert' // Add 'invert' or other styles if needed
+                                />
+                                <Typography
+                                  component='span'
+                                  weight='light'
+                                  variant='body-lg'
+                                  theme='graylight'
+                                  fontFamily='ClashDisplay'
+                                  className=''
+                                >
+                                  {task}
+                                </Typography>
+                              </div>
+                            ))}
                         </div>
                       </div>
                     </div>
