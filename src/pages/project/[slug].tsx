@@ -57,11 +57,11 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
 
   const getRepoInfo = (url: string) => {
     if (url.includes('github.com')) {
-      return { icon: '/github.png', text: 'GitHub' };
+      return { icon: '/github.webp', text: 'GitHub' };
     } else if (url.includes('gitlab.com')) {
-      return { icon: '/gitlab.png', text: 'GitLab' };
+      return { icon: '/gitlab.webp', text: 'GitLab' };
     } else {
-      return { icon: '/globe.png', text: 'Repository' };
+      return { icon: '/globe.webp', text: 'Repository' };
     }
   };
 
@@ -91,7 +91,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
   const sections = ['presentation', 'ressources', 'gallery'];
 
   const getSectionImagePath = (section: string) => {
-    return `/${section.toLowerCase()}.png`;
+    return `/${section.toLowerCase()}.webp`;
   };
 
   const getNextProject = () => {
@@ -198,7 +198,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                   {t(section)}
                 </Typography>
                 <Image
-                  src={`/${section}.png`}
+                  src={`/${section}.webp`}
                   width={23}
                   height={23}
                   alt={section}
@@ -255,7 +255,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             className='dashedbox flex items-center gap-3 p-4 py-2 rounded-xl'
                           >
                             <Image
-                              src={`/stackUse/${tech.toLowerCase()}.png`}
+                              src={`/stackUse/${tech.toLowerCase()}.webp`}
                               width={20}
                               height={20}
                               alt={`${tech} icon`}
@@ -281,7 +281,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             className='flex gap-2 grouper items-center overhed px-4 py-2.5 rounded-xl'
                           >
                             <Image
-                              src={repoInfo?.icon || '/globe.png'}
+                              src={repoInfo?.icon || '/globe.webp'}
                               width={18}
                               height={18}
                               alt={repoInfo?.text || 'Repository'}
@@ -306,7 +306,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             className='flex gap-2 items-center overhed px-4 py-2.5 rounded-xl'
                           >
                             <Image
-                              src='/globe.png'
+                              src='/globe.webp'
                               width={18}
                               height={18}
                               alt='arrow'
@@ -381,7 +381,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                             className='min-w-60 flex items-center gap-3'
                           >
                             <Image
-                              src='/listsl.png'
+                              src='/listsl.webp'
                               alt='icon note'
                               className='invert'
                               width={24}
@@ -395,7 +395,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                               <div key={index} className='flex gap-2 items-center rounded-xl'>
                                 <Image
                                   alt='icone droite'
-                                  src='/fleches-droites.png' // Adjust the path of the image as needed
+                                  src='/fleches-droites.webp' // Adjust the path of the image as needed
                                   width={16}
                                   height={16}
                                   className='invert' // Add 'invert' or other styles if needed
@@ -427,7 +427,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
           <div className='flex justify-between items-center mt-10'>
             <Link href={`/project/${previousProject.slug}`} passHref>
               <div className='flex items-center cursor-pointer hover:opacity-80 opacity-55 transition-all'>
-                <Image src='/larrow.png' width={16} height={16} alt='Previous' />
+                <Image src='/larrow.webp' width={16} height={16} alt='Previous' />
                 <Typography
                   theme='white'
                   weight='medium'
@@ -452,7 +452,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ project: initia
                 >
                   {nextProject.title}
                 </Typography>
-                <Image src='/rarrow.png' width={16} height={16} alt='Next' />
+                <Image src='/rarrow.webp' width={16} height={16} alt='Next' />
               </div>
             </Link>
           </div>

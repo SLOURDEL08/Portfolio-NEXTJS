@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
                 className='flex gap-3 group items-center justify-start p-3 px-4 border-[#494949] border bg-[#e5e5e5]  rounded-2xl w-max'
               >
                 <Image
-                  src='/e-mail.png'
+                  src='/e-mail.webp'
                   width='22'
                   height='22'
                   alt='de'
@@ -136,7 +136,7 @@ const ContactPage: React.FC = () => {
                 className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'
               >
                 <Image
-                  src='/linkedicon.png'
+                  src='/linkedicon.webp'
                   width='30'
                   height='30'
                   alt='de'
@@ -158,7 +158,7 @@ const ContactPage: React.FC = () => {
                 className='overhedz flex gap-2 border-[#494949] border items-center p-3  bg-[#00000040] rounded-2xl w-max'
               >
                 <Image
-                  src='/github.png'
+                  src='/github.webp'
                   width='25'
                   height='25'
                   alt='de'

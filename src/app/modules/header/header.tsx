@@ -125,7 +125,7 @@ export const Header: React.FC = () => {
               width='30'
               height='30'
               alt='logo web app'
-              src='/sl.png'
+              src='/sl.webp'
               className='min-w-[26px] min-h-[26px]'
             />
           </div>
@@ -156,7 +156,7 @@ export const Header: React.FC = () => {
           <div className='navbar-end flex gap-6 max-[900px]:gap-6 items-cener '>
             <div className='justify-between gap-12 hidden max-xml:flex items-center'>
               <div onClick={handleMenuToggle} className='cursor-pointer'>
-                <Image width='30' height='30' alt='menu icon' src='/menuwhite.png' className='' />
+                <Image width='30' height='30' alt='menu icon' src='/menuwhite.webp' className='' />
               </div>
             </div>
             <div className='flex  justify-between gap-6 max-xml:hidden'>
@@ -169,7 +169,7 @@ export const Header: React.FC = () => {
                   width='100'
                   height='100'
                   alt='menu icon'
-                  src='/homet.png'
+                  src='/homet.webp'
                   className='min-h-[18px] min-w-[18px] w-[18px] h-[18px]'
                 />
                 <Typography
@@ -191,7 +191,7 @@ export const Header: React.FC = () => {
                   width='100'
                   height='100'
                   alt='menu icon'
-                  src='/docufile.png'
+                  src='/docufile.webp'
                   className='min-h-[18px] min-w-[18px] w-[18px] h-[18px]'
                 />
                 <Typography
@@ -213,7 +213,7 @@ export const Header: React.FC = () => {
                   width='100'
                   height='100'
                   alt='menu icon'
-                  src='/layers.png'
+                  src='/layers.webp'
                   className='min-h-[18px] min-w-[18px] w-[18px] h-[18px]'
                 />
                 <Typography
@@ -235,7 +235,7 @@ export const Header: React.FC = () => {
                   width='100'
                   height='100'
                   alt='menu icon'
-                  src='/chat.png'
+                  src='/chat.webp'
                   className='min-h-[18px] min-w-[18px] w-[18px] h-[18px]'
                 />
                 <Typography
@@ -303,7 +303,7 @@ export const Header: React.FC = () => {
                     width='100'
                     height='100'
                     alt='menu icon'
-                    src='/homet.png'
+                    src='/homet.webp'
                     className='min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-xml:h-[20px] max-xml:w-[20px]'
                   />
                   {router.pathname === '/' ? (
@@ -328,7 +328,7 @@ export const Header: React.FC = () => {
                     width='100'
                     height='100'
                     alt='menu icon'
-                    src='/docufile.png'
+                    src='/docufile.webp'
                     className='min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-xml:h-[20px] max-xml:w-[20px]'
                   />
                   {router.pathname === '/aboutpage' ? (
@@ -353,7 +353,7 @@ export const Header: React.FC = () => {
                     width='100'
                     height='100'
                     alt='menu icon'
-                    src='/layers.png'
+                    src='/layers.webp'
                     className='min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-xml:h-[20px] max-xml:w-[20px]'
                   />
                   {router.pathname === '/projects' ? (
@@ -379,7 +379,7 @@ export const Header: React.FC = () => {
                     width='100'
                     height='100'
                     alt='menu icon'
-                    src='/chat.png'
+                    src='/chat.webp'
                     className='min-h-[20px] min-w-[20px] w-[45px] h-[45px] max-xml:h-[20px] max-xml:w-[20px]'
                   />
                   {router.pathname === '/contact' ? (

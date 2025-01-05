@@ -182,7 +182,7 @@ const Segmented: React.FC<SegmentedProps> = ({
                       href={`/project/${project.slug}`}
                     >
                       <Image
-                        src='/top-right-arrow.png'
+                        src='/top-right-arrow.webp'
                         width={15}
                         height={15}
                         alt=''

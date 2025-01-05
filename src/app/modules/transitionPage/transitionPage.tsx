@@ -11,17 +11,14 @@ type TransitionPageProps = {
 const pageVariants = {
   initial: {
     opacity: 0,
-    filter: 'blur(4px)',
   },
   in: {
     opacity: 1,
-    filter: 'blur(0px)',
-    transition: { duration: 0.4 },
+    transition: { duration: 0.3 },
   },
   out: {
     opacity: 0,
-    filter: 'blur(4px)',
-    transition: { duration: 0.4 },
+    transition: { duration: 0.3 },
   },
 };
 

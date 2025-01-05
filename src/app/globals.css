@@ -335,7 +335,7 @@ table {
 }
 
 .background-topgradient{
-  background-image: url('/bgr.png');
+  background-image: url('/bgr.webp');
   background-position: top center;
   opacity: 0.95;
   background-repeat: no-repeat;
@@ -781,7 +781,7 @@ opacity: 0.8;
 
 .profilpiced {
   flex-shrink: 1;
-  background-image: url('/cesded.png');
+  background-image: url('/cesded.webp');
   background-position: 100%;
   background-size: cover;
   background: linear-gradient(45deg, #7A24E8, #7924e84d, #7A24E8, #7924e84d, #7A24E8, #7924e84d);
@@ -792,7 +792,7 @@ opacity: 0.8;
 
 .profilpiced:hover {
   flex-shrink: 1; /* La div prendra autant de hauteur que nécessaire pour s'adapter au contenu */
-  background-image: url('/cesded.png');
+  background-image: url('/cesded.webp');
   background-position: 100%;
   background-size: cover;
   background: linear-gradient(45deg, #7A24E8, #7924e864, #7A24E8, #7924e864, #7A24E8, #7924e864);
@@ -1883,11 +1883,11 @@ padding: 20px;
 background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);
  background-size: 400% 400%;
   animation: Gradient 10s ease infinite;
-      -webkit-mask-image: url('/nextjsico.png');
+      -webkit-mask-image: url('/nextjsico.webp');
       -webkit-mask-size: cover;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
-      mask-image: url('/nextjsico.png');
+      mask-image: url('/nextjsico.webp');
       mask-size: cover;
       mask-repeat: no-repeat;
       mask-position: center;
@@ -1899,11 +1899,11 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
 background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);  
 background-size: 400% 400%;
   animation: Gradient 10s ease infinite;
-      -webkit-mask-image: url('/typelogo.png');
+      -webkit-mask-image: url('/typelogo.webp');
       -webkit-mask-size: cover;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
-      mask-image: url('/typelogo.png');
+      mask-image: url('/typelogo.webp');
       mask-size: cover;
       mask-repeat: no-repeat;
       mask-position: center;
@@ -1915,11 +1915,11 @@ background-size: 400% 400%;
 background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #ffffff20, #ffffff40);  
   background-size: 400% 400%;
   animation: Gradient 10s ease infinite;
-      -webkit-mask-image: url('/tailwlogo.png');
+      -webkit-mask-image: url('/tailwlogo.webp');
       -webkit-mask-size: cover;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
-      mask-image: url('/tailwlogo.png');
+      mask-image: url('/tailwlogo.webp');
       mask-size: cover;
       mask-repeat: no-repeat;
       mask-position: center;
@@ -1954,7 +1954,7 @@ background: linear-gradient(45deg, #ffffff20, #ffffff40, #ffffff20, #ffffff40, #
 
                
 .cesdede {
-  background-image: url('/cesde.png')!important;
+  background-image: url('/cesde.webp')!important;
   background-size: cover!important; /* couvre complètement la div */
   background-position: center!important;
   background-repeat: no-repeat!important; /* assurez-vous que l'image ne se répète pas */

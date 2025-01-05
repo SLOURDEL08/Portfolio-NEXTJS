@@ -67,10 +67,10 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
 
         <div>
           <div className='bgleft-gradient-gallery w-80 h-full flex items-center absolute left-0 top-1/2 -translate-y-1/2'>
-            <Image alt='icon next' width={60} height={60} src='/larrow.png' className='m-auto' />
+            <Image alt='icon next' width={60} height={60} src='/larrow.webp' className='m-auto' />
           </div>
           <div className='bgright-gradient-gallery justify-end pr-20 z-50 w-80 m h-full flex items-center  absolute right-0 top-1/2 -translate-y-1/2'>
-            <Image alt='icon next' width={60} height={60} src='/rarrow.png' className='' />
+            <Image alt='icon next' width={60} height={60} src='/rarrow.webp' className='' />
           </div>
         </div>
 
@@ -109,10 +109,10 @@ const ProjectGallery: React.FC<{ project: Project }> = ({ project }) => {
                 layout='fill'
                 objectFit='cover'
                 alt={`Gallery thumbnail ${index + 1}`}
-                className='transition-all duration-300 ease-in-out hover:scale-110'
+                className='transition-all  duration-300 ease-in-out hover:scale-110'
               />
               {activeImage !== image && (
-                <div className='absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm grayscale transition-all duration-300 ease-in-out hover:opacity-0'></div>
+                <div className='absolute grayscale inset-0 bg-black bg-opacity-50 transition-all duration-300 ease-in-out hover:opacity-0'></div>
               )}
             </div>
           ))}

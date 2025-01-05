@@ -15,7 +15,7 @@ import Link from 'next/link';
 import { ImageSlideFront, TextSlide, ImageSlideBack } from '@/app/modules/textSlide/textSlide';
 import { useLocale } from '@/app/modules/useLocale';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 const AboutPage: React.FC = () => {
   const { t } = useTranslation('common');
   const { locale, handleLanguageChange } = useLocale();
@@ -69,7 +69,7 @@ const AboutPage: React.FC = () => {
                       >
                         {t('index.button.second')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                      <Image src='/top-right-arrow.webp' width='14' height='14' alt='de' />
                     </div>
                   </Link>
                   <Link href='/projects' className=''>
@@ -84,7 +84,7 @@ const AboutPage: React.FC = () => {
                       >
                         {t('index.download.cv')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width='14' height='14' alt='de' />
+                      <Image src='/top-right-arrow.webp' width='14' height='14' alt='de' />
                     </div>
                   </Link>
                 </div>
@@ -93,7 +93,7 @@ const AboutPage: React.FC = () => {
               <div className='flex  max-lg:justify-start  gap-6 max-smd:gap-5 flex-wrap w-full justify-end'>
                 <div className='flex items-center gap-3 border p-3 px-4  hover:bg-[#e5e5e5] border-[#2b2b2b] bg-[#ffffff15] group rounded-2xl'>
                   <Image
-                    src='/utili.png'
+                    src='/utili.webp'
                     width='22'
                     height='22'
                     alt='de'
@@ -111,7 +111,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className='flex gap-3 group p-3 px-4 brder items-center border hover:bg-[#e5e5e5] border-[#2b2b2b] bg-[#ffffff15] rounded-2xl'>
                   <Image
-                    src='/gateau.png'
+                    src='/gateau.webp'
                     width='22'
                     height='22'
                     alt='de'
@@ -129,7 +129,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className='flex gap-3 group items-center justify-start p-3 px-4 border border-[#2b2b2b] bg-[#ffffff15] hover:bg-[#e5e5e5]  rounded-2xl'>
                   <Image
-                    src='/lieu.png'
+                    src='/lieu.webp'
                     width='22'
                     height='22'
                     alt='de'
@@ -147,7 +147,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className='flex gap-3 group items-center justify-start bg-[#ffffff15] p-3 px-4 border-[#2b2b2b] border hover:bg-[#e5e5e5]  rounded-2xl w-max'>
                   <Image
-                    src='/e-mail.png'
+                    src='/e-mail.webp'
                     width='22'
                     height='22'
                     alt='de'
@@ -166,7 +166,7 @@ const AboutPage: React.FC = () => {
 
                 <div className='overhedz flex gap-2 border-[#2b2b2b] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
-                    src='/linkedicon.png'
+                    src='/linkedicon.webp'
                     width='25'
                     height='25'
                     alt='de'
@@ -185,7 +185,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className='overhedz flex gap-2 border-[#2b2b2b] border items-center p-3  bg-[#00000040] rounded-2xl w-max'>
                   <Image
-                    src='/github.png'
+                    src='/github.webp'
                     width='25'
                     height='25'
                     alt='de'
@@ -320,35 +320,35 @@ const AboutPage: React.FC = () => {
 
                 {/*<div className='flex flex-wrap justify-start gap-5'>
                   <Image
-                    src='/animText/reactlog.png'
+                    src='/animText/reactlog.webp'
                     width='1000'
                     height='1000'
                     alt='reactlog'
                     className='cvicon object-contain'
                   />
                   <Image
-                    src='/animText/nodejslog.png'
+                    src='/animText/nodejslog.webp'
                     width='1000'
                     height='1000'
                     alt='nodejslog'
                     className='cvicon object-contain'
                   />
                   <Image
-                    src='/animText/typelog.png'
+                    src='/animText/typelog.webp'
                     width='1000'
                     height='1000'
                     alt='typelog'
                     className='cvicon object-contain'
                   />
                   <Image
-                    src='/animText/nextjswhitelog.png'
+                    src='/animText/nextjswhitelog.webp'
                     width='1000'
                     height='1000'
                     alt='phplog'
                     className='cvicon object-contain'
                   />
                   <Image
-                    src='/animText/taillog.png'
+                    src='/animText/taillog.webp'
                     width='1000'
                     height='1000'
                     alt='taillog'
@@ -479,7 +479,7 @@ const AboutPage: React.FC = () => {
               <div className='w-[100%] flex flex-col justify-between gap-8'>
                 <div className='flex items-center gap-5'>
                   <Image
-                    src='/formexp.png'
+                    src='/formexp.webp'
                     width='40'
                     height='40'
                     alt='de'
@@ -501,14 +501,14 @@ const AboutPage: React.FC = () => {
                     title='OpenClassRoom'
                     description={t('education.openclassroom.description')}
                     date='Nov 2022/2023'
-                    iCon='/ocrlogo.png'
+                    iCon='/ocrlogo.webp'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='PopSchool'
                     description={t('education.popschool.description')}
                     date='Fev-Jui 2019'
-                    iCon='/poplogo.png'
+                    iCon='/poplogo.webp'
                   />
 
                   <hr className='border-[#ffffff20]' />
@@ -516,7 +516,7 @@ const AboutPage: React.FC = () => {
                     title='Bac STMG'
                     description={t('education.bac.description')}
                     date='Depuis 2020'
-                    iCon='/rimbaud.png'
+                    iCon='/rimbaud.webp'
                   />
 
                   {isFirstDropdownOpen && (
@@ -559,7 +559,7 @@ const AboutPage: React.FC = () => {
                     </Typography>
                   )}
                   <Image
-                    src='/dropp.png'
+                    src='/dropp.webp'
                     width='20'
                     height='20'
                     alt='de'
@@ -573,7 +573,7 @@ const AboutPage: React.FC = () => {
               <div className='w-[100%] flex flex-col justify-between gap-8'>
                 <div className='flex items-center gap-5'>
                   <Image
-                    src='/work.png'
+                    src='/work.webp'
                     width='40'
                     height='40'
                     alt='de'
@@ -595,21 +595,21 @@ const AboutPage: React.FC = () => {
                     title='Toast Agency'
                     description={t('experience.toast.description')}
                     date='Nov 2022-2023'
-                    iCon='/symbol.png'
+                    iCon='/symbol.webp'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='FL Express'
                     description={t('experience.flexpress.description')}
                     date='Nov 2020-2021'
-                    iCon='/flexpress.png'
+                    iCon='/flexpress.webp'
                   />
                   <hr className='border-[#ffffff20]' />
                   <LayerCV
                     title='Graphic Packaging'
                     description={t('experience.graphic.description')}
                     date='Juin-Aout 2020'
-                    iCon='/gp-logo.png'
+                    iCon='/gp-logo.webp'
                   />
                   {isSecondDropdownOpen && (
                     <>
@@ -625,21 +625,21 @@ const AboutPage: React.FC = () => {
                         title='Freelance'
                         description={t('experience.freelance.description')}
                         date='Jan 2020'
-                        iCon='/slp.png'
+                        iCon='/slp.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='DK Group'
                         description={t('experience.dk.description')}
                         date='Nov/Dec 2019'
-                        iCon='/dkgroup.png'
+                        iCon='/dkgroup.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
                         title='Faurecia'
                         description={t('experience.faurecia.description')}
                         date='Fev-Juillet 2018'
-                        iCon='/faurecia.png'
+                        iCon='/faurecia.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
@@ -679,7 +679,7 @@ const AboutPage: React.FC = () => {
                     </Typography>
                   )}
                   <Image
-                    src='/dropp.png'
+                    src='/dropp.webp'
                     width='20'
                     height='20'
                     alt='de'
@@ -695,11 +695,12 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
     },
+    revalidate: 3600 // Revalidation toutes les heures si nécessaire
   };
 };
 

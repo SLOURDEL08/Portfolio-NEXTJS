@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import StarRating from '../contact-modal/StarRating';
 import { Typography } from '../typography/typography';
+import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   const [rating, setRating] = useState<number>(0);
@@ -26,13 +27,14 @@ export const Footer: React.FC = () => {
               width='400'
               height='400'
               alt='logo web app'
-              src='/sl.png'
+              src='/sl.webp'
               className='w-[100%] h-[100%]'
             />
           </div>
           <div className=' flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:gap-4 max-foot:justify-between  justify- w-full'>
             <div className='flex flex-col gap-3'>
-              <Typography
+              <Link href={"/"}>
+                <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
@@ -40,7 +42,8 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Accueil
-              </Typography>
+              </Typography></Link>
+            <Link href={"/aboutpage"}>
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -49,7 +52,9 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 CV
-              </Typography>
+                </Typography>
+              </Link>
+            <Link href={"/projects"}>
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -58,7 +63,10 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Projets
-              </Typography>
+                </Typography>
+              </Link>
+                          <Link href={"/contact"}>
+
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -67,9 +75,12 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Contact
-              </Typography>
+                </Typography>
+                </Link>
             </div>
             <div className='flex flex-col gap-3'>
+                          <Link href={"https://github.com/SLOURDEL08"}>
+
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -78,7 +89,10 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Github
-              </Typography>
+                </Typography>
+              </Link>
+                          <Link href={"https://gitlab.com/slourdel08"}>
+
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -87,9 +101,31 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Gitlab
-              </Typography>
+                </Typography>
+              </Link>
+
+              <Typography
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                theme='gray'
+                variant='body-lg'
+                weight='light'
+                fontFamily='SanFrancisco'
+              >
+                Vercel
+                </Typography>
+
+              <Typography
+                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                theme='gray'
+                variant='body-lg'
+                weight='light'
+                fontFamily='SanFrancisco'
+              >
+                Netlify
+                </Typography>
             </div>
             <div className='flex flex-col gap-3'>
+              <Link href="https://www.linkedin.com/in/s%C3%A9bastien-lourdel-297715151/">
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -99,6 +135,9 @@ export const Footer: React.FC = () => {
               >
                 Linkedin
               </Typography>
+              </Link>
+                            <Link href="https://www.behance.net/lourdel00">
+
               <Typography
                 className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
@@ -107,7 +146,8 @@ export const Footer: React.FC = () => {
                 fontFamily='SanFrancisco'
               >
                 Behance
-              </Typography>
+                </Typography>
+                </Link>
             </div>
           </div>
         </div>
@@ -136,12 +176,12 @@ export const Footer: React.FC = () => {
                 className='w-full p-3 font-medium placeholder:text-[#ffffff60] font-SF	text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] border- hover:bg-[#ffffff20] border-[#ffffff60] hover:border-white'
               />
             </div>
-            <div className='w-full gap-6 max-smd:flex-wrap flex justify-between'>
+            <div className='w-full overflow-hidden gap-6 max-smd:flex-wrap flex justify-between'>
               <input
                 id='city'
                 name='city'
                 placeholder='Votre message'
-                className='w-full p-3 font-medium placeholder:text-[#ffffff60] font-SF text-[#ffffffc3]  focus:outline-none rounded-lg px-4 bg-[#ffffff10] border- hover:bg-[#ffffff20] border-[#ffffff60] hover:border-white'
+                className='w-full font-medium placeholder:text-[#ffffff60] font-SF text-[#ffffffc3]  focus:outline-none rounded-lg px-4 bg-[#ffffff10] border- hover:bg-[#ffffff20] border-[#ffffff60] hover:border-white'
               />
               <StarRating onChange={handleRatingChange} />
               <button
@@ -149,7 +189,7 @@ export const Footer: React.FC = () => {
                 className='flex items-center h-full font-CD font-extralight rounded text-white gap-4'
               >
                 <Image
-                  src='/top-right-arrow.png'
+                  src='/top-right-arrow.webp'
                   alt='de'
                   width='80'
                   height='80'

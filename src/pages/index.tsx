@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
         <Main className='overflow-hidden p-24 max-[900px]:p-14 max-[450px]:p-8'>
           <div className='image-container pt-2 w-full max-md:block flex gap-10 max-[900px]:pt-16 items-stretch'>
             <div className='overflow-hidden items-center gap-2 w-[30%] max-md:h-[160px] max-md:w-[160px] max-md:mb-8 rounded-WL max-[900px]:w-[40%] relative !max-h'>
-              <Image src='/cesde.png' alt='de' fill className='object-cover' />
+              <Image src='/cesde.webp' alt='de' fill className='object-cover' />
             </div>
             <div className='flex flex-col items-start gap-6 w-[70%] max-md:w-full h-auto max-[900px]:w-[60%] min-h-full'>
               <div className='font-CD'>
@@ -93,7 +93,7 @@ const HomePage: React.FC = () => {
                       >
                         {t('index.button.first')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
+                      <Image src='/top-right-arrow.webp' width={14} height={14} alt='de' />
                     </div>
                   </Link>
 
@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
                       >
                         {t('index.button.second')}
                       </Typography>
-                      <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
+                      <Image src='/top-right-arrow.webp' width={14} height={14} alt='de' />
                     </div>
                   </Link>
                 </div>
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
                     <div className='flex items-center justify-between'>
                       <div className='flex items-center gap-5'>
                         <Image
-                          src='/work.png'
+                          src='/work.webp'
                           width={40}
                           height={40}
                           alt='de'
@@ -162,7 +162,7 @@ const HomePage: React.FC = () => {
                       </div>
                       <Link href='/aboutpage' className='click-parented rounded-full'>
                         <Image
-                          src='/top-right-arrow.png'
+                          src='/top-right-arrow.webp'
                           width={22}
                           height={22}
                           alt='de'
@@ -176,11 +176,11 @@ const HomePage: React.FC = () => {
                         description={t('experience.freelance.description')}
                         date='Depuis 2020'
                         shortV
-                        iCon='/symbol.png'
+                        iCon='/symbol.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
-                        iCon='/symbol.png'
+                        iCon='/symbol.webp'
                         title='ToastAgency'
                         description={t('experience.toast.description')}
                         date='Nov 2022/2023'
@@ -188,7 +188,7 @@ const HomePage: React.FC = () => {
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
-                        iCon='/flexpress.png'
+                        iCon='/flexpress.webp'
                         title='FL Express'
                         description={t('experience.flexpress.description')}
                         date='Depuis 2020'
@@ -203,7 +203,7 @@ const HomePage: React.FC = () => {
                     <div className='flex items-center justify-between'>
                       <div className='flex items-center gap-5'>
                         <Image
-                          src='/formexp.png'
+                          src='/formexp.webp'
                           width={40}
                           height={40}
                           alt='de'
@@ -223,7 +223,7 @@ const HomePage: React.FC = () => {
                       </div>
                       <Link href='/aboutpage' className='click-parented rounded-full'>
                         <Image
-                          src='/top-right-arrow.png'
+                          src='/top-right-arrow.webp'
                           width={22}
                           height={22}
                           alt='de'
@@ -237,7 +237,7 @@ const HomePage: React.FC = () => {
                         description={t('education.openclassroom.description')}
                         date='Nov 2022/2023'
                         shortV
-                        iCon='/ocrlogo.png'
+                        iCon='/ocrlogo.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
@@ -245,7 +245,7 @@ const HomePage: React.FC = () => {
                         description={t('education.popschool.description')}
                         date='Fev-Jui 2019'
                         shortV
-                        iCon='/poplogo.png'
+                        iCon='/poplogo.webp'
                       />
                       <hr className='border-[#ffffff20]' />
                       <LayerCV
@@ -253,7 +253,7 @@ const HomePage: React.FC = () => {
                         description={t('education.bac.description')}
                         date='Depuis 2020'
                         shortV
-                        iCon='/rimbaud.png'
+                        iCon='/rimbaud.webp'
                       />
                     </div>
                   </div>
@@ -271,7 +271,7 @@ const HomePage: React.FC = () => {
                   >
                     {t('index.download.cv')}
                   </Typography>
-                  <Image src='/download.png' width={30} height={30} alt='Download icon' />
+                  <Image src='/download.webp' width={30} height={30} alt='Download icon' />
                 </div>
               </a>
             </div>
@@ -280,7 +280,7 @@ const HomePage: React.FC = () => {
               <div className='flex justify-between'>
                 <div className='flex items-center gap-5'>
                   <Image
-                    src='/applelay.png'
+                    src='/applelay.webp'
                     width={40}
                     height={40}
                     alt='de'
@@ -302,7 +302,7 @@ const HomePage: React.FC = () => {
                   href='/projects'
                   className='click-parented flex justify-center px-4 gap-3 items-center p-3 rounded-full'
                 >
-                  <Image src='/top-right-arrow.png' width={20} height={20} alt='de' />
+                  <Image src='/top-right-arrow.webp' width={20} height={20} alt='de' />
                 </Link>
               </div>
               <Segmented
@@ -324,11 +324,13 @@ const HomePage: React.FC = () => {
   );
 };
 
+
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
     },
+    revalidate: 3600 // Revalidation toutes les heures si nécessaire
   };
 };
 

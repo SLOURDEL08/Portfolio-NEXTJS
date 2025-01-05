@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '@/app/modules/layout/layout';
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
           <div className='flex max-lg:flex-col justify-between items-start pt-2 gap-10 py-10 max-[900px]:gap-6 max-[900px]:pt-16 max-[900px]:pb-8'>
             <div className='flex  gap-8 max-[500px]:gap-6 items-center justify-center'>
               <Image
-                src='/applelay.png'
+                src='/applelay.webp'
                 width={50}
                 height={50}
                 alt='de'
@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
             <Slider className='projage ' />
           </div>
           <div className='flex gap-10 mb-10 parented max-[900px]:block max-[900px]:bg-[#ffffff20] max-[900px]:rounded-3xl'>
-            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8 parentprojecting p-4 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
+            <div className='w-2/5 max-[900px]:bg-[#ffffff00] bg-[#ffffff20] max-[900px]:p-8 parentprojecting p-8 max-[900px]:pb-5 rounded-3xl relative max-[900px]:mb-0 max-[900px]:w-[100%] max-[900px]:h-[300px]'>
               <div
                 key={project.id}
                 className={`project-itemm projectadow ${!isTransitioning ? 'active' : ''}`}
@@ -130,7 +130,7 @@ const Projects: React.FC = () => {
                   width={500}
                   height={500}
                   alt={project.title}
-                  className='h-[100%] w-[100%] rounded-2xl object-cover object-left grayzc'
+                  className='h-[100%] w-[100%] rounded-3xl object-cover object-left grayzc'
                 />
               </div>
             </div>
@@ -194,7 +194,7 @@ const Projects: React.FC = () => {
                     onClick={prevProject}
                   >
                     <Image
-                      src='/larrow.png'
+                      src='/larrow.webp'
                       width={200}
                       height={200}
                       alt=''
@@ -206,7 +206,7 @@ const Projects: React.FC = () => {
                     onClick={nextProject}
                   >
                     <Image
-                      src='/rarrow.png'
+                      src='/rarrow.webp'
                       width={200}
                       height={200}
                       alt=''
@@ -229,7 +229,7 @@ const Projects: React.FC = () => {
                     >
                       {t('general.learnMore')}
                     </Typography>
-                    <Image src='/top-right-arrow.png' width={14} height={14} alt='de' />
+                    <Image src='/top-right-arrow.webp' width={14} height={14} alt='de' />
                   </Link>
                 </div>
               </div>
@@ -244,11 +244,12 @@ const Projects: React.FC = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
     },
+    revalidate: 3600 // Revalidation toutes les heures si nécessaire
   };
 };
 

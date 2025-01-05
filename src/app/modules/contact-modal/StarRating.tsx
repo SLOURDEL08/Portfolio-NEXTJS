@@ -13,7 +13,7 @@ const StarRating: React.FC<StarRatingProps> = ({ onChange }) => {
   };
 
   return (
-    <div className='flex gap-2 items-center'>
+    <div className='flex gap-2 -my-2 items-center'>
       {[1, 2, 3, 4, 5].map((star) => (
         <svg
           key={star}

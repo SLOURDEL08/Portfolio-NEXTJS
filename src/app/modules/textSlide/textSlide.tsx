@@ -20,22 +20,22 @@ const DURATION = 10000;
 
 // Define image sources for the variants
 const IMAGES_FRONT = [
-  '/animText/nextjswhitelog.png',
-  '/animText/jslog.png',
-  '/animText/taillog.png',
-  '/animText/figmall.png',
-  '/animText/photolog.png',
-  '/animText/jsonlog.png',
-  '/animText/restlog.png',
-  '/animText/nextjswhitelog.png',
-  '/animText/jslog.png',
-  '/animText/taillog.png',
-  '/animText/figmall.png',
-  '/animText/photolog.png',
-  '/animText/jsonlog.png',
-  '/animText/restlog.png',
+  '/animText/nextjswhitelog.webp',
+  '/animText/jslog.webp',
+  '/animText/taillog.webp',
+  '/animText/figmall.webp',
+  '/animText/photolog.webp',
+  '/animText/jsonlog.webp',
+  '/animText/restlog.webp',
+  '/animText/nextjswhitelog.webp',
+  '/animText/jslog.webp',
+  '/animText/taillog.webp',
+  '/animText/figmall.webp',
+  '/animText/photolog.webp',
+  '/animText/jsonlog.webp',
+  '/animText/restlog.webp',
 ]; // Replace with your actual image paths
-const IMAGES_BACK = ['/applelay.png', '/applelay.png', '/applelay.png']; // Replace with your actual image paths
+const IMAGES_BACK = ['/applelay.webp', '/applelay.webp', '/applelay.webp']; // Replace with your actual image paths
 
 interface InfiniteLoopSliderProps {
   children: React.ReactNode;

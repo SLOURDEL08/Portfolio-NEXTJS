@@ -38,7 +38,7 @@ const Slider = ({ className = '' }) => {
         ].map((src) => (
           <div key={src} className='carousel-slide'>
             <Image
-              src={`/animText/${src}.png`}
+              src={`/animText/${src}.webp`}
               width='1000'
               height='1000'
               alt={src}
