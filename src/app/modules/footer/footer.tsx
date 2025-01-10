@@ -23,12 +23,18 @@ export const Footer: React.FC = () => {
     };
 
     try {
+      // Utiliser une URL relative au lieu de l'URL complète
       const response = await axios.post('/api/send-mail-feedback', submitData);
       console.log('Feedback sent successfully:', response.data);
       setIsSuccess(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error sending feedback:', error);
-      // Optionally handle error state here
+      // Ajout de la gestion d'erreur explicite
+      if (error.response?.data?.message) {
+        alert(error.response.data.message);
+      } else {
+        alert("Une erreur est survenue lors de l'envoi du feedback");
+      }
     } finally {
       setIsSubmitting(false);
     }
