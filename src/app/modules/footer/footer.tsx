@@ -1,21 +1,41 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import StarRating from '../contact-modal/StarRating';
 import { Typography } from '../typography/typography';
 import Link from 'next/link';
+import StarRatingNew from '../contact-modal/StarRating';
+import axios from 'axios';
 
 export const Footer: React.FC = () => {
-  const [rating, setRating] = useState<number>(0);
+  const [rating, setRating] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const submitData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      rating: rating,
+    };
+
+    try {
+      const response = await axios.post('/api/send-mail-feedback', submitData);
+      console.log('Feedback sent successfully:', response.data);
+      setIsSuccess(true);
+    } catch (error) {
+      console.error('Error sending feedback:', error);
+      // Optionally handle error state here
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleRatingChange = (newRating: number) => {
     setRating(newRating);
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Ville:', (e.target as HTMLFormElement).city.value);
-    console.log('Note:', rating);
-    // Vous pouvez soumettre le formulaire ici
   };
 
   return (
@@ -31,173 +51,193 @@ export const Footer: React.FC = () => {
               className='w-[100%] h-[100%]'
             />
           </div>
-          <div className=' flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:gap-4 max-foot:justify-between  justify- w-full'>
+          <div className='flex gap-14 max-lg:gap-20 max-foot:justify-between max-foot:gap-4 max-foot:justify-between justify- w-full'>
             <div className='flex flex-col gap-3'>
-              <Link href={"/"}>
+              <Link href={'/'}>
                 <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Accueil
-              </Typography></Link>
-            <Link href={"/aboutpage"}>
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                CV
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Accueil
                 </Typography>
               </Link>
-            <Link href={"/projects"}>
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Projets
+              <Link href={'/aboutpage'}>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  CV
                 </Typography>
               </Link>
-                          <Link href={"/contact"}>
-
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Contact
+              <Link href={'/projects'}>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Projets
                 </Typography>
-                </Link>
+              </Link>
+              <Link href={'/contact'}>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Contact
+                </Typography>
+              </Link>
             </div>
             <div className='flex flex-col gap-3'>
-                          <Link href={"https://github.com/SLOURDEL08"}>
-
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Github
+              <Link href={'https://github.com/SLOURDEL08'}>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Github
                 </Typography>
               </Link>
-                          <Link href={"https://gitlab.com/slourdel08"}>
-
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Gitlab
+              <Link href={'https://gitlab.com/slourdel08'}>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Gitlab
                 </Typography>
               </Link>
-
               <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
                 fontFamily='SanFrancisco'
               >
                 Vercel
-                </Typography>
-
+              </Typography>
               <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
                 theme='gray'
                 variant='body-lg'
                 weight='light'
                 fontFamily='SanFrancisco'
               >
                 Netlify
-                </Typography>
+              </Typography>
             </div>
             <div className='flex flex-col gap-3'>
-              <Link href="https://www.linkedin.com/in/s%C3%A9bastien-lourdel-297715151/">
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Linkedin
-              </Typography>
-              </Link>
-                            <Link href="https://www.behance.net/lourdel00">
-
-              <Typography
-                className=' hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
-                theme='gray'
-                variant='body-lg'
-                weight='light'
-                fontFamily='SanFrancisco'
-              >
-                Behance
+              <Link href='https://www.linkedin.com/in/s%C3%A9bastien-lourdel-297715151/'>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Linkedin
                 </Typography>
-                </Link>
+              </Link>
+              <Link href='https://www.behance.net/lourdel00'>
+                <Typography
+                  className='hover:text-white transition ease-in-out max-[1250px]:text-lg max-foot:text-base'
+                  theme='gray'
+                  variant='body-lg'
+                  weight='light'
+                  fontFamily='SanFrancisco'
+                >
+                  Behance
+                </Typography>
+              </Link>
             </div>
           </div>
         </div>
-        <div className=' text-left space-y-6 w-[55%] max-lg:w-full'>
-          <Typography
-            theme='white'
-            fontFamily='ClashDisplay'
-            variant='h5'
-            weight='medium'
-            className=' '
-          >
-            Laisse moi un avis sur mon portfolio
-          </Typography>
-          <form onSubmit={handleSubmit} className='w-full space-y-6'>
-            <div className='flex gap-6'>
-              <input
-                id='city'
-                name='city'
-                placeholder='Qui êtes vous ?'
-                className='w-full p-3 font-medium placeholder:text-[#ffffff60] inputea font-SF	text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] hover:bg-[#ffffff20] border- border-[#ffffff60] hover:border-white'
-              />
-              <input
-                id='city'
-                name='city'
-                placeholder='Votre adresse e-mail'
-                className='w-full p-3 font-medium placeholder:text-[#ffffff60] font-SF	text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] border- hover:bg-[#ffffff20] border-[#ffffff60] hover:border-white'
-              />
+        <div className='text-left space-y-6 w-[55%] max-lg:w-full'>
+          {isSuccess ? (
+            <div className='space-y-4 bg-[#ffffff10] p-8 rounded-lg border border-[#ffffff20]'>
+              <Typography theme='white' fontFamily='ClashDisplay' variant='h5' weight='medium'>
+                Merci pour votre retour !
+              </Typography>
+              <Typography theme='gray' variant='body-lg' weight='light' fontFamily='SanFrancisco'>
+                Votre message a bien été envoyé.
+              </Typography>
             </div>
-            <div className='w-full overflow-hidden gap-6 max-smd:flex-wrap flex justify-between'>
-              <input
-                id='city'
-                name='city'
-                placeholder='Votre message'
-                className='w-full font-medium placeholder:text-[#ffffff60] font-SF text-[#ffffffc3]  focus:outline-none rounded-lg px-4 bg-[#ffffff10] border- hover:bg-[#ffffff20] border-[#ffffff60] hover:border-white'
-              />
-              <StarRating onChange={handleRatingChange} />
-              <button
-                type='submit'
-                className='flex items-center h-full font-CD font-extralight rounded text-white gap-4'
+          ) : (
+            <>
+              <Typography
+                theme='white'
+                fontFamily='ClashDisplay'
+                variant='h5'
+                weight='medium'
+                className=''
               >
-                <Image
-                  src='/top-right-arrow.webp'
-                  alt='de'
-                  width='80'
-                  height='80'
-                  className='min-w-10 max-smd:min-w-9 max-smd:w-9 ovhea p-2.5 rounded-lg w-full h-auto'
-                />
-              </button>
-            </div>
-          </form>
+                Laisse moi un avis sur mon portfolio
+              </Typography>
+              <form onSubmit={handleSubmit} className='w-full grid grid-col-1 gap-6'>
+                <div className='flex gap-6'>
+                  <input
+                    id='name'
+                    name='name'
+                    placeholder='Qui êtes vous ?'
+                    required
+                    disabled={isSubmitting}
+                    className='w-full p-4 font-light tracking-wide placeholder:text-[#ffffff60] font-SF text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] hover:bg-[#ffffff20] border border-[#ffffff60] hover:border-white disabled:opacity-50 disabled:cursor-not-allowed'
+                  />
+                  <input
+                    id='email'
+                    name='email'
+                    type='email'
+                    placeholder='Votre adresse e-mail'
+                    required
+                    disabled={isSubmitting}
+                    className='w-full p-4 font-light tracking-wide placeholder:text-[#ffffff60] font-SF text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] hover:bg-[#ffffff20] border border-[#ffffff60] hover:border-white disabled:opacity-50 disabled:cursor-not-allowed'
+                  />
+                </div>
+                <div className='submitbtn flex items-center gap-6'>
+                  <input
+                    id='message'
+                    name='message'
+                    placeholder='Votre message'
+                    required
+                    disabled={isSubmitting}
+                    className='flex-1 p-4 font-light tracking-wide placeholder:text-[#ffffff60] font-SF text-white focus:outline-none rounded-lg px-4 bg-[#ffffff10] hover:bg-[#ffffff20] border border-[#ffffff60] hover:border-white disabled:opacity-50 disabled:cursor-not-allowed'
+                  />
+                  <StarRatingNew onChange={handleRatingChange} />
+                  <button
+                    type='submit'
+                    disabled={isSubmitting}
+                    className='flex items-center group justify-center tre h-full w-max rounded-lg bg-[#ffffff10] hover:bg-[#ffffff20] border border-[#ffffff60] hover:border-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                  >
+                    {isSubmitting ? (
+                      <div className='w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin' />
+                    ) : (
+                      <Image
+                        src='/top-right-arrow.webp'
+                        alt='Envoyer'
+                        width={24}
+                        height={24}
+                        className='w-6 h-6 group-hover:opacity-100 transition-opacity opacity-60'
+                      />
+                    )}
+                  </button>
+                </div>
+              </form>
+            </>
+          )}
         </div>
       </div>
 

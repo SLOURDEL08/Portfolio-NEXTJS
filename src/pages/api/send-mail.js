@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   console.log('Request body:', req.body);
 
-  const { firstName, lastName, email, message, country, city, enterprise } = req.body;
+  const { firstName, lastName, email, message, enterprise } = req.body;
 
   if (!firstName || !lastName || !email || !message) {
     console.log('Missing required fields');
@@ -32,9 +32,15 @@ export default async function handler(req, res) {
       Name: ${firstName} ${lastName}
       Enterprise: ${enterprise || 'Not specified'}
       Email: ${email}
-      Country: ${country?.label || 'Not specified'}
-      City: ${city || 'Not specified'}
       Message: ${message}
+    `,
+    html: `
+      <h2>New Contact Message</h2>
+      <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+      <p><strong>Enterprise:</strong> ${enterprise || 'Not specified'}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <h3>Message:</h3>
+      <p>${message}</p>
     `,
   };
 
